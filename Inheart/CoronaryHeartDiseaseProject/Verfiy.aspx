@@ -1,0 +1,1 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Verfiy.aspx.cs" Inherits="CoronaryHeartDiseaseProject.Verfiy" %>

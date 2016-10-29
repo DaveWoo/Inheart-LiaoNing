@@ -1,0 +1,1784 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="MedicalBaseModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="MedicalBaseModelStoreContainer">
+    <EntitySet Name="Hospitals" EntityType="MedicalBaseModel.Store.Hospitals" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Log_Login" EntityType="MedicalBaseModel.Store.Log_Login" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="People" EntityType="MedicalBaseModel.Store.People" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Regions" EntityType="MedicalBaseModel.Store.Regions" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Report_ChuBuZhenDuan" EntityType="MedicalBaseModel.Store.Report_ChuBuZhenDuan" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Report_FuZhuYongYao" EntityType="MedicalBaseModel.Store.Report_FuZhuYongYao" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Report_JiBingBanSuiZhuangTai" EntityType="MedicalBaseModel.Store.Report_JiBingBanSuiZhuangTai" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Report_JieRuZhiLiao" EntityType="MedicalBaseModel.Store.Report_JieRuZhiLiao" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Report_JingMaiRongShuan" EntityType="MedicalBaseModel.Store.Report_JingMaiRongShuan" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Report_JiWangBingShi" EntityType="MedicalBaseModel.Store.Report_JiWangBingShi" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Report_LinChuangZhuanGui" EntityType="MedicalBaseModel.Store.Report_LinChuangZhuanGui" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Report_Summation" EntityType="MedicalBaseModel.Store.Report_Summation" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Report_WeiJinXingJingMaiRongSuanLiYou" EntityType="MedicalBaseModel.Store.Report_WeiJinXingJingMaiRongSuanLiYou" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Report_WeiJinXingJiZhenGuanMaiJieRuZhiLiao" EntityType="MedicalBaseModel.Store.Report_WeiJinXingJiZhenGuanMaiJieRuZhiLiao" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Report_ZhuSuAndXianBingShi" EntityType="MedicalBaseModel.Store.Report_ZhuSuAndXianBingShi" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Roles" EntityType="MedicalBaseModel.Store.Roles" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Users" EntityType="MedicalBaseModel.Store.Users" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_ReportSummation_Hospital" Association="MedicalBaseModel.Store.FK_ReportSummation_Hospital">
+      <End Role="Hospital" EntitySet="Hospitals" />
+      <End Role="Report_Summation" EntitySet="Report_Summation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_User_Hospital" Association="MedicalBaseModel.Store.FK_User_Hospital">
+      <End Role="Hospital" EntitySet="Hospitals" />
+      <End Role="User" EntitySet="Users" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ReportSummation_Person" Association="MedicalBaseModel.Store.FK_ReportSummation_Person">
+      <End Role="Person" EntitySet="People" />
+      <End Role="Report_Summation" EntitySet="Report_Summation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_User_Person" Association="MedicalBaseModel.Store.FK_User_Person">
+      <End Role="Person" EntitySet="People" />
+      <End Role="User" EntitySet="Users" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ReportSummation_ReportChuBuZhengDuan" Association="MedicalBaseModel.Store.FK_ReportSummation_ReportChuBuZhengDuan">
+      <End Role="Report_ChuBuZhenDuan" EntitySet="Report_ChuBuZhenDuan" />
+      <End Role="Report_Summation" EntitySet="Report_Summation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ReportSummation_ReportFuZhuYongYao" Association="MedicalBaseModel.Store.FK_ReportSummation_ReportFuZhuYongYao">
+      <End Role="Report_FuZhuYongYao" EntitySet="Report_FuZhuYongYao" />
+      <End Role="Report_Summation" EntitySet="Report_Summation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ReportSummation_ReportBinLiBanSuiZhuangTai" Association="MedicalBaseModel.Store.FK_ReportSummation_ReportBinLiBanSuiZhuangTai">
+      <End Role="Report_JiBingBanSuiZhuangTai" EntitySet="Report_JiBingBanSuiZhuangTai" />
+      <End Role="Report_Summation" EntitySet="Report_Summation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Report_Summation_JieRuZhiLiao" Association="MedicalBaseModel.Store.FK_Report_Summation_JieRuZhiLiao">
+      <End Role="Report_JieRuZhiLiao" EntitySet="Report_JieRuZhiLiao" />
+      <End Role="Report_Summation" EntitySet="Report_Summation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ReportSummation_ReportJinMaiRongShuan" Association="MedicalBaseModel.Store.FK_ReportSummation_ReportJinMaiRongShuan">
+      <End Role="Report_JingMaiRongShuan" EntitySet="Report_JingMaiRongShuan" />
+      <End Role="Report_Summation" EntitySet="Report_Summation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ReportSummation_ReportJiWangBingShi" Association="MedicalBaseModel.Store.FK_ReportSummation_ReportJiWangBingShi">
+      <End Role="Report_JiWangBingShi" EntitySet="Report_JiWangBingShi" />
+      <End Role="Report_Summation" EntitySet="Report_Summation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Report_Summation_LinChuangZhuanGui" Association="MedicalBaseModel.Store.FK_Report_Summation_LinChuangZhuanGui">
+      <End Role="Report_LinChuangZhuanGui" EntitySet="Report_LinChuangZhuanGui" />
+      <End Role="Report_Summation" EntitySet="Report_Summation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Report_Summation_Report_Summation" Association="MedicalBaseModel.Store.FK_Report_Summation_Report_Summation">
+      <End Role="Report_Summation" EntitySet="Report_Summation" />
+      <End Role="Report_Summation1" EntitySet="Report_Summation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Report_Summation_WeiJinXingJingMaiRongSuanLiYou" Association="MedicalBaseModel.Store.FK_Report_Summation_WeiJinXingJingMaiRongSuanLiYou">
+      <End Role="Report_WeiJinXingJingMaiRongSuanLiYou" EntitySet="Report_WeiJinXingJingMaiRongSuanLiYou" />
+      <End Role="Report_Summation" EntitySet="Report_Summation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Report_Summation_WeiJinXingZhenDuan" Association="MedicalBaseModel.Store.FK_Report_Summation_WeiJinXingZhenDuan">
+      <End Role="Report_WeiJinXingJiZhenGuanMaiJieRuZhiLiao" EntitySet="Report_WeiJinXingJiZhenGuanMaiJieRuZhiLiao" />
+      <End Role="Report_Summation" EntitySet="Report_Summation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Report_Summation_ZhuSuAndXianBingShi" Association="MedicalBaseModel.Store.FK_Report_Summation_ZhuSuAndXianBingShi">
+      <End Role="Report_ZhuSuAndXianBingShi" EntitySet="Report_ZhuSuAndXianBingShi" />
+      <End Role="Report_Summation" EntitySet="Report_Summation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ReportSummation_ReportLinChuangZhengZhuang" Association="MedicalBaseModel.Store.FK_ReportSummation_ReportLinChuangZhengZhuang">
+      <End Role="Report_ZhuSuAndXianBingShi" EntitySet="Report_ZhuSuAndXianBingShi" />
+      <End Role="Report_Summation" EntitySet="Report_Summation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ReportSummation_User" Association="MedicalBaseModel.Store.FK_ReportSummation_User">
+      <End Role="User" EntitySet="Users" />
+      <End Role="Report_Summation" EntitySet="Report_Summation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_User_Role" Association="MedicalBaseModel.Store.FK_User_Role">
+      <End Role="Role" EntitySet="Roles" />
+      <End Role="User" EntitySet="Users" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Hospitals">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="HospitalName" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Description" Type="nvarchar" Nullable="true" MaxLength="500" />
+    <Property Name="HospitalLevel" Type="int" Nullable="true" />
+    <Property Name="RegionID" Type="int" Nullable="true" />
+  </EntityType>
+  <EntityType Name="Log_Login">
+    <Key>
+      <PropertyRef Name="LogID" />
+    </Key>
+    <Property Name="LogID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserID" Type="int" Nullable="false" />
+    <Property Name="LoginDate" Type="datetime" Nullable="false" />
+    <Property Name="Detail" Type="nvarchar" Nullable="true" MaxLength="200" />
+    <Property Name="BroswerType" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="HospitalID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="People">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Sex" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="Nationality" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="Birthday" Type="datetime" Nullable="true" />
+    <Property Name="IdentityNumber" Type="varchar" Nullable="true" MaxLength="19" />
+    <Property Name="CellPhone" Type="nchar" Nullable="true" MaxLength="10" />
+    <Property Name="Mobile" Type="nvarchar" Nullable="true" MaxLength="11" />
+    <Property Name="Address" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="Occupation" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
+    <Property Name="UpdatedDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Regions">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RegionName" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="RegionShortName" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="Description" Type="nvarchar(max)" Nullable="true" />
+  </EntityType>
+  <EntityType Name="Report_ChuBuZhenDuan">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="BloodPressure" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="DiastolicPressure" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="FirstTimeXinDianTu" Type="datetime" Nullable="true" />
+    <Property Name="FirstTimeBlood" Type="datetime" Nullable="true" />
+    <Property Name="FisrtTimeReturn" Type="datetime" Nullable="true" />
+    <Property Name="CNTResult" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="RegularCNT" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="AcuteST" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="Anteroseptal" Type="bit" Nullable="true" />
+    <Property Name="Antetheca" Type="bit" Nullable="true" />
+    <Property Name="Extensive" Type="bit" Nullable="true" />
+    <Property Name="HeartWall" Type="bit" Nullable="true" />
+    <Property Name="HighWall" Type="bit" Nullable="true" />
+    <Property Name="InteriorWall" Type="bit" Nullable="true" />
+    <Property Name="BackWall" Type="bit" Nullable="true" />
+    <Property Name="RightVentricular" Type="bit" Nullable="true" />
+    <Property Name="PrtreatOther" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="FirstTimeHeartRate" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="FirstTimeImage" Type="datetime" Nullable="true" />
+    <Property Name="IntroduceThrombolysisSuggestion" Type="bit" Nullable="true" />
+  </EntityType>
+  <EntityType Name="Report_FuZhuYongYao">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="AspirinDosage" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="ClopidogrelDosage" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="LoadStatinUsed" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="Simvastatin" Type="bit" Nullable="true" />
+    <Property Name="Pravastatin" Type="bit" Nullable="true" />
+    <Property Name="Fluvastatin" Type="bit" Nullable="true" />
+    <Property Name="Atorvastatin" Type="bit" Nullable="true" />
+    <Property Name="Rosuvastatin" Type="bit" Nullable="true" />
+    <Property Name="Pitavastatin" Type="bit" Nullable="true" />
+    <Property Name="ACEIConfirm" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="BRBConfrim" Type="nvarchar" Nullable="true" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Report_JiBingBanSuiZhuangTai">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="HypotensionExist" Type="nchar" Nullable="true" MaxLength="10" />
+    <Property Name="CardiogenicShockExist" Type="nchar" Nullable="true" MaxLength="10" />
+    <Property Name="ArrhythmiaExist" Type="nchar" Nullable="true" MaxLength="10" />
+    <Property Name="VPB" Type="bit" Nullable="true" />
+    <Property Name="VT" Type="bit" Nullable="true" />
+    <Property Name="VF" Type="bit" Nullable="true" />
+    <Property Name="Ats" Type="bit" Nullable="true" />
+    <Property Name="AFS1" Type="bit" Nullable="true" />
+    <Property Name="AF" Type="bit" Nullable="true" />
+    <Property Name="APB" Type="bit" Nullable="true" />
+    <Property Name="AVBI" Type="bit" Nullable="true" />
+    <Property Name="AVBII" Type="bit" Nullable="true" />
+    <Property Name="AVBIII" Type="bit" Nullable="true" />
+    <Property Name="AFS" Type="bit" Nullable="true" />
+    <Property Name="RBBB" Type="bit" Nullable="true" />
+    <Property Name="AVBOther" Type="bit" Nullable="true" />
+    <Property Name="MitralValveProlapseOrBreakExist" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="PerforationofVentricularSeptumConfirm" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="StrokeExist" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="OGLBExist" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="KilipLevel" Type="nvarchar" Nullable="true" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Report_JieRuZhiLiao">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="D2BTime" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="Succeed" Type="nvarchar" Nullable="true" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Report_JingMaiRongShuan">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Urokinase" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="UrokinaseOther" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="Alteplase" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="Reteplase" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="Pass" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="Anaphylaxis" Type="bit" Nullable="true" />
+    <Property Name="Bleed" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="ReperfusionArrhythmia" Type="bit" Nullable="true" />
+    <Property Name="TreatTime" Type="nvarchar" Nullable="true" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Report_JiWangBingShi">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="MIConfirm" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="HypertensionConfirm" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="HypertensionLasted" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="HypertensionTreatedState" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="GlycuresisConfirm" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="GlycuresisLasted" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="GlycuresisTreatedState" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="CerebralHemorrhageConfirm" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="CerebralHemorrhageTreateLasted" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="PeripheralVascularConfirm" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="AnemiaOrOtherConfirm" Type="nvarchar" Nullable="true" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Report_LinChuangZhuanGui">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="CPR" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="CPRTimes" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="TreatResult" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="DeadTime" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="DeadForVentriclarArrhythmias" Type="bit" Nullable="true" />
+    <Property Name="DeadForCardiacArrest" Type="bit" Nullable="true" />
+    <Property Name="DeadForCardiogenicShock" Type="bit" Nullable="true" />
+    <Property Name="DeadForACVD" Type="bit" Nullable="true" />
+    <Property Name="DeadForGIH" Type="bit" Nullable="true" />
+    <Property Name="DeadForOther" Type="bit" Nullable="true" />
+    <Property Name="TransUpHospitalConfirm" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="TransUpHospitalLever" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="TransUpHospitalDate" Type="datetime" Nullable="true" />
+    <Property Name="IntroduceEmergencyCoronaryConfirm" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="IntroduceEmergencyCoronaryDate" Type="datetime" Nullable="true" />
+    <Property Name="AgreeEmergencyCoronaryConfirm" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="ThrombolyticForDisagree" Type="bit" Nullable="true" />
+    <Property Name="ThrombolyticForEconomicReason" Type="bit" Nullable="true" />
+    <Property Name="ThrombolyticForDream" Type="bit" Nullable="true" />
+    <Property Name="ThrombolyticForTimeLimited" Type="bit" Nullable="true" />
+    <Property Name="ConnectUpHospitalConfirm" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="UpHospitalLaboratory" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="IntroduceThrombolysisSuggestionConfirm" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="IntroduceThrombolysisSuggestionDate" Type="datetime" Nullable="true" />
+    <Property Name="ThrombolysisTreateConfirm" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="EmergencyCoronaryTreateConfirm" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="CheckOutDate" Type="datetime" Nullable="true" />
+  </EntityType>
+  <EntityType Name="Report_Summation">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ReportBinLiBanSuiZhuangTaiID" Type="uniqueidentifier" Nullable="true" />
+    <Property Name="ReportChunBuZhengDuanID" Type="uniqueidentifier" Nullable="true" />
+    <Property Name="ReportFuZhuYongYaoID" Type="uniqueidentifier" Nullable="true" />
+    <Property Name="ReportJinMaiRongShuanID" Type="uniqueidentifier" Nullable="true" />
+    <Property Name="ReportJiWangBingShiID" Type="uniqueidentifier" Nullable="true" />
+    <Property Name="ReportLinChuangZhengZhuangID" Type="uniqueidentifier" Nullable="true" />
+    <Property Name="ReportTreatResultID" Type="uniqueidentifier" Nullable="true" />
+    <Property Name="JieRuZhiLiaoID" Type="uniqueidentifier" Nullable="true" />
+    <Property Name="WeiJinXingJiZhenGuanMaiJieRuZhiLiaoID" Type="uniqueidentifier" Nullable="true" />
+    <Property Name="ZhuSuAndXianBingShiID" Type="uniqueidentifier" Nullable="true" />
+    <Property Name="LinChuangZhuanGuiID" Type="uniqueidentifier" Nullable="true" />
+    <Property Name="WeiJinXingJingMaiRongSuanLiYouID" Type="uniqueidentifier" Nullable="true" />
+    <Property Name="PersonID" Type="uniqueidentifier" Nullable="true" />
+    <Property Name="DiseaseTimeState" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="DiseaseTime" Type="datetime" Nullable="true" />
+    <Property Name="DiseaseHour" Type="int" Nullable="true" />
+    <Property Name="TreatDate" Type="datetime" Nullable="true" />
+    <Property Name="TrafficWay" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="DiseaseDescriber" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="Reliability" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="UserID" Type="int" Nullable="false" />
+    <Property Name="HospitalID" Type="int" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
+    <Property Name="LastUpdateDate" Type="datetime" Nullable="false" />
+    <Property Name="IsSubmit" Type="bit" Nullable="true" />
+  </EntityType>
+  <EntityType Name="Report_WeiJinXingJingMaiRongSuanLiYou">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="UnThrombolysisReasonForUnSute" Type="bit" Nullable="true" />
+    <Property Name="UnThrombolysisReasonForPatientDisagree" Type="bit" Nullable="true" />
+    <Property Name="UnThrombolyticForEconomicReason" Type="bit" Nullable="true" />
+    <Property Name="UnThrombolyticForHospitalCanNotDid" Type="bit" Nullable="true" />
+    <Property Name="UnThrombolyticForContraindication" Type="bit" Nullable="true" />
+  </EntityType>
+  <EntityType Name="Report_WeiJinXingJiZhenGuanMaiJieRuZhiLiao">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="UnEmergencyCoronaryTreateForHospitalUnable" Type="bit" Nullable="true" />
+    <Property Name="UnEmergencyCoronaryTreateForOverTreateTime" Type="bit" Nullable="true" />
+    <Property Name="UnEmergencyCoronaryTreateForPatientDisagree" Type="bit" Nullable="true" />
+    <Property Name="UnEmergencyCoronaryTreateForEmergency" Type="bit" Nullable="true" />
+    <Property Name="UnEmergencyCoronaryTreateForContraindication" Type="bit" Nullable="true" />
+  </EntityType>
+  <EntityType Name="Report_ZhuSuAndXianBingShi">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="ChestPainExist" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="IncentiveExist" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="PositionExist" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="RadiationPainExist" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="ConcomitantSymptomExist" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="IncentiveTypePhysical" Type="bit" Nullable="true" />
+    <Property Name="IncentiveTypeExcite" Type="bit" Nullable="true" />
+    <Property Name="IncentiveTypeEatMuch" Type="bit" Nullable="true" />
+    <Property Name="IncentiveTypeDefecate" Type="bit" Nullable="true" />
+    <Property Name="IncentiveTypeColdStimulation" Type="bit" Nullable="true" />
+    <Property Name="IncentiveTypeOther" Type="bit" Nullable="true" />
+    <Property Name="PositionTypePrecordium" Type="bit" Nullable="true" />
+    <Property Name="PositionTypeChest" Type="bit" Nullable="true" />
+    <Property Name="PositionTypeBelowXiphoid" Type="bit" Nullable="true" />
+    <Property Name="PositionTypeShoulder" Type="bit" Nullable="true" />
+    <Property Name="PositionTypeOther" Type="bit" Nullable="true" />
+    <Property Name="PropertiesTypeChestPain" Type="bit" Nullable="true" />
+    <Property Name="PropertiesTypePharyngeal" Type="bit" Nullable="true" />
+    <Property Name="PropertiesTypeChestCut" Type="bit" Nullable="true" />
+    <Property Name="PropertiesTypeOther" Type="bit" Nullable="true" />
+    <Property Name="RadiationPainTypeLeftShoulder" Type="bit" Nullable="true" />
+    <Property Name="RadiationPainTypePharyngeal" Type="bit" Nullable="true" />
+    <Property Name="RadiationPainTypeEpigastralgia" Type="bit" Nullable="true" />
+    <Property Name="RadiationPainTypeOther" Type="bit" Nullable="true" />
+    <Property Name="ConcomitantSymptomTypePalpitation" Type="bit" Nullable="true" />
+    <Property Name="ConcomitantSymptomTypeTiredBreath" Type="bit" Nullable="true" />
+    <Property Name="ConcomitantSymptomTypeAmaurosis" Type="bit" Nullable="true" />
+    <Property Name="ConcomitantSymptomTypeSyncope" Type="bit" Nullable="true" />
+    <Property Name="ConcomitantSymptomTypeOther" Type="bit" Nullable="true" />
+    <Property Name="RelievingFactorsRest" Type="bit" Nullable="true" />
+    <Property Name="RelievingFactorsNitrate" Type="bit" Nullable="true" />
+    <Property Name="RelievingFactorsBlackCa" Type="bit" Nullable="true" />
+    <Property Name="RelievingFactorsCaRivalry" Type="bit" Nullable="true" />
+    <Property Name="RelievingFactorsOther" Type="bit" Nullable="true" />
+    <Property Name="RelievingFactorsLastRespond" Type="bit" Nullable="true" />
+  </EntityType>
+  <EntityType Name="Roles">
+    <Key>
+      <PropertyRef Name="RoleID" />
+    </Key>
+    <Property Name="RoleID" Type="int" Nullable="false" />
+    <Property Name="RoleName" Type="nvarchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserName" Type="varchar" Nullable="false" MaxLength="16" />
+    <Property Name="Password" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="PersonID" Type="uniqueidentifier" Nullable="true" />
+    <Property Name="HospitalID" Type="int" Nullable="false" />
+    <Property Name="RoleID" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_ReportSummation_Hospital">
+    <End Role="Hospital" Type="MedicalBaseModel.Store.Hospitals" Multiplicity="1" />
+    <End Role="Report_Summation" Type="MedicalBaseModel.Store.Report_Summation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Hospital">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Report_Summation">
+        <PropertyRef Name="HospitalID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_User_Hospital">
+    <End Role="Hospital" Type="MedicalBaseModel.Store.Hospitals" Multiplicity="1" />
+    <End Role="User" Type="MedicalBaseModel.Store.Users" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Hospital">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="User">
+        <PropertyRef Name="HospitalID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ReportSummation_Person">
+    <End Role="Person" Type="MedicalBaseModel.Store.People" Multiplicity="0..1" />
+    <End Role="Report_Summation" Type="MedicalBaseModel.Store.Report_Summation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Person">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Report_Summation">
+        <PropertyRef Name="PersonID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_User_Person">
+    <End Role="Person" Type="MedicalBaseModel.Store.People" Multiplicity="0..1" />
+    <End Role="User" Type="MedicalBaseModel.Store.Users" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Person">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="User">
+        <PropertyRef Name="PersonID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ReportSummation_ReportChuBuZhengDuan">
+    <End Role="Report_ChuBuZhenDuan" Type="MedicalBaseModel.Store.Report_ChuBuZhenDuan" Multiplicity="0..1" />
+    <End Role="Report_Summation" Type="MedicalBaseModel.Store.Report_Summation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Report_ChuBuZhenDuan">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Report_Summation">
+        <PropertyRef Name="ReportChunBuZhengDuanID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ReportSummation_ReportFuZhuYongYao">
+    <End Role="Report_FuZhuYongYao" Type="MedicalBaseModel.Store.Report_FuZhuYongYao" Multiplicity="0..1" />
+    <End Role="Report_Summation" Type="MedicalBaseModel.Store.Report_Summation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Report_FuZhuYongYao">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Report_Summation">
+        <PropertyRef Name="ReportFuZhuYongYaoID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ReportSummation_ReportBinLiBanSuiZhuangTai">
+    <End Role="Report_JiBingBanSuiZhuangTai" Type="MedicalBaseModel.Store.Report_JiBingBanSuiZhuangTai" Multiplicity="0..1" />
+    <End Role="Report_Summation" Type="MedicalBaseModel.Store.Report_Summation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Report_JiBingBanSuiZhuangTai">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Report_Summation">
+        <PropertyRef Name="ReportBinLiBanSuiZhuangTaiID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Report_Summation_JieRuZhiLiao">
+    <End Role="Report_JieRuZhiLiao" Type="MedicalBaseModel.Store.Report_JieRuZhiLiao" Multiplicity="0..1" />
+    <End Role="Report_Summation" Type="MedicalBaseModel.Store.Report_Summation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Report_JieRuZhiLiao">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Report_Summation">
+        <PropertyRef Name="JieRuZhiLiaoID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ReportSummation_ReportJinMaiRongShuan">
+    <End Role="Report_JingMaiRongShuan" Type="MedicalBaseModel.Store.Report_JingMaiRongShuan" Multiplicity="0..1" />
+    <End Role="Report_Summation" Type="MedicalBaseModel.Store.Report_Summation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Report_JingMaiRongShuan">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Report_Summation">
+        <PropertyRef Name="ReportJinMaiRongShuanID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ReportSummation_ReportJiWangBingShi">
+    <End Role="Report_JiWangBingShi" Type="MedicalBaseModel.Store.Report_JiWangBingShi" Multiplicity="0..1" />
+    <End Role="Report_Summation" Type="MedicalBaseModel.Store.Report_Summation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Report_JiWangBingShi">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Report_Summation">
+        <PropertyRef Name="ReportJiWangBingShiID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Report_Summation_LinChuangZhuanGui">
+    <End Role="Report_LinChuangZhuanGui" Type="MedicalBaseModel.Store.Report_LinChuangZhuanGui" Multiplicity="0..1" />
+    <End Role="Report_Summation" Type="MedicalBaseModel.Store.Report_Summation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Report_LinChuangZhuanGui">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Report_Summation">
+        <PropertyRef Name="LinChuangZhuanGuiID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Report_Summation_Report_Summation">
+    <End Role="Report_Summation" Type="MedicalBaseModel.Store.Report_Summation" Multiplicity="1" />
+    <End Role="Report_Summation1" Type="MedicalBaseModel.Store.Report_Summation" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Report_Summation">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Report_Summation1">
+        <PropertyRef Name="ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Report_Summation_WeiJinXingJingMaiRongSuanLiYou">
+    <End Role="Report_WeiJinXingJingMaiRongSuanLiYou" Type="MedicalBaseModel.Store.Report_WeiJinXingJingMaiRongSuanLiYou" Multiplicity="0..1" />
+    <End Role="Report_Summation" Type="MedicalBaseModel.Store.Report_Summation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Report_WeiJinXingJingMaiRongSuanLiYou">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Report_Summation">
+        <PropertyRef Name="WeiJinXingJingMaiRongSuanLiYouID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Report_Summation_WeiJinXingZhenDuan">
+    <End Role="Report_WeiJinXingJiZhenGuanMaiJieRuZhiLiao" Type="MedicalBaseModel.Store.Report_WeiJinXingJiZhenGuanMaiJieRuZhiLiao" Multiplicity="0..1" />
+    <End Role="Report_Summation" Type="MedicalBaseModel.Store.Report_Summation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Report_WeiJinXingJiZhenGuanMaiJieRuZhiLiao">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Report_Summation">
+        <PropertyRef Name="WeiJinXingJiZhenGuanMaiJieRuZhiLiaoID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Report_Summation_ZhuSuAndXianBingShi">
+    <End Role="Report_ZhuSuAndXianBingShi" Type="MedicalBaseModel.Store.Report_ZhuSuAndXianBingShi" Multiplicity="0..1" />
+    <End Role="Report_Summation" Type="MedicalBaseModel.Store.Report_Summation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Report_ZhuSuAndXianBingShi">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Report_Summation">
+        <PropertyRef Name="ZhuSuAndXianBingShiID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ReportSummation_ReportLinChuangZhengZhuang">
+    <End Role="Report_ZhuSuAndXianBingShi" Type="MedicalBaseModel.Store.Report_ZhuSuAndXianBingShi" Multiplicity="0..1" />
+    <End Role="Report_Summation" Type="MedicalBaseModel.Store.Report_Summation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Report_ZhuSuAndXianBingShi">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Report_Summation">
+        <PropertyRef Name="ReportLinChuangZhengZhuangID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ReportSummation_User">
+    <End Role="User" Type="MedicalBaseModel.Store.Users" Multiplicity="1" />
+    <End Role="Report_Summation" Type="MedicalBaseModel.Store.Report_Summation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Report_Summation">
+        <PropertyRef Name="UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_User_Role">
+    <End Role="Role" Type="MedicalBaseModel.Store.Roles" Multiplicity="1" />
+    <End Role="User" Type="MedicalBaseModel.Store.Users" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Role">
+        <PropertyRef Name="RoleID" />
+      </Principal>
+      <Dependent Role="User">
+        <PropertyRef Name="RoleID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="MedicalBaseModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="MedicalBaseEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Hospitals" EntityType="MedicalBaseModel.Hospital" />
+          <EntitySet Name="Log_Login" EntityType="MedicalBaseModel.Log_Login" />
+          <EntitySet Name="People" EntityType="MedicalBaseModel.Person" />
+          <EntitySet Name="Regions" EntityType="MedicalBaseModel.Region" />
+          <EntitySet Name="Report_ChuBuZhenDuan" EntityType="MedicalBaseModel.Report_ChuBuZhenDuan" />
+          <EntitySet Name="Report_FuZhuYongYao" EntityType="MedicalBaseModel.Report_FuZhuYongYao" />
+          <EntitySet Name="Report_JiBingBanSuiZhuangTai" EntityType="MedicalBaseModel.Report_JiBingBanSuiZhuangTai" />
+          <EntitySet Name="Report_JieRuZhiLiao" EntityType="MedicalBaseModel.Report_JieRuZhiLiao" />
+          <EntitySet Name="Report_JingMaiRongShuan" EntityType="MedicalBaseModel.Report_JingMaiRongShuan" />
+          <EntitySet Name="Report_JiWangBingShi" EntityType="MedicalBaseModel.Report_JiWangBingShi" />
+          <EntitySet Name="Report_LinChuangZhuanGui" EntityType="MedicalBaseModel.Report_LinChuangZhuanGui" />
+          <EntitySet Name="Report_Summation" EntityType="MedicalBaseModel.Report_Summation" />
+          <EntitySet Name="Report_WeiJinXingJingMaiRongSuanLiYou" EntityType="MedicalBaseModel.Report_WeiJinXingJingMaiRongSuanLiYou" />
+          <EntitySet Name="Report_WeiJinXingJiZhenGuanMaiJieRuZhiLiao" EntityType="MedicalBaseModel.Report_WeiJinXingJiZhenGuanMaiJieRuZhiLiao" />
+          <EntitySet Name="Report_ZhuSuAndXianBingShi" EntityType="MedicalBaseModel.Report_ZhuSuAndXianBingShi" />
+          <EntitySet Name="Roles" EntityType="MedicalBaseModel.Role" />
+          <EntitySet Name="Users" EntityType="MedicalBaseModel.User" />
+          <AssociationSet Name="FK_ReportSummation_Hospital" Association="MedicalBaseModel.FK_ReportSummation_Hospital">
+            <End Role="Hospital" EntitySet="Hospitals" />
+            <End Role="Report_Summation" EntitySet="Report_Summation" />
+          </AssociationSet>
+          <AssociationSet Name="FK_User_Hospital" Association="MedicalBaseModel.FK_User_Hospital">
+            <End Role="Hospital" EntitySet="Hospitals" />
+            <End Role="User" EntitySet="Users" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ReportSummation_Person" Association="MedicalBaseModel.FK_ReportSummation_Person">
+            <End Role="Person" EntitySet="People" />
+            <End Role="Report_Summation" EntitySet="Report_Summation" />
+          </AssociationSet>
+          <AssociationSet Name="FK_User_Person" Association="MedicalBaseModel.FK_User_Person">
+            <End Role="Person" EntitySet="People" />
+            <End Role="User" EntitySet="Users" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ReportSummation_ReportChuBuZhengDuan" Association="MedicalBaseModel.FK_ReportSummation_ReportChuBuZhengDuan">
+            <End Role="Report_ChuBuZhenDuan" EntitySet="Report_ChuBuZhenDuan" />
+            <End Role="Report_Summation" EntitySet="Report_Summation" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ReportSummation_ReportFuZhuYongYao" Association="MedicalBaseModel.FK_ReportSummation_ReportFuZhuYongYao">
+            <End Role="Report_FuZhuYongYao" EntitySet="Report_FuZhuYongYao" />
+            <End Role="Report_Summation" EntitySet="Report_Summation" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ReportSummation_ReportBinLiBanSuiZhuangTai" Association="MedicalBaseModel.FK_ReportSummation_ReportBinLiBanSuiZhuangTai">
+            <End Role="Report_JiBingBanSuiZhuangTai" EntitySet="Report_JiBingBanSuiZhuangTai" />
+            <End Role="Report_Summation" EntitySet="Report_Summation" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Report_Summation_JieRuZhiLiao" Association="MedicalBaseModel.FK_Report_Summation_JieRuZhiLiao">
+            <End Role="Report_JieRuZhiLiao" EntitySet="Report_JieRuZhiLiao" />
+            <End Role="Report_Summation" EntitySet="Report_Summation" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ReportSummation_ReportJinMaiRongShuan" Association="MedicalBaseModel.FK_ReportSummation_ReportJinMaiRongShuan">
+            <End Role="Report_JingMaiRongShuan" EntitySet="Report_JingMaiRongShuan" />
+            <End Role="Report_Summation" EntitySet="Report_Summation" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ReportSummation_ReportJiWangBingShi" Association="MedicalBaseModel.FK_ReportSummation_ReportJiWangBingShi">
+            <End Role="Report_JiWangBingShi" EntitySet="Report_JiWangBingShi" />
+            <End Role="Report_Summation" EntitySet="Report_Summation" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Report_Summation_LinChuangZhuanGui" Association="MedicalBaseModel.FK_Report_Summation_LinChuangZhuanGui">
+            <End Role="Report_LinChuangZhuanGui" EntitySet="Report_LinChuangZhuanGui" />
+            <End Role="Report_Summation" EntitySet="Report_Summation" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Report_Summation_Report_Summation" Association="MedicalBaseModel.FK_Report_Summation_Report_Summation">
+            <End Role="Report_Summation" EntitySet="Report_Summation" />
+            <End Role="Report_Summation1" EntitySet="Report_Summation" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Report_Summation_WeiJinXingJingMaiRongSuanLiYou" Association="MedicalBaseModel.FK_Report_Summation_WeiJinXingJingMaiRongSuanLiYou">
+            <End Role="Report_WeiJinXingJingMaiRongSuanLiYou" EntitySet="Report_WeiJinXingJingMaiRongSuanLiYou" />
+            <End Role="Report_Summation" EntitySet="Report_Summation" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Report_Summation_WeiJinXingZhenDuan" Association="MedicalBaseModel.FK_Report_Summation_WeiJinXingZhenDuan">
+            <End Role="Report_WeiJinXingJiZhenGuanMaiJieRuZhiLiao" EntitySet="Report_WeiJinXingJiZhenGuanMaiJieRuZhiLiao" />
+            <End Role="Report_Summation" EntitySet="Report_Summation" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Report_Summation_ZhuSuAndXianBingShi" Association="MedicalBaseModel.FK_Report_Summation_ZhuSuAndXianBingShi">
+            <End Role="Report_ZhuSuAndXianBingShi" EntitySet="Report_ZhuSuAndXianBingShi" />
+            <End Role="Report_Summation" EntitySet="Report_Summation" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ReportSummation_ReportLinChuangZhengZhuang" Association="MedicalBaseModel.FK_ReportSummation_ReportLinChuangZhengZhuang">
+            <End Role="Report_ZhuSuAndXianBingShi" EntitySet="Report_ZhuSuAndXianBingShi" />
+            <End Role="Report_Summation" EntitySet="Report_Summation" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ReportSummation_User" Association="MedicalBaseModel.FK_ReportSummation_User">
+            <End Role="User" EntitySet="Users" />
+            <End Role="Report_Summation" EntitySet="Report_Summation" />
+          </AssociationSet>
+          <AssociationSet Name="FK_User_Role" Association="MedicalBaseModel.FK_User_Role">
+            <End Role="Role" EntitySet="Roles" />
+            <End Role="User" EntitySet="Users" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Hospital">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="HospitalName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Description" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="HospitalLevel" />
+          <Property Type="Int32" Name="RegionID" />
+          <NavigationProperty Name="Report_Summation" Relationship="MedicalBaseModel.FK_ReportSummation_Hospital" FromRole="Hospital" ToRole="Report_Summation" />
+          <NavigationProperty Name="Users" Relationship="MedicalBaseModel.FK_User_Hospital" FromRole="Hospital" ToRole="User" />
+        </EntityType>
+        <EntityType Name="Log_Login">
+          <Key>
+            <PropertyRef Name="LogID" />
+          </Key>
+          <Property Type="Int32" Name="LogID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="UserID" Nullable="false" />
+          <Property Type="DateTime" Name="LoginDate" Nullable="false" />
+          <Property Type="String" Name="Detail" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="BroswerType" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="HospitalID" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Person">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Guid" Name="ID" Nullable="false" />
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Sex" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Nationality" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="Birthday" />
+          <Property Type="String" Name="IdentityNumber" MaxLength="19" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CellPhone" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Type="String" Name="Mobile" MaxLength="11" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Address" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Occupation" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="CreateDate" Nullable="false" />
+          <Property Type="DateTime" Name="UpdatedDate" Nullable="false" />
+          <NavigationProperty Name="Report_Summation" Relationship="MedicalBaseModel.FK_ReportSummation_Person" FromRole="Person" ToRole="Report_Summation" />
+          <NavigationProperty Name="Users" Relationship="MedicalBaseModel.FK_User_Person" FromRole="Person" ToRole="User" />
+        </EntityType>
+        <EntityType Name="Region">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="RegionName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="RegionShortName" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Description" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Report_ChuBuZhenDuan">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Guid" Name="ID" Nullable="false" />
+          <Property Type="String" Name="BloodPressure" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="DiastolicPressure" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="FirstTimeXinDianTu" />
+          <Property Type="DateTime" Name="FirstTimeBlood" />
+          <Property Type="DateTime" Name="FisrtTimeReturn" />
+          <Property Type="String" Name="CNTResult" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="RegularCNT" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="AcuteST" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Boolean" Name="Anteroseptal" />
+          <Property Type="Boolean" Name="Antetheca" />
+          <Property Type="Boolean" Name="Extensive" />
+          <Property Type="Boolean" Name="HeartWall" />
+          <Property Type="Boolean" Name="HighWall" />
+          <Property Type="Boolean" Name="InteriorWall" />
+          <Property Type="Boolean" Name="BackWall" />
+          <Property Type="Boolean" Name="RightVentricular" />
+          <Property Type="String" Name="PrtreatOther" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="FirstTimeHeartRate" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="FirstTimeImage" />
+          <Property Type="Boolean" Name="IntroduceThrombolysisSuggestion" />
+          <NavigationProperty Name="Report_Summation" Relationship="MedicalBaseModel.FK_ReportSummation_ReportChuBuZhengDuan" FromRole="Report_ChuBuZhenDuan" ToRole="Report_Summation" />
+        </EntityType>
+        <EntityType Name="Report_FuZhuYongYao">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Guid" Name="ID" Nullable="false" />
+          <Property Type="String" Name="AspirinDosage" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ClopidogrelDosage" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="LoadStatinUsed" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Boolean" Name="Simvastatin" />
+          <Property Type="Boolean" Name="Pravastatin" />
+          <Property Type="Boolean" Name="Fluvastatin" />
+          <Property Type="Boolean" Name="Atorvastatin" />
+          <Property Type="Boolean" Name="Rosuvastatin" />
+          <Property Type="Boolean" Name="Pitavastatin" />
+          <Property Type="String" Name="ACEIConfirm" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="BRBConfrim" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Report_Summation" Relationship="MedicalBaseModel.FK_ReportSummation_ReportFuZhuYongYao" FromRole="Report_FuZhuYongYao" ToRole="Report_Summation" />
+        </EntityType>
+        <EntityType Name="Report_JiBingBanSuiZhuangTai">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Guid" Name="ID" Nullable="false" />
+          <Property Type="String" Name="HypotensionExist" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Type="String" Name="CardiogenicShockExist" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Type="String" Name="ArrhythmiaExist" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Type="Boolean" Name="VPB" />
+          <Property Type="Boolean" Name="VT" />
+          <Property Type="Boolean" Name="VF" />
+          <Property Type="Boolean" Name="Ats" />
+          <Property Type="Boolean" Name="AFS1" />
+          <Property Type="Boolean" Name="AF" />
+          <Property Type="Boolean" Name="APB" />
+          <Property Type="Boolean" Name="AVBI" />
+          <Property Type="Boolean" Name="AVBII" />
+          <Property Type="Boolean" Name="AVBIII" />
+          <Property Type="Boolean" Name="AFS" />
+          <Property Type="Boolean" Name="RBBB" />
+          <Property Type="Boolean" Name="AVBOther" />
+          <Property Type="String" Name="MitralValveProlapseOrBreakExist" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PerforationofVentricularSeptumConfirm" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="StrokeExist" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="OGLBExist" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="KilipLevel" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Report_Summation" Relationship="MedicalBaseModel.FK_ReportSummation_ReportBinLiBanSuiZhuangTai" FromRole="Report_JiBingBanSuiZhuangTai" ToRole="Report_Summation" />
+        </EntityType>
+        <EntityType Name="Report_JieRuZhiLiao">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Guid" Name="ID" Nullable="false" />
+          <Property Type="String" Name="D2BTime" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Succeed" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Report_Summation" Relationship="MedicalBaseModel.FK_Report_Summation_JieRuZhiLiao" FromRole="Report_JieRuZhiLiao" ToRole="Report_Summation" />
+        </EntityType>
+        <EntityType Name="Report_JingMaiRongShuan">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Guid" Name="ID" Nullable="false" />
+          <Property Type="String" Name="Urokinase" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="UrokinaseOther" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Alteplase" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Reteplase" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Pass" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Boolean" Name="Anaphylaxis" />
+          <Property Type="String" Name="Bleed" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Boolean" Name="ReperfusionArrhythmia" />
+          <Property Type="String" Name="TreatTime" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Report_Summation" Relationship="MedicalBaseModel.FK_ReportSummation_ReportJinMaiRongShuan" FromRole="Report_JingMaiRongShuan" ToRole="Report_Summation" />
+        </EntityType>
+        <EntityType Name="Report_JiWangBingShi">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Guid" Name="ID" Nullable="false" />
+          <Property Type="String" Name="MIConfirm" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="HypertensionConfirm" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="HypertensionLasted" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="HypertensionTreatedState" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="GlycuresisConfirm" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="GlycuresisLasted" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="GlycuresisTreatedState" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CerebralHemorrhageConfirm" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CerebralHemorrhageTreateLasted" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PeripheralVascularConfirm" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="AnemiaOrOtherConfirm" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Report_Summation" Relationship="MedicalBaseModel.FK_ReportSummation_ReportJiWangBingShi" FromRole="Report_JiWangBingShi" ToRole="Report_Summation" />
+        </EntityType>
+        <EntityType Name="Report_LinChuangZhuanGui">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Guid" Name="ID" Nullable="false" />
+          <Property Type="String" Name="CPR" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CPRTimes" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="TreatResult" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="DeadTime" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Boolean" Name="DeadForVentriclarArrhythmias" />
+          <Property Type="Boolean" Name="DeadForCardiacArrest" />
+          <Property Type="Boolean" Name="DeadForCardiogenicShock" />
+          <Property Type="Boolean" Name="DeadForACVD" />
+          <Property Type="Boolean" Name="DeadForGIH" />
+          <Property Type="Boolean" Name="DeadForOther" />
+          <Property Type="String" Name="TransUpHospitalConfirm" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="TransUpHospitalLever" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="TransUpHospitalDate" />
+          <Property Type="String" Name="IntroduceEmergencyCoronaryConfirm" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="IntroduceEmergencyCoronaryDate" />
+          <Property Type="String" Name="AgreeEmergencyCoronaryConfirm" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Boolean" Name="ThrombolyticForDisagree" />
+          <Property Type="Boolean" Name="ThrombolyticForEconomicReason" />
+          <Property Type="Boolean" Name="ThrombolyticForDream" />
+          <Property Type="Boolean" Name="ThrombolyticForTimeLimited" />
+          <Property Type="String" Name="ConnectUpHospitalConfirm" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="UpHospitalLaboratory" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="IntroduceThrombolysisSuggestionConfirm" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="IntroduceThrombolysisSuggestionDate" />
+          <Property Type="String" Name="ThrombolysisTreateConfirm" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="EmergencyCoronaryTreateConfirm" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="CheckOutDate" />
+          <NavigationProperty Name="Report_Summation" Relationship="MedicalBaseModel.FK_Report_Summation_LinChuangZhuanGui" FromRole="Report_LinChuangZhuanGui" ToRole="Report_Summation" />
+        </EntityType>
+        <EntityType Name="Report_Summation">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Guid" Name="ReportBinLiBanSuiZhuangTaiID" />
+          <Property Type="Guid" Name="ReportChunBuZhengDuanID" />
+          <Property Type="Guid" Name="ReportFuZhuYongYaoID" />
+          <Property Type="Guid" Name="ReportJinMaiRongShuanID" />
+          <Property Type="Guid" Name="ReportJiWangBingShiID" />
+          <Property Type="Guid" Name="ReportLinChuangZhengZhuangID" />
+          <Property Type="Guid" Name="ReportTreatResultID" />
+          <Property Type="Guid" Name="JieRuZhiLiaoID" />
+          <Property Type="Guid" Name="WeiJinXingJiZhenGuanMaiJieRuZhiLiaoID" />
+          <Property Type="Guid" Name="ZhuSuAndXianBingShiID" />
+          <Property Type="Guid" Name="LinChuangZhuanGuiID" />
+          <Property Type="Guid" Name="WeiJinXingJingMaiRongSuanLiYouID" />
+          <Property Type="Guid" Name="PersonID" />
+          <Property Type="String" Name="DiseaseTimeState" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="DiseaseTime" />
+          <Property Type="Int32" Name="DiseaseHour" />
+          <Property Type="DateTime" Name="TreatDate" />
+          <Property Type="String" Name="TrafficWay" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="DiseaseDescriber" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Reliability" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="UserID" Nullable="false" />
+          <Property Type="Int32" Name="HospitalID" Nullable="false" />
+          <Property Type="DateTime" Name="CreateDate" Nullable="false" />
+          <Property Type="DateTime" Name="LastUpdateDate" Nullable="false" />
+          <NavigationProperty Name="Hospital" Relationship="MedicalBaseModel.FK_ReportSummation_Hospital" FromRole="Report_Summation" ToRole="Hospital" />
+          <NavigationProperty Name="Person" Relationship="MedicalBaseModel.FK_ReportSummation_Person" FromRole="Report_Summation" ToRole="Person" />
+          <NavigationProperty Name="Report_ChuBuZhenDuan" Relationship="MedicalBaseModel.FK_ReportSummation_ReportChuBuZhengDuan" FromRole="Report_Summation" ToRole="Report_ChuBuZhenDuan" />
+          <NavigationProperty Name="Report_FuZhuYongYao" Relationship="MedicalBaseModel.FK_ReportSummation_ReportFuZhuYongYao" FromRole="Report_Summation" ToRole="Report_FuZhuYongYao" />
+          <NavigationProperty Name="Report_JiBingBanSuiZhuangTai" Relationship="MedicalBaseModel.FK_ReportSummation_ReportBinLiBanSuiZhuangTai" FromRole="Report_Summation" ToRole="Report_JiBingBanSuiZhuangTai" />
+          <NavigationProperty Name="Report_JieRuZhiLiao" Relationship="MedicalBaseModel.FK_Report_Summation_JieRuZhiLiao" FromRole="Report_Summation" ToRole="Report_JieRuZhiLiao" />
+          <NavigationProperty Name="Report_JingMaiRongShuan" Relationship="MedicalBaseModel.FK_ReportSummation_ReportJinMaiRongShuan" FromRole="Report_Summation" ToRole="Report_JingMaiRongShuan" />
+          <NavigationProperty Name="Report_JiWangBingShi" Relationship="MedicalBaseModel.FK_ReportSummation_ReportJiWangBingShi" FromRole="Report_Summation" ToRole="Report_JiWangBingShi" />
+          <NavigationProperty Name="Report_LinChuangZhuanGui" Relationship="MedicalBaseModel.FK_Report_Summation_LinChuangZhuanGui" FromRole="Report_Summation" ToRole="Report_LinChuangZhuanGui" />
+          <NavigationProperty Name="Report_Summation1" Relationship="MedicalBaseModel.FK_Report_Summation_Report_Summation" FromRole="Report_Summation" ToRole="Report_Summation1" />
+          <NavigationProperty Name="Report_Summation2" Relationship="MedicalBaseModel.FK_Report_Summation_Report_Summation" FromRole="Report_Summation1" ToRole="Report_Summation" />
+          <NavigationProperty Name="Report_WeiJinXingJingMaiRongSuanLiYou" Relationship="MedicalBaseModel.FK_Report_Summation_WeiJinXingJingMaiRongSuanLiYou" FromRole="Report_Summation" ToRole="Report_WeiJinXingJingMaiRongSuanLiYou" />
+          <NavigationProperty Name="Report_WeiJinXingJiZhenGuanMaiJieRuZhiLiao" Relationship="MedicalBaseModel.FK_Report_Summation_WeiJinXingZhenDuan" FromRole="Report_Summation" ToRole="Report_WeiJinXingJiZhenGuanMaiJieRuZhiLiao" />
+          <NavigationProperty Name="Report_ZhuSuAndXianBingShi" Relationship="MedicalBaseModel.FK_Report_Summation_ZhuSuAndXianBingShi" FromRole="Report_Summation" ToRole="Report_ZhuSuAndXianBingShi" />
+          <NavigationProperty Name="Report_ZhuSuAndXianBingShi1" Relationship="MedicalBaseModel.FK_ReportSummation_ReportLinChuangZhengZhuang" FromRole="Report_Summation" ToRole="Report_ZhuSuAndXianBingShi" />
+          <NavigationProperty Name="User" Relationship="MedicalBaseModel.FK_ReportSummation_User" FromRole="Report_Summation" ToRole="User" />
+          <Property Type="Boolean" Name="IsSubmit" />
+        </EntityType>
+        <EntityType Name="Report_WeiJinXingJingMaiRongSuanLiYou">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Guid" Name="ID" Nullable="false" />
+          <Property Type="Boolean" Name="UnThrombolysisReasonForUnSute" />
+          <Property Type="Boolean" Name="UnThrombolysisReasonForPatientDisagree" />
+          <Property Type="Boolean" Name="UnThrombolyticForEconomicReason" />
+          <Property Type="Boolean" Name="UnThrombolyticForHospitalCanNotDid" />
+          <Property Type="Boolean" Name="UnThrombolyticForContraindication" />
+          <NavigationProperty Name="Report_Summation" Relationship="MedicalBaseModel.FK_Report_Summation_WeiJinXingJingMaiRongSuanLiYou" FromRole="Report_WeiJinXingJingMaiRongSuanLiYou" ToRole="Report_Summation" />
+        </EntityType>
+        <EntityType Name="Report_WeiJinXingJiZhenGuanMaiJieRuZhiLiao">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Guid" Name="ID" Nullable="false" />
+          <Property Type="Boolean" Name="UnEmergencyCoronaryTreateForHospitalUnable" />
+          <Property Type="Boolean" Name="UnEmergencyCoronaryTreateForOverTreateTime" />
+          <Property Type="Boolean" Name="UnEmergencyCoronaryTreateForPatientDisagree" />
+          <Property Type="Boolean" Name="UnEmergencyCoronaryTreateForEmergency" />
+          <Property Type="Boolean" Name="UnEmergencyCoronaryTreateForContraindication" />
+          <NavigationProperty Name="Report_Summation" Relationship="MedicalBaseModel.FK_Report_Summation_WeiJinXingZhenDuan" FromRole="Report_WeiJinXingJiZhenGuanMaiJieRuZhiLiao" ToRole="Report_Summation" />
+        </EntityType>
+        <EntityType Name="Report_ZhuSuAndXianBingShi">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Guid" Name="ID" Nullable="false" />
+          <Property Type="String" Name="ChestPainExist" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="IncentiveExist" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PositionExist" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="RadiationPainExist" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ConcomitantSymptomExist" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Boolean" Name="IncentiveTypePhysical" />
+          <Property Type="Boolean" Name="IncentiveTypeExcite" />
+          <Property Type="Boolean" Name="IncentiveTypeEatMuch" />
+          <Property Type="Boolean" Name="IncentiveTypeDefecate" />
+          <Property Type="Boolean" Name="IncentiveTypeColdStimulation" />
+          <Property Type="Boolean" Name="IncentiveTypeOther" />
+          <Property Type="Boolean" Name="PositionTypePrecordium" />
+          <Property Type="Boolean" Name="PositionTypeChest" />
+          <Property Type="Boolean" Name="PositionTypeBelowXiphoid" />
+          <Property Type="Boolean" Name="PositionTypeShoulder" />
+          <Property Type="Boolean" Name="PositionTypeOther" />
+          <Property Type="Boolean" Name="PropertiesTypeChestPain" />
+          <Property Type="Boolean" Name="PropertiesTypePharyngeal" />
+          <Property Type="Boolean" Name="PropertiesTypeChestCut" />
+          <Property Type="Boolean" Name="PropertiesTypeOther" />
+          <Property Type="Boolean" Name="RadiationPainTypeLeftShoulder" />
+          <Property Type="Boolean" Name="RadiationPainTypePharyngeal" />
+          <Property Type="Boolean" Name="RadiationPainTypeEpigastralgia" />
+          <Property Type="Boolean" Name="RadiationPainTypeOther" />
+          <Property Type="Boolean" Name="ConcomitantSymptomTypePalpitation" />
+          <Property Type="Boolean" Name="ConcomitantSymptomTypeTiredBreath" />
+          <Property Type="Boolean" Name="ConcomitantSymptomTypeAmaurosis" />
+          <Property Type="Boolean" Name="ConcomitantSymptomTypeSyncope" />
+          <Property Type="Boolean" Name="ConcomitantSymptomTypeOther" />
+          <Property Type="Boolean" Name="RelievingFactorsRest" />
+          <Property Type="Boolean" Name="RelievingFactorsNitrate" />
+          <Property Type="Boolean" Name="RelievingFactorsBlackCa" />
+          <Property Type="Boolean" Name="RelievingFactorsCaRivalry" />
+          <Property Type="Boolean" Name="RelievingFactorsOther" />
+          <Property Type="Boolean" Name="RelievingFactorsLastRespond" />
+          <NavigationProperty Name="Report_Summation" Relationship="MedicalBaseModel.FK_Report_Summation_ZhuSuAndXianBingShi" FromRole="Report_ZhuSuAndXianBingShi" ToRole="Report_Summation" />
+          <NavigationProperty Name="Report_Summation1" Relationship="MedicalBaseModel.FK_ReportSummation_ReportLinChuangZhengZhuang" FromRole="Report_ZhuSuAndXianBingShi" ToRole="Report_Summation" />
+        </EntityType>
+        <EntityType Name="Role">
+          <Key>
+            <PropertyRef Name="RoleID" />
+          </Key>
+          <Property Type="Int32" Name="RoleID" Nullable="false" />
+          <Property Type="String" Name="RoleName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Users" Relationship="MedicalBaseModel.FK_User_Role" FromRole="Role" ToRole="User" />
+        </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="UserName" Nullable="false" MaxLength="16" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Password" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Guid" Name="PersonID" />
+          <Property Type="Int32" Name="HospitalID" Nullable="false" />
+          <Property Type="Int32" Name="RoleID" Nullable="false" />
+          <NavigationProperty Name="Hospital" Relationship="MedicalBaseModel.FK_User_Hospital" FromRole="User" ToRole="Hospital" />
+          <NavigationProperty Name="Person" Relationship="MedicalBaseModel.FK_User_Person" FromRole="User" ToRole="Person" />
+          <NavigationProperty Name="Report_Summation" Relationship="MedicalBaseModel.FK_ReportSummation_User" FromRole="User" ToRole="Report_Summation" />
+          <NavigationProperty Name="Role" Relationship="MedicalBaseModel.FK_User_Role" FromRole="User" ToRole="Role" />
+        </EntityType>
+        <Association Name="FK_ReportSummation_Hospital">
+          <End Type="MedicalBaseModel.Hospital" Role="Hospital" Multiplicity="1" />
+          <End Type="MedicalBaseModel.Report_Summation" Role="Report_Summation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Hospital">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Report_Summation">
+              <PropertyRef Name="HospitalID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_User_Hospital">
+          <End Type="MedicalBaseModel.Hospital" Role="Hospital" Multiplicity="1" />
+          <End Type="MedicalBaseModel.User" Role="User" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Hospital">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="User">
+              <PropertyRef Name="HospitalID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ReportSummation_Person">
+          <End Type="MedicalBaseModel.Person" Role="Person" Multiplicity="0..1" />
+          <End Type="MedicalBaseModel.Report_Summation" Role="Report_Summation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Person">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Report_Summation">
+              <PropertyRef Name="PersonID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_User_Person">
+          <End Type="MedicalBaseModel.Person" Role="Person" Multiplicity="0..1" />
+          <End Type="MedicalBaseModel.User" Role="User" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Person">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="User">
+              <PropertyRef Name="PersonID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ReportSummation_ReportChuBuZhengDuan">
+          <End Type="MedicalBaseModel.Report_ChuBuZhenDuan" Role="Report_ChuBuZhenDuan" Multiplicity="0..1" />
+          <End Type="MedicalBaseModel.Report_Summation" Role="Report_Summation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Report_ChuBuZhenDuan">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Report_Summation">
+              <PropertyRef Name="ReportChunBuZhengDuanID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ReportSummation_ReportFuZhuYongYao">
+          <End Type="MedicalBaseModel.Report_FuZhuYongYao" Role="Report_FuZhuYongYao" Multiplicity="0..1" />
+          <End Type="MedicalBaseModel.Report_Summation" Role="Report_Summation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Report_FuZhuYongYao">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Report_Summation">
+              <PropertyRef Name="ReportFuZhuYongYaoID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ReportSummation_ReportBinLiBanSuiZhuangTai">
+          <End Type="MedicalBaseModel.Report_JiBingBanSuiZhuangTai" Role="Report_JiBingBanSuiZhuangTai" Multiplicity="0..1" />
+          <End Type="MedicalBaseModel.Report_Summation" Role="Report_Summation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Report_JiBingBanSuiZhuangTai">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Report_Summation">
+              <PropertyRef Name="ReportBinLiBanSuiZhuangTaiID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Report_Summation_JieRuZhiLiao">
+          <End Type="MedicalBaseModel.Report_JieRuZhiLiao" Role="Report_JieRuZhiLiao" Multiplicity="0..1" />
+          <End Type="MedicalBaseModel.Report_Summation" Role="Report_Summation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Report_JieRuZhiLiao">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Report_Summation">
+              <PropertyRef Name="JieRuZhiLiaoID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ReportSummation_ReportJinMaiRongShuan">
+          <End Type="MedicalBaseModel.Report_JingMaiRongShuan" Role="Report_JingMaiRongShuan" Multiplicity="0..1" />
+          <End Type="MedicalBaseModel.Report_Summation" Role="Report_Summation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Report_JingMaiRongShuan">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Report_Summation">
+              <PropertyRef Name="ReportJinMaiRongShuanID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ReportSummation_ReportJiWangBingShi">
+          <End Type="MedicalBaseModel.Report_JiWangBingShi" Role="Report_JiWangBingShi" Multiplicity="0..1" />
+          <End Type="MedicalBaseModel.Report_Summation" Role="Report_Summation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Report_JiWangBingShi">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Report_Summation">
+              <PropertyRef Name="ReportJiWangBingShiID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Report_Summation_LinChuangZhuanGui">
+          <End Type="MedicalBaseModel.Report_LinChuangZhuanGui" Role="Report_LinChuangZhuanGui" Multiplicity="0..1" />
+          <End Type="MedicalBaseModel.Report_Summation" Role="Report_Summation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Report_LinChuangZhuanGui">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Report_Summation">
+              <PropertyRef Name="LinChuangZhuanGuiID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Report_Summation_Report_Summation">
+          <End Type="MedicalBaseModel.Report_Summation" Role="Report_Summation" Multiplicity="1" />
+          <End Type="MedicalBaseModel.Report_Summation" Role="Report_Summation1" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Report_Summation">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Report_Summation1">
+              <PropertyRef Name="ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Report_Summation_WeiJinXingJingMaiRongSuanLiYou">
+          <End Type="MedicalBaseModel.Report_WeiJinXingJingMaiRongSuanLiYou" Role="Report_WeiJinXingJingMaiRongSuanLiYou" Multiplicity="0..1" />
+          <End Type="MedicalBaseModel.Report_Summation" Role="Report_Summation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Report_WeiJinXingJingMaiRongSuanLiYou">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Report_Summation">
+              <PropertyRef Name="WeiJinXingJingMaiRongSuanLiYouID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Report_Summation_WeiJinXingZhenDuan">
+          <End Type="MedicalBaseModel.Report_WeiJinXingJiZhenGuanMaiJieRuZhiLiao" Role="Report_WeiJinXingJiZhenGuanMaiJieRuZhiLiao" Multiplicity="0..1" />
+          <End Type="MedicalBaseModel.Report_Summation" Role="Report_Summation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Report_WeiJinXingJiZhenGuanMaiJieRuZhiLiao">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Report_Summation">
+              <PropertyRef Name="WeiJinXingJiZhenGuanMaiJieRuZhiLiaoID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Report_Summation_ZhuSuAndXianBingShi">
+          <End Type="MedicalBaseModel.Report_ZhuSuAndXianBingShi" Role="Report_ZhuSuAndXianBingShi" Multiplicity="0..1" />
+          <End Type="MedicalBaseModel.Report_Summation" Role="Report_Summation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Report_ZhuSuAndXianBingShi">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Report_Summation">
+              <PropertyRef Name="ZhuSuAndXianBingShiID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ReportSummation_ReportLinChuangZhengZhuang">
+          <End Type="MedicalBaseModel.Report_ZhuSuAndXianBingShi" Role="Report_ZhuSuAndXianBingShi" Multiplicity="0..1" />
+          <End Type="MedicalBaseModel.Report_Summation" Role="Report_Summation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Report_ZhuSuAndXianBingShi">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Report_Summation">
+              <PropertyRef Name="ReportLinChuangZhengZhuangID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ReportSummation_User">
+          <End Type="MedicalBaseModel.User" Role="User" Multiplicity="1" />
+          <End Type="MedicalBaseModel.Report_Summation" Role="Report_Summation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Report_Summation">
+              <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_User_Role">
+          <End Type="MedicalBaseModel.Role" Role="Role" Multiplicity="1" />
+          <End Type="MedicalBaseModel.User" Role="User" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Role">
+              <PropertyRef Name="RoleID" />
+            </Principal>
+            <Dependent Role="User">
+              <PropertyRef Name="RoleID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+    <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="MedicalBaseModelStoreContainer" CdmEntityContainer="MedicalBaseEntities">
+    <EntitySetMapping Name="Hospitals">
+      <EntityTypeMapping TypeName="IsTypeOf(MedicalBaseModel.Hospital)">
+        <MappingFragment StoreEntitySet="Hospitals">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="HospitalName" ColumnName="HospitalName" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="HospitalLevel" ColumnName="HospitalLevel" />
+          <ScalarProperty Name="RegionID" ColumnName="RegionID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Log_Login">
+      <EntityTypeMapping TypeName="IsTypeOf(MedicalBaseModel.Log_Login)">
+        <MappingFragment StoreEntitySet="Log_Login">
+          <ScalarProperty Name="LogID" ColumnName="LogID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="LoginDate" ColumnName="LoginDate" />
+          <ScalarProperty Name="Detail" ColumnName="Detail" />
+          <ScalarProperty Name="BroswerType" ColumnName="BroswerType" />
+          <ScalarProperty Name="HospitalID" ColumnName="HospitalID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="People">
+      <EntityTypeMapping TypeName="IsTypeOf(MedicalBaseModel.Person)">
+        <MappingFragment StoreEntitySet="People">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Sex" ColumnName="Sex" />
+          <ScalarProperty Name="Nationality" ColumnName="Nationality" />
+          <ScalarProperty Name="Birthday" ColumnName="Birthday" />
+          <ScalarProperty Name="IdentityNumber" ColumnName="IdentityNumber" />
+          <ScalarProperty Name="CellPhone" ColumnName="CellPhone" />
+          <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Occupation" ColumnName="Occupation" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Regions">
+      <EntityTypeMapping TypeName="IsTypeOf(MedicalBaseModel.Region)">
+        <MappingFragment StoreEntitySet="Regions">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="RegionName" ColumnName="RegionName" />
+          <ScalarProperty Name="RegionShortName" ColumnName="RegionShortName" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Report_ChuBuZhenDuan">
+      <EntityTypeMapping TypeName="IsTypeOf(MedicalBaseModel.Report_ChuBuZhenDuan)">
+        <MappingFragment StoreEntitySet="Report_ChuBuZhenDuan">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="BloodPressure" ColumnName="BloodPressure" />
+          <ScalarProperty Name="DiastolicPressure" ColumnName="DiastolicPressure" />
+          <ScalarProperty Name="FirstTimeXinDianTu" ColumnName="FirstTimeXinDianTu" />
+          <ScalarProperty Name="FirstTimeBlood" ColumnName="FirstTimeBlood" />
+          <ScalarProperty Name="FisrtTimeReturn" ColumnName="FisrtTimeReturn" />
+          <ScalarProperty Name="CNTResult" ColumnName="CNTResult" />
+          <ScalarProperty Name="RegularCNT" ColumnName="RegularCNT" />
+          <ScalarProperty Name="AcuteST" ColumnName="AcuteST" />
+          <ScalarProperty Name="Anteroseptal" ColumnName="Anteroseptal" />
+          <ScalarProperty Name="Antetheca" ColumnName="Antetheca" />
+          <ScalarProperty Name="Extensive" ColumnName="Extensive" />
+          <ScalarProperty Name="HeartWall" ColumnName="HeartWall" />
+          <ScalarProperty Name="HighWall" ColumnName="HighWall" />
+          <ScalarProperty Name="InteriorWall" ColumnName="InteriorWall" />
+          <ScalarProperty Name="BackWall" ColumnName="BackWall" />
+          <ScalarProperty Name="RightVentricular" ColumnName="RightVentricular" />
+          <ScalarProperty Name="PrtreatOther" ColumnName="PrtreatOther" />
+          <ScalarProperty Name="FirstTimeHeartRate" ColumnName="FirstTimeHeartRate" />
+          <ScalarProperty Name="FirstTimeImage" ColumnName="FirstTimeImage" />
+          <ScalarProperty Name="IntroduceThrombolysisSuggestion" ColumnName="IntroduceThrombolysisSuggestion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Report_FuZhuYongYao">
+      <EntityTypeMapping TypeName="IsTypeOf(MedicalBaseModel.Report_FuZhuYongYao)">
+        <MappingFragment StoreEntitySet="Report_FuZhuYongYao">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="AspirinDosage" ColumnName="AspirinDosage" />
+          <ScalarProperty Name="ClopidogrelDosage" ColumnName="ClopidogrelDosage" />
+          <ScalarProperty Name="LoadStatinUsed" ColumnName="LoadStatinUsed" />
+          <ScalarProperty Name="Simvastatin" ColumnName="Simvastatin" />
+          <ScalarProperty Name="Pravastatin" ColumnName="Pravastatin" />
+          <ScalarProperty Name="Fluvastatin" ColumnName="Fluvastatin" />
+          <ScalarProperty Name="Atorvastatin" ColumnName="Atorvastatin" />
+          <ScalarProperty Name="Rosuvastatin" ColumnName="Rosuvastatin" />
+          <ScalarProperty Name="Pitavastatin" ColumnName="Pitavastatin" />
+          <ScalarProperty Name="ACEIConfirm" ColumnName="ACEIConfirm" />
+          <ScalarProperty Name="BRBConfrim" ColumnName="BRBConfrim" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Report_JiBingBanSuiZhuangTai">
+      <EntityTypeMapping TypeName="IsTypeOf(MedicalBaseModel.Report_JiBingBanSuiZhuangTai)">
+        <MappingFragment StoreEntitySet="Report_JiBingBanSuiZhuangTai">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="HypotensionExist" ColumnName="HypotensionExist" />
+          <ScalarProperty Name="CardiogenicShockExist" ColumnName="CardiogenicShockExist" />
+          <ScalarProperty Name="ArrhythmiaExist" ColumnName="ArrhythmiaExist" />
+          <ScalarProperty Name="VPB" ColumnName="VPB" />
+          <ScalarProperty Name="VT" ColumnName="VT" />
+          <ScalarProperty Name="VF" ColumnName="VF" />
+          <ScalarProperty Name="Ats" ColumnName="Ats" />
+          <ScalarProperty Name="AFS1" ColumnName="AFS1" />
+          <ScalarProperty Name="AF" ColumnName="AF" />
+          <ScalarProperty Name="APB" ColumnName="APB" />
+          <ScalarProperty Name="AVBI" ColumnName="AVBI" />
+          <ScalarProperty Name="AVBII" ColumnName="AVBII" />
+          <ScalarProperty Name="AVBIII" ColumnName="AVBIII" />
+          <ScalarProperty Name="AFS" ColumnName="AFS" />
+          <ScalarProperty Name="RBBB" ColumnName="RBBB" />
+          <ScalarProperty Name="AVBOther" ColumnName="AVBOther" />
+          <ScalarProperty Name="MitralValveProlapseOrBreakExist" ColumnName="MitralValveProlapseOrBreakExist" />
+          <ScalarProperty Name="PerforationofVentricularSeptumConfirm" ColumnName="PerforationofVentricularSeptumConfirm" />
+          <ScalarProperty Name="StrokeExist" ColumnName="StrokeExist" />
+          <ScalarProperty Name="OGLBExist" ColumnName="OGLBExist" />
+          <ScalarProperty Name="KilipLevel" ColumnName="KilipLevel" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Report_JieRuZhiLiao">
+      <EntityTypeMapping TypeName="IsTypeOf(MedicalBaseModel.Report_JieRuZhiLiao)">
+        <MappingFragment StoreEntitySet="Report_JieRuZhiLiao">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="D2BTime" ColumnName="D2BTime" />
+          <ScalarProperty Name="Succeed" ColumnName="Succeed" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Report_JingMaiRongShuan">
+      <EntityTypeMapping TypeName="IsTypeOf(MedicalBaseModel.Report_JingMaiRongShuan)">
+        <MappingFragment StoreEntitySet="Report_JingMaiRongShuan">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Urokinase" ColumnName="Urokinase" />
+          <ScalarProperty Name="UrokinaseOther" ColumnName="UrokinaseOther" />
+          <ScalarProperty Name="Alteplase" ColumnName="Alteplase" />
+          <ScalarProperty Name="Reteplase" ColumnName="Reteplase" />
+          <ScalarProperty Name="Pass" ColumnName="Pass" />
+          <ScalarProperty Name="Anaphylaxis" ColumnName="Anaphylaxis" />
+          <ScalarProperty Name="Bleed" ColumnName="Bleed" />
+          <ScalarProperty Name="ReperfusionArrhythmia" ColumnName="ReperfusionArrhythmia" />
+          <ScalarProperty Name="TreatTime" ColumnName="TreatTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Report_JiWangBingShi">
+      <EntityTypeMapping TypeName="IsTypeOf(MedicalBaseModel.Report_JiWangBingShi)">
+        <MappingFragment StoreEntitySet="Report_JiWangBingShi">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="MIConfirm" ColumnName="MIConfirm" />
+          <ScalarProperty Name="HypertensionConfirm" ColumnName="HypertensionConfirm" />
+          <ScalarProperty Name="HypertensionLasted" ColumnName="HypertensionLasted" />
+          <ScalarProperty Name="HypertensionTreatedState" ColumnName="HypertensionTreatedState" />
+          <ScalarProperty Name="GlycuresisConfirm" ColumnName="GlycuresisConfirm" />
+          <ScalarProperty Name="GlycuresisLasted" ColumnName="GlycuresisLasted" />
+          <ScalarProperty Name="GlycuresisTreatedState" ColumnName="GlycuresisTreatedState" />
+          <ScalarProperty Name="CerebralHemorrhageConfirm" ColumnName="CerebralHemorrhageConfirm" />
+          <ScalarProperty Name="CerebralHemorrhageTreateLasted" ColumnName="CerebralHemorrhageTreateLasted" />
+          <ScalarProperty Name="PeripheralVascularConfirm" ColumnName="PeripheralVascularConfirm" />
+          <ScalarProperty Name="AnemiaOrOtherConfirm" ColumnName="AnemiaOrOtherConfirm" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Report_LinChuangZhuanGui">
+      <EntityTypeMapping TypeName="IsTypeOf(MedicalBaseModel.Report_LinChuangZhuanGui)">
+        <MappingFragment StoreEntitySet="Report_LinChuangZhuanGui">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="CPR" ColumnName="CPR" />
+          <ScalarProperty Name="CPRTimes" ColumnName="CPRTimes" />
+          <ScalarProperty Name="TreatResult" ColumnName="TreatResult" />
+          <ScalarProperty Name="DeadTime" ColumnName="DeadTime" />
+          <ScalarProperty Name="DeadForVentriclarArrhythmias" ColumnName="DeadForVentriclarArrhythmias" />
+          <ScalarProperty Name="DeadForCardiacArrest" ColumnName="DeadForCardiacArrest" />
+          <ScalarProperty Name="DeadForCardiogenicShock" ColumnName="DeadForCardiogenicShock" />
+          <ScalarProperty Name="DeadForACVD" ColumnName="DeadForACVD" />
+          <ScalarProperty Name="DeadForGIH" ColumnName="DeadForGIH" />
+          <ScalarProperty Name="DeadForOther" ColumnName="DeadForOther" />
+          <ScalarProperty Name="TransUpHospitalConfirm" ColumnName="TransUpHospitalConfirm" />
+          <ScalarProperty Name="TransUpHospitalLever" ColumnName="TransUpHospitalLever" />
+          <ScalarProperty Name="TransUpHospitalDate" ColumnName="TransUpHospitalDate" />
+          <ScalarProperty Name="IntroduceEmergencyCoronaryConfirm" ColumnName="IntroduceEmergencyCoronaryConfirm" />
+          <ScalarProperty Name="IntroduceEmergencyCoronaryDate" ColumnName="IntroduceEmergencyCoronaryDate" />
+          <ScalarProperty Name="AgreeEmergencyCoronaryConfirm" ColumnName="AgreeEmergencyCoronaryConfirm" />
+          <ScalarProperty Name="ThrombolyticForDisagree" ColumnName="ThrombolyticForDisagree" />
+          <ScalarProperty Name="ThrombolyticForEconomicReason" ColumnName="ThrombolyticForEconomicReason" />
+          <ScalarProperty Name="ThrombolyticForDream" ColumnName="ThrombolyticForDream" />
+          <ScalarProperty Name="ThrombolyticForTimeLimited" ColumnName="ThrombolyticForTimeLimited" />
+          <ScalarProperty Name="ConnectUpHospitalConfirm" ColumnName="ConnectUpHospitalConfirm" />
+          <ScalarProperty Name="UpHospitalLaboratory" ColumnName="UpHospitalLaboratory" />
+          <ScalarProperty Name="IntroduceThrombolysisSuggestionConfirm" ColumnName="IntroduceThrombolysisSuggestionConfirm" />
+          <ScalarProperty Name="IntroduceThrombolysisSuggestionDate" ColumnName="IntroduceThrombolysisSuggestionDate" />
+          <ScalarProperty Name="ThrombolysisTreateConfirm" ColumnName="ThrombolysisTreateConfirm" />
+          <ScalarProperty Name="EmergencyCoronaryTreateConfirm" ColumnName="EmergencyCoronaryTreateConfirm" />
+          <ScalarProperty Name="CheckOutDate" ColumnName="CheckOutDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Report_Summation">
+      <EntityTypeMapping TypeName="IsTypeOf(MedicalBaseModel.Report_Summation)">
+        <MappingFragment StoreEntitySet="Report_Summation">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ReportBinLiBanSuiZhuangTaiID" ColumnName="ReportBinLiBanSuiZhuangTaiID" />
+          <ScalarProperty Name="ReportChunBuZhengDuanID" ColumnName="ReportChunBuZhengDuanID" />
+          <ScalarProperty Name="ReportFuZhuYongYaoID" ColumnName="ReportFuZhuYongYaoID" />
+          <ScalarProperty Name="ReportJinMaiRongShuanID" ColumnName="ReportJinMaiRongShuanID" />
+          <ScalarProperty Name="ReportJiWangBingShiID" ColumnName="ReportJiWangBingShiID" />
+          <ScalarProperty Name="ReportLinChuangZhengZhuangID" ColumnName="ReportLinChuangZhengZhuangID" />
+          <ScalarProperty Name="ReportTreatResultID" ColumnName="ReportTreatResultID" />
+          <ScalarProperty Name="JieRuZhiLiaoID" ColumnName="JieRuZhiLiaoID" />
+          <ScalarProperty Name="WeiJinXingJiZhenGuanMaiJieRuZhiLiaoID" ColumnName="WeiJinXingJiZhenGuanMaiJieRuZhiLiaoID" />
+          <ScalarProperty Name="ZhuSuAndXianBingShiID" ColumnName="ZhuSuAndXianBingShiID" />
+          <ScalarProperty Name="LinChuangZhuanGuiID" ColumnName="LinChuangZhuanGuiID" />
+          <ScalarProperty Name="WeiJinXingJingMaiRongSuanLiYouID" ColumnName="WeiJinXingJingMaiRongSuanLiYouID" />
+          <ScalarProperty Name="PersonID" ColumnName="PersonID" />
+          <ScalarProperty Name="DiseaseTimeState" ColumnName="DiseaseTimeState" />
+          <ScalarProperty Name="DiseaseTime" ColumnName="DiseaseTime" />
+          <ScalarProperty Name="DiseaseHour" ColumnName="DiseaseHour" />
+          <ScalarProperty Name="TreatDate" ColumnName="TreatDate" />
+          <ScalarProperty Name="TrafficWay" ColumnName="TrafficWay" />
+          <ScalarProperty Name="DiseaseDescriber" ColumnName="DiseaseDescriber" />
+          <ScalarProperty Name="Reliability" ColumnName="Reliability" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="HospitalID" ColumnName="HospitalID" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+          <ScalarProperty Name="IsSubmit" ColumnName="IsSubmit" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Report_WeiJinXingJingMaiRongSuanLiYou">
+      <EntityTypeMapping TypeName="IsTypeOf(MedicalBaseModel.Report_WeiJinXingJingMaiRongSuanLiYou)">
+        <MappingFragment StoreEntitySet="Report_WeiJinXingJingMaiRongSuanLiYou">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="UnThrombolysisReasonForUnSute" ColumnName="UnThrombolysisReasonForUnSute" />
+          <ScalarProperty Name="UnThrombolysisReasonForPatientDisagree" ColumnName="UnThrombolysisReasonForPatientDisagree" />
+          <ScalarProperty Name="UnThrombolyticForEconomicReason" ColumnName="UnThrombolyticForEconomicReason" />
+          <ScalarProperty Name="UnThrombolyticForHospitalCanNotDid" ColumnName="UnThrombolyticForHospitalCanNotDid" />
+          <ScalarProperty Name="UnThrombolyticForContraindication" ColumnName="UnThrombolyticForContraindication" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Report_WeiJinXingJiZhenGuanMaiJieRuZhiLiao">
+      <EntityTypeMapping TypeName="IsTypeOf(MedicalBaseModel.Report_WeiJinXingJiZhenGuanMaiJieRuZhiLiao)">
+        <MappingFragment StoreEntitySet="Report_WeiJinXingJiZhenGuanMaiJieRuZhiLiao">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="UnEmergencyCoronaryTreateForHospitalUnable" ColumnName="UnEmergencyCoronaryTreateForHospitalUnable" />
+          <ScalarProperty Name="UnEmergencyCoronaryTreateForOverTreateTime" ColumnName="UnEmergencyCoronaryTreateForOverTreateTime" />
+          <ScalarProperty Name="UnEmergencyCoronaryTreateForPatientDisagree" ColumnName="UnEmergencyCoronaryTreateForPatientDisagree" />
+          <ScalarProperty Name="UnEmergencyCoronaryTreateForEmergency" ColumnName="UnEmergencyCoronaryTreateForEmergency" />
+          <ScalarProperty Name="UnEmergencyCoronaryTreateForContraindication" ColumnName="UnEmergencyCoronaryTreateForContraindication" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Report_ZhuSuAndXianBingShi">
+      <EntityTypeMapping TypeName="IsTypeOf(MedicalBaseModel.Report_ZhuSuAndXianBingShi)">
+        <MappingFragment StoreEntitySet="Report_ZhuSuAndXianBingShi">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ChestPainExist" ColumnName="ChestPainExist" />
+          <ScalarProperty Name="IncentiveExist" ColumnName="IncentiveExist" />
+          <ScalarProperty Name="PositionExist" ColumnName="PositionExist" />
+          <ScalarProperty Name="RadiationPainExist" ColumnName="RadiationPainExist" />
+          <ScalarProperty Name="ConcomitantSymptomExist" ColumnName="ConcomitantSymptomExist" />
+          <ScalarProperty Name="IncentiveTypePhysical" ColumnName="IncentiveTypePhysical" />
+          <ScalarProperty Name="IncentiveTypeExcite" ColumnName="IncentiveTypeExcite" />
+          <ScalarProperty Name="IncentiveTypeEatMuch" ColumnName="IncentiveTypeEatMuch" />
+          <ScalarProperty Name="IncentiveTypeDefecate" ColumnName="IncentiveTypeDefecate" />
+          <ScalarProperty Name="IncentiveTypeColdStimulation" ColumnName="IncentiveTypeColdStimulation" />
+          <ScalarProperty Name="IncentiveTypeOther" ColumnName="IncentiveTypeOther" />
+          <ScalarProperty Name="PositionTypePrecordium" ColumnName="PositionTypePrecordium" />
+          <ScalarProperty Name="PositionTypeChest" ColumnName="PositionTypeChest" />
+          <ScalarProperty Name="PositionTypeBelowXiphoid" ColumnName="PositionTypeBelowXiphoid" />
+          <ScalarProperty Name="PositionTypeShoulder" ColumnName="PositionTypeShoulder" />
+          <ScalarProperty Name="PositionTypeOther" ColumnName="PositionTypeOther" />
+          <ScalarProperty Name="PropertiesTypeChestPain" ColumnName="PropertiesTypeChestPain" />
+          <ScalarProperty Name="PropertiesTypePharyngeal" ColumnName="PropertiesTypePharyngeal" />
+          <ScalarProperty Name="PropertiesTypeChestCut" ColumnName="PropertiesTypeChestCut" />
+          <ScalarProperty Name="PropertiesTypeOther" ColumnName="PropertiesTypeOther" />
+          <ScalarProperty Name="RadiationPainTypeLeftShoulder" ColumnName="RadiationPainTypeLeftShoulder" />
+          <ScalarProperty Name="RadiationPainTypePharyngeal" ColumnName="RadiationPainTypePharyngeal" />
+          <ScalarProperty Name="RadiationPainTypeEpigastralgia" ColumnName="RadiationPainTypeEpigastralgia" />
+          <ScalarProperty Name="RadiationPainTypeOther" ColumnName="RadiationPainTypeOther" />
+          <ScalarProperty Name="ConcomitantSymptomTypePalpitation" ColumnName="ConcomitantSymptomTypePalpitation" />
+          <ScalarProperty Name="ConcomitantSymptomTypeTiredBreath" ColumnName="ConcomitantSymptomTypeTiredBreath" />
+          <ScalarProperty Name="ConcomitantSymptomTypeAmaurosis" ColumnName="ConcomitantSymptomTypeAmaurosis" />
+          <ScalarProperty Name="ConcomitantSymptomTypeSyncope" ColumnName="ConcomitantSymptomTypeSyncope" />
+          <ScalarProperty Name="ConcomitantSymptomTypeOther" ColumnName="ConcomitantSymptomTypeOther" />
+          <ScalarProperty Name="RelievingFactorsRest" ColumnName="RelievingFactorsRest" />
+          <ScalarProperty Name="RelievingFactorsNitrate" ColumnName="RelievingFactorsNitrate" />
+          <ScalarProperty Name="RelievingFactorsBlackCa" ColumnName="RelievingFactorsBlackCa" />
+          <ScalarProperty Name="RelievingFactorsCaRivalry" ColumnName="RelievingFactorsCaRivalry" />
+          <ScalarProperty Name="RelievingFactorsOther" ColumnName="RelievingFactorsOther" />
+          <ScalarProperty Name="RelievingFactorsLastRespond" ColumnName="RelievingFactorsLastRespond" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Roles">
+      <EntityTypeMapping TypeName="IsTypeOf(MedicalBaseModel.Role)">
+        <MappingFragment StoreEntitySet="Roles">
+          <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+          <ScalarProperty Name="RoleName" ColumnName="RoleName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="IsTypeOf(MedicalBaseModel.User)">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="PersonID" ColumnName="PersonID" />
+          <ScalarProperty Name="HospitalID" ColumnName="HospitalID" />
+          <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping></edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="UseLegacyProvider" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="Model1" ZoomLevel="100">
+        <EntityTypeShape EntityType="MedicalBaseModel.Hospital" Width="1.5" PointX="0.75" PointY="6.625" Height="2.3648893229166674" />
+        <EntityTypeShape EntityType="MedicalBaseModel.Log_Login" Width="1.5" PointX="5.75" PointY="0.75" Height="2.1725878906250031" />
+        <EntityTypeShape EntityType="MedicalBaseModel.Person" Width="1.5" PointX="0.75" PointY="11.5" Height="3.7109993489583388" />
+        <EntityTypeShape EntityType="MedicalBaseModel.Region" Width="1.5" PointX="0.75" PointY="0.75" Height="1.7879850260416674" />
+        <EntityTypeShape EntityType="MedicalBaseModel.Report_ChuBuZhenDuan" Width="1.5" PointX="0.75" PointY="15.875" Height="5.2494108072916674" />
+        <EntityTypeShape EntityType="MedicalBaseModel.Report_FuZhuYongYao" Width="1.5" PointX="0.75" PointY="21.875" Height="3.5186979166666674" />
+        <EntityTypeShape EntityType="MedicalBaseModel.Report_JiBingBanSuiZhuangTai" Width="1.5" PointX="0.75" PointY="28.75" Height="5.4417122395833246" />
+        <EntityTypeShape EntityType="MedicalBaseModel.Report_JieRuZhiLiao" Width="1.5" PointX="0.75" PointY="26.125" Height="1.7879850260416674" />
+        <EntityTypeShape EntityType="MedicalBaseModel.Report_JingMaiRongShuan" Width="1.5" PointX="0.75" PointY="34.875" Height="3.1340950520833246" />
+        <EntityTypeShape EntityType="MedicalBaseModel.Report_JiWangBingShi" Width="1.5" PointX="0.75" PointY="38.75" Height="3.5186979166666674" />
+        <EntityTypeShape EntityType="MedicalBaseModel.Report_LinChuangZhuanGui" Width="1.5" PointX="0.75" PointY="43" Height="6.5955208333333246" />
+        <EntityTypeShape EntityType="MedicalBaseModel.Report_Summation" Width="1.5" PointX="3" PointY="3.25" Height="8.9031380208333246" />
+        <EntityTypeShape EntityType="MedicalBaseModel.Report_WeiJinXingJingMaiRongSuanLiYou" Width="1.5" PointX="0.75" PointY="50.375" Height="2.3648893229166674" />
+        <EntityTypeShape EntityType="MedicalBaseModel.Report_WeiJinXingJiZhenGuanMaiJieRuZhiLiao" Width="1.5" PointX="0.75" PointY="53.5" Height="2.3648893229166674" />
+        <EntityTypeShape EntityType="MedicalBaseModel.Report_ZhuSuAndXianBingShi" Width="1.5" PointX="0.75" PointY="56.625" Height="8.3262337239583388" />
+        <EntityTypeShape EntityType="MedicalBaseModel.Role" Width="1.5" PointX="3.75" PointY="1" Height="1.595683593749996" />
+        <EntityTypeShape EntityType="MedicalBaseModel.User" Width="1.5" PointX="6" PointY="6.25" Height="2.9417936197916674" />
+        <AssociationConnector Association="MedicalBaseModel.FK_ReportSummation_Hospital" >
+          <ConnectorPoint PointX="2.25" PointY="7.8074446614583337" />
+          <ConnectorPoint PointX="2.6666666666666665" PointY="7.8074446614583328" />
+          <ConnectorPoint PointX="2.8333333333333335" PointY="7.8074446614583337" />
+          <ConnectorPoint PointX="3" PointY="7.8074446614583337" />
+        </AssociationConnector>
+        <AssociationConnector Association="MedicalBaseModel.FK_User_Hospital" >
+          <ConnectorPoint PointX="2.25" PointY="7.1849703307291737" />
+          <ConnectorPoint PointX="2.75" PointY="7.1849703307291737" />
+          <ConnectorPoint PointX="2.75" PointY="12.403138020833325" />
+          <ConnectorPoint PointX="2.9557247916666665" PointY="12.403138020833321" />
+          <ConnectorPoint PointX="3.8333333333333339" PointY="12.403138020833325" />
+          <ConnectorPoint PointX="3.8697929166666665" PointY="12.403138020833325" />
+          <ConnectorPoint PointX="4.0364595833333334" PointY="12.403138020833325" />
+          <ConnectorPoint PointX="4.0729191666666669" PointY="12.403138020833325" />
+          <ConnectorPoint PointX="4.2395858333333329" PointY="12.403138020833325" />
+          <ConnectorPoint PointX="4.2760454166666664" PointY="12.403138020833325" />
+          <ConnectorPoint PointX="4.4427120833333325" PointY="12.403138020833325" />
+          <ConnectorPoint PointX="6.2604141666666671" PointY="12.403138020833325" />
+          <ConnectorPoint PointX="6.4270808333333331" PointY="12.403138020833325" />
+          <ConnectorPoint PointX="6.75" PointY="12.403138020833325" />
+          <ConnectorPoint PointX="6.75" PointY="9.1917936197916674" />
+        </AssociationConnector>
+        <AssociationConnector Association="MedicalBaseModel.FK_ReportSummation_Person" >
+          <ConnectorPoint PointX="2.25" PointY="11.826569010416662" />
+          <ConnectorPoint PointX="2.6666666666666665" PointY="11.826569010416662" />
+          <ConnectorPoint PointX="2.8333333333333335" PointY="11.826569010416662" />
+          <ConnectorPoint PointX="3" PointY="11.826569010416662" />
+        </AssociationConnector>
+        <AssociationConnector Association="MedicalBaseModel.FK_User_Person" >
+          <ConnectorPoint PointX="2.25" PointY="13.807068684895832" />
+          <ConnectorPoint PointX="2.9557247916666665" PointY="13.807068684895828" />
+          <ConnectorPoint PointX="3.8333333333333339" PointY="13.807068684895832" />
+          <ConnectorPoint PointX="3.8697929166666665" PointY="13.807068684895832" />
+          <ConnectorPoint PointX="4.0364595833333334" PointY="13.807068684895832" />
+          <ConnectorPoint PointX="4.0729191666666669" PointY="13.807068684895832" />
+          <ConnectorPoint PointX="4.2395858333333329" PointY="13.807068684895832" />
+          <ConnectorPoint PointX="4.2760454166666664" PointY="13.807068684895832" />
+          <ConnectorPoint PointX="4.4427120833333325" PointY="13.807068684895832" />
+          <ConnectorPoint PointX="6.3437475" PointY="13.807068684895832" />
+          <ConnectorPoint PointX="6.3437475" PointY="9.1917936197916674" />
+        </AssociationConnector>
+        <AssociationConnector Association="MedicalBaseModel.FK_ReportSummation_ReportChuBuZhengDuan" >
+          <ConnectorPoint PointX="2.25" PointY="18.499705403645834" />
+          <ConnectorPoint PointX="2.9557247916666665" PointY="18.49970540364583" />
+          <ConnectorPoint PointX="3.7317702083333337" PointY="18.499705403645834" />
+          <ConnectorPoint PointX="3.75" PointY="18.499705403645834" />
+          <ConnectorPoint PointX="3.75" PointY="12.153138020833325" />
+        </AssociationConnector>
+        <AssociationConnector Association="MedicalBaseModel.FK_ReportSummation_ReportFuZhuYongYao" >
+          <ConnectorPoint PointX="2.25" PointY="23.634348958333334" />
+          <ConnectorPoint PointX="2.9557247916666665" PointY="23.634348958333334" />
+          <ConnectorPoint PointX="3.3255177083333338" PointY="23.634348958333334" />
+          <ConnectorPoint PointX="3.3437475" PointY="23.634348958333334" />
+          <ConnectorPoint PointX="3.3437475" PointY="12.153138020833325" />
+        </AssociationConnector>
+        <AssociationConnector Association="MedicalBaseModel.FK_ReportSummation_ReportBinLiBanSuiZhuangTai" >
+          <ConnectorPoint PointX="2.25" PointY="31.470856119791662" />
+          <ConnectorPoint PointX="2.9557247916666665" PointY="31.470856119791662" />
+          <ConnectorPoint PointX="3.1223914583333334" PointY="31.470856119791662" />
+          <ConnectorPoint PointX="3.1588510416666669" PointY="31.470856119791662" />
+          <ConnectorPoint PointX="3.3255177083333338" PointY="31.470856119791662" />
+          <ConnectorPoint PointX="3.3619772916666664" PointY="31.470856119791662" />
+          <ConnectorPoint PointX="3.7317702083333337" PointY="31.470856119791662" />
+          <ConnectorPoint PointX="3.8697929166666665" PointY="31.470856119791662" />
+          <ConnectorPoint PointX="4.0364595833333334" PointY="31.470856119791662" />
+          <ConnectorPoint PointX="4.1562525" PointY="31.470856119791662" />
+          <ConnectorPoint PointX="4.1562525" PointY="12.153138020833325" />
+        </AssociationConnector>
+        <AssociationConnector Association="MedicalBaseModel.FK_Report_Summation_JieRuZhiLiao" >
+          <ConnectorPoint PointX="2.25" PointY="27.018992513020834" />
+          <ConnectorPoint PointX="2.9557247916666665" PointY="27.018992513020834" />
+          <ConnectorPoint PointX="3.1223914583333334" PointY="27.018992513020834" />
+          <ConnectorPoint PointX="3.14062125" PointY="27.018992513020834" />
+          <ConnectorPoint PointX="3.14062125" PointY="12.153138020833325" />
+        </AssociationConnector>
+        <AssociationConnector Association="MedicalBaseModel.FK_ReportSummation_ReportJinMaiRongShuan" >
+          <ConnectorPoint PointX="2.25" PointY="36.442047526041662" />
+          <ConnectorPoint PointX="2.9557247916666665" PointY="36.442047526041662" />
+          <ConnectorPoint PointX="3.1223914583333334" PointY="36.442047526041662" />
+          <ConnectorPoint PointX="3.1588510416666669" PointY="36.442047526041662" />
+          <ConnectorPoint PointX="3.3255177083333338" PointY="36.442047526041662" />
+          <ConnectorPoint PointX="3.3619772916666664" PointY="36.442047526041662" />
+          <ConnectorPoint PointX="3.5286439583333333" PointY="36.442047526041662" />
+          <ConnectorPoint PointX="3.54687375" PointY="36.442047526041662" />
+          <ConnectorPoint PointX="3.54687375" PointY="12.153138020833325" />
+        </AssociationConnector>
+        <AssociationConnector Association="MedicalBaseModel.FK_ReportSummation_ReportJiWangBingShi" >
+          <ConnectorPoint PointX="2.25" PointY="40.509348958333334" />
+          <ConnectorPoint PointX="2.9557247916666665" PointY="40.509348958333334" />
+          <ConnectorPoint PointX="3.1223914583333334" PointY="40.509348958333334" />
+          <ConnectorPoint PointX="3.1588510416666669" PointY="40.509348958333334" />
+          <ConnectorPoint PointX="3.3255177083333338" PointY="40.509348958333334" />
+          <ConnectorPoint PointX="3.3619772916666664" PointY="40.509348958333334" />
+          <ConnectorPoint PointX="3.5286439583333333" PointY="40.509348958333334" />
+          <ConnectorPoint PointX="3.5651035416666668" PointY="40.509348958333334" />
+          <ConnectorPoint PointX="3.7317702083333337" PointY="40.509348958333334" />
+          <ConnectorPoint PointX="3.95312625" PointY="40.509348958333334" />
+          <ConnectorPoint PointX="3.95312625" PointY="12.153138020833325" />
+        </AssociationConnector>
+        <AssociationConnector Association="MedicalBaseModel.FK_Report_Summation_LinChuangZhuanGui" >
+          <ConnectorPoint PointX="2.25" PointY="46.297760416666662" />
+          <ConnectorPoint PointX="2.9557247916666665" PointY="46.297760416666662" />
+          <ConnectorPoint PointX="3.1223914583333334" PointY="46.297760416666662" />
+          <ConnectorPoint PointX="3.1588510416666669" PointY="46.297760416666662" />
+          <ConnectorPoint PointX="3.3255177083333338" PointY="46.297760416666662" />
+          <ConnectorPoint PointX="3.3619772916666664" PointY="46.297760416666662" />
+          <ConnectorPoint PointX="3.5286439583333333" PointY="46.297760416666662" />
+          <ConnectorPoint PointX="3.5651035416666668" PointY="46.297760416666662" />
+          <ConnectorPoint PointX="3.7317702083333337" PointY="46.297760416666662" />
+          <ConnectorPoint PointX="4.3593787499999994" PointY="46.297760416666662" />
+          <ConnectorPoint PointX="4.3593787499999994" PointY="12.153138020833325" />
+        </AssociationConnector>
+        <AssociationConnector Association="MedicalBaseModel.FK_Report_Summation_Report_Summation" >
+          <ConnectorPoint PointX="3.5319230769230767" PointY="3.25" />
+          <ConnectorPoint PointX="3.5319230769230767" PointY="3" />
+          <ConnectorPoint PointX="3.9784615384615383" PointY="3" />
+          <ConnectorPoint PointX="3.9784615384615383" PointY="3.25" />
+        </AssociationConnector>
+        <AssociationConnector Association="MedicalBaseModel.FK_Report_Summation_WeiJinXingJingMaiRongSuanLiYou" >
+          <ConnectorPoint PointX="2.25" PointY="51.557444661458334" />
+          <ConnectorPoint PointX="3.039058125" PointY="51.557444661458334" />
+          <ConnectorPoint PointX="3.039058125" PointY="12.153138020833325" />
+        </AssociationConnector>
+        <AssociationConnector Association="MedicalBaseModel.FK_Report_Summation_WeiJinXingZhenDuan" >
+          <ConnectorPoint PointX="2.25" PointY="54.682444661458334" />
+          <ConnectorPoint PointX="3.2421843750000003" PointY="54.682444661458334" />
+          <ConnectorPoint PointX="3.2421843750000003" PointY="12.153138020833325" />
+        </AssociationConnector>
+        <AssociationConnector Association="MedicalBaseModel.FK_Report_Summation_ZhuSuAndXianBingShi" >
+          <ConnectorPoint PointX="2.25" PointY="60.788116861979169" />
+          <ConnectorPoint PointX="3.445310625" PointY="60.788116861979169" />
+          <ConnectorPoint PointX="3.445310625" PointY="12.153138020833325" />
+        </AssociationConnector>
+        <AssociationConnector Association="MedicalBaseModel.FK_ReportSummation_ReportLinChuangZhengZhuang" >
+          <ConnectorPoint PointX="2.25" PointY="58.675305930989595" />
+          <ConnectorPoint PointX="3.3619772916666664" PointY="58.675305930989595" />
+          <ConnectorPoint PointX="3.5286439583333333" PointY="58.675305930989595" />
+          <ConnectorPoint PointX="3.6484368750000002" PointY="58.675305930989595" />
+          <ConnectorPoint PointX="3.6484368750000002" PointY="12.153138020833325" />
+        </AssociationConnector>
+        <AssociationConnector Association="MedicalBaseModel.FK_ReportSummation_User" >
+          <ConnectorPoint PointX="6" PointY="7.7208968098958337" />
+          <ConnectorPoint PointX="4.5" PointY="7.7208968098958337" />
+        </AssociationConnector>
+        <AssociationConnector Association="MedicalBaseModel.FK_User_Role" >
+          <ConnectorPoint PointX="5.25" PointY="1.797841796874998" />
+          <ConnectorPoint PointX="5.5" PointY="1.797841796874998" />
+          <ConnectorPoint PointX="5.5" PointY="3.1725878906250031" />
+          <ConnectorPoint PointX="6.75" PointY="3.1725878906250031" />
+          <ConnectorPoint PointX="6.75" PointY="6.25" />
+        </AssociationConnector>
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

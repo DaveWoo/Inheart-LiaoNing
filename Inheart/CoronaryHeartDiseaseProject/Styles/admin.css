@@ -1,0 +1,100 @@
+a
+{
+    text-decoration: none;
+    color: #003366;
+}
+a:hover
+{
+    text-decoration: underline;
+}
+table
+{
+    font: 12pt Tahoma, Verdana;
+    color: #000000;
+}
+input, select, textarea
+{
+    color: #000000;
+    font-weight: normal;
+    background-color: #F8F8F8;
+    font-style: normal;
+    font-variant: normal;
+    font-size: 12pt;
+    line-height: normal;
+    font-family: Tahoma, Verdana;
+    width: 123px;
+}
+select
+{
+    font: 12pt Tahoma, Verdana;
+    color: #000000;
+    font-weight: normal;
+    background-color: #F8F8F8;
+}
+.nav
+{
+    font: 12pt Tahoma, Verdana;
+    color: #000000;
+    font-weight: bold;
+}
+.nav a
+{
+    color: #000000;
+}
+.header
+{
+    font: 12pt Tahoma, Verdana;
+    color: #FFFFFF;
+    font-weight: bold;
+    background-color: #66aadb;
+}
+.headerLongin
+{
+    font: 12pt Tahoma, Verdana;
+    color: #FFFFFF;
+    font-weight: bold;
+    background-color: #698CC3;
+}
+.header a
+{
+    color: #FFFFFF;
+}
+.category
+{
+    font: 12pt Tahoma, Verdana;
+    color: #000000;
+    background-color: #EFEFEF;
+}
+.tableborder
+{
+    background: #D6E0EF;
+    border: 1px solid #698CC3;
+}
+.singleborder
+{
+    font-size: 0px;
+    line-height: 1px;
+    padding: 0px;
+    background-color: #F8F8F8;
+}
+.smalltxt
+{
+    font: 12pt Tahoma, Verdana;
+}
+.outertxt
+{
+    font: 12pt Tahoma, Verdana;
+    color: #000000;
+}
+.outertxt a
+{
+    color: #000000;
+}
+.bold
+{
+    font-weight: bold;
+}
+.tableWidth
+{
+    width:243px;
+    }

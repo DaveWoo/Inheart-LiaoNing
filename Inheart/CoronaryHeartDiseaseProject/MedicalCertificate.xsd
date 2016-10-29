@@ -1,0 +1,254 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/MedicalCertificate.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="MedicalCertificate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="TreatDate" type="xs:dateTime" />
+        <xs:element name="CanBeTrust" />
+        <xs:element name="Description" />
+        <xs:element name="SimpleDisease" />
+        <xs:element name="HistoryDisease">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Hypertension">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Sure" />
+                    <xs:element name="Duration" type="xs:unsignedByte" />
+                    <xs:element name="TreatState" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Glycuresis">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Sure" />
+                    <xs:element name="Duration" type="xs:unsignedByte" />
+                    <xs:element name="TreatState" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="CerebralThrombosis">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Sure" />
+                    <xs:element name="Duration" type="xs:unsignedByte" />
+                    <xs:element name="TreatState" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="CerebralHemorrhage">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Sure" />
+                    <xs:element name="Duration" type="xs:unsignedByte" />
+                    <xs:element name="TreatUntillNow" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="AnemiaorOtherDisease">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Sure" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Other">
+                <xs:complexType>
+                  <xs:attribute name="Description" type="xs:string" use="required" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="FirstTimeBloodPressure" />
+        <xs:element name="FirstTimeHeartRate" />
+        <xs:element name="FirstCNT">
+          <xs:complexType>
+            <xs:attribute name="RegularCNT" type="xs:string" use="required" />
+            <xs:attribute name="Result" type="xs:string" use="required" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="CNTBackTime" />
+        <xs:element name="FirstHeartImageDateTime" type="xs:dateTime" />
+        <xs:element name="FirstBloodPressureTestingTime" type="xs:dateTime" />
+        <xs:element name="FirstReportTime" type="xs:dateTime" />
+        <xs:element name="PreTreat">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="AcuteST">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Anteroseptal" />
+                    <xs:element name="Antetheca" />
+                    <xs:element name="Extensive" />
+                    <xs:element name="InteriorWall" />
+                    <xs:element name="BackWall" />
+                    <xs:element name="RightVentricular" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="UnAcuteST" />
+              <xs:element name="UAP" />
+              <xs:element name="Other">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Sure" />
+                    <xs:element name="Description" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="KillipLevels">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="KillipI" />
+              <xs:element name="KillipII" />
+              <xs:element name="KillipIII" />
+              <xs:element name="KillipIV" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DiseaseWithState">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Hypotension" />
+              <xs:element name="Shock" />
+              <xs:element name="KILLIP">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Sure" />
+                    <xs:element name="Description" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Arrhythmia">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="APB" />
+                    <xs:element name="ATs" />
+                    <xs:element name="AFS" />
+                    <xs:element name="AF" />
+                    <xs:element name="VPB" />
+                    <xs:element name="VT" />
+                    <xs:element name="VF" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="MitralProlopse" />
+              <xs:element name="PerforationOfVentricularSeptum" />
+              <xs:element name="Stroke" />
+              <xs:element name="GastrointestinalBleeding" />
+              <xs:element name="VentricularBlocking">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="AVBI" />
+                    <xs:element name="AVBII" />
+                    <xs:element name="AVBIII" />
+                    <xs:element name="AFS" />
+                    <xs:element name="RBBB" />
+                    <xs:element name="AVBOther" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="OGLB" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="CPRTimes">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Sure" />
+              <xs:element name="Times"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TreatState">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IntravenousThrombolysis">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Urokinase"/>
+                    <xs:element name="Alteplase"/>
+                    <xs:element name="Reteplase"/>
+                    <xs:element name="Complication">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="Anaphylaxis" />
+                          <xs:element name="Bleed" />
+                          <xs:element name="ReperfusionArrhythmia" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="Pass" />
+                    <xs:element name="BeforeTreatTime" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="PCI">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="D2BTime" />
+              <xs:element name="IsSucceed" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TransUpHospital">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TransUpHospitalConfirm"/>
+              <xs:element name="TransUpHospitalLever"/>
+              <xs:element name="TranseferDate"/>
+              <xs:element name="ConnectUpHospitalConfirm"/>
+              <xs:element name="UpHospitalLaboratory"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="AdjuvantDrug">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="AspirinDosage"/>
+              <xs:element name="ClopidogrelDosage"/>
+              <xs:element name="LoadStatinUsed"/>
+              <xs:element name="LoadStatinDosage"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="OneDayState">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TreatResult"/>
+              <xs:element name="DeadTime" />
+              <xs:element name="DeadForVentriclarArrhythmias"/>
+              <xs:element name="DeadForCardiacArrest" />
+              <xs:element name="DeadForCardiogenicShock" />
+              <xs:element name="DeadForACVD"/>
+              <xs:element name="DeadForGIH"/>
+              <xs:element name="DeadForOther"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="IntroduceEmergencyCoronaryConfirm"/>
+        <xs:element name="EmergencyCoronaryDate"/>
+        <xs:element name="AgreeEmergencyCoronaryConfirm"/>
+        <xs:element name="ThrombolyticReason">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ThrombolyticForDisagree"/>
+              <xs:element name="ThrombolyticForEconomicReason"/>
+              <xs:element name="ThrombolyticForDream"/>
+              <xs:element name="ThrombolyticForTimeLimited"/>
+
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

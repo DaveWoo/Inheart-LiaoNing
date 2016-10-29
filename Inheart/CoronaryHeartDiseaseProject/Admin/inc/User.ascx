@@ -1,0 +1,1 @@
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="User.ascx.cs" Inherits="CoronaryHeartDiseaseProject.UserSession" %>

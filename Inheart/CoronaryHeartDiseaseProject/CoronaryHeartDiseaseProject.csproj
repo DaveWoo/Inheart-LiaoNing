@@ -1,0 +1,534 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1E872235-E84B-4645-B60A-34565D4FF172}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CoronaryHeartDiseaseProject</RootNamespace>
+    <AssemblyName>CoronaryHeartDiseaseProject</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <TargetFrameworkProfile />
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.DataVisualization" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="About.aspx" />
+    <Content Include="Admin\inc\IsSuperAdmin.ascx" />
+    <Content Include="Admin\Login.aspx" />
+    <Content Include="Admin\Logout.aspx" />
+    <Content Include="Admin\SuperManage\AddAdmin.aspx" />
+    <Content Include="Admin\SuperManage\AdminCenter.aspx" />
+    <Content Include="Admin\SuperManage\AdminManage.aspx" />
+    <Content Include="Admin\SuperManage\AddHospital.aspx" />
+    <Content Include="Admin\SuperManage\AdminManageHospital.aspx" />
+    <Content Include="Admin\SuperManage\MessageManageSupperAdmin.aspx" />
+    <Content Include="Admin\SuperManage\ModifyHospital.aspx" />
+    <Content Include="Admin\SuperManage\ModifyAdmin.aspx" />
+    <Content Include="Admin\inc\IsAdmin.ascx" />
+    <Content Include="Admin\inc\User.ascx" />
+    <Content Include="Admin\SuperManage\ViewLogs.aspx" />
+    <Content Include="Admin\SystemManage\AddUser.aspx" />
+    <Content Include="Admin\SystemManage\MessageManageAdmin.aspx" />
+    <Content Include="Admin\SuperManage\SummaryReport.aspx" />
+    <Content Include="Admin\SystemManage\ViewLogs.aspx" />
+    <Content Include="Admin\SystemManage\UserCenter.aspx" />
+    <Content Include="Admin\SystemManage\UserManage.aspx" />
+    <Content Include="Admin\SystemManage\ModifyUser.aspx" />
+    <Content Include="alert.htm" />
+    <Content Include="calendar.htm" />
+    <Content Include="Default.aspx" />
+    <Content Include="Images\112.png" />
+    <Content Include="Images\bj.jpg" />
+    <Content Include="Images\ChartAge.jpg" />
+    <Content Include="Images\ChartImage.jpg" />
+    <Content Include="Images\DefaultChat.jpg" />
+    <Content Include="Images\liaoning.jpg" />
+    <Content Include="Images\liaoning2.png" />
+    <Content Include="Images\va_page_05.jpg" />
+    <Content Include="MessageInputDetail.aspx" />
+    <Content Include="MessageManageReporting.aspx" />
+    <Content Include="Images\alertInfo.png" />
+    <Content Include="Images\bar1.gif" />
+    <Content Include="Images\bg.gif" />
+    <Content Include="Images\body_background.png" />
+    <Content Include="Images\body_background_new.png" />
+    <Content Include="Images\border_bg.png" />
+    <Content Include="Images\border_end.png" />
+    <Content Include="Images\BoxOver_bd.png" />
+    <Content Include="Images\btu_ok.png" />
+    <Content Include="Images\button_login2.gif" />
+    <Content Include="Images\calendar.jpg" />
+    <Content Include="Images\close.gif" />
+    <Content Include="Images\content_li_top.png" />
+    <Content Include="Images\DelNews.png" />
+    <Content Include="Images\dir.gif" />
+    <Content Include="Images\EditNews.png" />
+    <Content Include="Images\left_tabid_cnt_top.png" />
+    <Content Include="Images\left_tab_Selected.gif" />
+    <Content Include="Images\left_tab_Selectedno.gif" />
+    <Content Include="Images\line_2.gif" />
+    <Content Include="Images\lock.png" />
+    <Content Include="Images\login-welcome.gif" />
+    <Content Include="Images\logo.png" />
+    <Content Include="Images\LogoNew.png" />
+    <Content Include="Images\logo_user.png" />
+    <Content Include="Images\manage_arrow_down.gif" />
+    <Content Include="Images\manage_arrow_left.gif" />
+    <Content Include="Images\manage_arrow_right.gif" />
+    <Content Include="Images\manage_arrow_up.gif" />
+    <Content Include="Images\manage_back.gif" />
+    <Content Include="Images\manage_top_bg.gif" />
+    <Content Include="Images\menuitembgcolor.png" />
+    <Content Include="Images\menutopbgcolor.png" />
+    <Content Include="Images\menutopbgcolorleft.png" />
+    <Content Include="Images\menutopbgcolortop.png" />
+    <Content Include="Images\minus.gif" />
+    <Content Include="Images\open.gif" />
+    <Content Include="Images\plus.gif" />
+    <Content Include="Images\progress.jpg" />
+    <Content Include="Images\progress1.jpg" />
+    <Content Include="Images\quote.gif" />
+    <Content Include="Images\re.gif" />
+    <Content Include="Images\saveExit.png" />
+    <Content Include="Images\saveExitSelected.png" />
+    <Content Include="Images\Search.png" />
+    <Content Include="Images\Setting_TabPage2.png" />
+    <Content Include="Images\skinpic.png" />
+    <Content Include="Images\Skin_onmouseout_bg.gif" />
+    <Content Include="Images\Skin_onmouseout_bg.png" />
+    <Content Include="Images\Skin_onmouseover_bg.gif" />
+    <Content Include="Images\Skin_onmouseover_bg.png" />
+    <Content Include="Images\sword03.gif" />
+    <Content Include="Images\tab.gif" />
+    <Content Include="Images\tab01.gif" />
+    <Content Include="Images\tab11.png" />
+    <Content Include="Images\tabnew.gif" />
+    <Content Include="Images\Template_bg.png" />
+    <Content Include="Images\unlock.png" />
+    <Content Include="Images\update.png" />
+    <Content Include="Images\updateSelected.png" />
+    <Content Include="Images\used.png" />
+    <Content Include="Images\UserIco_bg.png" />
+    <Content Include="Images\user_btu_left.png" />
+    <Content Include="Images\user_btu_right.png" />
+    <Content Include="Images\user_dleft_tab7.png" />
+    <Content Include="Images\user_login_02.gif" />
+    <Content Include="Images\user_login_04.gif" />
+    <Content Include="Images\user_login_05.gif" />
+    <Content Include="Images\user_post_input.png" />
+    <Content Include="Images\user_post_inputtxt.png" />
+    <Content Include="Images\user_post_inputtxt1.png" />
+    <Content Include="Images\user_post_title_bg.png" />
+    <Content Include="Images\user_post_top_bg.png" />
+    <Content Include="Images\user_setting_title_tab_bg.png" />
+    <Content Include="Images\user_team_bg.png" />
+    <Content Include="Images\user_team_top.png" />
+    <Content Include="Images\win_top.png" />
+    <Content Include="Images\win_top2.png" />
+    <Content Include="Images\X.gif" />
+    <Content Include="MessageInput.aspx" />
+    <Content Include="Default3.aspx" />
+    <Content Include="Logout.aspx" />
+    <Content Include="Admin\SuperAdmin.aspx" />
+    <Content Include="Admin\SuperContent.aspx" />
+    <Content Include="Login.aspx" />
+    <Content Include="MedicalCertificate.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="MessageManage.aspx" />
+    <Content Include="Scripts\alert.js" />
+    <Content Include="Scripts\calendar.js" />
+    <Content Include="Scripts\Calendar1.js" />
+    <Content Include="Scripts\Calendar2.js" />
+    <Content Include="Scripts\Calendar3.js" />
+    <Content Include="Scripts\Calendar4.js" />
+    <Content Include="Scripts\Calendar5.js" />
+    <Content Include="Scripts\Calendar6.js" />
+    <Content Include="Scripts\check.js" />
+    <Content Include="Scripts\JScript.js" />
+    <Content Include="Scripts\My97DatePicker\calendar.js" />
+    <Content Include="Scripts\My97DatePicker\config.js" />
+    <Content Include="Scripts\My97DatePicker\lang\en.js" />
+    <Content Include="Scripts\My97DatePicker\lang\zh-cn.js" />
+    <Content Include="Scripts\My97DatePicker\lang\zh-tw.js" />
+    <Content Include="Scripts\My97DatePicker\My97DatePicker.htm" />
+    <Content Include="Scripts\My97DatePicker\skin\datePicker.gif" />
+    <Content Include="Scripts\My97DatePicker\skin\default\datepicker.css" />
+    <Content Include="Scripts\My97DatePicker\skin\default\down.jpg" />
+    <Content Include="Scripts\My97DatePicker\skin\default\img.gif" />
+    <Content Include="Scripts\My97DatePicker\skin\default\left.gif" />
+    <Content Include="Scripts\My97DatePicker\skin\default\navLeft.gif" />
+    <Content Include="Scripts\My97DatePicker\skin\default\navRight.gif" />
+    <Content Include="Scripts\My97DatePicker\skin\default\right.gif" />
+    <Content Include="Scripts\My97DatePicker\skin\default\up.jpg" />
+    <Content Include="Scripts\My97DatePicker\skin\WdatePicker.css" />
+    <Content Include="Scripts\My97DatePicker\skin\whyGreen\bg.jpg" />
+    <Content Include="Scripts\My97DatePicker\skin\whyGreen\datepicker.css" />
+    <Content Include="Scripts\My97DatePicker\skin\whyGreen\down.jpg" />
+    <Content Include="Scripts\My97DatePicker\skin\whyGreen\img.gif" />
+    <Content Include="Scripts\My97DatePicker\skin\whyGreen\left.gif" />
+    <Content Include="Scripts\My97DatePicker\skin\whyGreen\navLeft.gif" />
+    <Content Include="Scripts\My97DatePicker\skin\whyGreen\navRight.gif" />
+    <Content Include="Scripts\My97DatePicker\skin\whyGreen\other\bg2.jpg" />
+    <Content Include="Scripts\My97DatePicker\skin\whyGreen\other\interface.jpg" />
+    <Content Include="Scripts\My97DatePicker\skin\whyGreen\right.gif" />
+    <Content Include="Scripts\My97DatePicker\skin\whyGreen\up.jpg" />
+    <Content Include="Scripts\My97DatePicker\skin\whyGreen\ymbg.jpg" />
+    <Content Include="Scripts\My97DatePicker\WdatePicker.js" />
+    <Content Include="Scripts\Preview.js" />
+    <Content Include="Styles\admin.css" />
+    <Content Include="Styles\messageDetail.css" />
+    <Content Include="Styles\default.css" />
+    <Content Include="Styles\main.css" />
+    <Content Include="Admin\Admin.aspx" />
+    <Content Include="Scripts\menu.js" />
+    <Content Include="Admin\Content.aspx" />
+    <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.4.1.js" />
+    <Content Include="Scripts\jquery-1.4.1.min.js" />
+    <Content Include="main.aspx" />
+    <Content Include="Styles\Site.css" />
+    <Content Include="UserCenter.aspx" />
+    <Content Include="Verfiy.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="About.aspx.designer.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\SuperManage\AddHospital.aspx.designer.cs">
+      <DependentUpon>AddHospital.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\inc\IsSuperAdmin.ascx.cs">
+      <DependentUpon>IsSuperAdmin.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Logout.aspx.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\SuperManage\AddAdmin.aspx.cs">
+      <DependentUpon>AddAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\SuperManage\AddAdmin.aspx.designer.cs">
+      <DependentUpon>AddAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\SuperManage\AdminCenter.aspx.cs">
+      <DependentUpon>AdminCenter.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\SuperManage\AdminCenter.aspx.designer.cs">
+      <DependentUpon>AdminCenter.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\SuperManage\AdminManage.aspx.cs">
+      <DependentUpon>AdminManage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\SuperManage\AdminManage.aspx.designer.cs">
+      <DependentUpon>AdminManage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\SuperManage\AddHospital.aspx.cs">
+      <DependentUpon>AddHospital.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\SuperManage\AdminManageHospital.aspx.cs">
+      <DependentUpon>AdminManageHospital.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\SuperManage\AdminManageHospital.aspx.designer.cs">
+      <DependentUpon>AdminManageHospital.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\SuperManage\MessageManageSupperAdmin.aspx.cs">
+      <DependentUpon>MessageManageSupperAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\SuperManage\MessageManageSupperAdmin.aspx.designer.cs">
+      <DependentUpon>MessageManageSupperAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\SuperManage\ModifyHospital.aspx.cs">
+      <DependentUpon>ModifyHospital.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\SuperManage\ModifyAdmin.aspx.cs">
+      <DependentUpon>ModifyAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\SuperManage\ModifyAdmin.aspx.designer.cs">
+      <DependentUpon>ModifyAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\inc\IsAdmin.ascx.cs">
+      <DependentUpon>IsAdmin.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\inc\User.ascx.cs">
+      <DependentUpon>User.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\SuperManage\ViewLogs.aspx.cs">
+      <DependentUpon>ViewLogs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\SuperManage\ViewLogs.aspx.designer.cs">
+      <DependentUpon>ViewLogs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\SystemManage\AddUser.aspx.cs">
+      <DependentUpon>AddUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\SystemManage\MessageManageAdmin.aspx.cs">
+      <DependentUpon>MessageManageAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\SystemManage\MessageManageAdmin.aspx.designer.cs">
+      <DependentUpon>MessageManageAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\SuperManage\SummaryReport.aspx.cs">
+      <DependentUpon>SummaryReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\SuperManage\SummaryReport.aspx.designer.cs">
+      <DependentUpon>SummaryReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\SystemManage\ViewLogs.aspx.cs">
+      <DependentUpon>ViewLogs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\SystemManage\ViewLogs.aspx.designer.cs">
+      <DependentUpon>ViewLogs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\SystemManage\UserCenter.aspx.cs">
+      <DependentUpon>UserCenter.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\SystemManage\UserCenter.aspx.designer.cs">
+      <DependentUpon>UserCenter.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\SystemManage\UserManage.aspx.cs">
+      <DependentUpon>UserManage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\SystemManage\UserManage.aspx.designer.cs">
+      <DependentUpon>UserManage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\SystemManage\ModifyUser.aspx.cs">
+      <DependentUpon>ModifyUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MessageInput.MessageDetail.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MessageInputDetail.aspx.cs">
+      <DependentUpon>MessageInputDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MessageInputDetail.aspx.designer.cs">
+      <DependentUpon>MessageInputDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Help\2Excel.cs" />
+    <Compile Include="MessageManageReporting.aspx.cs">
+      <DependentUpon>MessageManageReporting.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MessageManageReporting.aspx.designer.cs">
+      <DependentUpon>MessageManageReporting.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MessageInput.aspx.cs">
+      <DependentUpon>MessageInput.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MessageInput.aspx.designer.cs">
+      <DependentUpon>MessageInput.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Help\BaseSystem.cs" />
+    <Compile Include="Default3.aspx.cs">
+      <DependentUpon>Default3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Logout.aspx.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\SuperAdmin.aspx.cs">
+      <DependentUpon>SuperAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\SuperContent.aspx.cs">
+      <DependentUpon>SuperContent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\SystemManage\ModifyUser.aspx.designer.cs">
+      <DependentUpon>ModifyUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Admin.aspx.cs">
+      <DependentUpon>Admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Content.aspx.cs">
+      <DependentUpon>Content.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MedicalCertificate.cs">
+      <DependentUpon>MedicalCertificate.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MessageInput.ReportSummation.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MessageManage.aspx.cs">
+      <DependentUpon>MessageManage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MessageManage.aspx.designer.cs">
+      <DependentUpon>MessageManage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MyTemplate.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="main.aspx.cs">
+      <DependentUpon>main.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Report.cs" />
+    <Compile Include="UserCenter.aspx.cs">
+      <DependentUpon>UserCenter.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserCenter.aspx.designer.cs">
+      <DependentUpon>UserCenter.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Verfiy.aspx.cs">
+      <DependentUpon>Verfiy.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MedicalCertificate.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DreamWork.BussinessLogic\DreamWork.BussinessLogic.csproj">
+      <Project>{0C10AA64-AE9D-4CA9-87CD-33A768504C45}</Project>
+      <Name>DreamWork.BussinessLogic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DreamWork.ObjectModel\DreamWork.ObjectModel.csproj">
+      <Project>{D3F2ABA4-E5AA-4065-BD2F-60F34337A99A}</Project>
+      <Name>DreamWork.ObjectModel</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>60001</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
