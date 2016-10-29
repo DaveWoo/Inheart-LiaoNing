@@ -86,16 +86,20 @@ strFrame+='					<span id=meizzMinuteHead></span></td>';
 strFrame+='			 </tr></table></td></tr></table></div>';
 
 window.frames.endDateLayer.document.writeln(strFrame);
-window.frames.endDateLayer.document.close();		//解决ie进度条不结束的问题
+window.frames.endDateLayer.document.close();		//解决ie进度条不结束的问题
+
 
 //==================================================== WEB 页面显示部分 ======================================================
 var outObject;
-var outButton;		//点击的按钮
-var outDate="";		//存放对象的日期
+var outButton;		//点击的按钮
+
+var outDate="";		//存放对象的日期
+
 var odatelayer=window.frames.endDateLayer.document.all;		//存放日历对象
 var odatelayer=window.endDateLayer.document.all;
 var bUseTime=false;		//是否使用时间
-var bCanUseTime=true;	//能否开启关闭时间
+var bCanUseTime=true;	//能否开启关闭时间
+
 //odatelayer.bUseTimeLayer.innerText="NO";
 bImgSwitch();
 odatelayer.bUseTimeLayer.innerHTML=bImg;
@@ -109,18 +113,23 @@ function setTime(tt,obj,hasTime,canUseTime)
 	if (arguments.length == 0){alert("对不起！您没有传回本控件任何参数！");return;}
 	var dads  = document.all.endDateLayer.style;
 	var th = tt;
-	var ttop  = tt.offsetTop;     //TT控件的定位点高
+	var ttop  = tt.offsetTop;     //TT控件的定位点高
+
 	var thei  = tt.clientHeight;  //TT控件本身的高
-	var tleft = tt.offsetLeft;    //TT控件的定位点宽
-	var ttyp  = tt.type;          //TT控件的类型
+	var tleft = tt.offsetLeft;    //TT控件的定位点宽
+
+	var ttyp  = tt.type;          //TT控件的类型
+
 	while (tt = tt.offsetParent){ttop+=tt.offsetTop; tleft+=tt.offsetLeft;}
 	dads.top  = (ttyp=="image")? ttop+thei : ttop+thei+6;
 	dads.left = tleft;
 	outObject = (arguments.length == 1) ? th : obj;
-	outButton = (arguments.length == 1) ? null : th;	//设定外部点击的按钮
+	outButton = (arguments.length == 1) ? null : th;	//设定外部点击的按钮
+
 	bCanUseTime = canUseTime;
 	
-	//根据当前输入框的日期显示日历的年月
+	//根据当前输入框的日期显示日历的年月
+
 	var reg = /^(\d+)-(\d{1,2})-(\d{1,2})/;		//不含时间
 	var r = outObject.value.match(reg);	
 	if(r!=null){
@@ -167,7 +176,8 @@ function setTime(tt,obj,hasTime,canUseTime)
 	}
 	catch (e)
 	{
-		//此处排除错误，错误原因暂未找到。
+		//此处排除错误，错误原因暂未找到。
+
 	}
 }
 
@@ -177,18 +187,23 @@ function setday(tt,obj) //主调函数
 	if (arguments.length == 0){alert("对不起！您没有传回本控件任何参数！");return;}
 	var dads  = document.all.endDateLayer.style;
 	var th = tt;
-	var ttop  = tt.offsetTop;     //TT控件的定位点高
+	var ttop  = tt.offsetTop;     //TT控件的定位点高
+
 	var thei  = tt.clientHeight;  //TT控件本身的高
-	var tleft = tt.offsetLeft;    //TT控件的定位点宽
-	var ttyp  = tt.type;          //TT控件的类型
+	var tleft = tt.offsetLeft;    //TT控件的定位点宽
+
+	var ttyp  = tt.type;          //TT控件的类型
+
 	while (tt = tt.offsetParent){ttop+=tt.offsetTop; tleft+=tt.offsetLeft;}
 	dads.top  = (ttyp=="image")? ttop+thei : ttop+thei+6;
 	dads.left = tleft;
 	outObject = (arguments.length == 1) ? th : obj;
-	outButton = (arguments.length == 1) ? null : th;	//设定外部点击的按钮
+	outButton = (arguments.length == 1) ? null : th;	//设定外部点击的按钮
 
 
-	//根据当前输入框的日期显示日历的年月
+
+	//根据当前输入框的日期显示日历的年月
+
 	var reg = /^(\d+)-(\d{1,2})-(\d{1,2})/;		//不含时间
 	var r = outObject.value.match(reg);	
 	if(r!=null){
@@ -214,7 +229,8 @@ function setday(tt,obj) //主调函数
 	}
 	dads.display = '';
 
-	//判断初始化时是否使用时间,非严格验证
+	//判断初始化时是否使用时间,非严格验证
+
 	if (outObject.value.length>10)
 	{
 		bUseTime=true;
@@ -252,7 +268,8 @@ function setday(tt,obj) //主调函数
 	}
 	catch (e)
 	{
-		//此处排除错误，错误原因暂未找到。
+		//此处排除错误，错误原因暂未找到。
+
 	}
 	//--------------------------------------
 	// add by cd.NET 2008-05-28
@@ -263,18 +280,24 @@ function setday(tt,obj) //主调函数
     //--------------------------------------
 }
 
-var MonHead = new Array(12);    		   //定义阳历中每个月的最大天数
+var MonHead = new Array(12);    		   //定义阳历中每个月的最大天数
+
     MonHead[0] = 31; MonHead[1] = 28; MonHead[2] = 31; MonHead[3] = 30; MonHead[4]  = 31; MonHead[5]  = 30;
     MonHead[6] = 31; MonHead[7] = 31; MonHead[8] = 30; MonHead[9] = 31; MonHead[10] = 30; MonHead[11] = 31;
 
-var meizzTheYear=new Date().getFullYear(); //定义年的变量的初始值
-var meizzTheMonth=new Date().getMonth()+1; //定义月的变量的初始值
+var meizzTheYear=new Date().getFullYear(); //定义年的变量的初始值
+
+var meizzTheMonth=new Date().getMonth()+1; //定义月的变量的初始值
+
 var meizzTheDate=new Date().getDate();	   //定义日的变量的初始值	
-var meizzTheHour=new Date().getHours();	   //定义小时变量的初始值
-var meizzTheMinute=new Date().getMinutes();//定义分钟变量的初始值
+var meizzTheHour=new Date().getHours();	   //定义小时变量的初始值
+
+var meizzTheMinute=new Date().getMinutes();//定义分钟变量的初始值
+
 var meizzWDay=new Array(37);               //定义写日期的数组
 
-function document.onclick() //任意点击时关闭该控件	//ie6的情况可以由下面的切换焦点处理代替
+function document.onclick() //任意点击时关闭该控件	//ie6的情况可以由下面的切换焦点处理代替
+
 { 
   with(window.event)
   { if (srcElement != outObject && srcElement != outButton)
@@ -295,7 +318,8 @@ function document.onkeyup()		//按Esc键关闭，切换焦点关闭
 		}
   }
 
-function meizzWriteHead(yy,mm)  //往 head 中写入当前的年与月
+function meizzWriteHead(yy,mm)  //往 head 中写入当前的年与月
+
   {
 	odatelayer.meizzYearHead.innerText  = yy + " 年";
     odatelayer.meizzMonthHead.innerText = format(mm) + " 月";
@@ -413,17 +437,20 @@ function showLayer()               //这个层的关闭
     document.all.endDateLayer.style.display="";
   }
 
-function IsPinYear(year)            //判断是否闰平年
+function IsPinYear(year)            //判断是否闰平年
+
   {
     if (0==year%4&&((year%100!=0)||(year%400==0))) return true;else return false;
   }
 
-function GetMonthCount(year,month)  //闰年二月为29天
+function GetMonthCount(year,month)  //闰年二月为29天
+
   {
     var c=MonHead[month-1];if((month==2)&&IsPinYear(year)) c++;return c;
   }
 
-function GetDOW(day,month,year)     //求某天的星期几
+function GetDOW(day,month,year)     //求某天的星期几
+
   {
     var dt=new Date(year,month-1,day).getDay()/7; return dt;
   }
@@ -493,20 +520,26 @@ function meizzNextM()  //往后翻月份
 function meizzSetDay(yy,mm)   //主要的写程序**********
 {
   meizzWriteHead(yy,mm);
-  //设置当前年月的公共变量为传入值
+  //设置当前年月的公共变量为传入值
+
   meizzTheYear=yy;
   meizzTheMonth=mm;
   
-  for (var i = 0; i < 37; i++){meizzWDay[i]=""};  //将显示框的内容全部清空
-  var day1 = 1,day2=1,firstday = new Date(yy,mm-1,1).getDay();  //某月第一天的星期几
-  for (i=0;i<firstday;i++)meizzWDay[i]=GetMonthCount(mm==1?yy-1:yy,mm==1?12:mm-1)-firstday+i+1	//上个月的最后几天
+  for (var i = 0; i < 37; i++){meizzWDay[i]=""};  //将显示框的内容全部清空
+
+  var day1 = 1,day2=1,firstday = new Date(yy,mm-1,1).getDay();  //某月第一天的星期几
+
+  for (i=0;i<firstday;i++)meizzWDay[i]=GetMonthCount(mm==1?yy-1:yy,mm==1?12:mm-1)-firstday+i+1	//上个月的最后几天
+
   for (i = firstday; day1 < GetMonthCount(yy,mm)+1; i++){meizzWDay[i]=day1;day1++;}
   for (i=firstday+GetMonthCount(yy,mm);i<37;i++){meizzWDay[i]=day2;day2++}
   for (i = 0; i < 37; i++)
-  { var da = eval("odatelayer.meizzDay"+i)     //书写新的一个月的日期星期排列
+  { var da = eval("odatelayer.meizzDay"+i)     //书写新的一个月的日期星期排列
+
     if (meizzWDay[i]!="")
       { 
-		//初始化边框
+		//初始化边框
+
 		da.borderColorLight="#63A3E9";
 		da.borderColorDark="#63A3E9";
 		da.style.color="#1478eb";
@@ -526,7 +559,8 @@ function meizzSetDay(yy,mm)   //主要的写程序**********
 				meizzWDay[i]==outDate.getDate())? "#84C1FF" :
 				(((mm==1?yy-1:yy) == new Date().getFullYear() && (mm==1?12:mm-1) == new Date().getMonth()+1 && 
 				meizzWDay[i] == new Date().getDate()) ? "#5CEFA0":"#f5f5f5");
-				//将选中的日期显示为凹下去
+				//将选中的日期显示为凹下去
+
 				if((mm==1?yy-1:yy)==outDate.getFullYear() && (mm==1?12:mm-1)== outDate.getMonth() + 1 && 
 				meizzWDay[i]==outDate.getDate())
 				{
@@ -550,7 +584,8 @@ function meizzSetDay(yy,mm)   //主要的写程序**********
 				meizzWDay[i]==outDate.getDate())? "#84C1FF" :
 				(((mm==12?yy+1:yy) == new Date().getFullYear() && (mm==12?1:mm+1) == new Date().getMonth()+1 && 
 				meizzWDay[i] == new Date().getDate()) ? "#5CEFA0":"#f5f5f5");
-				//将选中的日期显示为凹下去
+				//将选中的日期显示为凹下去
+
 				if((mm==12?yy+1:yy)==outDate.getFullYear() && (mm==12?1:mm+1)== outDate.getMonth() + 1 && 
 				meizzWDay[i]==outDate.getDate())
 				{
@@ -559,11 +594,13 @@ function meizzSetDay(yy,mm)   //主要的写程序**********
 				}
 			}
 		}
-		else		//本月的部分
+		else		//本月的部分
+
 		{
 			da.innerHTML="<b>" + meizzWDay[i] + "</b>";
 			da.title=mm +"月" + meizzWDay[i] + "日";
-			da.onclick=Function("meizzDayClick(this.innerText,0)");		//给td赋予onclick事件的处理
+			da.onclick=Function("meizzDayClick(this.innerText,0)");		//给td赋予onclick事件的处理
+
 			//如果是当前选择的日期，则显示亮蓝色的背景；如果是当前日期，则显示暗黄色背景
 			if(!outDate)
 				da.style.backgroundColor = (yy == new Date().getFullYear() && mm == new Date().getMonth()+1 && meizzWDay[i] == new Date().getDate())?
@@ -573,7 +610,8 @@ function meizzSetDay(yy,mm)   //主要的写程序**********
 				da.style.backgroundColor =(yy==outDate.getFullYear() && mm== outDate.getMonth() + 1 && meizzWDay[i]==outDate.getDate())?
 					"#84C1FF":((yy == new Date().getFullYear() && mm == new Date().getMonth()+1 && meizzWDay[i] == new Date().getDate())?
 					"#5CEFA0":"#f5f5f5");
-				//将选中的日期显示为凹下去
+				//将选中的日期显示为凹下去
+
 				if(yy==outDate.getFullYear() && mm== outDate.getMonth() + 1 && meizzWDay[i]==outDate.getDate())
 				{
 					da.borderColorLight="#FFFFFF";
@@ -594,7 +632,8 @@ function meizzDayClick(n,ex)  //点击显示框选取日期，主输入函数***
   var mm = parseInt(meizzTheMonth)+ex;	//ex表示偏移量，用于选择上个月份和下个月份的日期
   var hh=meizzTheHour;
   var mi=meizzTheMinute;
-	//判断月份，并进行对应的处理
+	//判断月份，并进行对应的处理
+
 	if(mm<1){
 		yy--;
 		mm=12+mm;
@@ -606,8 +645,10 @@ function meizzDayClick(n,ex)  //点击显示框选取日期，主输入函数***
 	
   if (mm < 10){mm = "0" + mm;}
 
-  if (hh<10) {hh="0" + hh;}	//时
-  if (mi<10) {mi="0" + mi;}	//分
+  if (hh<10) {hh="0" + hh;}	//时
+
+  if (mi<10) {mi="0" + mi;}	//分
+
 
   if (outObject)
   {
@@ -650,7 +691,8 @@ function format(n)	//格式化数字为两位字符表示
 	return m;
 }
 
-function evaSetTime()		//设置用户选择的小时、分钟
+function evaSetTime()		//设置用户选择的小时、分钟
+
 {
 	odatelayer.meizzHourHead.innerText=meizzTheHour+" 时";  
 	odatelayer.meizzMinuteHead.innerText=meizzTheMinute+" 分";
@@ -664,7 +706,8 @@ function evaSetTimeNothing()	//设置时间控件为空
 	WriteDateTo(meizzTheYear,meizzTheMonth,meizzTheDate,meizzTheHour,meizzTheMinute)
 }
 
-function evaSetTimeNow()	//设置时间控件为当前时间
+function evaSetTimeNow()	//设置时间控件为当前时间
+
 {
 	odatelayer.meizzHourHead.innerText=new Date().getHours()+" 时";
 	odatelayer.meizzMinuteHead.innerText=new Date().getMinutes()+" 分";
@@ -682,7 +725,8 @@ function UseTime(ctl)
 		{
 			bImgSwitch();
 			ctl.innerHTML=bImg;
-			evaSetTime();		//显示时间，用户原来选择的时间
+			evaSetTime();		//显示时间，用户原来选择的时间
+
 			//evaSetTimeNow();	//显示当前时间
 		}
 		else

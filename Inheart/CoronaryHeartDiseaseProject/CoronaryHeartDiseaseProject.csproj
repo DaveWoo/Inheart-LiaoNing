@@ -21,6 +21,10 @@
     <UpgradeBackupLocation>
     </UpgradeBackupLocation>
     <OldToolsVersion>4.0</OldToolsVersion>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -193,36 +197,8 @@
     <Content Include="Scripts\Calendar5.js" />
     <Content Include="Scripts\Calendar6.js" />
     <Content Include="Scripts\check.js" />
+    <Content Include="Scripts\calendarAll.js" />
     <Content Include="Scripts\JScript.js" />
-    <Content Include="Scripts\My97DatePicker\calendar.js" />
-    <Content Include="Scripts\My97DatePicker\config.js" />
-    <Content Include="Scripts\My97DatePicker\lang\en.js" />
-    <Content Include="Scripts\My97DatePicker\lang\zh-cn.js" />
-    <Content Include="Scripts\My97DatePicker\lang\zh-tw.js" />
-    <Content Include="Scripts\My97DatePicker\My97DatePicker.htm" />
-    <Content Include="Scripts\My97DatePicker\skin\datePicker.gif" />
-    <Content Include="Scripts\My97DatePicker\skin\default\datepicker.css" />
-    <Content Include="Scripts\My97DatePicker\skin\default\down.jpg" />
-    <Content Include="Scripts\My97DatePicker\skin\default\img.gif" />
-    <Content Include="Scripts\My97DatePicker\skin\default\left.gif" />
-    <Content Include="Scripts\My97DatePicker\skin\default\navLeft.gif" />
-    <Content Include="Scripts\My97DatePicker\skin\default\navRight.gif" />
-    <Content Include="Scripts\My97DatePicker\skin\default\right.gif" />
-    <Content Include="Scripts\My97DatePicker\skin\default\up.jpg" />
-    <Content Include="Scripts\My97DatePicker\skin\WdatePicker.css" />
-    <Content Include="Scripts\My97DatePicker\skin\whyGreen\bg.jpg" />
-    <Content Include="Scripts\My97DatePicker\skin\whyGreen\datepicker.css" />
-    <Content Include="Scripts\My97DatePicker\skin\whyGreen\down.jpg" />
-    <Content Include="Scripts\My97DatePicker\skin\whyGreen\img.gif" />
-    <Content Include="Scripts\My97DatePicker\skin\whyGreen\left.gif" />
-    <Content Include="Scripts\My97DatePicker\skin\whyGreen\navLeft.gif" />
-    <Content Include="Scripts\My97DatePicker\skin\whyGreen\navRight.gif" />
-    <Content Include="Scripts\My97DatePicker\skin\whyGreen\other\bg2.jpg" />
-    <Content Include="Scripts\My97DatePicker\skin\whyGreen\other\interface.jpg" />
-    <Content Include="Scripts\My97DatePicker\skin\whyGreen\right.gif" />
-    <Content Include="Scripts\My97DatePicker\skin\whyGreen\up.jpg" />
-    <Content Include="Scripts\My97DatePicker\skin\whyGreen\ymbg.jpg" />
-    <Content Include="Scripts\My97DatePicker\WdatePicker.js" />
     <Content Include="Scripts\Preview.js" />
     <Content Include="Styles\admin.css" />
     <Content Include="Styles\messageDetail.css" />
@@ -240,12 +216,15 @@
     <Content Include="Verfiy.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
   <ItemGroup>
