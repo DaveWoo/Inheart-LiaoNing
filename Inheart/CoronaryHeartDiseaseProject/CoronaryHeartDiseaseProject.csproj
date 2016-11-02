@@ -21,6 +21,10 @@
     <UpgradeBackupLocation>
     </UpgradeBackupLocation>
     <OldToolsVersion>4.0</OldToolsVersion>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -84,6 +88,8 @@
     <Content Include="alert.htm" />
     <Content Include="calendar.htm" />
     <Content Include="Default.aspx" />
+    <Content Include="Default.jpg" />
+    <Content Include="Default3.aspx" />
     <Content Include="Images\112.png" />
     <Content Include="Images\bj.jpg" />
     <Content Include="Images\ChartAge.jpg" />
@@ -174,7 +180,6 @@
     <Content Include="Images\win_top2.png" />
     <Content Include="Images\X.gif" />
     <Content Include="MessageInput.aspx" />
-    <Content Include="Default3.aspx" />
     <Content Include="Logout.aspx" />
     <Content Include="Admin\SuperAdmin.aspx" />
     <Content Include="Admin\SuperContent.aspx" />
@@ -386,6 +391,10 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Default3.aspx.cs">
+      <DependentUpon>Default3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
@@ -415,10 +424,6 @@
       <DependentUpon>MessageInput.aspx</DependentUpon>
     </Compile>
     <Compile Include="Help\BaseSystem.cs" />
-    <Compile Include="Default3.aspx.cs">
-      <DependentUpon>Default3.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
     <Compile Include="Logout.aspx.cs">
       <DependentUpon>Logout.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
