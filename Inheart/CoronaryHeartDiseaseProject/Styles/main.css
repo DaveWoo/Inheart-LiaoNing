@@ -212,26 +212,6 @@ legend
     background-color: #ffffff;
     font-variant: normal;
 }
-TH
-{
-    font-weight: bold;
-    font-size: 18px;
-    color: white;
-    height: 30px;
-    text-align: left;
-    padding-left: 20px;
-    background-image: url(../images/win_top2.png);
-}
-
-.THTitle
-{
-    font-weight: bold;
-    font-size: 28px;
-    color: Black;
-    height: 30px;
-    text-align: center;
-    font-family: Tahoma,Ariall,ËÎÌו;
-}
 
 .foot
 {

@@ -21,7 +21,7 @@ namespace CoronaryHeartDiseaseProject
             {
                 if (item.Controls.Count != 0)
                 {
-                    errorMessage.Append(CheckControlValue(item.Controls));
+                    CheckControlValue(item.Controls);
                 }
 
                 if (item is TextBox)
