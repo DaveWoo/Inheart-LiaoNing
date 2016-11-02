@@ -13,6 +13,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DreamWork.BussinessLogic", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DreamWork.ObjectModel", "DreamWork.ObjectModel\DreamWork.ObjectModel.csproj", "{D3F2ABA4-E5AA-4065-BD2F-60F34337A99A}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Prepare", "Prepare", "{26F7DAF2-A066-4782-ABEB-020257002621}"
+	ProjectSection(SolutionItems) = preProject
+		SQL\Insert.sql = SQL\Insert.sql
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
