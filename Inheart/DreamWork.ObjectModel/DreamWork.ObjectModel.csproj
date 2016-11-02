@@ -60,8 +60,6 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>Model1.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="bin\Debug\DreamWork.ObjectModel.dll.config" />
-    <None Include="bin\Release\DreamWork.ObjectModel.dll.config" />
     <None Include="LiaoNing.snk" />
   </ItemGroup>
   <ItemGroup>
@@ -72,13 +70,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="bin\Debug\Dotfuscated\DreamWork.ObjectModel.dll" />
-    <Content Include="bin\Debug\Dotfuscated\Map.xml" />
-    <Content Include="bin\Debug\Dotfuscator1.xml" />
-    <Content Include="bin\Debug\DreamWork.ObjectModel.dll" />
-    <Content Include="bin\Debug\DreamWork.ObjectModel.pdb" />
-    <Content Include="bin\Release\DreamWork.ObjectModel.dll" />
-    <Content Include="bin\Release\DreamWork.ObjectModel.pdb" />
     <Content Include="Model1.edmx.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
