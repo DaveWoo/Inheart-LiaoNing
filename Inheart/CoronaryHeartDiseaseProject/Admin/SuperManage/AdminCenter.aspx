@@ -1,27 +1,27 @@
-<%@ Page Language="C#" AutoEventWireup="true" CodeFile="AdminCenter.aspx.cs" Inherits="CoronaryHeartDiseaseProject.Admin.SuperManage.AdminCenter" %>
+ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="AdminCenter.aspx.cs" Inherits="CoronaryHeartDiseaseProject.Admin.SuperManage.AdminCenter" %>
 
 <%--<%@ Register Src="../inc/session.ascx" TagName="session" TagPrefix="uc1" %>--%>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
-    <title>ĞŞ¸Ä×ÊÁÏ</title>
+    <title>ä¿®æ”¹èµ„æ–™</title>
     <link href="../../Styles/admin.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript" language="javascript">
         function check() {
             if (document.myform.oldpass.value == "") {
-                alert("Ô­ÃÜÂë²»ÄÜÎª¿Õ£¡£¡");
+                alert("åŸå¯†ç ä¸èƒ½ä¸ºç©ºï¼ï¼");
                 return false;
             }
             if (document.myform.newpass.value.length < 7) {
-                alert("ÃÜÂë³¤¶È²»ÄÜĞ¡ÓÚ6Î»£¡£¡");
+                alert("å¯†ç é•¿åº¦ä¸èƒ½å°äº6ä½ï¼ï¼");
                 return false;
             }
             if (document.myform.newpass.value == "") {
-                alert("ĞÂÃÜÂë²»ÄÜÎª¿Õ£¡£¡");
+                alert("æ–°å¯†ç ä¸èƒ½ä¸ºç©ºï¼ï¼");
                 return false;
             }
             if (document.myform.repass.value != document.myform.newpass.value) {
-                alert("Á½´ÎÃÜÂëÊäÈë²»Ò»Ñù£¡£¡");
+                alert("ä¸¤æ¬¡å¯†ç è¾“å…¥ä¸ä¸€æ ·ï¼ï¼");
                 return false;
             }
         }
@@ -33,7 +33,7 @@
             <td>
                 <table width="98%%" border="0" align="center" cellpadding="3" cellspacing="1">
                     <tr>
-                        <td height="25" colspan="2">ÍøÕ¾µ¼º½: &nbsp;<a href="AddAdmin.aspx">Ìí¼Ó¹ÜÀíÔ±</a> &nbsp;|&nbsp; <a href="AdminManage.aspx">¹ÜÀí¹ÜÀíÔ±</a>&nbsp; | <a href="AdminCenter.aspx"><b>ĞŞ¸ÄÃÜÂë</b></a> |
+                        <td height="25" colspan="2">ç½‘ç«™å¯¼èˆª: &nbsp;<a href="AddAdmin.aspx">æ·»åŠ ç®¡ç†å‘˜</a> &nbsp;|&nbsp; <a href="AdminManage.aspx">ç®¡ç†ç®¡ç†å‘˜</a>&nbsp; | <a href="AdminCenter.aspx"><b>ä¿®æ”¹å¯†ç </b></a> |
                         </td>
                     </tr>
                 </table>
@@ -43,25 +43,25 @@
     <form id="myform" runat="server" onsubmit="return check()">
         <table width="98%%" border="0" align="center" cellpadding="3" cellspacing="1" class="tableborder">
             <tr class="header">
-                <td height="25" colspan="2">ĞŞ¸Ä³¬¼¶¹ÜÀíÔ±ÃÜÂë&nbsp;
+                <td height="25" colspan="2">ä¿®æ”¹è¶…çº§ç®¡ç†å‘˜å¯†ç &nbsp;
                 </td>
             </tr>
             <tr bgcolor="#FFFFFF">
-                <td width="25%" height="25">Ô­ÃÜÂë
+                <td width="25%" height="25">åŸå¯†ç 
                 </td>
                 <td width="75%" height="25">
                     <input type="password" name="oldpass" style="width: 250px" />
                 </td>
             </tr>
             <tr bgcolor="#FFFFFF">
-                <td height="25">ĞÂÃÜÂë
+                <td height="25">æ–°å¯†ç 
                 </td>
                 <td height="25">
                     <input type="password" name="newpass" style="width: 250px" />
                 </td>
             </tr>
             <tr bgcolor="#FFFFFF">
-                <td height="25">È·ÈÏÃÜÂë
+                <td height="25">ç¡®è®¤å¯†ç 
                 </td>
                 <td height="25">
                     <input type="password" name="repass" style="width: 250px" />
@@ -71,9 +71,9 @@
                 <td height="25">&nbsp;
                 </td>
                 <td height="25">
-                    <input type="submit" value="±£´æÃÜÂë" name="B1" class="Button" id="Submit2" onserverclick="Submit1_SavePassword_ServerClick"
+                    <input type="submit" value="ä¿å­˜å¯†ç " name="B1" class="Button" id="Submit2" onserverclick="Submit1_SavePassword_ServerClick"
                         runat="server">
-                    <input type="reset" name="Submit2" value="ÖØÖÃ">
+                    <input type="reset" name="Submit2" value="é‡ç½®">
                 </td>
             </tr>
         </table>

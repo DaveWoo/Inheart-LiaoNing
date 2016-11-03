@@ -1,26 +1,26 @@
-<%@ Page Language="C#" AutoEventWireup="true" CodeFile="UserCenter.aspx.cs" Inherits="CoronaryHeartDiseaseProject.Admin.UserCenter" %>
+ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="UserCenter.aspx.cs" Inherits="CoronaryHeartDiseaseProject.Admin.UserCenter" %>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
-    <title>ĞŞ¸Ä×ÊÁÏ</title>
+    <title>ä¿®æ”¹èµ„æ–™</title>
     <link href="../../Styles/admin.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript" language="javascript">
         function check() {
             if (document.myform.oldpass.value == "") {
-                alert("Ô­ÃÜÂë²»ÄÜÎª¿Õ£¡£¡");
+                alert("åŸå¯†ç ä¸èƒ½ä¸ºç©ºï¼ï¼");
                 return false;
             }
             if (document.myform.newpass.value.length < 6) {
-                alert("ÃÜÂë³¤¶È²»ÄÜĞ¡ÓÚ6Î»£¡£¡");
+                alert("å¯†ç é•¿åº¦ä¸èƒ½å°äº6ä½ï¼ï¼");
                 return false;
             }
             if (document.myform.newpass.value == "") {
-                alert("ĞÂÃÜÂë²»ÄÜÎª¿Õ£¡£¡");
+                alert("æ–°å¯†ç ä¸èƒ½ä¸ºç©ºï¼ï¼");
                 return false;
             }
             if (document.myform.repass.value != document.myform.newpass.value) {
-                alert("Á½´ÎÃÜÂëÊäÈë²»Ò»Ñù£¡£¡");
+                alert("ä¸¤æ¬¡å¯†ç è¾“å…¥ä¸ä¸€æ ·ï¼ï¼");
                 return false;
             }
         }
@@ -36,7 +36,7 @@
             <td>
                 <table width="98%%" border="0" align="center" cellpadding="3" cellspacing="1">
                     <tr>
-                        <td height="25" colspan="2">ÍøÕ¾µ¼º½: &nbsp;<a href="AddUser.aspx">Ìí¼ÓĞÂÓÃ»§</a> &nbsp;|&nbsp; <a href="UserManage.aspx">ÓÃ»§¹ÜÀí</a>&nbsp; | <a href="UserCenter.aspx"><b>ĞŞ¸Ä¹ÜÀíÔ±ÃÜÂë</b> </a>
+                        <td height="25" colspan="2">ç½‘ç«™å¯¼èˆª: &nbsp;<a href="AddUser.aspx">æ·»åŠ æ–°ç”¨æˆ·</a> &nbsp;|&nbsp; <a href="UserManage.aspx">ç”¨æˆ·ç®¡ç†</a>&nbsp; | <a href="UserCenter.aspx"><b>ä¿®æ”¹ç®¡ç†å‘˜å¯†ç </b> </a>
                         </td>
                     </tr>
                 </table>
@@ -46,25 +46,25 @@
     <form id="myform" runat="server" onsubmit="return check()">
         <table width="98%%" border="0" align="center" cellpadding="3" cellspacing="1" class="tableborder">
             <tr class="header">
-                <td height="25" colspan="2">ĞŞ¸Ä¹ÜÀíÔ±ÃÜÂë&nbsp;
+                <td height="25" colspan="2">ä¿®æ”¹ç®¡ç†å‘˜å¯†ç &nbsp;
                 </td>
             </tr>
             <tr bgcolor="#FFFFFF">
-                <td width="25%" height="25">Ô­ÃÜÂë
+                <td width="25%" height="25">åŸå¯†ç 
                 </td>
                 <td width="75%" height="25">
                     <input type="password" name="oldpass" class="tableWidth">
                 </td>
             </tr>
             <tr bgcolor="#FFFFFF">
-                <td height="25">ĞÂÃÜÂë
+                <td height="25">æ–°å¯†ç 
                 </td>
                 <td height="25">
                     <input type="password" name="newpass" class="tableWidth" />
                 </td>
             </tr>
             <tr bgcolor="#FFFFFF">
-                <td height="25">È·ÈÏÃÜÂë
+                <td height="25">ç¡®è®¤å¯†ç 
                 </td>
                 <td height="25">
                     <input type="password" name="repass" class="tableWidth">
@@ -74,9 +74,9 @@
                 <td height="25">&nbsp;
                 </td>
                 <td height="25">
-                    <input type="submit" value="±£´æÃÜÂë" name="B1" class="Button" id="Submit2" onserverclick="Submit1_ServerClick"
+                    <input type="submit" value="ä¿å­˜å¯†ç " name="B1" class="Button" id="Submit2" onserverclick="Submit1_ServerClick"
                         runat="server" onclick="return Submit2_onclick()">
-                    <input type="reset" name="Submit2" value="ÖØÖÃ">
+                    <input type="reset" name="Submit2" value="é‡ç½®">
                 </td>
             </tr>
         </table>

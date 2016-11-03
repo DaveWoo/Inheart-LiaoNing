@@ -1,10 +1,10 @@
-<%@ Page Language="C#" AutoEventWireup="true" CodeFile="AdminManageHospital.aspx.cs"
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="AdminManageHospital.aspx.cs"
     Inherits="CoronaryHeartDiseaseProject.Admin.SuperManage.AdminManageHospital" %>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
-    <title>�޸�����</title>
+    <title>修改资料</title>
     <link href="../../Styles/admin.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript" language="javascript">
         function CheckAll(form) {
@@ -25,15 +25,15 @@
             <td>
                 <table width="98%%" border="0" align="center" cellpadding="3" cellspacing="1">
                     <tr>
-                        <td height="25" colspan="2">��վ����: &nbsp;<a href="AddHospital.aspx">����ҽԺ</a> &nbsp;|&nbsp; <a href="AdminManageHospital.aspx">
-                            <b>����ҽԺ</b></a>&nbsp; |
+                        <td height="25" colspan="2">网站导航: &nbsp;<a href="AddHospital.aspx">添加医院</a> &nbsp;|&nbsp; <a href="AdminManageHospital.aspx">
+                            <b>管理医院</b></a>&nbsp; |
                         </td>
                     </tr>
                 </table>
             </td>
         </tr>
     </table>
-    <form id="Form1" name="listform" runat="server" onsubmit="return confirm('ȷ��Ҫִ�д˲�����');">
+    <form id="Form1" name="listform" runat="server" onsubmit="return confirm('确认要执行此操作？');">
         <asp:Label ID="Label1" runat="server"></asp:Label>&nbsp;
     <asp:DataList ID="DataListHospital" runat="server" Width="100%">
         <HeaderTemplate>
@@ -45,17 +45,17 @@
                     </td>--%>
                     <td width="40%" height="25">
                         <div align="center">
-                            ҽԺ
+                            医院
                         </div>
                     </td>
                     <td width="40%" height="25">
                         <div align="center">
-                            ��������
+                            所属地区
                         </div>
                     </td>
                     <td width="20%" height="25">
                         <div align="center">
-                            ����
+                            操作
                         </div>
                     </td>
                 </tr>
@@ -92,13 +92,13 @@
                 <tr bgcolor="#ffffff">
                     <td height="25" colspan="4">
                         <div align="right">
-                            <input type="submit" name="Submit3" value="����ѡҽԺɾ��" id="Submit1" onserverclick="Submit1_ServerClick"
+                            <input type="submit" name="Submit3" value="将所选医院删除" id="Submit1" onserverclick="Submit1_ServerClick"
                                 runat="server">
                             &nbsp;&nbsp;
-                            <input type="button" name="Submit822" value="����ҽԺ" onclick="javascript: window.location = 'AddHospital.aspx';">&nbsp;
-                            <%--  <input type="button" name="Submit8222" value="���غ�̨��ҳ" onclick="javascript:window.location='../SuperAdmin.aspx';">
+                            <input type="button" name="Submit822" value="添加医院" onclick="javascript: window.location = 'AddHospital.aspx';">&nbsp;
+                            <%--  <input type="button" name="Submit8222" value="返回后台首页" onclick="javascript:window.location='../SuperAdmin.aspx';">
                             &nbsp;&nbsp;--%>
-                            <input type="checkbox" name="chkall" value="on" onclick="CheckAll(this.form)">ѡ��ȫ��
+                            <input type="checkbox" name="chkall" value="on" onclick="CheckAll(this.form)">选中全部
                         </div>
                     </td>
                 </tr>
@@ -116,9 +116,9 @@
         </table>
         <table width="100%" border="0" cellpadding="0" cellspacing="0">
             <tr bgcolor="#ffffff">
-                <td height="25" colspan="4">��ע��<span style="color: #ff0000"> 1.��ѡ�򱳾�ɫΪ��ɫ������ѡ����Ϣ,���в�����Ϊ���ɻָ����ڲ���ʱ�����Ա���ء�<br />
+                <td height="25" colspan="4">备注：<span style="color: #ff0000"> 1.多选框背景色为蓝色代表已选中信息,所有操作均为不可恢复，在操作时请管理员慎重。<br />
                     &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-                    <!--2.�������վ�����¿��Իָ�,��ջ���վ���³���ɾ����-->
+                    <!--2.放入回收站的文章可以恢复,清空回收站文章彻底删除。-->
                     <br />
                 </span>
                 </td>

@@ -1,39 +1,39 @@
-<%@ Page Language="C#" AutoEventWireup="true" CodeFile="AddUser.aspx.cs" Inherits="CoronaryHeartDiseaseProject.Admin.AddUser" %>
+ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="AddUser.aspx.cs" Inherits="CoronaryHeartDiseaseProject.Admin.AddUser" %>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
-    <title>ĞŞ¸Ä×ÊÁÏ</title>
+    <title>ä¿®æ”¹èµ„æ–™</title>
     <link href="../../Styles/admin.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript" language="javascript">
         function check() {
             if (document.myform.username.value == "") {
-                alert("ÓÃ»§Ãû²»ÄÜÎª¿Õ£¡£¡");
+                alert("ç”¨æˆ·åä¸èƒ½ä¸ºç©ºï¼ï¼");
                 return false;
             }
 
             if (document.myform.username.value.length > 12) {
-                alert("ÓÃ»§Ãû²»ÄÜ²»ÄÜ³¤ÓÚ12£¡£¡");
+                alert("ç”¨æˆ·åä¸èƒ½ä¸èƒ½é•¿äº12ï¼ï¼");
                 return false;
             }
 
             if (document.myform.newpass.value == "") {
-                alert("ÃÜÂë²»ÄÜÎª¿Õ£¡£¡");
+                alert("å¯†ç ä¸èƒ½ä¸ºç©ºï¼ï¼");
                 return false;
             }
 
             if (document.myform.newpass.value.length < 6) {
-                alert("ÃÜÂë³¤¶È²»ÄÜĞ¡ÓÚ6Î»£¡£¡");
+                alert("å¯†ç é•¿åº¦ä¸èƒ½å°äº6ä½ï¼ï¼");
                 return false;
             }
 
             if (document.myform.repass.value != document.myform.newpass.value) {
-                alert("Á½´ÎÃÜÂëÊäÈë²»Ò»Ñù£¡£¡");
+                alert("ä¸¤æ¬¡å¯†ç è¾“å…¥ä¸ä¸€æ ·ï¼ï¼");
                 return false;
             }
 
             if (document.myform.newpass.value.length > 12) {
-                alert("ÃÜÂë³¤¶È²»ÄÜ³¤ÓÚ12£¡£¡");
+                alert("å¯†ç é•¿åº¦ä¸èƒ½é•¿äº12ï¼ï¼");
                 return false;
             }
         }
@@ -50,7 +50,7 @@
             <td>
                 <table width="98%%" border="0" align="center" cellpadding="3" cellspacing="1">
                     <tr>
-                        <td height="25" colspan="2">ÍøÕ¾µ¼º½: &nbsp;<a href="AddUser.aspx"><b>Ìí¼ÓĞÂÓÃ»§</b></a> &nbsp;|&nbsp; <a href="UserManage.aspx">ÓÃ»§¹ÜÀí</a>&nbsp; | <a href="UserCenter.aspx">ĞŞ¸Ä¹ÜÀíÔ±ÃÜÂë </a>
+                        <td height="25" colspan="2">ç½‘ç«™å¯¼èˆª: &nbsp;<a href="AddUser.aspx"><b>æ·»åŠ æ–°ç”¨æˆ·</b></a> &nbsp;|&nbsp; <a href="UserManage.aspx">ç”¨æˆ·ç®¡ç†</a>&nbsp; | <a href="UserCenter.aspx">ä¿®æ”¹ç®¡ç†å‘˜å¯†ç  </a>
                         </td>
                     </tr>
                 </table>
@@ -60,25 +60,25 @@
     <form id="myform" runat="server" onsubmit="return check()">
         <table width="98%%" border="0" align="center" cellpadding="3" cellspacing="1" class="tableborder">
             <tr class="header">
-                <td height="25" colspan="2">Ìí¼ÓĞÂÓÃ»§
+                <td height="25" colspan="2">æ·»åŠ æ–°ç”¨æˆ·
                 </td>
             </tr>
             <tr bgcolor="#FFFFFF">
-                <td width="25%" height="25">ĞÂÓÃ»§ÓÃÃû
+                <td width="25%" height="25">æ–°ç”¨æˆ·ç”¨å
                 </td>
                 <td width="75%" height="25">
                     <input type="text" name="username" class="tableWidth" />
                 </td>
             </tr>
             <tr bgcolor="#FFFFFF">
-                <td height="25">ÓÃ»§ÃÜÂë
+                <td height="25">ç”¨æˆ·å¯†ç 
                 </td>
                 <td height="25">
                     <input type="password" name="newpass" class="tableWidth" />
                 </td>
             </tr>
             <tr bgcolor="#FFFFFF">
-                <td height="25">È·ÈÏÃÜÂë
+                <td height="25">ç¡®è®¤å¯†ç 
                 </td>
                 <td height="25">
                     <input type="password" name="repass" class="tableWidth" />
@@ -88,9 +88,9 @@
                 <td height="25">&nbsp;
                 </td>
                 <td height="25">
-                    <input type="submit" value="Ìí¼ÓĞÂÓÃ»§" name="B1" class="Button" id="Submit2" onserverclick="Submit1_ServerClick"
+                    <input type="submit" value="æ·»åŠ æ–°ç”¨æˆ·" name="B1" class="Button" id="Submit2" onserverclick="Submit1_ServerClick"
                         runat="server" onclick="return Submit2_onclick()" />
-                    <input type="reset" name="Submit2" value="ÖØÖÃ" />
+                    <input type="reset" name="Submit2" value="é‡ç½®" />
                 </td>
             </tr>
         </table>

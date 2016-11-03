@@ -1,9 +1,9 @@
-<%@ Page Language="C#" AutoEventWireup="true" CodeFile="ViewLogs.aspx.cs" Inherits="CoronaryHeartDiseaseProject.Admin.ViewLogs" %>
+锘�<%@ Page Language="C#" AutoEventWireup="true" CodeFile="ViewLogs.aspx.cs" Inherits="CoronaryHeartDiseaseProject.Admin.ViewLogs" %>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
-    <title>修改资料</title>
+    <title>淇敼璧勬枡</title>
     <link href="../../Styles/admin.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript" language="javascript">
         function CheckAll(form) {
@@ -18,7 +18,7 @@
     </script>
 </head>
 <body>
-    <form id="Form1" name="listform" runat="server" onsubmit="return confirm('确认要执行此操作？');">
+    <form id="Form1" name="listform" runat="server" onsubmit="return confirm('纭瑕佹墽琛屾鎿嶄綔锛�');">
         <asp:Label ID="Label1" runat="server"></asp:Label>&nbsp;
     <asp:DataList ID="DataListUserLog" runat="server" Width="100%">
         <HeaderTemplate>
@@ -26,17 +26,17 @@
                 <tr class="header">
                     <td width="10%" height="25">
                         <div align="center">
-                            医院
+                            鍖婚櫌
                         </div>
                     </td>
                     <td width="10%" height="25">
                         <div align="left">
-                            用户ID
+                            鐢ㄦ埛ID
                         </div>
                     </td>
                     <td width="10%" height="25">
                         <div align="center">
-                            登录时间
+                            鐧诲綍鏃堕棿
                         </div>
                     </td>
                 </tr>

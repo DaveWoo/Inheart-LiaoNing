@@ -1,9 +1,9 @@
-<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AddHospital.aspx.cs" Inherits="CoronaryHeartDiseaseProject.Admin.SuperManage.AddHospital" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AddHospital.aspx.cs" Inherits="CoronaryHeartDiseaseProject.Admin.SuperManage.AddHospital" %>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
-    <title>�޸�����</title>
+    <title>修改资料</title>
     <link href="../../Styles/admin.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript" language="javascript">
         String.prototype.trim = function () {
@@ -21,20 +21,20 @@
     <script type="text/javascript" language="javascript">
         function check() {
             if (document.myform.hospitalname.value.trim() == "") {
-                alert("ҽԺ����������Ϊ�գ���");
+                alert("医院名称名不能为空！！");
                 return false;
             }
 
             if (document.myform.hospitalname.value.length > 16) {
-                alert("ҽԺ���Ƴ��Ȳ��ܳ���16�����ֻ����ַ�����");
+                alert("医院名称长度不能长于16个汉字或者字符！！");
                 return false;
             }
             if (document.myform.comment.value.trim() == "") {
-                alert("��ע����Ϊ�գ���");
+                alert("备注不能为空！！");
                 return false;
             }
             if (document.myform.comment.value.length > 32) {
-                alert("��ע���Ȳ��ܳ���32�����֣���");
+                alert("备注长度不能长于32个汉字！！");
                 return false;
             }
         }
@@ -51,7 +51,7 @@
             <td>
                 <table width="98%%" border="0" align="center" cellpadding="3" cellspacing="1">
                     <tr>
-                        <td height="25" colspan="2">��վ����: &nbsp;<a href="AddHospital.aspx"><b>����ҽԺ</b></a> &nbsp;|&nbsp; <a href="AdminManageHospital.aspx">����ҽԺ</a>&nbsp; |
+                        <td height="25" colspan="2">网站导航: &nbsp;<a href="AddHospital.aspx"><b>添加医院</b></a> &nbsp;|&nbsp; <a href="AdminManageHospital.aspx">管理医院</a>&nbsp; |
                         </td>
                     </tr>
                 </table>
@@ -61,25 +61,25 @@
     <form id="myform" runat="server" onsubmit="return check()">
         <table width="98%%" border="0" align="center" cellpadding="5" cellspacing="1" class="tableborder">
             <tr class="header">
-                <td height="25" colspan="2">����ҽԺ&nbsp;
+                <td height="25" colspan="2">添加医院&nbsp;
                 </td>
             </tr>
             <tr bgcolor="#FFFFFF">
-                <td width="25%" height="25">���ڵ���
+                <td width="25%" height="25">所在地区
                 </td>
                 <td width="75%" height="25">
                     <asp:DropDownList ID="Region" runat="server" Height="19px" Width="250px" />
                 </td>
             </tr>
             <tr bgcolor="#FFFFFF">
-                <td width="25%" height="25">ҽԺ����
+                <td width="25%" height="25">医院名称
                 </td>
                 <td height="25" colspan="2">
                     <input type="text" name="hospitalname" style="width: 250px" />
                 </td>
             </tr>
             <tr bgcolor="#FFFFFF">
-                <td height="25">��ע
+                <td height="25">备注
                 </td>
                 <td height="25">
                     <input type="text" name="comment" style="width: 250px" />
@@ -89,9 +89,9 @@
                 <td height="25">&nbsp;
                 </td>
                 <td height="25">
-                    <input type="submit" value="����" name="B1" class="Button" id="Submit2" onserverclick="Submit1_ServerClick" style="width: 100px;"
+                    <input type="submit" value="添加" name="B1" class="Button" id="Submit2" onserverclick="Submit1_ServerClick" style="width: 100px;"
                         runat="server" />
-                    <input type="reset" name="Submit2" value="����" style="width: 100px;" onclick="return Submit2_onclick()" />
+                    <input type="reset" name="Submit2" value="重置" style="width: 100px;" onclick="return Submit2_onclick()" />
                 </td>
             </tr>
         </table>
