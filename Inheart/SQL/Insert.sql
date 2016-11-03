@@ -1,7 +1,7 @@
-﻿use MedicalBase
+use MedicalBase
 
 --Hospitals default value
-INSERT [dbo].[Hospitals]([HospitalName], [Description], [HospitalLevel], [RegionID]) VALUES ( N'卫生部', N'国务院直属', 1,0)
+INSERT [dbo].[Hospitals]([HospitalName], [Description], [HospitalLevel], [RegionID]) VALUES ( N'卫生部', N'国务院直属', 1,1)
 INSERT [dbo].[Hospitals]([HospitalName], [Description], [HospitalLevel], [RegionID]) VALUES ( N'沈阳市120急救中心'		, N'一所优秀的医院',			 2,54)
 INSERT [dbo].[Hospitals]([HospitalName], [Description], [HospitalLevel], [RegionID]) VALUES ( N'沈阳市七三九医院'			, N'一所优秀的医院',			 2,54)
 INSERT [dbo].[Hospitals]([HospitalName], [Description], [HospitalLevel], [RegionID]) VALUES ( N'沈阳市二四五医院'			, N'一所优秀的医院',			 2,54)

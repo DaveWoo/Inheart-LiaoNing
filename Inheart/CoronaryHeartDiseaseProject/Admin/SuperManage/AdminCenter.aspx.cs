@@ -1,4 +1,4 @@
-namespace CoronaryHeartDiseaseProject.Admin.SuperManage
+﻿namespace CoronaryHeartDiseaseProject.Admin.SuperManage
 {
 	using System;
 	using DreamWork.BussinessLogic;
