@@ -1,7 +1,7 @@
-using DreamWork.ObjectModel;
-
 namespace DreamWork.BussinessLogic
 {
+	using DreamWork.ObjectModel;
+
 	/// <summary>
 	/// 病例的基础类
 	/// </summary>

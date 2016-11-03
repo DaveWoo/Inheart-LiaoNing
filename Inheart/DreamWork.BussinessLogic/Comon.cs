@@ -1,10 +1,10 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using DreamWork.ObjectModel;
-
 namespace DreamWork.BussinessLogic
 {
+	using System;
+	using System.Collections.Generic;
+	using System.Linq;
+	using DreamWork.ObjectModel;
+
 	/// <summary>
 	/// 用户管理类
 	/// </summary>
@@ -54,9 +54,10 @@ namespace DreamWork.BussinessLogic
 				{
 					List<User> userTable = new List<User>();
 					userTable = (from p in context.Users
-								 where (p.UserName == userName.Trim()
+								 where (p.UserName.Trim() == userName.Trim()
 								 && p.Password == strPassword)
 								 select p).ToList<User>();
+
 					if (userTable.Count > 0)
 					{
 						// 写入日志中
@@ -860,7 +861,7 @@ namespace DreamWork.BussinessLogic
 			{
 				userList = new List<User>();
 				userList = (from p in context.Users
-							where p.UserName == name
+							where p.UserName.Trim() == name
 							select p).ToList<User>();
 
 				int order = 1;

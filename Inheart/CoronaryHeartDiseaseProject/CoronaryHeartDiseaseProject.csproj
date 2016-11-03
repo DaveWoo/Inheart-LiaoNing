@@ -233,7 +233,7 @@
     <Content Include="Styles\messageDetail.css" />
     <Content Include="Styles\default.css" />
     <Content Include="Styles\main.css" />
-    <Content Include="Admin\Admin.aspx" />
+    <Content Include="Admin\Default.aspx" />
     <Content Include="Scripts\menu.js" />
     <Content Include="Admin\Content.aspx" />
     <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
@@ -439,8 +439,8 @@
     <Compile Include="Admin\SystemManage\ModifyUser.aspx.designer.cs">
       <DependentUpon>ModifyUser.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Admin\Admin.aspx.cs">
-      <DependentUpon>Admin.aspx</DependentUpon>
+    <Compile Include="Admin\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Admin\Content.aspx.cs">

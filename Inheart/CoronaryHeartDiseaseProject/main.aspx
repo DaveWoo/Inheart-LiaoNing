@@ -10,58 +10,57 @@
     <table class="usertableborder" cellspacing="1" cellpadding="3" width="96%" align="center"
         border="0">
         <tr>
-            <th colspan="3">
-                环境信息
+            <th colspan="3">环境信息
             </th>
         </tr>
         <tr>
-            <td class="usertablerow2" width="33%">
-                新闻总数：123
+            <td class="usertablerow2" width="33%">新闻总数：123
             </td>
-            <td class="usertablerow2">
-                当前版本：ver 1.5 utf-8（国际版）
+            <td class="usertablerow2">当前版本：ver 1.5 utf-8（国际版）
             </td>
-            <td class="usertablerow2" width="33%">
-                更新时间：2008-1-22
+            <td class="usertablerow2" width="33%">更新时间：2008-1-22
             </td>
         </tr>
         <tr>
-            <td class="usertablerow1">
-                浏览模式：模拟静态
+            <td class="usertablerow1">浏览模式：模拟静态
             </td>
-            <td class="usertablerow1">
-                标题拼音：启用
+            <td class="usertablerow1">标题拼音：启用
             </td>
-            <td class="usertablerow1">
-                远程抓图：启用
+            <td class="usertablerow1">远程抓图：启用
             </td>
         </tr>
         <tr>
             <td class="usertablerow2">
                 <div align="left" width="33%">
-                    服务器ip地址：127.0.0.1</div>
+                    服务器ip地址：127.0.0.1
+                </div>
             </td>
             <td class="usertablerow2">
                 <div align="left">
-                    脚本解释引擎：vbscript/5.6.8835,jscript/5.6.8835</div>
+                    脚本解释引擎：vbscript/5.6.8835,jscript/5.6.8835
+                </div>
             </td>
             <td class="usertablerow2">
                 <div align="left" width="33%">
-                    服务器session数量：1</div>
+                    服务器session数量：1
+                </div>
             </td>
         </tr>
         <tr>
             <td class="usertablerow1">
                 <div align="left">
-                    服务器当前时间：2009-1-3 10:44:07</div>
+                    服务器当前时间：2009-1-3 10:44:07
+                </div>
             </td>
             <td class="usertablerow1">
                 <div align="left">
-                    站点物理路径：d:\admin\</div>
+                    站点物理路径：d:\admin\
+                </div>
             </td>
             <td class="usertablerow1">
                 <div align="left">
-                    iis版本名称：microsoft-iis/5.1</div>
+                    iis版本名称：microsoft-iis/5.1
+                </div>
             </td>
         </tr>
     </table>
@@ -69,8 +68,7 @@
     <table class="usertableborder" cellspacing="1" cellpadding="3" width="96%" align="center"
         border="0">
         <tr>
-            <th colspan="2">
-                版权声明
+            <th colspan="2">版权声明
             </th>
         </tr>
         <tr>

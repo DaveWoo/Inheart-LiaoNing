@@ -1,10 +1,10 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using DreamWork.ObjectModel;
-
 namespace DreamWork.BussinessLogic
 {
+	using System;
+	using System.Collections.Generic;
+	using System.Linq;
+	using DreamWork.ObjectModel;
+
 	/// <summary>
 	/// 病例信息类
 	/// </summary>

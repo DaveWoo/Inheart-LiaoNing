@@ -51,9 +51,7 @@
             <td>
                 <table width="98%%" border="0" align="center" cellpadding="3" cellspacing="1">
                     <tr>
-                        <td height="25" colspan="2">
-                            网站导航: &nbsp;<a href="AddHospital.aspx"><b>添加医院</b></a> &nbsp;|&nbsp; <a href="AdminManageHospital.aspx">
-                                管理医院</a>&nbsp; |
+                        <td height="25" colspan="2">网站导航: &nbsp;<a href="AddHospital.aspx"><b>添加医院</b></a> &nbsp;|&nbsp; <a href="AdminManageHospital.aspx">管理医院</a>&nbsp; |
                         </td>
                     </tr>
                 </table>
@@ -61,50 +59,45 @@
         </tr>
     </table>
     <form id="myform" runat="server" onsubmit="return check()">
-    <table width="98%%" border="0" align="center" cellpadding="5" cellspacing="1" class="tableborder">
-        <tr class="header">
-            <td height="25" colspan="2">
-                添加医院&nbsp;
-            </td>
-        </tr>
-        <tr bgcolor="#FFFFFF">
-            <td width="25%" height="25">
-                所在地区
-            </td>
-            <td width="75%" height="25">
-                <asp:DropDownList ID="Region" runat="server" Height="19px" Width="250px" />
-            </td>
-        </tr>
-        <tr bgcolor="#FFFFFF">
-            <td width="25%" height="25">
-                医院名称
-            </td>
-            <td height="25" colspan="2">
-                <input type="text" name="hospitalname" style="width: 250px" />
-            </td>
-        </tr>
-        <tr bgcolor="#FFFFFF">
-            <td height="25">
-                备注
-            </td>
-            <td height="25">
-                <input type="text" name="comment" style="width:250px"/>
-            </td>
-        </tr>
-        <tr bgcolor="#FFFFFF">
-            <td height="25">
-                &nbsp;
-            </td>
-            <td height="25">
-                <input type="submit" value="添加" name="B1" class="Button" id="Submit2" onserverclick="Submit1_ServerClick" style="width:100px;"
-                    runat="server" />
-                <input type="reset" name="Submit2" value="重置" style="width:100px;" onclick="return Submit2_onclick()" />
-            </td>
-        </tr>
-    </table>
-    <br />
-    <br />
-    <br />
+        <table width="98%%" border="0" align="center" cellpadding="5" cellspacing="1" class="tableborder">
+            <tr class="header">
+                <td height="25" colspan="2">添加医院&nbsp;
+                </td>
+            </tr>
+            <tr bgcolor="#FFFFFF">
+                <td width="25%" height="25">所在地区
+                </td>
+                <td width="75%" height="25">
+                    <asp:DropDownList ID="Region" runat="server" Height="19px" Width="250px" />
+                </td>
+            </tr>
+            <tr bgcolor="#FFFFFF">
+                <td width="25%" height="25">医院名称
+                </td>
+                <td height="25" colspan="2">
+                    <input type="text" name="hospitalname" style="width: 250px" />
+                </td>
+            </tr>
+            <tr bgcolor="#FFFFFF">
+                <td height="25">备注
+                </td>
+                <td height="25">
+                    <input type="text" name="comment" style="width: 250px" />
+                </td>
+            </tr>
+            <tr bgcolor="#FFFFFF">
+                <td height="25">&nbsp;
+                </td>
+                <td height="25">
+                    <input type="submit" value="添加" name="B1" class="Button" id="Submit2" onserverclick="Submit1_ServerClick" style="width: 100px;"
+                        runat="server" />
+                    <input type="reset" name="Submit2" value="重置" style="width: 100px;" onclick="return Submit2_onclick()" />
+                </td>
+            </tr>
+        </table>
+        <br />
+        <br />
+        <br />
     </form>
     <%--    <uc1:session ID="Session1" runat="server" />
     <uc2:IsAdmin ID="IsAdmin1" runat="server" />--%>

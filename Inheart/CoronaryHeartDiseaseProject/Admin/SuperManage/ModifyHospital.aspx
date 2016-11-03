@@ -37,9 +37,7 @@
             <td>
                 <table width="98%%" border="0" align="center" cellpadding="3" cellspacing="1">
                     <tr>
-                        <td height="25" colspan="2">
-                            网站导航: &nbsp;<a href="AddAdmin.aspx">添加医院</a> &nbsp;|&nbsp; <a href="AddHospital.aspx">
-                                管理医院</a>&nbsp; |
+                        <td height="25" colspan="2">网站导航: &nbsp;<a href="AddAdmin.aspx">添加医院</a> &nbsp;|&nbsp; <a href="AddHospital.aspx">管理医院</a>&nbsp; |
                         </td>
                     </tr>
                 </table>
@@ -47,42 +45,38 @@
         </tr>
     </table>
     <form id="myform" runat="server" onsubmit="return check()">
-    <table width="98%%" border="0" align="center" cellpadding="3" cellspacing="1" class="tableborder">
-        <tr class="header">
-            <td height="25" colspan="2">
-                管理医院&nbsp;
-            </td>
-        </tr>
-        <tr bgcolor="#FFFFFF">
-            <td width="25%" height="25">
-                医院名称
-            </td>
-            <td width="75%" height="25">
-                <input type="text" name="hospitalname" size="35" value="<%=hospitalNameOriginal %>" />
-            </td>
-        </tr>
-        <tr bgcolor="#FFFFFF">
-            <td height="25">
-                备注
-            </td>
-            <td height="25">
-                <input type="text" name="comment" size="35" value="<%=comment %>" />
-            </td>
-        </tr>
-        <tr bgcolor="#FFFFFF">
-            <td height="25">
-                &nbsp;
-            </td>
-            <td height="25">
-                <input type="submit" value="修改" name="B1" class="Button" id="Submit2" onserverclick="Submit1_ServerClick"
-                    runat="server" />
-                <input type="reset" name="Submit2" value="重置" />
-            </td>
-        </tr>
-    </table>
-    <br />
-    <br />
-    <br />
+        <table width="98%%" border="0" align="center" cellpadding="3" cellspacing="1" class="tableborder">
+            <tr class="header">
+                <td height="25" colspan="2">管理医院&nbsp;
+                </td>
+            </tr>
+            <tr bgcolor="#FFFFFF">
+                <td width="25%" height="25">医院名称
+                </td>
+                <td width="75%" height="25">
+                    <input type="text" name="hospitalname" size="35" value="<%=hospitalNameOriginal %>" />
+                </td>
+            </tr>
+            <tr bgcolor="#FFFFFF">
+                <td height="25">备注
+                </td>
+                <td height="25">
+                    <input type="text" name="comment" size="35" value="<%=comment %>" />
+                </td>
+            </tr>
+            <tr bgcolor="#FFFFFF">
+                <td height="25">&nbsp;
+                </td>
+                <td height="25">
+                    <input type="submit" value="修改" name="B1" class="Button" id="Submit2" onserverclick="Submit1_ServerClick"
+                        runat="server" />
+                    <input type="reset" name="Submit2" value="重置" />
+                </td>
+            </tr>
+        </table>
+        <br />
+        <br />
+        <br />
     </form>
     <%--    <uc1:session ID="Session1" runat="server" />
     <uc2:IsAdmin ID="IsAdmin1" runat="server" />--%>

@@ -32,47 +32,42 @@
 </head>
 <body>
     <form id="myform" runat="server" onsubmit="return check()">
-    <table width="98%%" border="0" align="center" cellpadding="3" cellspacing="1" class="tableborder">
-        <tr class="header">
-            <td height="25" colspan="2">
-                修改密码&nbsp;
-            </td>
-        </tr>
-        <tr bgcolor="#FFFFFF">
-            <td width="25%" height="25">
-                原密码
-            </td>
-            <td width="75%" height="25">
-                <input type="password" name="oldpass" size="35">
-            </td>
-        </tr>
-        <tr bgcolor="#FFFFFF">
-            <td height="25">
-                新密码
-            </td>
-            <td height="25">
-                <input type="password" name="newpass" size="35" />
-            </td>
-        </tr>
-        <tr bgcolor="#FFFFFF">
-            <td height="25">
-                确认密码
-            </td>
-            <td height="25">
-                <input type="password" name="repass" size="35">
-            </td>
-        </tr>
-        <tr bgcolor="#FFFFFF">
-            <td height="25">
-                &nbsp;
-            </td>
-            <td height="25">
-                <input type="submit" value="保存密码" name="B1" class="Button" id="Submit2" onserverclick="Submit1_ServerClick"
-                    runat="server" onclick="return Submit2_onclick()">
-                <input type="reset" name="Submit2" value="重置">
-            </td>
-        </tr>
-    </table>
+        <table width="98%%" border="0" align="center" cellpadding="3" cellspacing="1" class="tableborder">
+            <tr class="header">
+                <td height="25" colspan="2">修改密码&nbsp;
+                </td>
+            </tr>
+            <tr bgcolor="#FFFFFF">
+                <td width="25%" height="25">原密码
+                </td>
+                <td width="75%" height="25">
+                    <input type="password" name="oldpass" size="35">
+                </td>
+            </tr>
+            <tr bgcolor="#FFFFFF">
+                <td height="25">新密码
+                </td>
+                <td height="25">
+                    <input type="password" name="newpass" size="35" />
+                </td>
+            </tr>
+            <tr bgcolor="#FFFFFF">
+                <td height="25">确认密码
+                </td>
+                <td height="25">
+                    <input type="password" name="repass" size="35">
+                </td>
+            </tr>
+            <tr bgcolor="#FFFFFF">
+                <td height="25">&nbsp;
+                </td>
+                <td height="25">
+                    <input type="submit" value="保存密码" name="B1" class="Button" id="Submit2" onserverclick="Submit1_ServerClick"
+                        runat="server" onclick="return Submit2_onclick()">
+                    <input type="reset" name="Submit2" value="重置">
+                </td>
+            </tr>
+        </table>
     </form>
 </body>
 </html>

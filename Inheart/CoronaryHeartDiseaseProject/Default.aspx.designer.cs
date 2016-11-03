@@ -7,9 +7,9 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace WebApplication2 {
+namespace CoronaryHeartDiseaseProject {
     
     
-    public partial class WebForm3 {
+    public partial class Default {
     }
 }

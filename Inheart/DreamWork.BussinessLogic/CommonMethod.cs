@@ -1,12 +1,12 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Data;
-using System.Linq;
-using DreamWork.ObjectModel;
-
 namespace DreamWork.BussinessLogic
 {
+	using System;
+	using System.Collections;
+	using System.Collections.Generic;
+	using System.Data;
+	using System.Linq;
+	using DreamWork.ObjectModel;
+
 	/// <summary>
 	/// 公共类
 	/// </summary>

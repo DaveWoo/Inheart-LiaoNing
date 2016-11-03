@@ -6,8 +6,7 @@
     <title>修改资料</title>
     <link href="../../Styles/admin.css" rel="stylesheet" type="text/css" />
     <style>
-        body
-        {
+        body {
             word-break: break-all;
             word-wrap: break-word;
         }
@@ -31,9 +30,8 @@
             <td>
                 <table width="98%%" border="0" align="center" cellpadding="3" cellspacing="1">
                     <tr>
-                        <td height="25" colspan="2">
-                            网站导航: &nbsp;<a href="AddAdmin.aspx">添加管理员</a> &nbsp;|&nbsp; <a href="AdminManage.aspx">
-                                <b>管理管理员</b></a>&nbsp; | <a href="AdminCenter.aspx">修改密码</a> |
+                        <td height="25" colspan="2">网站导航: &nbsp;<a href="AddAdmin.aspx">添加管理员</a> &nbsp;|&nbsp; <a href="AdminManage.aspx">
+                            <b>管理管理员</b></a>&nbsp; | <a href="AdminCenter.aspx">修改密码</a> |
                         </td>
                     </tr>
                 </table>
@@ -41,7 +39,7 @@
         </tr>
     </table>
     <form id="Form1" name="listform" runat="server" onsubmit="return confirm('确认要执行此操作？');">
-    <asp:Label ID="Label1" runat="server"></asp:Label>&nbsp;
+        <asp:Label ID="Label1" runat="server"></asp:Label>&nbsp;
     <asp:DataList ID="DataListUser" runat="server" Width="100%">
         <HeaderTemplate>
             <table width="100%" border="0" align="left" cellpadding="1" cellspacing="1" class="tableborder">
@@ -56,19 +54,23 @@
                     </td>--%>
                     <td width="100" height="25">
                         <div align="center">
-                            管理员ID</div>
+                            管理员ID
+                        </div>
                     </td>
                     <td width="200" height="25">
                         <div align="center">
-                            所属医院</div>
+                            所属医院
+                        </div>
                     </td>
                     <td width="150" height="25">
                         <div align="center">
-                            所属地区</div>
+                            所属地区
+                        </div>
                     </td>
                     <td width="150" height="25">
                         <div align="center">
-                            操作</div>
+                            操作
+                        </div>
                     </td>
                 </tr>
             </table>
@@ -117,7 +119,7 @@
                             <%--   <input type="submit" name="Submit3" value="将所选管理员删除" id="Submit1" onserverclick="Submit1_ServerClick"
                                 runat="server" />--%>
                             &nbsp;&nbsp;
-                            <input type="button" name="Submit822" value="添加管理员" onclick="javascript:window.location='AddAdmin.aspx';">&nbsp;
+                            <input type="button" name="Submit822" value="添加管理员" onclick="javascript: window.location = 'AddAdmin.aspx';">&nbsp;
                             <%--   <input type="checkbox" name="chkall" value="on" onclick="CheckAll(this.form)">选中全部 --%>
                         </div>
                     </td>
@@ -125,26 +127,25 @@
             </table>
         </FooterTemplate>
     </asp:DataList>
-    <table width="100%" border="0" align="center" cellpadding="3" cellspacing="1" class="tableborder">
-        <tr bgcolor="#ffffff">
-            <td height="25" colspan="4">
-                <div align="left">
-                    &nbsp;&nbsp;
-                </div>
-            </td>
-        </tr>
-    </table>
-    <table width="100%" border="0" cellpadding="0" cellspacing="0">
-        <tr bgcolor="#ffffff">
-            <td height="25" colspan="4">
-                备注：<span style="color: #ff0000"> 1.多选框背景色为蓝色代表已选中信息,所有操作均为不可恢复，在操作时请管理员慎重。<br />
+        <table width="100%" border="0" align="center" cellpadding="3" cellspacing="1" class="tableborder">
+            <tr bgcolor="#ffffff">
+                <td height="25" colspan="4">
+                    <div align="left">
+                        &nbsp;&nbsp;
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <table width="100%" border="0" cellpadding="0" cellspacing="0">
+            <tr bgcolor="#ffffff">
+                <td height="25" colspan="4">备注：<span style="color: #ff0000"> 1.多选框背景色为蓝色代表已选中信息,所有操作均为不可恢复，在操作时请管理员慎重。<br />
                     &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
                     <!--2.放入回收站的文章可以恢复,清空回收站文章彻底删除。-->
                     <br />
                 </span>
-            </td>
-        </tr>
-    </table>
+                </td>
+            </tr>
+        </table>
     </form>
     <%#Eval("ID")%>
 </body>

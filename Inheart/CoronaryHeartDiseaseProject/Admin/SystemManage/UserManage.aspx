@@ -24,9 +24,8 @@
             <td>
                 <table width="98%%" border="0" align="center" cellpadding="3" cellspacing="1">
                     <tr>
-                        <td height="25" colspan="2">
-                            网站导航: &nbsp;<a href="AddUser.aspx">添加新用户</a> &nbsp;|&nbsp; <a href="UserManage.aspx">
-                                <b>用户管理</b></a>&nbsp; | <a href="UserCenter.aspx">修改管理员密码 </a>
+                        <td height="25" colspan="2">网站导航: &nbsp;<a href="AddUser.aspx">添加新用户</a> &nbsp;|&nbsp; <a href="UserManage.aspx">
+                            <b>用户管理</b></a>&nbsp; | <a href="UserCenter.aspx">修改管理员密码 </a>
                         </td>
                     </tr>
                 </table>
@@ -34,7 +33,7 @@
         </tr>
     </table>
     <form id="Form1" name="listform" runat="server" onsubmit="return confirm('确认要执行此操作？');">
-    <asp:Label ID="Label1" runat="server"></asp:Label>&nbsp;
+        <asp:Label ID="Label1" runat="server"></asp:Label>&nbsp;
     <asp:DataList ID="DataListUser" runat="server" Width="100%">
         <HeaderTemplate>
             <table width="100%" border="0" align="center" cellpadding="3" cellspacing="1" class="tableborder">
@@ -45,15 +44,18 @@
                     </td>--%>
                     <td width="20%" height="25">
                         <div align="center">
-                            用户ID</div>
+                            用户ID
+                        </div>
                     </td>
                     <td width="40%" height="25">
                         <div align="center">
-                            所属医院</div>
+                            所属医院
+                        </div>
                     </td>
                     <td width="20%" height="25">
                         <div align="center">
-                            操作</div>
+                            操作
+                        </div>
                     </td>
                 </tr>
             </table>
@@ -92,34 +94,33 @@
                             <input type="submit" name="Submit3" value="将所选用户删除" id="Submit1" onserverclick="Submit1_ServerClick"
                                 runat="server" style="width: 150px;" />
                             &nbsp;&nbsp;
-                            <input type="button" name="Submit822" value="添加新用户" onclick="javascript:window.location='AddUser.aspx';">
-                          <%--  <input type="checkbox" name="chkall" value="on" onclick="CheckAll(this.form)">选中全部--%>
+                            <input type="button" name="Submit822" value="添加新用户" onclick="javascript: window.location = 'AddUser.aspx';">
+                            <%--  <input type="checkbox" name="chkall" value="on" onclick="CheckAll(this.form)">选中全部--%>
                         </div>
                     </td>
                 </tr>
             </table>
         </FooterTemplate>
     </asp:DataList>
-    <table width="100%" border="0" align="center" cellpadding="3" cellspacing="1" class="tableborder">
-        <tr bgcolor="#ffffff">
-            <td height="25" colspan="4">
-                <div align="left">
-                    &nbsp;&nbsp;
-                </div>
-            </td>
-        </tr>
-    </table>
-    <table width="100%" border="0" cellpadding="0" cellspacing="0">
-        <tr bgcolor="#ffffff">
-            <td height="25" colspan="4">
-                备注：<span style="color: #ff0000"> 1.多选框背景色为蓝色代表已选中信息,所有操作均为不可恢复，在操作时请管理员慎重。<br />
+        <table width="100%" border="0" align="center" cellpadding="3" cellspacing="1" class="tableborder">
+            <tr bgcolor="#ffffff">
+                <td height="25" colspan="4">
+                    <div align="left">
+                        &nbsp;&nbsp;
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <table width="100%" border="0" cellpadding="0" cellspacing="0">
+            <tr bgcolor="#ffffff">
+                <td height="25" colspan="4">备注：<span style="color: #ff0000"> 1.多选框背景色为蓝色代表已选中信息,所有操作均为不可恢复，在操作时请管理员慎重。<br />
                     &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
                     <!--2.放入回收站的文章可以恢复,清空回收站文章彻底删除。-->
                     <br />
                 </span>
-            </td>
-        </tr>
-    </table>
+                </td>
+            </tr>
+        </table>
     </form>
     <%#Eval("ID")%>
 </body>

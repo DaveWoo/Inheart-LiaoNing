@@ -1,8 +1,8 @@
-﻿using System.Linq;
-using DreamWork.ObjectModel;
-
 namespace DreamWork.BussinessLogic
 {
+	using System.Linq;
+	using DreamWork.ObjectModel;
+
 	/// <summary>
 	/// 数据清除类
 	/// </summary>

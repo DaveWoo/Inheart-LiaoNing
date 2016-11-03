@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="WebApplication2.WebForm3" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="CoronaryHeartDiseaseProject.Default" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -22,8 +22,7 @@
         }
     </script>
     <style>
-        html, body
-        {
+        html, body {
             height: 100%;
             margin: 0px;
             background-image: url(../images/va_page_05.jpg);
@@ -32,45 +31,43 @@
             background-color: #EDF5FA;
             font-size: 18px;
         }
-        
-        A:link
-        {
+
+        A:link {
             line-height: 23px;
             color: #000000;
             font-size: 18px;
             font-weight: normal;
             text-decoration: none;
         }
-        A:visited
-        {
+
+        A:visited {
             line-height: 23px;
             color: #000000;
             font-size: 18px;
             font-weight: normal;
             text-decoration: none;
         }
-        A:active
-        {
+
+        A:active {
             line-height: 23px;
             font-size: 18px;
             font-weight: normal;
             text-decoration: none;
         }
-        A:hover
-        {
+
+        A:hover {
             line-height: 23px;
             color: #fc7d01;
             font-size: 18px;
             font-weight: normal;
             text-decoration: none;
         }
-        
-        .rs-topic .head ul li a:hover
-        {
+
+        .rs-topic .head ul li a:hover {
             color: #546b8c;
         }
-        .rs-topic .head ul li.sel th
-        {
+
+        .rs-topic .head ul li.sel th {
             color: #333;
             table-layout: fixed;
             font-size: 16px;
@@ -79,78 +76,77 @@
             border: 1px solid #F0F5FD;
             background: #fafbfc;
         }
-        th
-        {
+
+        th {
             table-layout: fixed;
             font-size: 16px;
             word-break: break-all;
             line-height: 200%;
             border: 1px solid #F0F5FD;
         }
-        td
-        {
+
+        td {
             table-layout: fixed;
             font-size: 16px;
             word-break: break-all;
             line-height: 200%;
             border: 1px solid #F0F5FD;
         }
-        
-        .relation-split
-        {
+
+        .relation-split {
             padding: 0 5px;
             color: #999;
             font-size: 16px;
             line-height: 14px;
         }
-        .left
-        {
+
+        .left {
             width: 200px;
         }
-        .right
-        {
+
+        .right {
             width: 300px;
             font-size: 18px;
         }
-        #leftDiv
-        {
+
+        #leftDiv {
             float: left;
         }
-        #rightDiv
-        {
+
+        #rightDiv {
             float: left;
         }
-        .left1
-        {
+
+        .left1 {
             width: 120px;
         }
-        .left2
-        {
+
+        .left2 {
             width: 120px;
         }
-        .left3
-        {
+
+        .left3 {
             width: 120px;
         }
-        .left4
-        {
+
+        .left4 {
             width: 120px;
         }
-        .left5
-        {
+
+        .left5 {
             width: 120px;
         }
-        .t1
-        {
+
+        .t1 {
             font-size: 30px;
         }
-        li
-        {
+
+        li {
             list-style-type: decimal;
             line-height: normal;
         }
-        .foot
-        {
+
+        .foot {
             margin-top: 150px;
             position: relative;
             margin-left: auto;
@@ -183,15 +179,14 @@
             document.getElementById(obj.parent.curId + "_hidden_div").style.display = 'none';
             document.getElementById(obj.parent.curId + "_a").href = 'javascript:show_hiddendiv(this);';
             document.getElementById(obj.curId).innerHTML = "[+]";
-        }  
+        }
     </script>
 </head>
 <body>
     <table width="800" border="0" align="center" cellpadding="0" cellspacing="0" style="margin-top: 50px;">
         <tr>
             <td>
-                <h2 style="color: Blue; text-align: center; font-family: 黑体" class="t1">
-                    辽宁省冠心病急救网络信息平台
+                <h2 style="color: Blue; text-align: center; font-family: 黑体" class="t1">辽宁省冠心病急救网络信息平台
                 </h2>
             </td>
         </tr>
@@ -204,8 +199,7 @@
     <table width="800" border="0" align="center" cellpadding="0" cellspacing="0">
         <tr>
             <td>
-                <div style="clear: both; font-size: 14px; left: 30px; font-family: 微软雅黑; color: #333;
-                    margin-right: auto; background-color: #c7d1e0">
+                <div style="clear: both; font-size: 14px; left: 30px; font-family: 微软雅黑; color: #333; margin-right: auto; background-color: #c7d1e0">
                     &nbsp;&nbsp; 系统说明
                 </div>
                 <div style="font-family: 楷体; font-size: 14px; margin: 0px; padding: 0px;">
@@ -222,8 +216,7 @@
     <table width="800" border="0" align="center" cellpadding="0" cellspacing="0">
         <tr>
             <td>
-                <div style="clear: both; font-size: 14px; left: 30px; font-family: 微软雅黑; color: #333;
-                    margin-right: auto; background-color: #c7d1e0">
+                <div style="clear: both; font-size: 14px; left: 30px; font-family: 微软雅黑; color: #333; margin-right: auto; background-color: #c7d1e0">
                     &nbsp;&nbsp; 选择医院所在城市 点击进入
                 </div>
             </td>
@@ -238,8 +231,7 @@
                             <tbody>
                                 <tr>
                                     <td class="left">
-                                        <span class="relation-split">▪</span> <a id="shenyang_a" href="Login.aspx?hr=shenyang">
-                                            沈阳市</a>
+                                        <span class="relation-split">▪</span> <a id="shenyang_a" href="Login.aspx?hr=shenyang">沈阳市</a>
                                     </td>
                                     <td class="left">
                                         <span class="relation-split">▪</span> <a id="A12" href="Login.aspx?hr=dalian">大连市</a>
