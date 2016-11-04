@@ -70,7 +70,7 @@
                 <td width="32%" height="25">医院：
                 </td>
                 <td width="100%" height="25" colspan="2">
-                    <asp:DropDownList ID="SelectHosptial" runat="server" Width="250px">
+                    <asp:DropDownList CssClass="form-control" ID="SelectHosptial" runat="server" Width="250px">
                     </asp:DropDownList>
                 </td>
             </tr>
@@ -78,30 +78,30 @@
                 <td width="25%" height="25">管理员用户名
                 </td>
                 <td width="75%" height="25">
-                    <input type="text" name="username" style="width: 250px" />
+                    <input type="text" class="form-control" name="username" style="width: 250px" />
                 </td>
             </tr>
             <tr bgcolor="#FFFFFF">
                 <td height="25">管理员密码
                 </td>
                 <td height="25">
-                    <input type="password" name="newpass" style="width: 250px" />
+                    <input type="password" name="newpass" class="form-control" style="width: 250px" />
                 </td>
             </tr>
             <tr bgcolor="#FFFFFF">
                 <td height="25">确认密码
                 </td>
                 <td height="25">
-                    <input type="password" name="repass" style="width: 250px">
+                    <input type="password" name="repass" class="form-control" style="width: 250px">
                 </td>
             </tr>
             <tr bgcolor="#FFFFFF">
                 <td height="25">&nbsp;
                 </td>
                 <td height="25">
-                    <input type="submit" value="添加管理员" name="B1" class="Button" id="Submit2" onserverclick="Submit1_ServerClick"
+                    <input type="submit" value="添加管理员" class="btn btn-info " name="B1" id="Submit2" onserverclick="Submit1_ServerClick"
                         runat="server" onclick="return Submit2_onclick()">
-                    <input type="reset" name="Submit2" value="重置">
+                    <input type="reset" name="Submit2" value="重置" class="btn btn-info ">
                 </td>
             </tr>
         </table>

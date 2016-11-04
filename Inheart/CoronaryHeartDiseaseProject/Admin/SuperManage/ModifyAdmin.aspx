@@ -84,7 +84,7 @@
                 <td width="25%" height="25">管理员用户名
                 </td>
                 <td width="75%" height="25">
-                    <input type="text" name="username" size="35" readonly value="<%=UserName %>" />
+                    <input type="text" class="form-control"  name="username" size="35" readonly value="<%=UserName %>" />
                 </td>
             </tr>
             <tr bgcolor="#FFFFFF">

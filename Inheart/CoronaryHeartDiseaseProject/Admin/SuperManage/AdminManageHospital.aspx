@@ -46,17 +46,17 @@
                             ID</div>
                     </td>--%>
                     <td width="40%" height="25">
-                        <div align="center">
+                        <div align="left">
                             医院
                         </div>
                     </td>
                     <td width="80px" height="25">
-                        <div align="center">
+                        <div align="left">
                             所属地区
                         </div>
                     </td>
-                    <td width="20%" height="25">
-                        <div align="center">
+                    <td width="80px" height="25">
+                        <div align="left">
                             操作
                         </div>
                     </td>
@@ -72,17 +72,17 @@
                         </div>
                     </td>--%>
                     <td height="25" width="40%">
-                        <div align="center">
+                        <div align="left">
                             <%#Eval("HospitalName")%>
                         </div>
                     </td>
                     <td height="25" width="80px">
-                        <div align="center">
+                        <div align="left">
                             <%#ShowRegionName(Eval("RegionID").ToString())%>
                         </div>
                     </td>
-                    <td height="25" width="20%">
-                        <div align="center">
+                    <td height="25" width="80px">
+                        <div align="left" style="padding-left: 18px;">
                             <%#ShowTxt(Eval("ID").ToString())%>
                         </div>
                     </td>
@@ -94,10 +94,10 @@
                 <tr bgcolor="#ffffff">
                     <td height="25" colspan="4">
                         <div align="right">
-                            <input type="submit" name="Submit3" value="将所选医院删除" id="Submit1" onserverclick="Submit1_ServerClick"
+                            <input type="submit" class="btn btn-info" name="Submit3" value="将所选医院删除" id="Submit1" onserverclick="Submit1_ServerClick"
                                 runat="server">
                             &nbsp;&nbsp;
-                            <input type="button" name="Submit822" value="添加医院" onclick="javascript: window.location = 'AddHospital.aspx';">&nbsp;
+                            <input type="button" class="btn btn-info" name="Submit822" value="添加医院" onclick="javascript: window.location = 'AddHospital.aspx';">&nbsp;
                             <%--  <input type="button" name="Submit8222" value="返回后台首页" onclick="javascript:window.location='../SuperAdmin.aspx';">
                             &nbsp;&nbsp;--%>
                             <input type="checkbox" name="chkall" value="on" onclick="CheckAll(this.form)">选中全部

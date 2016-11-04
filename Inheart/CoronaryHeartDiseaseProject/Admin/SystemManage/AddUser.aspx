@@ -70,7 +70,7 @@
                 <td width="25%" height="25">新用户用名
                 </td>
                 <td width="75%" height="25">
-                    <input type="text" name="username" class="tableWidth" />
+                    <input type="text" class="form-control"  name="username" class="tableWidth" />
                 </td>
             </tr>
             <tr bgcolor="#FFFFFF">

@@ -57,14 +57,14 @@
                 <td width="25%" height="25">医院名称
                 </td>
                 <td width="75%" height="25">
-                    <input type="text" name="hospitalname" size="35" value="<%=hospitalNameOriginal %>" />
+                    <input type="text" class="form-control" name="hospitalname" size="35" value="<%=hospitalNameOriginal %>" />
                 </td>
             </tr>
             <tr bgcolor="#FFFFFF">
                 <td height="25">备注
                 </td>
                 <td height="25">
-                    <input type="text" name="comment" size="35" value="<%=comment %>" />
+                    <input type="text" class="form-control"  name="comment" size="35" value="<%=comment %>" />
                 </td>
             </tr>
             <tr bgcolor="#FFFFFF">

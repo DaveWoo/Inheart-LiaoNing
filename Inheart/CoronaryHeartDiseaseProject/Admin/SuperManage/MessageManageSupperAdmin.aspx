@@ -48,7 +48,7 @@
     <form id="form1" runat="server">
         <div style="height: 20px;">
             <asp:Label Text="条件" runat="server" Height="20" Style="vertical-align: middle; text-align: center" />&nbsp;
-        <asp:DropDownList ID="ddlCondition" runat="server" Height="20" Style="vertical-align: middle">
+        <asp:DropDownList ID="ddlCondition" CssClass="form-control" runat="server" Height="20" Style="vertical-align: middle">
             <asp:ListItem>请选择</asp:ListItem>
         </asp:DropDownList>
             &nbsp;

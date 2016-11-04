@@ -73,7 +73,7 @@
                 <td width="25%" height="25">用户名
                 </td>
                 <td width="75%" height="25">
-                    <input type="text" name="username" size="35" readonly value="<%=userName %>" />
+                    <input type="text" class="form-control"  name="username" size="35" readonly value="<%=userName %>" />
                 </td>
             </tr>
             <tr bgcolor="#FFFFFF">

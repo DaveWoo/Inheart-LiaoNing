@@ -578,7 +578,7 @@
                                                         <asp:Panel runat="server" ID="PanelddlHypertensionLasted">
                                                             病程(年):&nbsp;
                                                        
-                                                            <asp:DropDownList TabIndex="28"  ID="ddlHypertensionLasted" CssClass="form-control" runat="server" RepeatDirection="Horizontal"
+                                                            <asp:DropDownList TabIndex="28" ID="ddlHypertensionLasted" CssClass="form-control" runat="server" RepeatDirection="Horizontal"
                                                                 RepeatLayout="Flow" Width="120px">
                                                                 <asp:ListItem>0</asp:ListItem>
                                                                 <asp:ListItem>1</asp:ListItem>

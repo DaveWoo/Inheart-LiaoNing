@@ -33,7 +33,7 @@
                 <td style="width: 80px; height: 25px;padding-left:10px;padding-top:20px">用户名：
                 </td>
                 <td >
-                    <input name="username" type="text" id="username" class="form-control" style="margin-top:20px" maxlength="16" title="请输入您的用户名"
+                    <input name="username" type="text" id="username" class="form-control" style="margin-top:20px;margin-right:10px" maxlength="16" title="请输入您的用户名"
                         tabindex="2" />
                 </td>
             </tr>
