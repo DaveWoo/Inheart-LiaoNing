@@ -8,6 +8,32 @@
     <script src="/Scripts/bootstrap.min.js"></script>
     <script src="/Scripts/jquery-1.9.1.min.js"></script>
     <link href="../../Styles/admin.css" rel="stylesheet" type="text/css" />
+    <style>
+        .c1 {
+            width: 30%;
+        }
+
+        .c2 {
+            width: 30%;
+        }
+
+        .c3 {
+            width: 30%;
+        }
+
+            .c3 input {
+                width: 30px;
+            }
+
+            .c3 img {
+                width: 12px;
+                vertical-align: baseline;
+            }
+
+        .widthButton {
+            width: 160px;
+        }
+    </style>
     <script type="text/javascript" language="javascript">
         function CheckAll(form) {
             for (var i = 0; i < form.elements.length; i++) {
@@ -22,111 +48,88 @@
     </script>
 </head>
 <body>
-    <table width="100%" border="0" align="center" cellpadding="3" cellspacing="1">
-        <tr>
-            <td>
-                <table width="98%%" border="0" align="center" cellpadding="3" cellspacing="1">
-                    <tr>
-                        <td height="25" colspan="2">网站导航: &nbsp;<a href="AddHospital.aspx">添加医院</a> &nbsp;|&nbsp; <a href="AdminManageHospital.aspx">
-                            <b>管理医院</b></a>&nbsp; |
+    <div style="margin-left:10px">
+        <table width="100%" border="0" align="center" cellpadding="3" cellspacing="1">
+            <tr>
+                <td>
+                    <table width="100%" border="0" align="center" cellpadding="3" cellspacing="1">
+                        <tr>
+                            <td height="25" colspan="2">网站导航: &nbsp;<a href="AddHospital.aspx">添加医院</a> &nbsp;|&nbsp; <a href="AdminManageHospital.aspx">
+                                <b>管理医院</b></a>&nbsp; |
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <form id="Form1" name="listform" runat="server" onsubmit="return confirm('确认要执行此操作？');">
+            <asp:Label ID="Label1" runat="server"></asp:Label>&nbsp;
+   
+        <a href="../../Help/">Help</a><asp:DataList ID="DataListHospital" runat="server" Width="100%">
+            <HeaderTemplate>
+                <table width="100%" border="0" align="left" cellpadding="3" cellspacing="1" class="tableborder">
+                    <tr class="header">
+                        <td class="c1">医院</td>
+                        <td class="c2">所属地区</td>
+                        <td class="c3">操作</td>
+                    </tr>
+                </table>
+            </HeaderTemplate>
+            <ItemTemplate>
+                <table width="100%" border="0" align="left" cellpadding="3" cellspacing="1" class="tableborder">
+                    <tr bgcolor="#ffffff" id="news<%#Eval("ID") %>">
+                        <td class="c1">
+                            <%#Eval("HospitalName")%>
+                        </td>
+                        <td class="c2">
+                            <%#ShowRegionName(Eval("RegionID").ToString())%>
+                        </td>
+                        <td class="c3">
+                            <%#ShowTxt(Eval("ID").ToString())%>
                         </td>
                     </tr>
                 </table>
-            </td>
-        </tr>
-    </table>
-    <form id="Form1" name="listform" runat="server" onsubmit="return confirm('确认要执行此操作？');">
-        <asp:Label ID="Label1" runat="server"></asp:Label>&nbsp;
-    <asp:DataList ID="DataListHospital" runat="server" Width="100%">
-        <HeaderTemplate>
-            <table width="100%" border="0" align="center" cellpadding="3" cellspacing="1" class="tableborder">
-                <tr class="header">
-                    <%--      <td width="10%" height="25">
-                        <div align="center">
-                            ID</div>
-                    </td>--%>
-                    <td width="40%" height="25">
-                        <div align="left">
-                            医院
-                        </div>
-                    </td>
-                    <td width="80px" height="25">
-                        <div align="left">
-                            所属地区
-                        </div>
-                    </td>
-                    <td width="80px" height="25">
-                        <div align="left">
-                            操作
-                        </div>
-                    </td>
-                </tr>
-            </table>
-        </HeaderTemplate>
-        <ItemTemplate>
-            <table width="100%" border="0" align="center" cellpadding="3" cellspacing="1" class="tableborder">
-                <tr bgcolor="#ffffff" id="news<%#Eval("ID") %>">
-                    <%--   <td height="25" width="10%">
-                        <div align="center">
-                            <%#Eval("ID")%>
-                        </div>
-                    </td>--%>
-                    <td height="25" width="40%">
-                        <div align="left">
-                            <%#Eval("HospitalName")%>
-                        </div>
-                    </td>
-                    <td height="25" width="80px">
-                        <div align="left">
-                            <%#ShowRegionName(Eval("RegionID").ToString())%>
-                        </div>
-                    </td>
-                    <td height="25" width="80px">
-                        <div align="left" style="padding-left: 18px;">
-                            <%#ShowTxt(Eval("ID").ToString())%>
-                        </div>
-                    </td>
-                </tr>
-            </table>
-        </ItemTemplate>
-        <FooterTemplate>
+            </ItemTemplate>
+            <FooterTemplate>
+                <table width="100%" border="1" align="left" cellpadding="3" cellspacing="1" class="tableborder">
+                    <tr bgcolor="#ffffff">
+                        <td height="25" colspan="4">
+                            <div align="left">
+                                <input type="button" class="btn btn-info widthButton" name="Submit822" value="添加医院" onclick="javascript: window.location = 'AddHospital.aspx';">&nbsp;
+                               
+                                <input type="submit" class="btn btn-info widthButton" name="Submit3" value="将所选医院删除" id="Submit1" onserverclick="Submit1_ServerClick" runat="server">
+
+                                <span class="label label-default">选中全部</span>
+                                <input type="checkbox" name="chkall" value="on" onclick="CheckAll(this.form)">
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </FooterTemplate>
+        </asp:DataList>
             <table width="100%" border="0" align="center" cellpadding="3" cellspacing="1" class="tableborder">
                 <tr bgcolor="#ffffff">
                     <td height="25" colspan="4">
-                        <div align="right">
-                            <input type="submit" class="btn btn-info" name="Submit3" value="将所选医院删除" id="Submit1" onserverclick="Submit1_ServerClick"
-                                runat="server">
+                        <div align="left">
                             &nbsp;&nbsp;
-                            <input type="button" class="btn btn-info" name="Submit822" value="添加医院" onclick="javascript: window.location = 'AddHospital.aspx';">&nbsp;
-                            <%--  <input type="button" name="Submit8222" value="返回后台首页" onclick="javascript:window.location='../SuperAdmin.aspx';">
-                            &nbsp;&nbsp;--%>
-                            <input type="checkbox" name="chkall" value="on" onclick="CheckAll(this.form)">选中全部
+                   
                         </div>
                     </td>
                 </tr>
             </table>
-        </FooterTemplate>
-    </asp:DataList>
-        <table width="100%" border="0" align="center" cellpadding="3" cellspacing="1" class="tableborder">
-            <tr bgcolor="#ffffff">
-                <td height="25" colspan="4">
-                    <div align="left">
-                        &nbsp;&nbsp;
-                    </div>
-                </td>
-            </tr>
-        </table>
-        <table width="100%" border="0" cellpadding="0" cellspacing="0">
-            <tr bgcolor="#ffffff">
-                <td height="25" colspan="4">备注：<span style="color: #ff0000"> 1.多选框背景色为蓝色代表已选中信息,所有操作均为不可恢复，在操作时请管理员慎重。<br />
-                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+            <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                <tr bgcolor="#ffffff">
+                    <td height="25" colspan="4">备注：<span style="color: #ff0000"> 1.多选框背景色为蓝色代表已选中信息,所有操作均为不可恢复，在操作时请管理员慎重。<br />
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                   
                     <!--2.放入回收站的文章可以恢复,清空回收站文章彻底删除。-->
-                    <br />
-                </span>
-                </td>
-            </tr>
-        </table>
-    </form>
-    <%#Eval("ID")%>
+                        <br />
+                    </span>
+                    </td>
+                </tr>
+            </table>
+        </form>
+        <%#Eval("ID")%>
+    </div>
 </body>
 </html>

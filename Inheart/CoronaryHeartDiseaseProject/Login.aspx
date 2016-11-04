@@ -10,6 +10,16 @@
     <script src="/Scripts/jquery-1.9.1.min.js"></script>
     <base onmouseover="window.status='辽宁省冠心病急救网络信息平台';return true" />
     <style type="text/css">
+        html, body {
+            height: 100%;
+            margin: 0px;
+            background-image: url(../images/va_page_05.jpg);
+            background-repeat: repeat-x;
+            background-position: bottom;
+            background-color: #EDF5FA;
+            font-size: 18px;
+        }
+
         .style1 {
             width: 209px;
         }
@@ -57,21 +67,21 @@
                             <td style="width: 80px;">地&nbsp;&nbsp;&nbsp;区：
                             </td>
                             <td height="25" class="style1">
-                                <%=HospitalRegion%>
+                               &nbsp;&nbsp;&nbsp;<%=HospitalRegion%>
                             </td>
                         </tr>
                         <tr>
                             <td height="25">医&nbsp;&nbsp;&nbsp;院：
                             </td>
                             <td>
-                                <asp:DropDownList ID="Hospitial" TabIndex="1" runat="server" CssClass="form-control" />
+                                <asp:DropDownList ID="Hospitial" TabIndex="1" style="width:200px" runat="server" CssClass="form-control" />
                             </td>
                         </tr>
                         <tr>
                             <td height="25">用户名：
                             </td>
                             <td height="25" class="style1">
-                                <input name="username" type="text" id="username" maxlength="16" title="请输入您的用户名"
+                                <input name="username" type="text" id="username" maxlength="16" style="width:200px"   title="请输入您的用户名"
                                     class="form-control" tabindex="2" />
                             </td>
                         </tr>
@@ -79,7 +89,7 @@
                             <td height="25">密&nbsp;&nbsp;&nbsp;码：
                             </td>
                             <td height="25" class="style1">
-                                <input name="password" type="password" id="password" maxlength="16" title="请输入您的密码"
+                                <input name="password" type="password" id="password" maxlength="16" style="width:200px"   title="请输入您的密码"
                                     class="form-control" tabindex="3" />
                             </td>
                         </tr>
@@ -88,11 +98,11 @@
                             </td>
                             <td>
                                 <div class="form-group">
-                                    <div class="col-xs-5">
+                                    <div class="col-xs-1" style="width:100px">
                                         <input name="verify" type="text" title="请输入验证码" size="5" maxlength="4" tabindex="4" class="form-control"
-                                            style="width: 90px; text-align: center; vertical-align: top" />
+                                            text-align: center; vertical-align: top" />
                                     </div>
-                                    <div class="col-xs-2">
+                                    <div class="col-xs-1">
                                         <asp:Image ID="ValImage" runat="server" Width="60px" Height="32px" ImageUrl="~/Verfiy.aspx" ImageAlign="Baseline"></asp:Image>
                                     </div>
                                 </div>

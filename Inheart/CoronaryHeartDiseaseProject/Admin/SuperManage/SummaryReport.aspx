@@ -5,8 +5,8 @@
 <head id="Head1" runat="server">
     <link href="../../Styles/main.css" type="text/css" rel="stylesheet" />
     <link rel="stylesheet" href="/Content/bootstrap.min.css">
-    <script src="/Scripts/bootstrap.min.js"></script>
-    <script src="/Scripts/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="/Scripts/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/Scripts/jquery-1.9.1.min.js"></script>
     <title></title>
     <script src="../../Scripts/calendar3.js" type="text/javascript"></script>
     <style>
@@ -24,18 +24,6 @@
             color: #333;
             font-weight: bold;
             background-color: #c7d1e0;
-        }
-
-        .ButtonSave1 {
-            background: #24B1DC;
-            filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr='#84B0DC',endColorstr='#ffffff', gradientType='0')progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='#8b9b99', Positive='true');
-            color: black;
-            font-family: Comic Sans MS;
-            font-size: 18px;
-            font-weight: bold;
-            cursor: pointer;
-            text-align: center;
-            vertical-align: middle;
         }
 
         .style12 {
@@ -85,26 +73,24 @@
     <form id="form1" runat="server">
         <asp:Panel runat="server" ID="panelQuery" Visible="false">
             <div style="margin-bottom: 50px;">
-                <table border="0" cellpadding="0" cellspacing="0" style="margin-top: 10px;" align="center">
+                <table border="0" cellpadding="0" cellspacing="0" style="margin-top: 10px;" >
                     <tr style="height: 60px;">
-                        <td style="color: Red; font-size: 20px;" colspan="3" align="center">请选择统计时期，不选择则统计全部！
+                        <td style="color: Red; font-size: 20px;" colspan="4" align="left">请选择统计时期，不选择则统计全部！
                         </td>
                     </tr>
                     <tr style="height: 60px;">
                         <td>按时间段查询：
                         </td>
-                        <td class="style12">起
-                        <asp:TextBox name="control_date" type="text" ID="controldate" size="10" MaxLength="10"
+                        <td >起                       
+                            <asp:TextBox name="control_date" type="text" ID="controldate" size="10" MaxLength="10"
+                                onclick="new Calendar().show(this);" runat="server" Width="182px" />
+                        </td>
+                        <td>止<asp:TextBox name="control_date2" type="text" ID="controldate2" size="10" MaxLength="10"
                             onclick="new Calendar().show(this);" runat="server" Width="182px" />
                         </td>
-                        <td>止
-                        <asp:TextBox name="control_date2" type="text" ID="controldate2" size="10" MaxLength="10"
-                            onclick="new Calendar().show(this);" runat="server" Width="182px" />
-                        </td>
-                    </tr>
-                    <tr style="height: 60px;">
-                        <td colspan="3" align="center">
-                            <asp:Button runat="server" ID="Button1" Text="查询" OnClick="Go_Click" CssClass="ButtonSave1"
+                        <td>
+                            <span class="glyphicon glyphicon-search"></span>
+                            <asp:Button runat="server" ID="Button1" Text="查询" OnClick="Go_Click"     CssClass="btn btn-info widthButton "
                                 Height="35px" />
                         </td>
                     </tr>
@@ -112,7 +98,7 @@
             </div>
         </asp:Panel>
         <asp:Panel runat="server" ID="paneOverView" Visible="false">
-            <table cellpadding="0" cellspacing="0" class="table1" align="center" style="margin-top: 100px;">
+            <table cellpadding="0" cellspacing="0" class="table1" align="left" style="margin-top: 50px;">
                 <tr class="row1">
                     <td colspan="2" style="text-align: center; font-weight: bold;">2012年上报统计
                     </td>

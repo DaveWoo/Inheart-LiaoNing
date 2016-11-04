@@ -52,30 +52,30 @@
                 <td width="25%" height="25">原密码
                 </td>
                 <td width="75%" height="25">
-                    <input type="password" name="oldpass" style="width: 250px" />
+                    <input type="password" class="form-control" name="oldpass" style="width: 250px" />
                 </td>
             </tr>
             <tr bgcolor="#FFFFFF">
                 <td height="25">新密码
                 </td>
                 <td height="25">
-                    <input type="password" name="newpass" style="width: 250px" />
+                    <input type="password" class="form-control" name="newpass" style="width: 250px" />
                 </td>
             </tr>
             <tr bgcolor="#FFFFFF">
                 <td height="25">确认密码
                 </td>
                 <td height="25">
-                    <input type="password" name="repass" style="width: 250px" />
+                    <input type="password" class="form-control" name="repass" style="width: 250px" />
                 </td>
             </tr>
             <tr bgcolor="#FFFFFF">
                 <td height="25">&nbsp;
                 </td>
                 <td height="25">
-                    <input type="submit" value="保存密码" name="B1" class="Button" id="Submit2" onserverclick="Submit1_SavePassword_ServerClick"
+                    <input type="submit" class="btn btn-info widthButton" value="保存密码" name="B1" id="Submit2" onserverclick="Submit1_SavePassword_ServerClick"
                         runat="server">
-                    <input type="reset" name="Submit2" value="重置">
+                    <input type="reset" class="btn btn-info widthButton" name="Submit2" value="重置">
                 </td>
             </tr>
         </table>

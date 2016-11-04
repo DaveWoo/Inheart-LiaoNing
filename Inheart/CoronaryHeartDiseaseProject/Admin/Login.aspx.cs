@@ -30,7 +30,7 @@
 					if (siteUser.Role.RoleID == 2)
 					{
 						Session["admin"] = siteUser;
-						this.Response.Redirect("Admin.aspx");
+						this.Response.Redirect("Default.aspx");
 					}
 					else if (siteUser.Role.RoleID == 1)
 					{
