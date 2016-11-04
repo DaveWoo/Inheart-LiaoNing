@@ -21,7 +21,7 @@ namespace CoronaryHeartDiseaseProject
 				"content-disposition", string.Format("attachment; filename={0}.xls", fileName));
 			HttpContext.Current.Response.ContentEncoding = System.Text.Encoding.GetEncoding("GB2312");
 			HttpContext.Current.Response.ContentType = "application/ms-excel";
-			HttpContext.Current.Response.Write("<meta http-equiv=Content-Type content=\"text/html; charset=GB2312\">");
+			HttpContext.Current.Response.Write("<meta http-equiv=Content-Type content=\"text/html; charset=utf-8\">");
 
 			using (StringWriter sw = new StringWriter())
 			{

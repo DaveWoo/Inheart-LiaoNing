@@ -1,9 +1,9 @@
-锘�<%@ Page Language="C#" AutoEventWireup="true" CodeFile="ViewLogs.aspx.cs" Inherits="CoronaryHeartDiseaseProject.Admin.ViewLogs" %>
+<%@ Page Language="C#" AutoEventWireup="true" Inherits="CoronaryHeartDiseaseProject.Admin.ViewLogs" %>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
-    <title>淇敼璧勬枡</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>修改资料</title>
     <link href="../../Styles/admin.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript" language="javascript">
         function CheckAll(form) {
@@ -18,7 +18,7 @@
     </script>
 </head>
 <body>
-    <form id="Form1" name="listform" runat="server" onsubmit="return confirm('纭瑕佹墽琛屾鎿嶄綔锛�');">
+    <form id="Form1" name="listform" runat="server" onsubmit="return confirm('确认要执行此操作？');">
         <asp:Label ID="Label1" runat="server"></asp:Label>&nbsp;
     <asp:DataList ID="DataListUserLog" runat="server" Width="100%">
         <HeaderTemplate>
@@ -26,17 +26,17 @@
                 <tr class="header">
                     <td width="10%" height="25">
                         <div align="center">
-                            鍖婚櫌
+                            医院
                         </div>
                     </td>
                     <td width="10%" height="25">
                         <div align="left">
-                            鐢ㄦ埛ID
+                            用户ID
                         </div>
                     </td>
                     <td width="10%" height="25">
                         <div align="center">
-                            鐧诲綍鏃堕棿
+                            登录时间
                         </div>
                     </td>
                 </tr>

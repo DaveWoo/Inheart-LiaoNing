@@ -87,9 +87,14 @@
     <Content Include="Admin\SystemManage\ModifyUser.aspx" />
     <Content Include="alert.htm" />
     <Content Include="calendar.htm" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
     <Content Include="Default.aspx" />
     <Content Include="Default.jpg" />
     <Content Include="Default3.aspx" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Images\112.png" />
     <Content Include="Images\bj.jpg" />
     <Content Include="Images\ChartAge.jpg" />
@@ -190,6 +195,8 @@
     </Content>
     <Content Include="MessageManage.aspx" />
     <Content Include="Scripts\alert.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\calendar.js" />
     <Content Include="Scripts\Calendar1.js" />
     <Content Include="Scripts\Calendar2.js" />
@@ -198,6 +205,18 @@
     <Content Include="Scripts\Calendar5.js" />
     <Content Include="Scripts\Calendar6.js" />
     <Content Include="Scripts\check.js" />
+    <Content Include="packages.config" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <None Include="Scripts\jquery-1.9.1.intellisense.js" />
+    <Content Include="Scripts\jquery-1.9.1.js" />
+    <Content Include="Scripts\jquery-1.9.1.min.js" />
     <Content Include="Scripts\JScript.js" />
     <Content Include="Scripts\My97DatePicker\calendar.js" />
     <Content Include="Scripts\My97DatePicker\config.js" />
@@ -252,6 +271,7 @@
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
+    <Content Include="Scripts\jquery-1.9.1.min.map" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="About.aspx.cs">
@@ -487,6 +507,7 @@
     <None Include="MedicalCertificate.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Properties\PublishProfiles\Inheart.pubxml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DreamWork.BussinessLogic\DreamWork.BussinessLogic.csproj">

@@ -1,5 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="MessageInputDetail.aspx.cs"
-    Inherits="CoronaryHeartDiseaseProject.MessageDetail" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" Inherits="CoronaryHeartDiseaseProject.MessageDetail" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -765,7 +764,7 @@
                                                             <asp:Panel ID="qitaNiaoJiMei" runat="server">
                                                                 其他：<asp:Label ID="txtUrokinaseOther" runat="server" />
                                                                 &nbsp;万U
-                                                                </asp:Panel>
+                                                            </asp:Panel>
                                                             </td>
                                                             <td class="Column2JiBing">阿替普酶:
                                                             <asp:Label ID="rblAlteplase" runat="server" />

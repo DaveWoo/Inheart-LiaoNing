@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Default3.aspx.cs" Inherits="index" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" Inherits="index" %>
 
 <%@ Register Src="Admin/inc/User.ascx" TagName="User" TagPrefix="uc1" %>
 <html>

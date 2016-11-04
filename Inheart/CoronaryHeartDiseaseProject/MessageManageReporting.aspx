@@ -1,11 +1,10 @@
-<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="MessageManageReporting.aspx.cs"
-    Inherits="CoronaryHeartDiseaseProject.ReportingManage" %>
+<%@ Page Language="C#" AutoEventWireup="true" Inherits="CoronaryHeartDiseaseProject.ReportingManage" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
     <link href="Styles/main.css" type="text/css" rel="stylesheet" />
-    <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <script language="javascript" type="text/javascript">
         function CheckAll(form) {
             for (var i = 0; i < form.elements.length; i++) {
@@ -59,7 +58,7 @@
                 <tr bgcolor="#ffffff">
                     <td colspan="4" height="25">
                         <div align="right">
-                            <input id="btnImportExcel" name="Submit822" type="button" value="导出Excel" runat="server"
+                            <input id="btnImportExcel" name="Submit822" type="button" value="瀵煎嚭Excel" runat="server"
                                 align="right" class="Button" onserverclick="ImportExcel_Click" />&nbsp;&nbsp;
                         </div>
                     </td>

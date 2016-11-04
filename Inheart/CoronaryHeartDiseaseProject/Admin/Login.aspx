@@ -1,8 +1,8 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Login.aspx.cs" Inherits="CoronaryHeartDiseaseProject.AdminLogin" %>
+<%@ Page Language="C#" AutoEventWireup="true" Inherits="CoronaryHeartDiseaseProject.AdminLogin" %>
 
 <html>
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>辽宁省冠心病急救网络信息平台 -- 系统登陆</title>
     <link href="../Styles/admin.css" rel="stylesheet" type="text/css" />
     <base onmouseover="window.status='辽宁省冠心病急救网络信息平台';return true" />

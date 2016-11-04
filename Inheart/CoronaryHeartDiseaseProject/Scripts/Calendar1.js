@@ -1,4 +1,4 @@
-﻿<!--
+<!--
 /* 调用方法：
   <input onfocus="calendar()" name="s2" type="text" id="s2" style="width:100%;" />
 */
@@ -58,7 +58,7 @@ function WebCalendar() //初始化日历的设置
 
 function writeIframe()
 {
-    var strIframe = "<html><head><meta http-equiv='Content-Type' content='text/html; charset=gb2312'><style>"+
+    var strIframe = "<html><head><meta http-equiv='Content-Type' content='text/html; charset=utf-8'><style>"+
     "*{font-size: 12px; font-family: 宋体}"+
     ".bg{  color: "+ WebCalendar.lightColor +"; cursor: default; background-color: "+ WebCalendar.darkColor +";}"+
     "table#tableMain{ width: "+ (cal_Width+2).toString() +"px; height: 180px;}"+
