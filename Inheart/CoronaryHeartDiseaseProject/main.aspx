@@ -4,6 +4,9 @@
 <html>
 <head>
     <link href="Styles/main.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" href="/Content/bootstrap.min.css">
+    <script src="/Scripts/bootstrap.min.js"></script>
+    <script src="/Scripts/jquery-1.9.1.min.js"></script>
 </head>
 <body bottommargin="0" leftmargin="0" topmargin="0" rightmargin="0">
     <br>

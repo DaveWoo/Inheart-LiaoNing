@@ -3,6 +3,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="/Content/bootstrap.min.css">
+    <script src="/Scripts/bootstrap.min.js"></script>
+    <script src="/Scripts/jquery-1.9.1.min.js"></script>
     <title>修改资料</title>
     <link href="../../Styles/admin.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript" language="javascript">
@@ -68,30 +71,30 @@
                 <td width="25%" height="25">所在地区
                 </td>
                 <td width="75%" height="25">
-                    <asp:DropDownList ID="Region" runat="server" Height="19px" Width="250px" />
+                    <asp:DropDownList ID="Region" runat="server" CssClass="form-control" Width="250px" />
                 </td>
             </tr>
             <tr bgcolor="#FFFFFF">
                 <td width="25%" height="25">医院名称
                 </td>
                 <td height="25" colspan="2">
-                    <input type="text" name="hospitalname" style="width: 250px" />
+                    <input type="text" name="hospitalname" class="form-control" style="width: 250px" />
                 </td>
             </tr>
             <tr bgcolor="#FFFFFF">
                 <td height="25">备注
                 </td>
                 <td height="25">
-                    <input type="text" name="comment" style="width: 250px" />
+                    <input type="text" name="comment" class="form-control" style="width: 250px" />
                 </td>
             </tr>
             <tr bgcolor="#FFFFFF">
                 <td height="25">&nbsp;
                 </td>
                 <td height="25">
-                    <input type="submit" value="添加" name="B1" class="Button" id="Submit2" onserverclick="Submit1_ServerClick" style="width: 100px;"
+                    <input type="submit" value="添加" name="B1" class="btn btn-info" id="Submit2" onserverclick="Submit1_ServerClick" style="width: 100px;"
                         runat="server" />
-                    <input type="reset" name="Submit2" value="重置" style="width: 100px;" onclick="return Submit2_onclick()" />
+                    <input type="reset" name="Submit2" value="重置" class="btn btn-info" style="width: 100px;" onclick="return Submit2_onclick()" />
                 </td>
             </tr>
         </table>

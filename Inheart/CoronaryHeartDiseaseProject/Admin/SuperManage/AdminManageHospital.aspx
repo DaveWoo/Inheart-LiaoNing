@@ -1,9 +1,12 @@
-<%@ Page Language="C#" AutoEventWireup="true" Inherits="CoronaryHeartDiseaseProject.Admin.SuperManage.AdminManageHospital" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" Inherits="CoronaryHeartDiseaseProject.Admin.SuperManage.AdminManageHospital" %>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>修改资料</title>
+    <link rel="stylesheet" href="/Content/bootstrap.min.css">
+    <script src="/Scripts/bootstrap.min.js"></script>
+    <script src="/Scripts/jquery-1.9.1.min.js"></script>
     <link href="../../Styles/admin.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript" language="javascript">
         function CheckAll(form) {
@@ -47,7 +50,7 @@
                             医院
                         </div>
                     </td>
-                    <td width="40%" height="25">
+                    <td width="80px" height="25">
                         <div align="center">
                             所属地区
                         </div>
@@ -73,7 +76,7 @@
                             <%#Eval("HospitalName")%>
                         </div>
                     </td>
-                    <td height="25" width="40%">
+                    <td height="25" width="80px">
                         <div align="center">
                             <%#ShowRegionName(Eval("RegionID").ToString())%>
                         </div>

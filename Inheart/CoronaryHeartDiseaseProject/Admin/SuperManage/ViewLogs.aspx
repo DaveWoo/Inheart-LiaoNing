@@ -1,10 +1,13 @@
-<%@ Page Language="C#" AutoEventWireup="true" Inherits="CoronaryHeartDiseaseProject.Admin.SuperManage.ViewLogs" %>
+ï»¿<%@ Page Language="C#" AutoEventWireup="true" Inherits="CoronaryHeartDiseaseProject.Admin.SuperManage.ViewLogs" %>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>ÐÞ¸Ä×ÊÁÏ</title>
+    <title>ï¿½Þ¸ï¿½ï¿½ï¿½ï¿½ï¿½</title>
     <link href="../../Styles/admin.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="/Content/bootstrap.min.css">
+    <script src="/Scripts/bootstrap.min.js"></script>
+    <script src="/Scripts/jquery-1.9.1.min.js"></script>
     <script type="text/javascript" language="javascript">
         function CheckAll(form) {
             for (var i = 0; i < form.elements.length; i++) {
@@ -20,7 +23,7 @@
     </script>
 </head>
 <body>
-    <form id="Form1" name="listform" runat="server" onsubmit="return confirm('È·ÈÏÒªÖ´ÐÐ´Ë²Ù×÷£¿');">
+    <form id="Form1" name="listform" runat="server" onsubmit="return confirm('È·ï¿½ï¿½ÒªÖ´ï¿½Ð´Ë²ï¿½ï¿½ï¿½ï¿½ï¿½');">
         <asp:Label ID="Label1" runat="server"></asp:Label>&nbsp;
     <asp:DataList ID="DataListUserLog" runat="server" Width="100%">
         <HeaderTemplate>
@@ -33,12 +36,12 @@
                     </td>
                     <td width="10%" height="25">
                         <div align="left">
-                            ÓÃ»§ID
+                            ï¿½Ã»ï¿½ID
                         </div>
                     </td>
                     <td width="10%" height="25">
                         <div align="center">
-                            µÇÂ¼Ê±¼ä
+                            ï¿½ï¿½Â¼Ê±ï¿½ï¿½
                         </div>
                     </td>
                 </tr>
@@ -70,7 +73,7 @@
             <tr bgcolor="#ffffff">
                 <td height="25" colspan="4">
                     <div align="right">
-                        <input id="btnClear" name="Submit822" type="button" value="Çå¿ÕËùÓÐµÇÂ½¼ÇÂ¼" runat="server"
+                        <input id="btnClear" name="Submit822" type="button" value="ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ðµï¿½Â½ï¿½ï¿½Â¼" runat="server"
                             align="left" class="Button" onserverclick="Clear_Click" />&nbsp;&nbsp;
                     </div>
                 </td>

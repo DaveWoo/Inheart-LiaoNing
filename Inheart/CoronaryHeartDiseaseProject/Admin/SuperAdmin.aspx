@@ -6,6 +6,9 @@
 <head>
     <title>辽宁省冠心病急救网络信息平台</title>
     <link href="../Styles/default.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" href="/Content/bootstrap.min.css">
+    <script src="/Scripts/bootstrap.min.js"></script>
+    <script src="/Scripts/jquery-1.9.1.min.js"></script>
     <script language="javascript" src="../Scripts/menu.js" type="text/javascript"></script>
 </head>
 <body onload="javascript:border_left('left_tab1','left_menu_cnt1');">

@@ -15,22 +15,19 @@
         }
 
         .foot {
+            margin-top: 150px;
             position: relative;
             margin-left: auto;
             color: #4D4D4D;
-            width: 960px;
             line-height: 21px;
             clear: both;
-            border-top: 1px solid #4D4D4D;
             text-align: center;
             bottom: 0px;
-            left: 10%;
-            right: 10%;
         }
     </style>
 </head>
 <body background="images/bg.gif">
-    <form name="form1" id="form1" runat="server">
+    <form name="form1" id="form1" class="form-horizontal" runat="server">
         <p>
             &nbsp;
         </p>
@@ -40,22 +37,24 @@
         <p>
             &nbsp;
         </p>
-        <table border="0" align="center" cellpadding="3" cellspacing="1" class="tableborder">
+        <table border="0" align="center" cellpadding="3" cellspacing="1" class="tableborder" style="width: 500px;">
             <tr class="headerLongin">
-                <td height="25" colspan="2">
-                    <div align="center">
+                <td colspan="2">
+                    <div>
                         <strong><font color="#FFFFFF">&nbsp; 辽宁省冠心病急救网络信息平台 -- 系统登陆 &nbsp; </font></strong>
                     </div>
                 </td>
             </tr>
             <tr>
-                <td style="padding-right: 50px;">
-                    <asp:Image runat="server" ImageUrl="~/Images/112.png" Width="120" />
+                <td style="padding-right: 20px; padding-left: 20px;">
+                    <div style="margin-top: -40px">
+                        <asp:Image runat="server" ImageUrl="~/Images/112.png" Width="120" />
+                    </div>
                 </td>
                 <td>
-                    <table>
+                    <table style="margin-top: 20px">
                         <tr>
-                            <td height="25">地&nbsp;&nbsp;&nbsp;区：
+                            <td style="width: 80px;">地&nbsp;&nbsp;&nbsp;区：
                             </td>
                             <td height="25" class="style1">
                                 <%=HospitalRegion%>
@@ -64,8 +63,8 @@
                         <tr>
                             <td height="25">医&nbsp;&nbsp;&nbsp;院：
                             </td>
-                            <td height="25" class="style1">
-                                <asp:DropDownList ID="Hospitial" runat="server" Width="242px" CssClass="form-control" />
+                            <td>
+                                <asp:DropDownList ID="Hospitial" TabIndex="1" runat="server" CssClass="form-control" />
                             </td>
                         </tr>
                         <tr>
@@ -85,27 +84,25 @@
                             </td>
                         </tr>
                         <tr>
-                            <td height="25">验证码：
+                            <td>验证码：
                             </td>
-                            <td height="25" class="style1">
+                            <td>
                                 <div class="form-group">
-                                    <div class="col-xs-7">
+                                    <div class="col-xs-5">
                                         <input name="verify" type="text" title="请输入验证码" size="5" maxlength="4" tabindex="4" class="form-control"
                                             style="width: 90px; text-align: center; vertical-align: top" />
                                     </div>
                                     <div class="col-xs-2">
-                                        <asp:Image ID="ValImage" class="form-control" runat="server" Width="60px" ImageUrl="~/Verfiy.aspx" Style="text-align: center; vertical-align: middle;"
-                                            ImageAlign="Baseline"></asp:Image>
+                                        <asp:Image ID="ValImage" runat="server" Width="60px" Height="32px" ImageUrl="~/Verfiy.aspx" ImageAlign="Baseline"></asp:Image>
                                     </div>
                                 </div>
                             </td>
                         </tr>
                         <tr>
-                            <td height="25" colspan="2" align="center">
-                                <input style="cursor: hand" type="submit" value="登录系统" name="B12" class="btn btn-default"
+                            <td colspan="2" style="padding-bottom: 20px">
+                                <input type="submit" value="登录系统" name="B12" class="btn btn-success " style="margin-left: 80px"
                                     id="Submit1" onserverclick="Submit_ServerClick" runat="server" tabindex="5" />
                                 &nbsp;&nbsp;&nbsp;&nbsp;
-                            <input style="cursor: hand" type="reset" value="清除重写" name="B1" class="btn btn-default" tabindex="6" />
                             </td>
                         </tr>
                     </table>
@@ -131,10 +128,10 @@
             &nbsp;
         </p>
     </form>
-    <div class="foot">
+    <%--   <div class="foot">
         联系电话：024-24016114 - 电子信箱：lzqlr@medmail.com.cn<br />
         辽宁省人民医院版权所有<br />
         <span class="cRed">&copy;2012</span>
-    </div>
+    </div>--%>
 </body>
 </html>

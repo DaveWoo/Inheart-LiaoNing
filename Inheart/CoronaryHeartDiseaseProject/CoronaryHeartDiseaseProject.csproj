@@ -189,10 +189,6 @@
     <Content Include="Admin\SuperAdmin.aspx" />
     <Content Include="Admin\SuperContent.aspx" />
     <Content Include="Login.aspx" />
-    <Content Include="MedicalCertificate.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <SubType>Designer</SubType>
-    </Content>
     <Content Include="MessageManage.aspx" />
     <Content Include="Scripts\alert.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -471,9 +467,6 @@
       <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="MedicalCertificate.cs">
-      <DependentUpon>MedicalCertificate.xsd</DependentUpon>
-    </Compile>
     <Compile Include="MessageInput.ReportSummation.cs">
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
@@ -504,9 +497,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="MedicalCertificate.xsd">
-      <SubType>Designer</SubType>
-    </None>
     <None Include="Properties\PublishProfiles\Inheart.pubxml" />
   </ItemGroup>
   <ItemGroup>

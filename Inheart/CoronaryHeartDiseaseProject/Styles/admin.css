@@ -22,7 +22,7 @@ input, select, textarea
     font-size: 12pt;
     line-height: normal;
     font-family: Tahoma, Verdana;
-    width: 123px;
+    width: 236px;
 }
 select
 {
@@ -54,6 +54,7 @@ select
     color: #FFFFFF;
     font-weight: bold;
     background-color: #698CC3;
+    line-height:40px;
 }
 .header a
 {
