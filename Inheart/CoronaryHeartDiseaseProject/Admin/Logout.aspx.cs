@@ -10,7 +10,7 @@ public partial class AdminLogout : System.Web.UI.Page
         }
         else
         {
-            Session["admin"] = null;
+            Session["sa"] = null;
             Session["admin"] = null;
             this.Response.Write("<script>top.location.href='Login.aspx';</script>");
         }

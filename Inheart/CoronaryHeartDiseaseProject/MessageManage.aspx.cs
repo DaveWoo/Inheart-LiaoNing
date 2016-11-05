@@ -119,7 +119,7 @@
 				{
 					this.PagePageID = 1;
 				}
-				this.Label1.Text = string.Format("共有<font color=red><b>{0}</b></font>条记录 每页显示<font color=red><b>{1}</b></font> 条 共<font color=red><b>{2}</b></font>页 当前页 <font color=red><b>{3}</b></font>/{4}页{5}{6}{7}{8}{9}", this.TotalNums, this.PageSize, this.MaxPages, this.PagePageID, this.MaxPages, HtmlFirstString, HtmlPrevString, HtmlNextString, HtmlLastString, HtmlSelectString);
+                this.Label1.Text = string.Format("共有<span class=badge><b>{0}</b></span>条记录 每页显示<span class=badge><b>{1}</b></span> 条 共<span class=badge><b>{2}</b></span class=badge>页 当前页 <font color=red><b>{3}</b></font>/{4}页{5}{6}{7}{8}{9}", this.TotalNums, this.PageSize, this.MaxPages, this.PagePageID, this.MaxPages, HtmlFirstString, HtmlPrevString, HtmlNextString, HtmlLastString, HtmlSelectString);
 			}
 			else
 			{

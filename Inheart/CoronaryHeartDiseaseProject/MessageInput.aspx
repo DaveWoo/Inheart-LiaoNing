@@ -346,7 +346,7 @@
 													<td class="Column1JiBing1">胸痛（闷）:
 													</td>
 													<td>
-														<asp:RadioButtonList ToolTip="不能为空" TabIndex="9" AutoPostBack="true" ID="rblChestPainExist" runat="server"
+														<asp:RadioButtonList ToolTip="不能为空" TabIndex="10" AutoPostBack="true"  ID="rblChestPainExist" runat="server"
 															RepeatDirection="Horizontal" RepeatLayout="Flow">
 															<asp:ListItem>无</asp:ListItem>
 															<asp:ListItem>有</asp:ListItem>
@@ -370,14 +370,14 @@
 													<td class="Column1JiBing1">诱因:
 													</td>
 													<td class="Column2ZhuSuXianBingShi">
-														<asp:RadioButtonList ToolTip="不能为空" TabIndex="10"  AutoPostBack="true" ID="rblIncentiveExist" runat="server"
+														<asp:RadioButtonList ToolTip="不能为空" TabIndex="11"  AutoPostBack="true" ID="rblIncentiveExist" runat="server"
 															RepeatDirection="Horizontal" RepeatLayout="Flow" OnSelectedIndexChanged="rblIncentiveExist_SelectedIndexChanged">
 															<asp:ListItem>无</asp:ListItem>
 															<asp:ListItem>有</asp:ListItem>
 														</asp:RadioButtonList>
 													</td>
 													<td>
-														<asp:Panel runat="server" TabIndex="11"  ID="PanelrblIncentiveType">
+														<asp:Panel runat="server"   ID="PanelrblIncentiveType">
 															<asp:CheckBox runat="server" Text="体力活动" ID="chkIncentiveTypePhysical" />
 															<asp:CheckBox runat="server" Text="情绪激动" ID="chkIncentiveTypeExcite" />
 															<asp:CheckBox runat="server" Text="饱餐" ID="chkIncentiveTypeEatMuch" />
@@ -1388,7 +1388,7 @@
 												<td>是否应用β-受体阻滞剂:
 												</td>
 												<td>
-													<asp:RadioButtonList ToolTip="不能为空" ID="rblBRBConfrim" runat="server" AutoPostBack="false"
+													<asp:RadioButtonList TabIndex="91" ToolTip="不能为空" ID="rblBRBConfrim" runat="server" AutoPostBack="false"
 														RepeatDirection="Horizontal" RepeatLayout="Flow">
 														<asp:ListItem>是</asp:ListItem>
 														<asp:ListItem>否</asp:ListItem>

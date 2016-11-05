@@ -22,8 +22,8 @@
     <style type="text/css">
         #div-body {
             margin-left: 10px;
-            margin-right:10px;
-            margin-top:10px;
+            margin-right: 10px;
+            margin-top: 10px;
         }
 
         .tableborder {
@@ -38,35 +38,44 @@
             background-color: #66aadb;
         }
 
-        .Button {
-            border: groove inset 1px #000000;
-            background: #84B0DC;
-            filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr='#84B0DC',endColorstr='#ffffff', gradientType='0')progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='#8b9b99', Positive='true');
-            color: black;
-            font-family: Comic Sans MS;
-            font-size: 18px;
-            font-weight: bold;
+        .btn2 {
+            display: inline-block;
+            padding: 6px 12px;
+            margin-bottom: 0;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 1.42857143;
+            text-align: center;
+            white-space: nowrap;
+            vertical-align: middle;
+            -ms-touch-action: manipulation;
+            touch-action: manipulation;
             cursor: pointer;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            background-image: none;
+            border: 1px solid transparent;
+            /* border-radius: 4px; */
         }
     </style>
 </head>
 <body>
     <div id="div-body">
         <form id="form1" runat="server">
-            <div style="height: 20px;">
-                <span class="glyphicon glyphicon-search" style="font-size: 25px; vertical-align: middle"></span>
+            <div style="height: 20px;" class="input-group" id="search-bar">
+                <span class="glyphicon glyphicon-search" style="font-size: 25px; vertical-align: middle"></span>&nbsp;
                 <asp:DropDownList ID="ddlCondition" runat="server" Height="35" Style="vertical-align: middle">
                     <asp:ListItem>请选择</asp:ListItem>
                 </asp:DropDownList>
                 <asp:TextBox ID="txtCondition" runat="server" Height="35" Style="vertical-align: middle" placeholder="请输入"></asp:TextBox>
-                <asp:Button runat="server" ID="Button1" Text="查询" OnClick="ibtnSearch_Click" CssClass="btn btn-info widthButton "
+                <asp:Button runat="server" ID="Button1" Text="查询" OnClick="ibtnSearch_Click" CssClass="btn2 btn-info widthButton "
                     Height="35px" />
                 <asp:Label ID="lblMessage" runat="server" ForeColor="Red" />
             </div>
             <div>
-                <br />
-                <asp:Label ID="Label1" runat="server"></asp:Label>&nbsp;
-       
+                <asp:Label ID="Label1" runat="server"></asp:Label>&nbsp;       
             <asp:DataList ID="dgMessage" runat="server" Width="100%">
                 <FooterTemplate>
                 </FooterTemplate>
@@ -74,52 +83,28 @@
                     <table width="100%" border="0" align="center" cellpadding="3" cellspacing="1" class="tableborder">
                         <tr class="header">
                             <td width="10%" height="25">
-                                <div align="center">
-                                    序号
-                           
-                                </div>
+                                <div align="center">序号</div>
                             </td>
                             <td width="10%" height="25">
-                                <div align="center">
-                                    患者姓名
-                           
-                                </div>
+                                <div align="center">患者姓名</div>
                             </td>
                             <td width="5%" height="25">
-                                <div align="center">
-                                    性别
-                           
-                                </div>
+                                <div align="center">性别</div>
                             </td>
                             <td width="5%" height="25">
-                                <div align="center">
-                                    年龄
-                           
-                                </div>
+                                <div align="center">年龄</div>
                             </td>
                             <td width="10%" height="25">
-                                <div align="center">
-                                    医生
-                           
-                                </div>
+                                <div align="center">医生</div>
                             </td>
                             <td width="15%" height="25">
-                                <div align="center">
-                                    就诊时间
-                           
-                                </div>
+                                <div align="center">就诊时间</div>
                             </td>
                             <td width="15%" height="25">
-                                <div align="center">
-                                    创建时间
-                           
-                                </div>
+                                <div align="center">创建时间</div>
                             </td>
                             <td width="5%" height="25">
-                                <div align="center">
-                                    状态
-                           
-                                </div>
+                                <div align="center">状态</div>
                             </td>
                         </tr>
                     </table>

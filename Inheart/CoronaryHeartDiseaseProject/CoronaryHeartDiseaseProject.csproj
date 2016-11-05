@@ -200,6 +200,7 @@
     <Content Include="Scripts\Calendar4.js" />
     <Content Include="Scripts\Calendar5.js" />
     <Content Include="Scripts\Calendar6.js" />
+    <Content Include="Scripts\Chart.min.js" />
     <Content Include="Scripts\check.js" />
     <Content Include="packages.config" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

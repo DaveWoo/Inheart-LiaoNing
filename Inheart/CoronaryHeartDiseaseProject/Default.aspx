@@ -186,6 +186,38 @@
     </script>
 </head>
 <body>
+   @{
+      var barChart = new BarChart();
+      barChart.ComplexData.Labels.AddRange(new []{ "January", "February",  "March", "April", "May", "June", "July"});
+      barChart.ComplexData.Datasets.AddRange(new List<ComplexDataset>
+                             { 
+                                new ComplexDataset
+                                    {
+                                        Data = new List<double> { 65, 59, 80, 81, 56, 55, 40 },
+                                        Label = "My First dataset",
+                                        FillColor = "rgba(220,220,220,0.2)",
+                                        StrokeColor = "rgba(220,220,220,1)",
+                                        PointColor = "rgba(220,220,220,1)",
+                                        PointStrokeColor = "#fff",
+                                        PointHighlightFill = "#fff",
+                                        PointHighlightStroke = "rgba(220,220,220,1)",
+                                    }, 
+                                new ComplexDataset
+                                    {
+                                        Data = new List<double> { 28, 48, 40, 19, 86, 27, 90 },
+                                        Label = "My Second dataset",
+                                        FillColor = "rgba(151,187,205,0.2)",
+                                        StrokeColor = "rgba(151,187,205,1)",
+                                        PointColor = "rgba(151,187,205,1)",
+                                        PointStrokeColor = "#fff",
+                                        PointHighlightFill = "#fff",
+                                        PointHighlightStroke = "rgba(151,187,205,1)",
+                                    }
+                            });
+  }
+  <canvas id="myCanvas" width="400" height="400"></canvas>
+  @Html.CreateChart("myCanvas", barChart)
+
     <table width="800" border="0" align="center" cellpadding="0" cellspacing="0" style="margin-top: 50px;">
         <tr>
             <td>
@@ -193,11 +225,6 @@
                 </h2>
             </td>
         </tr>
-        <%--     <tr>
-                <td>
-                    <asp:Image runat="server" ImageUrl="~/Images/liaoning2.png" Width="977px" Height="300px" />
-                </td>
-            </tr>--%>
     </table>
     <table width="800" border="0" align="center" cellpadding="0" cellspacing="0">
         <tr>
@@ -254,11 +281,6 @@
                                         <span class="relation-split">▪</span> <a id="A4" href="Login.aspx?hr=dandong">丹东市</a>
                                     </td>
                                 </tr>
-                                <%--    <tr>
-                                        <td>
-                                            <a href="Admin/SuperAdmin.aspx"><span style="color: Red">超级管理员入口<span></span></a>
-                                        </td>
-                                    </tr>--%>
                                 <tr>
                                     <td class="left">
                                         <span class="relation-split">▪</span> <a id="A2" href="Login.aspx?hr=jinzhou">锦州市</a>

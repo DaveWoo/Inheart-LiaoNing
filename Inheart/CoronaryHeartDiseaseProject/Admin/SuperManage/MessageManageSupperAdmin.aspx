@@ -36,26 +36,23 @@
             color: #FFFFFF;
             font-weight: bold;
             background-color: #66aadb;
-        }
+        }  
     </style>
 </head>
 <body>
     <div id="div-body">
         <form id="form1" runat="server">
-            <div>
-                <span class="glyphicon glyphicon-search" style="font-size: 25px; vertical-align: middle"></span>
+            <div class="input-group" id="search-bar">
+                <span class="glyphicon glyphicon-search" style="font-size: 25px; vertical-align: middle"></span>&nbsp;
                 <asp:DropDownList ID="ddlCondition" runat="server" Height="35" Style="vertical-align: middle; width: 150px;">
                     <asp:ListItem>请选择</asp:ListItem>
                 </asp:DropDownList>
-                <asp:TextBox ID="txtCondition" runat="server" Height="35" placeholder="请输入"></asp:TextBox>
-
-                <asp:Button runat="server" ID="Button1" Text="查询" OnClick="ibtnSearch_Click" CssClass="btn btn-info widthButton "
-                    Height="35px" />
+                <asp:TextBox ID="txtCondition" runat="server" Height="35" Style="vertical-align: middle" placeholder="请输入"></asp:TextBox>
+                <asp:Button runat="server" ID="Button1" Text="查询" OnClick="Search_Click" CssClass="btn2 btn-info widthButton " Height="35px" />
                 <asp:Label ID="lblMessage" runat="server" ForeColor="Red" />
             </div>
             <div>
-                <asp:Label ID="Label1" runat="server"></asp:Label>&nbsp;
-       
+                <asp:Label ID="Label1" runat="server"></asp:Label>&nbsp;       
             <asp:DataList ID="dgMessage" runat="server" Width="100%">
                 <FooterTemplate>
                 </FooterTemplate>

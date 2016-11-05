@@ -368,7 +368,7 @@ namespace DreamWork.BussinessLogic
 						if (user.Role.RoleName == "超级管理员")
 						{
 							reportSummationList = (from p in context.Report_Summation
-												   where (p.IsSubmit != null) && (p.IsSubmit == true)
+												   where (p.IsSubmit != null)
 												   orderby p.ID descending
 												   select p).ToArray<Report_Summation>();
 						}
@@ -378,7 +378,7 @@ namespace DreamWork.BussinessLogic
 
 							reportSummationList = (from p in context.Report_Summation
 												   where adminHospitalID == p.HospitalID
-												   && (p.IsSubmit != null) && (p.IsSubmit == true)
+												   && (p.IsSubmit != null)
 												   orderby p.ID descending
 												   select p).ToArray<Report_Summation>();
 						}

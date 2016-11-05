@@ -100,7 +100,7 @@
         <asp:Panel runat="server" ID="paneOverView" Visible="false">
             <table cellpadding="0" cellspacing="0" class="table1" align="left" style="margin-top: 50px;">
                 <tr class="row1">
-                    <td colspan="2" style="text-align: center; font-weight: bold;">2012年上报统计
+                    <td colspan="2" style="text-align: center; font-weight: bold;">2016年上报统计
                     </td>
                 </tr>
                 <tr>
@@ -185,7 +185,7 @@
                 </tr>
                 <tr>
                     <td class="row2">
-                        <%=Total%>
+                        <%=Female%>
                     </td>
                     <td class="row2">
                         <%=Male%>

@@ -141,13 +141,13 @@ namespace CoronaryHeartDiseaseProject
                 {
                     PagePageID = 1;
                 }
-                this.Label1.Text = "共有<font color=red><b>"
+                this.Label1.Text = "共有<span class=badge><b>"
                     + TotalNums
-                    + "</b></font>条记录 每页显示<font color=red><b>"
+                    + "</b></span>条记录 每页显示<span class=badge><b>"
                     + PageSize
-                    + "</b></font> 条 共<font color=red><b>"
+                    + "</b></span> 条 共<span class=badge><b>"
                     + MaxPages
-                    + "</b></font>页 当前页 <font color=red><b>"
+                    + "</b></span>页 当前页 <font color=red><b>"
                     + PagePageID
                     + "</b></font>/"
                     + MaxPages
