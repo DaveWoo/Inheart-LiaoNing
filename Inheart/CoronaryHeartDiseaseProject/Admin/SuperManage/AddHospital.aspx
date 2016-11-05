@@ -78,14 +78,14 @@
                 <td width="25%" height="25">医院名称
                 </td>
                 <td height="25" colspan="2">
-                    <input type="text" name="hospitalname" class="form-control" style="width: 250px" />
+                    <input type="text" name="hospitalname" class="form-control" placeholder="请输入医院名称" style="width: 250px" />
                 </td>
             </tr>
             <tr bgcolor="#FFFFFF">
                 <td height="25">备注
                 </td>
                 <td height="25">
-                    <input type="text" name="comment" class="form-control" style="width: 250px" />
+                    <input type="text" name="comment" class="form-control" placeholder="医院备注" style="width: 250px" />
                 </td>
             </tr>
             <tr bgcolor="#FFFFFF">

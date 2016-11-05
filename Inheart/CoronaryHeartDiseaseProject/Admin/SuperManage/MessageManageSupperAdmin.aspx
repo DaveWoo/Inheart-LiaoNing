@@ -25,6 +25,12 @@
             border: 1px solid #698CC3;
         }
 
+        #div-body {
+            margin-left: 10px;
+            margin-right: 10px;
+            margin-top: 10px;
+        }
+
         .header {
             font: 9pt Tahoma, Verdana;
             color: #FFFFFF;
@@ -34,21 +40,20 @@
     </style>
 </head>
 <body>
-    <div style="margin-left: 10px;margin-right:10px">
+    <div id="div-body">
         <form id="form1" runat="server">
             <div>
-                <span class="label label-default" style="height: 30px; width: 60px">条件</span>
+                <span class="glyphicon glyphicon-search" style="font-size: 25px; vertical-align: middle"></span>
                 <asp:DropDownList ID="ddlCondition" runat="server" Height="35" Style="vertical-align: middle; width: 150px;">
                     <asp:ListItem>请选择</asp:ListItem>
                 </asp:DropDownList>
-                <asp:TextBox ID="txtCondition" runat="server" Height="35"></asp:TextBox>
-                <span class="glyphicon glyphicon-search"></span>
+                <asp:TextBox ID="txtCondition" runat="server" Height="35" placeholder="请输入"></asp:TextBox>
+
                 <asp:Button runat="server" ID="Button1" Text="查询" OnClick="ibtnSearch_Click" CssClass="btn btn-info widthButton "
                     Height="35px" />
                 <asp:Label ID="lblMessage" runat="server" ForeColor="Red" />
             </div>
             <div>
-                <br />
                 <asp:Label ID="Label1" runat="server"></asp:Label>&nbsp;
        
             <asp:DataList ID="dgMessage" runat="server" Width="100%">

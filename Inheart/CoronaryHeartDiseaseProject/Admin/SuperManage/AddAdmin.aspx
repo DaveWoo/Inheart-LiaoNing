@@ -78,21 +78,21 @@
                 <td width="25%" height="25">管理员用户名
                 </td>
                 <td width="75%" height="25">
-                    <input type="text" class="form-control" name="username" style="width: 250px" />
+                    <input type="text" class="form-control" name="username" placeholder="用户名" style="width: 250px" />
                 </td>
             </tr>
             <tr bgcolor="#FFFFFF">
                 <td height="25">管理员密码
                 </td>
                 <td height="25">
-                    <input type="password" name="newpass" class="form-control" style="width: 250px" />
+                    <input type="password" name="newpass" class="form-control" placeholder="密码" style="width: 250px" />
                 </td>
             </tr>
             <tr bgcolor="#FFFFFF">
                 <td height="25">确认密码
                 </td>
                 <td height="25">
-                    <input type="password" name="repass" class="form-control" style="width: 250px">
+                    <input type="password" name="repass" class="form-control" placeholder="确认密码" style="width: 250px">
                 </td>
             </tr>
             <tr bgcolor="#FFFFFF">

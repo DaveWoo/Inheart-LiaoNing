@@ -49,24 +49,22 @@
                 </td>
             </tr>
             <tr bgcolor="#FFFFFF">
-                <td width="25%" height="25">原密码
-                </td>
+                <td width="25%" height="25">原密码</td>
                 <td width="75%" height="25">
-                    <input type="password" class="form-control" name="oldpass" style="width: 250px" />
+                    <input type="password" class="form-control" placeholder="原密码" name="oldpass" style="width: 250px" />
                 </td>
             </tr>
             <tr bgcolor="#FFFFFF">
-                <td height="25">新密码
-                </td>
+                <td height="25">新密码</td>
                 <td height="25">
-                    <input type="password" class="form-control" name="newpass" style="width: 250px" />
+                    <input type="password" class="form-control" name="newpass" placeholder="新密码"  style="width: 250px" />
                 </td>
             </tr>
             <tr bgcolor="#FFFFFF">
                 <td height="25">确认密码
                 </td>
                 <td height="25">
-                    <input type="password" class="form-control" name="repass" style="width: 250px" />
+                    <input type="password" class="form-control" name="repass" placeholder="确认新密码"  style="width: 250px" />
                 </td>
             </tr>
             <tr bgcolor="#FFFFFF">

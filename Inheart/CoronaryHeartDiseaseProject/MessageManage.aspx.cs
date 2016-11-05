@@ -158,7 +158,7 @@
 			return htmlstring1;
 		}
 
-		protected void Search_Click(object sender, ImageClickEventArgs e)
+		protected void Search_Click(object sender, EventArgs e)
 		{
 			if (this.ddlCondition.SelectedItem.Text.Trim() == conditionDefault)
 			{

@@ -70,21 +70,21 @@
                 <td width="25%" height="25">新用户用名
                 </td>
                 <td width="75%" height="25">
-                    <input type="text" class="form-control"  name="username" class="tableWidth" />
+                    <input type="text" class="form-control"  name="username" placeholder="户用名" />
                 </td>
             </tr>
             <tr bgcolor="#FFFFFF">
                 <td height="25">用户密码
                 </td>
                 <td height="25">
-                    <input type="password" class="form-control"  name="newpass" class="tableWidth" />
+                    <input type="password" class="form-control"  name="newpass" placeholder="用户密码"/>
                 </td>
             </tr>
             <tr bgcolor="#FFFFFF">
                 <td height="25">确认密码
                 </td>
                 <td height="25">
-                    <input type="password" class="form-control"  name="repass" class="tableWidth" />
+                    <input type="password" class="form-control"  name="repass" placeholder="确认密码" />
                 </td>
             </tr>
             <tr bgcolor="#FFFFFF">

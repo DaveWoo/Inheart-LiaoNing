@@ -20,9 +20,12 @@
     </script>
     <title></title>
     <style type="text/css">
-        #form1 {
-            margin-left:10px;
+        #div-body {
+            margin-left: 10px;
+            margin-right:10px;
+            margin-top:10px;
         }
+
         .tableborder {
             background: #D6E0EF;
             border: 1px solid #698CC3;
@@ -48,22 +51,21 @@
     </style>
 </head>
 <body>
-    <form id="form1" runat="server">
-        <div style="height: 20px;">
-             <span class="label label-default" style="height:30px;width:60px" >条件</span>         
-            <asp:DropDownList ID="ddlCondition" runat="server" Height="35" Style="vertical-align: middle">
-                <asp:ListItem>请选择</asp:ListItem>
-            </asp:DropDownList>
-            &nbsp;
-       
-            <asp:TextBox ID="txtCondition" runat="server" Height="35" Style="vertical-align: middle"></asp:TextBox>
-            <asp:Button runat="server" ID="Button1" Text="查询" OnClick="ibtnSearch_Click" CssClass="btn btn-info widthButton "
-                Height="35px" />
-            <asp:Label ID="lblMessage" runat="server" ForeColor="Red" />
-        </div>
-        <div>
-            <br />
-            <asp:Label ID="Label1" runat="server"></asp:Label>&nbsp;
+    <div id="div-body">
+        <form id="form1" runat="server">
+            <div style="height: 20px;">
+                <span class="glyphicon glyphicon-search" style="font-size: 25px; vertical-align: middle"></span>
+                <asp:DropDownList ID="ddlCondition" runat="server" Height="35" Style="vertical-align: middle">
+                    <asp:ListItem>请选择</asp:ListItem>
+                </asp:DropDownList>
+                <asp:TextBox ID="txtCondition" runat="server" Height="35" Style="vertical-align: middle" placeholder="请输入"></asp:TextBox>
+                <asp:Button runat="server" ID="Button1" Text="查询" OnClick="ibtnSearch_Click" CssClass="btn btn-info widthButton "
+                    Height="35px" />
+                <asp:Label ID="lblMessage" runat="server" ForeColor="Red" />
+            </div>
+            <div>
+                <br />
+                <asp:Label ID="Label1" runat="server"></asp:Label>&nbsp;
        
             <asp:DataList ID="dgMessage" runat="server" Width="100%">
                 <FooterTemplate>
@@ -171,20 +173,21 @@
                     </table>
                 </ItemTemplate>
             </asp:DataList>
-            <table align="center" border="0" cellpadding="3" cellspacing="1" class="tableborder"
-                width="100%">
-                <tr bgcolor="#ffffff">
-                    <td colspan="4" height="25">
-                        <%--     <div align="right">
+                <table align="center" border="0" cellpadding="3" cellspacing="1" class="tableborder"
+                    width="100%">
+                    <tr bgcolor="#ffffff">
+                        <td colspan="4" height="25">
+                            <%--     <div align="right">
                         <div align="right">
                             <input id="btnImportExcel" name="Submit822" type="button" value="导出Excel" runat="server"
                                 align="left" class="Button" onserverclick="ImportExcel_Click" />&nbsp;&nbsp;
                         </div>
                     </div>--%>
-                    </td>
-                </tr>
-            </table>
-        </div>
-    </form>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </form>
+    </div>
 </body>
 </html>

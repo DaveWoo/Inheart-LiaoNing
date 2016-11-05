@@ -58,7 +58,7 @@
             <tr>
                 <td style="padding-right: 20px; padding-left: 20px;">
                     <div style="margin-top: -40px">
-                        <asp:Image runat="server" ImageUrl="~/Images/112.png" Width="120" />
+                        <asp:Image runat="server" ImageUrl="~/Images/112.png" Width="120"  />
                     </div>
                 </td>
                 <td>
@@ -81,7 +81,7 @@
                             <td height="25">用户名：
                             </td>
                             <td height="25" class="style1">
-                                <input name="username" type="text" id="username" maxlength="16" style="width:200px"   title="请输入您的用户名"
+                                <input name="username" type="text" id="username" maxlength="16" style="width:200px" placeholder="请输入您的用户名"   title="请输入您的用户名"
                                     class="form-control" tabindex="2" />
                             </td>
                         </tr>
@@ -89,17 +89,16 @@
                             <td height="25">密&nbsp;&nbsp;&nbsp;码：
                             </td>
                             <td height="25" class="style1">
-                                <input name="password" type="password" id="password" maxlength="16" style="width:200px"   title="请输入您的密码"
+                                <input name="password" type="password" id="password" maxlength="16" style="width:200px" placeholder="请输入您的密码"   title="请输入您的密码"
                                     class="form-control" tabindex="3" />
                             </td>
                         </tr>
                         <tr>
-                            <td>验证码：
-                            </td>
+                            <td>验证码：</td>
                             <td>
                                 <div class="form-group">
-                                    <div class="col-xs-1" style="width:100px">
-                                        <input name="verify" type="text" title="请输入验证码" size="5" maxlength="4" tabindex="4" class="form-control"
+                                    <div class="col-xs-2" style="width:100px">
+                                        <input name="verify" type="text" title="请输入验证码" placeholder="验证码" size="5" maxlength="4" tabindex="4" class="form-control"
                                             text-align: center; vertical-align: top" />
                                     </div>
                                     <div class="col-xs-1">
@@ -110,7 +109,7 @@
                         </tr>
                         <tr>
                             <td colspan="2" style="padding-bottom: 20px">
-                                <input type="submit" value="登录系统" name="B12" class="btn btn-success " style="margin-left: 80px"
+                                <input type="submit" value="登录系统" name="B12" class="btn btn-success " style="margin-left: 80px;width:200px"
                                     id="Submit1" onserverclick="Submit_ServerClick" runat="server" tabindex="5" />
                                 &nbsp;&nbsp;&nbsp;&nbsp;
                             </td>
