@@ -8,18 +8,23 @@
     <link rel="stylesheet" href="/Content/bootstrap.min.css">
     <script src="/Scripts/bootstrap.min.js"></script>
     <script src="/Scripts/jquery-1.9.1.min.js"></script>
+    <style>
+    </style>
     <base onmouseover="window.status='辽宁省冠心病急救网络信息平台';return true" />
 </head>
-<body background="../images/bg.gif">
+<body>
     <form name="form1" id="form1" runat="server">
         <p>
             &nbsp;
+       
         </p>
         <p>
             &nbsp;
+       
         </p>
         <p>
             &nbsp;
+       
         </p>
         <table width="320" border="0" align="center" cellpadding="3" cellspacing="1" class="tableborder">
             <tr class="headerLongin">
@@ -30,41 +35,38 @@
                 </td>
             </tr>
             <tr>
-                <td style="width: 80px; height: 25px;padding-left:10px;padding-top:20px">用户名：
-                </td>
-                <td >
-                    <input name="username" type="text" id="username" class="form-control" style="margin-top:20px;margin-right:10px" maxlength="16" title="请输入您的用户名"
+                <td style="width: 100px; height: 25px; padding-left: 20px; padding-top: 20px;">用户名：</td>
+                <td style="padding-top: 20px;">
+                    <input name="username" type="text" id="username" class="form-control" maxlength="16" placeholder="请输入您的用户名" title="请输入您的用户名"
                         tabindex="2" />
                 </td>
             </tr>
             <tr>
-                <td style="width: 80px; height: 25px;padding-left:10px;" >密码：
-                </td>
+                <td style="width: 80px; height: 25px; padding-left: 20px;">密码：</td>
                 <td height="25">
-                    <input name="password" type="password" id="password" class="form-control" maxlength="16" title="请输入您的密码"
+                    <input name="password" type="password" id="password" class="form-control" maxlength="16"  placeholder="请输入您的密码" title="请输入您的密码"
                         tabindex="3" />
                 </td>
             </tr>
             <tr>
-                <td style="width: 80px; height: 25px;padding-left:10px;">验证码：
+                <td style="width: 80px; height: 25px; padding-left: 20px;">验证码：
                 </td>
                 <td>
-                    <div class="form-group" >
-                        <div class="col-xs-5" style="margin-left:0;padding-left:0">
-                            <input name="verify" type="text" title="请输入验证码" size="5" maxlength="4" tabindex="4" class="form-control"
-                                style="width: 90px;" />
+                    <div class="form-group">
+                        <div class="col-xs-2" style="margin-left: 0; padding-left: 0">
+                            <input name="verify" type="text" title="请输入验证码" size="5" maxlength="4" tabindex="4" class="form-control"  placeholder="验证码"
+                                style="width: 100px;" />
                         </div>
-                        <div class="col-xs-2">
-                            <asp:Image ID="Image1"  runat="server" Width="60px" Height="32px" ImageUrl="~/Verfiy.aspx" ImageAlign="Baseline"></asp:Image>
+                        <div class="col-xs-1" style="margin-left:40px;">
+                            <asp:Image ID="Image1" runat="server" Width="60px" Height="32px" ImageUrl="~/Verfiy.aspx" ImageAlign="Baseline"></asp:Image>
                         </div>
                     </div>
                 </td>
             </tr>
             <tr>
-                <td colspan="2" style="padding-bottom: 10px;padding-top:10px" >
-                    <input type="submit" value="登录系统" name="B12" class="btn btn-success " style="margin-left: 80px"
+                <td colspan="2" style="padding-bottom: 10px; padding-top: 10px">
+                    <input type="submit" value="登录系统" name="B12" class="btn btn-success " style="margin-left: 100px; width: 190px"
                         id="Submit2" onserverclick="Submit1_ServerClick" runat="server" tabindex="5" />
-                    &nbsp;&nbsp;&nbsp;&nbsp;
                 </td>
             </tr>
         </table>
