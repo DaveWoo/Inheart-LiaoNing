@@ -1,5 +1,7 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" Inherits="CoronaryHeartDiseaseProject.Admin.ModifyUser" %>
 
+<%@ Register src="../inc/IsAdmin.ascx" tagname="IsAdmin" tagprefix="uc1" %>
+
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -70,22 +72,19 @@
                 </td>
             </tr>
             <tr bgcolor="#FFFFFF">
-                <td width="25%" height="25">用户名
-                </td>
+                <td width="25%" height="25">用户名</td>
                 <td width="75%" height="25">
                     <input type="text" class="form-control"  name="username" size="35" readonly value="<%=userName %>" />
                 </td>
             </tr>
             <tr bgcolor="#FFFFFF">
-                <td height="25">用户密码
-                </td>
+                <td height="25">用户密码</td>
                 <td height="25">
                     <input type="password" name="newpass" size="35" value="">
                 </td>
             </tr>
             <tr bgcolor="#FFFFFF">
-                <td height="25">确认密码
-                </td>
+                <td height="25">确认密码</td>
                 <td height="25">
                     <input type="password" name="repass" size="35" value="">
                 </td>
@@ -103,8 +102,7 @@
         <br />
         <br />
         <br />
+        <uc1:IsAdmin ID="IsAdmin1" runat="server" />
     </form>
-    <%--   <uc1:session ID="Session1" runat="server" />
-    <uc2:IsAdmin ID="IsAdmin1" runat="server" />--%>
 </body>
 </html>

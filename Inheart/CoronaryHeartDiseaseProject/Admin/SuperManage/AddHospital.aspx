@@ -1,5 +1,7 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" Inherits="CoronaryHeartDiseaseProject.Admin.SuperManage.AddHospital" %>
 
+<%@ Register src="../inc/IsSuperAdmin.ascx" tagname="IsSuperAdmin" tagprefix="uc1" %>
+
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -68,22 +70,19 @@
                 </td>
             </tr>
             <tr bgcolor="#FFFFFF">
-                <td width="25%" height="25">所在地区
-                </td>
+                <td width="25%" height="25">所在地区</td>
                 <td width="75%" height="25">
                     <asp:DropDownList ID="Region" runat="server" CssClass="form-control" Width="250px" />
                 </td>
             </tr>
             <tr bgcolor="#FFFFFF">
-                <td width="25%" height="25">医院名称
-                </td>
+                <td width="25%" height="25">医院名称</td>
                 <td height="25" colspan="2">
                     <input type="text" name="hospitalname" class="form-control" placeholder="请输入医院名称" style="width: 250px" />
                 </td>
             </tr>
             <tr bgcolor="#FFFFFF">
-                <td height="25">备注
-                </td>
+                <td height="25">备注</td>
                 <td height="25">
                     <input type="text" name="comment" class="form-control" placeholder="医院备注" style="width: 250px" />
                 </td>
@@ -101,8 +100,7 @@
         <br />
         <br />
         <br />
+        <uc1:IsSuperAdmin ID="IsSuperAdmin1" runat="server" />
     </form>
-    <%--    <uc1:session ID="Session1" runat="server" />
-    <uc2:IsAdmin ID="IsAdmin1" runat="server" />--%>
-</body>
+    </body>
 </html>

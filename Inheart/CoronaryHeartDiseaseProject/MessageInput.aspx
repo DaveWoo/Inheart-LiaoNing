@@ -1,5 +1,7 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" Inherits="CoronaryHeartDiseaseProject.MessageInput" %>
 
+<%@ Register src="Admin/inc/User.ascx" tagname="User" tagprefix="uc1" %>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -1692,6 +1694,7 @@
 				</tr>
 				<tr>
 					<td style="padding-bottom: 160px;">&nbsp;
+					    <uc1:User ID="User1" runat="server" />
 					</td>
 				</tr>
 			</table>

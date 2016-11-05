@@ -13,20 +13,8 @@
     <base onmouseover="window.status='辽宁省冠心病急救网络信息平台';return true" />
 </head>
 <body>
-    <form name="form1" id="form1" runat="server">
-        <p>
-            &nbsp;
-       
-        </p>
-        <p>
-            &nbsp;
-       
-        </p>
-        <p>
-            &nbsp;
-       
-        </p>
-        <table width="320" border="0" align="center" cellpadding="3" cellspacing="1" class="tableborder">
+    <form name="form1" id="form1" runat="server">      
+        <table style="margin-top:90px;" width="320" border="0" align="center" cellpadding="3" cellspacing="1" class="tableborder">
             <tr class="headerLongin">
                 <td height="25" colspan="2">
                     <div align="center">

@@ -1,5 +1,7 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" Inherits="CoronaryHeartDiseaseProject.Admin.SuperManage.ModifyHospital" %>
 
+<%@ Register src="../inc/IsSuperAdmin.ascx" tagname="IsSuperAdmin" tagprefix="uc1" %>
+
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -54,15 +56,13 @@
                 </td>
             </tr>
             <tr bgcolor="#FFFFFF">
-                <td width="25%" height="25">医院名称
-                </td>
+                <td width="25%" height="25">医院名称</td>
                 <td width="75%" height="25">
                     <input type="text" class="form-control" name="hospitalname" size="35" value="<%=hospitalNameOriginal %>" />
                 </td>
             </tr>
             <tr bgcolor="#FFFFFF">
-                <td height="25">备注
-                </td>
+                <td height="25">备注</td>
                 <td height="25">
                     <input type="text" class="form-control"  name="comment" size="35" value="<%=comment %>" />
                 </td>
@@ -80,8 +80,9 @@
         <br />
         <br />
         <br />
-    </form>
     <%--    <uc1:session ID="Session1" runat="server" />
     <uc2:IsAdmin ID="IsAdmin1" runat="server" />--%>
-</body>
+        <uc1:IsSuperAdmin ID="IsSuperAdmin1" runat="server" />
+    </form>
+    </body>
 </html>

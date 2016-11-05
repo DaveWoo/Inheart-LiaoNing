@@ -1,5 +1,7 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" Inherits="CoronaryHeartDiseaseProject.Admin.UserManage" %>
 
+<%@ Register src="../inc/IsAdmin.ascx" tagname="IsAdmin" tagprefix="uc1" %>
+
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -38,7 +40,6 @@
                     if (e.disabled == 0) {
                         e.checked = form.chkall.checked;
                     }
-
             }
         }
     </script>
@@ -118,11 +119,11 @@
         <table width="100%" border="0" cellpadding="0" cellspacing="0">
             <tr bgcolor="#ffffff">
                 <td height="25" colspan="4">备注：<span style="color: #ff0000"> 1.多选框背景色为蓝色代表已选中信息,所有操作均为不可恢复，在操作时请管理员慎重。<br />
-                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-                   
+                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;                   
                     <!--2.放入回收站的文章可以恢复,清空回收站文章彻底删除。-->
                     <br />
                 </span>
+                    <uc1:IsAdmin ID="IsAdmin1" runat="server" />
                 </td>
             </tr>
         </table>

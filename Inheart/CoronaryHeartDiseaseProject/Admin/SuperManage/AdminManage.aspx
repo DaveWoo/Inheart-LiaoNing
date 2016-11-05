@@ -1,5 +1,7 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" Inherits="CoronaryHeartDiseaseProject.Admin.SuperManage.AdminManage" %>
 
+<%@ Register src="../inc/IsSuperAdmin.ascx" tagname="IsSuperAdmin" tagprefix="uc1" %>
+
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -50,28 +52,16 @@
                 <table width="100%" border="0" align="left" cellpadding="1" cellspacing="1" class="tableborder">
                     <tr class="header">
                         <td width="100" height="25">
-                            <div align="left">
-                                管理员ID
-                       
-                            </div>
+                            <div align="left">管理员ID</div>
                         </td>
                         <td width="100" height="25">
-                            <div align="left">
-                                所属医院
-                       
-                            </div>
+                            <div align="left">所属医院</div>
                         </td>
                         <td width="100" height="25">
-                            <div align="left">
-                                所属地区
-                       
-                            </div>
+                            <div align="left">所属地区</div>
                         </td>
                         <td width="100" height="25">
-                            <div align="left">
-                                操作
-                       
-                            </div>
+                            <div align="left">操作</div>
                         </td>
                     </tr>
                 </table>
@@ -79,11 +69,6 @@
             <ItemTemplate>
                 <table width="100%" border="0" align="left" cellpadding="1" cellspacing="1" class="tableborder">
                     <tr bgcolor="#ffffff" id="news<%#Eval("ID") %>">
-                        <%--    <td height="25" width="10%">
-                        <div align="center">
-                            <%#Eval("OrderID")%>
-                        </div>
-                    </td>--%>
                         <td height="25" width="100">
                             <div align="left">
                                 <%#Eval("UserName")%>
@@ -142,5 +127,6 @@
         </form>
         <%#Eval("ID")%>
     </div>
+    <uc1:IsSuperAdmin ID="IsSuperAdmin1" runat="server" />
 </body>
 </html>

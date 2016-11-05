@@ -1,11 +1,13 @@
 <%@ Page Language="C#" AutoEventWireup="true" Inherits="CoronaryHeartDiseaseProject.UserCenter" %>
 
+<%@ Register src="Admin/inc/User.ascx" tagname="User" tagprefix="uc1" %>
+
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
-    <link rel="stylesheet" href="/Content/bootstrap.min.css">
-    <script src="/Scripts/bootstrap.min.js"></script>
-    <script src="/Scripts/jquery-1.9.1.min.js"></script>
+    <link rel="stylesheet" href="/Content/bootstrap.min.css" />
+    <script type="text/javascript" src="/Scripts/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/Scripts/jquery-1.9.1.min.js"></script>
     <title>修改资料</title>
     <link href="../../Styles/admin.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript" language="javascript">
@@ -41,22 +43,19 @@
                 </td>
             </tr>
             <tr bgcolor="#FFFFFF">
-                <td width="25%" height="25">原密码
-                </td>
+                <td width="25%" height="25">原密码</td>
                 <td width="75%" height="25">
                     <input type="password" name="oldpass" size="35">
                 </td>
             </tr>
             <tr bgcolor="#FFFFFF">
-                <td height="25">新密码
-                </td>
+                <td height="25">新密码</td>
                 <td height="25">
                     <input type="password" name="newpass" size="35" />
                 </td>
             </tr>
             <tr bgcolor="#FFFFFF">
-                <td height="25">确认密码
-                </td>
+                <td height="25">确认密码</td>
                 <td height="25">
                     <input type="password" name="repass" size="35">
                 </td>
@@ -71,6 +70,7 @@
                 </td>
             </tr>
         </table>
+        <uc1:User ID="User1" runat="server" />
     </form>
 </body>
 </html>

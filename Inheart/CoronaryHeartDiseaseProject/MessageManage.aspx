@@ -4,9 +4,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <link href="Styles/main.css" type="text/css" rel="stylesheet" />
-    <link rel="stylesheet" href="/Content/bootstrap.min.css">
-    <script src="/Scripts/bootstrap.min.js"></script>
-    <script src="/Scripts/jquery-1.9.1.min.js"></script>
+    <link rel="stylesheet" href="/Content/bootstrap.min.css" />
+    <script type="text/javascript" src="/Scripts/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/Scripts/jquery-1.9.1.min.js"></script>
     <script language="javascript" type="text/javascript">
         function CheckAll(form) {
             for (var i = 0; i < form.elements.length; i++) {

@@ -1,5 +1,7 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" Inherits="CoronaryHeartDiseaseProject.Admin.SuperManage.AdminCenter" %>
 
+<%@ Register src="../inc/IsSuperAdmin.ascx" tagname="IsSuperAdmin" tagprefix="uc1" %>
+
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -61,8 +63,7 @@
                 </td>
             </tr>
             <tr bgcolor="#FFFFFF">
-                <td height="25">确认密码
-                </td>
+                <td height="25">确认密码</td>
                 <td height="25">
                     <input type="password" class="form-control" name="repass" placeholder="确认新密码"  style="width: 250px" />
                 </td>
@@ -77,7 +78,8 @@
                 </td>
             </tr>
         </table>
+        <uc1:IsSuperAdmin ID="IsSuperAdmin1" runat="server" />
     </form>
-    <%--<uc1:session ID="Session1" runat="server" />--%>
+
 </body>
 </html>

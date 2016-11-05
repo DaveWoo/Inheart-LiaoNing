@@ -64,30 +64,26 @@
                 <td>
                     <table style="margin-top: 20px">
                         <tr>
-                            <td style="width: 80px;">地&nbsp;&nbsp;&nbsp;区：
-                            </td>
+                            <td style="width: 80px;">地&nbsp;&nbsp;&nbsp;区：</td>
                             <td height="25" class="style1">
                                &nbsp;&nbsp;&nbsp;<%=HospitalRegion%>
                             </td>
                         </tr>
                         <tr>
-                            <td height="25">医&nbsp;&nbsp;&nbsp;院：
-                            </td>
+                            <td height="25">医&nbsp;&nbsp;&nbsp;院：</td>
                             <td>
                                 <asp:DropDownList ID="Hospitial" TabIndex="1" style="width:200px" runat="server" CssClass="form-control" />
                             </td>
                         </tr>
                         <tr>
-                            <td height="25">用户名：
-                            </td>
+                            <td height="25">用户名：</td>
                             <td height="25" class="style1">
                                 <input name="username" type="text" id="username" maxlength="16" style="width:200px" placeholder="请输入您的用户名"   title="请输入您的用户名"
                                     class="form-control" tabindex="2" />
                             </td>
                         </tr>
                         <tr>
-                            <td height="25">密&nbsp;&nbsp;&nbsp;码：
-                            </td>
+                            <td height="25">密&nbsp;&nbsp;&nbsp;码：</td>
                             <td height="25" class="style1">
                                 <input name="password" type="password" id="password" maxlength="16" style="width:200px" placeholder="请输入您的密码"   title="请输入您的密码"
                                     class="form-control" tabindex="3" />
@@ -137,10 +133,5 @@
             &nbsp;
         </p>
     </form>
-    <%--   <div class="foot">
-        联系电话：024-24016114 - 电子信箱：lzqlr@medmail.com.cn<br />
-        辽宁省人民医院版权所有<br />
-        <span class="cRed">&copy;2012</span>
-    </div>--%>
 </body>
 </html>

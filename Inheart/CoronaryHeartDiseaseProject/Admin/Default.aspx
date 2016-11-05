@@ -77,8 +77,8 @@
                                                         target="content3"><span>病例管理</span></a></li>
                                                     <%--   <li id="now15"><a title="报表管理" onclick="show_title('报表管理')" href="Content.aspx" target="content3"
                                                     href="Content.aspx" target="content3" /><span>报表管理</span></a></li>--%>
-                                                    <%--  <li id="now16"><a title="查看日志" onclick="show_title('查看日志')" href="SystemManage/ViewLogs.aspx"
-                                                    target="content3" href="Content.aspx" target="content3" /><span>查看日志</span></a></li>--%>
+                                                      <li id="now16"><a title="查看日志" onclick="show_title('查看日志')" href="SystemManage/ViewLogs.aspx"
+                                                    target="content3" href="Content.aspx" target="content3" /><span>查看日志</span></a></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -103,6 +103,7 @@
                 document.getElementById("spanTitle").innerHTML = str;
             }
         </script>
+        <uc1:IsAdmin ID="IsAdmin1" runat="server" />
     </form>
 </body>
 </html>

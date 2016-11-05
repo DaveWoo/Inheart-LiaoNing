@@ -5,17 +5,175 @@
 <head>
     <title>辽宁省冠心病急救网络信息平台</title>
     <link rel="stylesheet" href="/Content/bootstrap.min.css" />
-    <link rel="stylesheet" href="/Styles/home.css" />
     <script type="text/javascript" src="/Scripts/bootstrap.min.js"></script>
     <script type="text/javascript" src="/Scripts/jquery-1.9.1.min.js"></script>
     <script type="text/javascript" src="/Scripts/Chart.min.js"></script>
 
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0px;
+            background-image: url(../images/va_page_05.jpg);
+            background-repeat: repeat-x;
+            background-position: bottom;
+            background-color: #EDF5FA;
+            font-size: 18px;
+        }
+
+        A:link {
+            line-height: 23px;
+            color: #000000;
+            font-size: 18px;
+            font-weight: normal;
+            text-decoration: none;
+        }
+
+        A:visited {
+            line-height: 23px;
+            color: #000000;
+            font-size: 18px;
+            font-weight: normal;
+            text-decoration: none;
+        }
+
+        A:active {
+            line-height: 23px;
+            font-size: 18px;
+            font-weight: normal;
+            text-decoration: none;
+        }
+
+        A:hover {
+            line-height: 23px;
+            color: #fc7d01;
+            font-size: 18px;
+            font-weight: normal;
+            text-decoration: none;
+        }
+
+        .rs-topic .head ul li a:hover {
+            color: #546b8c;
+        }
+
+        .rs-topic .head ul li.sel th {
+            color: #333;
+            table-layout: fixed;
+            font-size: 16px;
+            word-break: break-all;
+            line-height: 200%;
+            border: 1px solid #F0F5FD;
+            background: #fafbfc;
+        }
+
+        th {
+            table-layout: fixed;
+            font-size: 16px;
+            word-break: break-all;
+            line-height: 200%;
+            border: 1px solid #F0F5FD;
+        }
+
+        td {
+            table-layout: fixed;
+            font-size: 16px;
+            word-break: break-all;
+            line-height: 200%;
+            border: 1px solid #F0F5FD;
+        }
+
+        .relation-split {
+            padding: 0 5px;
+            color: #999;
+            font-size: 16px;
+            line-height: 14px;
+        }
+
+        .left {
+            width: 200px;
+        }
+
+        .right {
+            width: 300px;
+            font-size: 18px;
+        }
+
+        #leftDiv {
+            float: left;
+        }
+
+        #rightDiv {
+            float: left;
+        }
+
+        .t1 {
+            font-size: 30px;
+        }
+
+        li {
+            list-style-type: decimal;
+            line-height: normal;
+        }
+
+        .foot {
+            margin-top: 150px;
+            position: relative;
+            margin-left: auto;
+            color: #4D4D4D;
+            line-height: 21px;
+            clear: both;
+            text-align: center;
+            bottom: 0px;
+        }
+    </style>
 </head>
 <body>
+    <canvas id="myChart" width="400" height="400"></canvas>
+
+
+    <script type="text/javascript">
+        // Any of the following formats may be used
+        var ctx = document.getElementById("myChart");
+        var ctx = document.getElementById("myChart").getContext("2d");
+        var ctx = $("#myChart");
+
+        // For a pie chart
+        var myPieChart = new Chart(ctx, {
+            type: 'pie',
+            data: data,
+            options: options
+        });
+
+        var data = {
+            datasets: [{
+                data: [
+                    11,
+                    16,
+                    7,
+                    3,
+                    14
+                ],
+                backgroundColor: [
+                    "#FF6384",
+                    "#4BC0C0",
+                    "#FFCE56",
+                    "#E7E9ED",
+                    "#36A2EB"
+                ],
+                label: 'My dataset' // for legend
+            }],
+            labels: [
+                "Red",
+                "Green",
+                "Yellow",
+                "Grey",
+                "Blue"
+            ]
+        };
+    </script>
     <table width="800" border="0" align="center" cellpadding="0" cellspacing="0" style="margin-top: 50px;">
         <tr>
             <td>
-                <h2 style="color: Blue; text-align: center; font-family:KaiTi" class="t1">辽宁省冠心病急救网络信息平台
+                <h2 style="color: Blue; text-align: center; font-family: 黑体" class="t1">辽宁省冠心病急救网络信息平台
                 </h2>
             </td>
         </tr>
@@ -23,7 +181,7 @@
     <table width="800" border="0" align="center" cellpadding="0" cellspacing="0">
         <tr>
             <td>
-                <div class="title-1" >
+                <div style="clear: both; font-size: 14px; left: 30px; font-family: 微软雅黑; color: #333; margin-right: auto; background-color: #c7d1e0">
                     &nbsp;&nbsp; 系统说明
                 </div>
                 <div style="font-family: 楷体; font-size: 14px; margin: 0px; padding: 0px;">
@@ -40,7 +198,7 @@
     <table width="800" border="0" align="center" cellpadding="0" cellspacing="0">
         <tr>
             <td>
-                <div class="title-1" >
+                <div style="clear: both; font-size: 14px; left: 30px; font-family: 微软雅黑; color: #333; margin-right: auto; background-color: #c7d1e0">
                     &nbsp;&nbsp; 选择医院所在城市 点击进入
                 </div>
             </td>

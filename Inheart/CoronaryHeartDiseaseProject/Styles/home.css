@@ -1,0 +1,112 @@
+﻿html, body {
+    height: 100%;
+    margin: 0px;
+    background-image: url(../images/va_page_05.jpg);
+    background-repeat: repeat-x;
+    background-position: bottom;
+    background-color: #EDF5FA;
+    font-size: 18px;
+}
+
+A:link {
+    line-height: 23px;
+    color: #000000;
+    font-size: 18px;
+    font-weight: normal;
+    text-decoration: none;
+}
+
+A:visited {
+    line-height: 23px;
+    color: #000000;
+    font-size: 18px;
+    font-weight: normal;
+    text-decoration: none;
+}
+
+A:active {
+    line-height: 23px;
+    font-size: 18px;
+    font-weight: normal;
+    text-decoration: none;
+}
+
+A:hover {
+    line-height: 23px;
+    color: #fc7d01;
+    font-size: 18px;
+    font-weight: normal;
+    text-decoration: none;
+}
+
+.rs-topic .head ul li a:hover {
+    color: #546b8c;
+}
+
+.rs-topic .head ul li.sel th {
+    color: #333;
+    table-layout: fixed;
+    font-size: 16px;
+    word-break: break-all;
+    line-height: 200%;
+    border: 1px solid #F0F5FD;
+    background: #fafbfc;
+}
+
+th {
+    table-layout: fixed;
+    font-size: 16px;
+    word-break: break-all;
+    line-height: 200%;
+    border: 1px solid #F0F5FD;
+}
+
+td {
+    table-layout: fixed;
+    font-size: 16px;
+    word-break: break-all;
+    line-height: 200%;
+    border: 1px solid #F0F5FD;
+}
+
+.relation-split {
+    padding: 0 5px;
+    color: #999;
+    font-size: 16px;
+    line-height: 14px;
+}
+
+.left {
+    width: 200px;
+}
+
+
+
+li {
+    list-style-type: decimal;
+    line-height: normal;
+}
+
+.foot {
+    margin-top: 150px;
+    position: relative;
+    margin-left: auto;
+    color: #4D4D4D;
+    line-height: 21px;
+    clear: both;
+    text-align: center;
+    bottom: 0px;
+}
+
+.title-1 {
+    font-weight: bold;
+    font-size: 16px;
+    color: white;
+    height: 30px;
+    text-align: left;
+    padding-left: 0px;
+    background-image: url(../images/win_top2.png);
+    clear: both;
+    font-family: 微软雅黑;
+    margin-right: auto;
+}

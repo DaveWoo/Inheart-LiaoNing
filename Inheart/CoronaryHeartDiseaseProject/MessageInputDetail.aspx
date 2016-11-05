@@ -6,7 +6,7 @@
     <link href="Styles/messageDetail.css" type="text/css" rel="stylesheet" />
     <script src="Scripts/My97DatePicker/WdatePicker.js" type="text/javascript"></script>
     <script src="Scripts\Calendar3.js" type="text/javascript"></script>
-    <script language="javaScript">
+    <script type="text/javascript" language="javaScript">
         function setPrintTemplate() {
             factory.printing.templateURL = "MeadCo://IE7";
         }
@@ -72,8 +72,6 @@
             </asp:ScriptManager>
             <asp:UpdateProgress ID="UpdateProgress1" runat="server" DisplayAfter="5" DynamicLayout="true">
                 <ProgressTemplate>
-                    <%-- <span style="color: Red; position: absolute; font-size: 14px; padding: 5px; width: auto;
-					top: 70%; left: 50%;">Loading.....</span>--%>
                 </ProgressTemplate>
             </asp:UpdateProgress>
             <table class="UserTableBorder" cellspacing="0" cellpadding="0" align="left" border="0">

@@ -1,5 +1,7 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" Inherits="CoronaryHeartDiseaseProject.Admin.AddUser" %>
 
+<%@ Register src="../inc/IsAdmin.ascx" tagname="IsAdmin" tagprefix="uc1" %>
+
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -63,26 +65,22 @@
     <form id="myform" runat="server" onsubmit="return check()">
         <table width="98%%" border="0" align="center" cellpadding="3" cellspacing="1" class="tableborder">
             <tr class="header">
-                <td height="25" colspan="2">添加新用户
-                </td>
+                <td height="25" colspan="2">添加新用户</td>
             </tr>
             <tr bgcolor="#FFFFFF">
-                <td width="25%" height="25">新用户用名
-                </td>
+                <td width="25%" height="25">新用户用名</td>
                 <td width="75%" height="25">
                     <input type="text" class="form-control"  name="username" placeholder="户用名" />
                 </td>
             </tr>
             <tr bgcolor="#FFFFFF">
-                <td height="25">用户密码
-                </td>
+                <td height="25">用户密码</td>
                 <td height="25">
                     <input type="password" class="form-control"  name="newpass" placeholder="用户密码"/>
                 </td>
             </tr>
             <tr bgcolor="#FFFFFF">
-                <td height="25">确认密码
-                </td>
+                <td height="25">确认密码</td>
                 <td height="25">
                     <input type="password" class="form-control"  name="repass" placeholder="确认密码" />
                 </td>
@@ -100,8 +98,9 @@
         <br />
         <br />
         <br />
-    </form>
     <%--    <uc1:session ID="Session1" runat="server" />
     <uc2:IsAdmin ID="IsAdmin1" runat="server" />--%>
-</body>
+        <uc1:IsAdmin ID="IsAdmin1" runat="server" />
+    </form>
+    </body>
 </html>

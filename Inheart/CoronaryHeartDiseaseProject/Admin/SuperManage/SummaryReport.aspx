@@ -1,10 +1,12 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" Inherits="CoronaryHeartDiseaseProject.Admin.SummaryReport" %>
 
+<%@ Register src="../inc/IsSuperAdmin.ascx" tagname="IsSuperAdmin" tagprefix="uc1" %>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
     <link href="../../Styles/main.css" type="text/css" rel="stylesheet" />
-    <link rel="stylesheet" href="/Content/bootstrap.min.css">
+    <link rel="stylesheet" href="/Content/bootstrap.min.css" />
     <script type="text/javascript" src="/Scripts/bootstrap.min.js"></script>
     <script type="text/javascript" src="/Scripts/jquery-1.9.1.min.js"></script>
     <title></title>
@@ -100,7 +102,7 @@
         <asp:Panel runat="server" ID="paneOverView" Visible="false">
             <table cellpadding="0" cellspacing="0" class="table1" align="left" style="margin-top: 50px;">
                 <tr class="row1">
-                    <td colspan="2" style="text-align: center; font-weight: bold;">2016年上报统计
+                    <td colspan="2" style="text-align: center; font-weight: bold;font-size:16px">2016年上报统计
                     </td>
                 </tr>
                 <tr>
@@ -195,6 +197,9 @@
         </asp:Panel>
         <asp:Panel runat="server" ID="panelAge" Visible="false">
             <table cellpadding="0" cellspacing="0" class="table1" align="center">
+                <tr>
+                    <td colspan="5" style="text-align:center;font-size:16px;font-weight:bold">年龄分布图</td>
+                </tr>
                 <tr class="row1">
                     <td class="Column5">
                         <strong>40岁以下</strong>
@@ -287,6 +292,7 @@
                 </tr>
             </table>
         </asp:Panel>
+        <uc1:IsSuperAdmin ID="IsSuperAdmin1" runat="server" />
     </form>
 </body>
 </html>

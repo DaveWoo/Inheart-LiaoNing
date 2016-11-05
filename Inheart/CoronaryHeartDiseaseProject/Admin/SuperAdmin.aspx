@@ -16,8 +16,7 @@
         <table id="indextablebody" cellpadding="0">
             <thead>
                 <tr>
-                    <th style="padding-left: 10px; text-align: center; font-size: 18px;">超级管理管理平台
-                    </th>
+                    <th style="padding-left: 10px; text-align: center; font-size: 18px;">超级管理管理平台</th>
                     <th>
                         <a>用户ID ：<%=UserName%></a>&nbsp;&nbsp; <a>身份 ：<%=UserRole%></a>
                     </th>
@@ -113,10 +112,9 @@
                                                 <ul id="dleft_tab4">
                                                     <li id="now14"><a title="病例管理" onclick="show_title('病例管理')" href="SuperManage/MessageManageSupperAdmin.aspx"
                                                         target="content3"><span>病例管理</span></a></li>
-                                                    <%--      <li id="now11"><a title="报表管理" onclick="show_title('报表管理')" href="Content.aspx" target="content3"
-                                                    href="Content.aspx" target="content3"><span>报表管理</span></a></li>--%>
-                                                    <%--                                               <li id="now11"><a title="查看日志" onclick="show_title('查看日志')" href="SuperManage/ViewLogs.aspx"
-                                                    target="content3" href="Content.aspx" target="content3"><span>查看日志</span></a></li>--%>
+                                                    <li id="now16"><a title="查看日志" onclick="show_title('查看日志')" href="SuperManage/ViewLogs.aspx"
+                                                        target="content3" href="Content.aspx" target="content3" /><span>查看日志</span></a></li>
+
                                                 </ul>
                                             </div>
                                             <div class="clear">
@@ -143,6 +141,7 @@
                 document.getElementById("spanTitle").innerHTML = str;
             }
         </script>
+        <uc1:IsSuperAdmin ID="IsSuperAdmin1" runat="server" />
     </form>
 </body>
 </html>

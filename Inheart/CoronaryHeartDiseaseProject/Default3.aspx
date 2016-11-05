@@ -88,6 +88,7 @@
                 document.getElementById("spanTitle").innerHTML = str;
             }
         </script>
+        <uc1:User ID="User1" runat="server" />
     </form>
 </body>
 </html>

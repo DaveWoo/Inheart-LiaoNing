@@ -1,5 +1,7 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" Inherits="CoronaryHeartDiseaseProject.Admin.SuperManage.AddAdmin" %>
 
+<%@ Register src="../inc/IsSuperAdmin.ascx" tagname="IsSuperAdmin" tagprefix="uc1" %>
+
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -67,30 +69,26 @@
                 </td>
             </tr>
             <tr bgcolor="#FFFFFF">
-                <td width="32%" height="25">医院：
-                </td>
+                <td width="32%" height="25">医院：</td>
                 <td width="100%" height="25" colspan="2">
                     <asp:DropDownList CssClass="form-control" ID="SelectHosptial" runat="server" Width="250px">
                     </asp:DropDownList>
                 </td>
             </tr>
             <tr bgcolor="#FFFFFF">
-                <td width="25%" height="25">管理员用户名
-                </td>
+                <td width="25%" height="25">管理员用户名</td>
                 <td width="75%" height="25">
                     <input type="text" class="form-control" name="username" placeholder="用户名" style="width: 250px" />
                 </td>
             </tr>
             <tr bgcolor="#FFFFFF">
-                <td height="25">管理员密码
-                </td>
+                <td height="25">管理员密码</td>
                 <td height="25">
                     <input type="password" name="newpass" class="form-control" placeholder="密码" style="width: 250px" />
                 </td>
             </tr>
             <tr bgcolor="#FFFFFF">
-                <td height="25">确认密码
-                </td>
+                <td height="25">确认密码</td>
                 <td height="25">
                     <input type="password" name="repass" class="form-control" placeholder="确认密码" style="width: 250px">
                 </td>
@@ -108,8 +106,7 @@
         <br />
         <br />
         <br />
-        <%--    <uc1:session ID="Session1" runat="server" />
-    <uc2:IsAdmin ID="IsAdmin1" runat="server" />--%>
+        <uc1:IsSuperAdmin ID="IsSuperAdmin1" runat="server" />
     </form>
 </body>
 </html>

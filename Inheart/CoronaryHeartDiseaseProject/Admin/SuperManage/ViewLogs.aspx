@@ -1,13 +1,13 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" Inherits="CoronaryHeartDiseaseProject.Admin.SuperManage.ViewLogs" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="ViewLogs.aspx.cs" Inherits="CoronaryHeartDiseaseProject.Admin.SuperManage.ViewLogs" %>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>ï¿½Þ¸ï¿½ï¿½ï¿½ï¿½ï¿½</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+    <title>ÐÞ¸Ä×ÊÁÏ</title>
     <link href="../../Styles/admin.css" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" href="/Content/bootstrap.min.css">
-    <script src="/Scripts/bootstrap.min.js"></script>
-    <script src="/Scripts/jquery-1.9.1.min.js"></script>
+    <link rel="stylesheet" href="/Content/bootstrap.min.css" />
+    <script type="text/javascript" src="/Scripts/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/Scripts/jquery-1.9.1.min.js"></script>
     <script type="text/javascript" language="javascript">
         function CheckAll(form) {
             for (var i = 0; i < form.elements.length; i++) {
@@ -23,58 +23,54 @@
     </script>
 </head>
 <body>
-    <form id="Form1" name="listform" runat="server" onsubmit="return confirm('È·ï¿½ï¿½ÒªÖ´ï¿½Ð´Ë²ï¿½ï¿½ï¿½ï¿½ï¿½');">
+    <form id="divbody" name="listform" runat="server" onsubmit="return confirm('È·ÈÏÒªÖ´ÐÐ´Ë²Ù×÷£¿');">
         <asp:Label ID="Label1" runat="server"></asp:Label>&nbsp;
-    <asp:DataList ID="DataListUserLog" runat="server" Width="100%">
-        <HeaderTemplate>
-            <table width="100%" border="0" align="center" cellpadding="3" cellspacing="1" class="tableborder">
-                <tr class="header">
-                    <td width="10%" height="25">
-                        <div align="center">
-                            Ò½Ôº
-                        </div>
-                    </td>
-                    <td width="10%" height="25">
-                        <div align="left">
-                            ï¿½Ã»ï¿½ID
-                        </div>
-                    </td>
-                    <td width="10%" height="25">
-                        <div align="center">
-                            ï¿½ï¿½Â¼Ê±ï¿½ï¿½
-                        </div>
-                    </td>
-                </tr>
-            </table>
-        </HeaderTemplate>
-        <ItemTemplate>
-            <table width="100%" border="0" align="center" cellpadding="3" cellspacing="1" class="tableborder">
-                <tr bgcolor="#ffffff" id="news<%#Eval("LogID") %>">
-                    <td height="25" width="10%">
-                        <div align="center">
-                            <%#ShowHospitalName(Eval("HospitalID").ToString())%>
-                        </div>
-                    </td>
-                    <td height="25" width="10%">
-                        <div align="left">
-                            <%#ShowUserName(Eval("UserID").ToString())%>
-                        </div>
-                    </td>
-                    <td height="25" width="10%">
-                        <div align="center">
-                            <%#Eval("LoginDate")%>
-                        </div>
-                    </td>
-                </tr>
-            </table>
-        </ItemTemplate>
-    </asp:DataList>
+   
+        <asp:DataList ID="DataListUserLog" runat="server" Width="100%">
+            <HeaderTemplate>
+                <table width="100%" border="0" align="center" cellpadding="3" cellspacing="1" class="tableborder">
+                    <tr class="header">
+                        <td width="10%" height="25">
+                            <div align="left">Ò½Ôº</div>
+                        </td>
+                        <td width="10%" height="25">
+                            <div align="left">ÓÃ»§ID</div>
+                        </td>
+                        <td width="10%" height="25">
+                            <div align="left">µÇÂ¼Ê±¼ä</div>
+                        </td>
+                    </tr>
+                </table>
+            </HeaderTemplate>
+            <ItemTemplate>
+                <table width="100%" border="0" align="center" cellpadding="3" cellspacing="1" class="tableborder">
+                    <tr bgcolor="#ffffff" id="news<%#Eval("LogID") %>">
+                        <td height="25" width="10%">
+                            <div align="left">
+                                <%#ShowHospitalName(Eval("HospitalID").ToString())%>
+                            </div>
+                        </td>
+                        <td height="25" width="10%">
+                            <div align="left">
+                                <%#ShowUserName(Eval("UserID").ToString())%>
+                            </div>
+                        </td>
+                        <td height="25" width="10%">
+                            <div align="left">
+                                <%#Eval("LoginDate")%>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </ItemTemplate>
+        </asp:DataList>
         <table width="100%" border="0" align="center" cellpadding="3" cellspacing="1" class="tableborder">
             <tr bgcolor="#ffffff">
                 <td height="25" colspan="4">
-                    <div align="right">
-                        <input id="btnClear" name="Submit822" type="button" value="ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ðµï¿½Â½ï¿½ï¿½Â¼" runat="server"
-                            align="left" class="Button" onserverclick="Clear_Click" />&nbsp;&nbsp;
+                    <div align="left">
+                        <input id="btnClear" name="Submit822" type="button" value="Çå¿ÕËùÓÐµÇÂ½¼ÇÂ¼" runat="server"
+                            align="left" class="btn btn-info" onserverclick="Clear_Click" />&nbsp;&nbsp;
+                   
                     </div>
                 </td>
             </tr>
