@@ -207,16 +207,7 @@
 			HeaderList.Add("TransUpHospitalDate", "患者转上级医院时间");
 
 			#endregion 临床转归
-
-			//Table [ReportJinMaiRongShuan]
-			//HeaderList.Add("TreatTime", "就诊日期");
-
-			//HeaderList.Add("DiseaseTimeState", "");
-			//HeaderList.Add("DiseaseTime", "");
-			//HeaderList.Add("DiseaseHour", "");
-
-			//HeaderList.Add("UserID", "");
-			//HeaderList.Add("HospitalID", "");
+	
 			HeaderList.Add("CreateDate", "创建时间");
 			HeaderList.Add("LastUpdateDate", "最后更新日期");
 			HeaderList.Add("Creater", "病例录入者");

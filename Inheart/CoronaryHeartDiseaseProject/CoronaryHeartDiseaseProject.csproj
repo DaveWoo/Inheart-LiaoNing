@@ -235,6 +235,7 @@
     <Content Include="Scripts\My97DatePicker\skin\whyGreen\up.jpg" />
     <Content Include="Scripts\My97DatePicker\skin\whyGreen\ymbg.jpg" />
     <Content Include="Scripts\My97DatePicker\WdatePicker.js" />
+    <Content Include="Scripts\pi.js" />
     <Content Include="Scripts\Preview.js" />
     <Content Include="Styles\admin.css" />
     <Content Include="Styles\home.css" />

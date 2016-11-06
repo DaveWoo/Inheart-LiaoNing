@@ -606,22 +606,38 @@ FORM {
 }
 
 .badge {
-display: inline-block;
-min-width: 10px;
-padding: 3px 7px;
-font-size: 12px;
-font-weight: 700;
-line-height: 1;
-color: #fff;
-text-align: center;
-white-space: nowrap;
-vertical-align: middle;
-background-color: #777;
-border-radius: 10px;
+    display: inline-block;
+    min-width: 10px;
+    padding: 3px 7px;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    background-color: #777;
+    border-radius: 10px;
 }
 
 #div-body {
     margin-left: 10px;
     margin-right: 10px;
     margin-top: 10px;
+}
+
+.style14 {
+    width: 458px;
+}
+
+.tableborder {
+    background: #D6E0EF;
+    border: 1px solid #698CC3;
+}
+
+.header {
+    font: 9pt Tahoma, Verdana;
+    color: #FFFFFF;
+    font-weight: bold;
+    background-color: #66aadb;
 }

@@ -10,6 +10,7 @@
     <script type="text/javascript" src="/Scripts/jquery-1.9.1.min.js"></script>
     <title>修改资料</title>
     <link href="../../Styles/admin.css" rel="stylesheet" type="text/css" />
+    <%--密码验证--%>
     <script type="text/javascript" language="javascript">
         function check() {
             if (document.myform.oldpass.value == "") {

@@ -18,21 +18,6 @@
             }
         }
     </script>
-    <title></title>
-    <style type="text/css">
-        .tableborder {
-            background: #D6E0EF;
-            border: 1px solid #698CC3;
-        }
-
-        .header {
-            font: 9pt Tahoma, Verdana;
-            color: #FFFFFF;
-            font-weight: bold;
-            background-color: #66aadb;
-        }
-    
-    </style>
 </head>
 <body>
     <div style="margin-left: 10px; margin-right: 10px">        
