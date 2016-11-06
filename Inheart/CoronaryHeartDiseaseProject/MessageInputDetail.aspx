@@ -4,58 +4,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <link href="Styles/messageDetail.css" type="text/css" rel="stylesheet" />
-    <script src="Scripts/My97DatePicker/WdatePicker.js" type="text/javascript"></script>
-    <script src="Scripts\Calendar3.js" type="text/javascript"></script>
-    <script type="text/javascript" language="javaScript">
-        function setPrintTemplate() {
-            factory.printing.templateURL = "MeadCo://IE7";
-        }
-        function alert(msg, title, fontColor, width, height) {
-            var content;
-            content = "<html><head><title>" + title + "</title></head>";
-            content += "<body   bgcolor='#f0fafc'>";
-            content += "<font   color='" + fontColor + "'; padding:5px>" + msg + "</font>";
-            content += "<br><center><button   style='width:80px; margin-top:20px'   onclick='window.close();'>确   定</button></center>";
-            content += "</body></html>";
-            var x = window.showModalDialog("alert.htm", content, "dialogWidth:" + width + "px;dialogHeight:" + height + "px;status:no;help:no");
-        }
-    </script>
-    <script language="javascript" src="Scripts/Preview.js" type="text/javascript">
-        var pb_strConfirmCloseMessage;
-        var pb_blnCloseWindow = false;
-        pb_strConfirmCloseMessage = "确实要离开该页面吗?您的文章内容还没有进行保存！按“提交”继续，或按“取消”留在当前页面。";
-        function ConfirmClose() {
-            if (pb_blnCloseWindow == false) {
-                window.event.returnValue = pb_strConfirmCloseMessage;
-                pb_blnCloseWindow = true;
-            }
-        }
-
-        function ShowConfirmClose(blnValue) {
-            if (blnValue) {
-                document.body.onbeforeunload = ConfirmClose;
-            } else {
-                document.body.onbeforeunload = null;
-            }
-        }
-
-        if (window.print) {
-            document.write('<form><input type=button name=print value="Print" onClick="window.print()"></form>');
-        }
-
-    </script>
-    <style type="text/css">
-        .style9 {
-            background-color: #f7f7f7;
-            height: 12px;
-        }
-        <!-- media=print 这个属性可以在打印时有效-- >
-    </style>
-    <style media="print">
-        {
-            .Noprint;
-
-        {
+    <link href="Content/bootstrap.min.css" type="text/css" rel="stylesheet" />
+    <script src="Scripts\jquery-1.9.1.min.js" type="text/javascript"></script>
+    <script src="Scripts\bootstrap.min.js" type="text/javascript"></script>
+    <%--这个属性可以在打印时有效--%>
+    <style type="text/css" media="print">
+        .Noprint {
             display: none;
         }
 
@@ -63,6 +17,7 @@
             page-break-after: always;
         }
     </style>
+
     <title>病例表单</title>
 </head>
 <body onunload="return '你确实要关闭吗?'">
@@ -393,10 +348,12 @@
                                             <td>
                                                 <asp:Panel runat="server" ID="PanelddlHypertensionLasted">
                                                     病程（年）:
-                                                <asp:Label ID="ddlHypertensionLasted" runat="server" RepeatDirection="Horizontal"
-                                                    Width="40px" />治疗状况:
-                                                <asp:Label ID="ddlHypertensionTreatedState" runat="server" RepeatDirection="Horizontal"
-                                                    RepeatLayout="Flow" TabIndex="61" Width="80px" />
+                                               
+                                                    <asp:Label ID="ddlHypertensionLasted" runat="server" RepeatDirection="Horizontal"
+                                                        Width="40px" />治疗状况:
+                                               
+                                                    <asp:Label ID="ddlHypertensionTreatedState" runat="server" RepeatDirection="Horizontal"
+                                                        RepeatLayout="Flow" TabIndex="61" Width="80px" />
                                                 </asp:Panel>
                                             </td>
                                         </tr>
@@ -415,11 +372,13 @@
                                             <td>
                                                 <asp:Panel runat="server" ID="PanelddlGlycuresisLasted">
                                                     病程（年）:
-                                                <asp:Label ID="ddlGlycuresisLasted" runat="server" RepeatDirection="Horizontal" RepeatLayout="Flow"
-                                                    TabIndex="61" Width="40px" />
+                                               
+                                                    <asp:Label ID="ddlGlycuresisLasted" runat="server" RepeatDirection="Horizontal" RepeatLayout="Flow"
+                                                        TabIndex="61" Width="40px" />
                                                     &nbsp;治疗状况:
-                                                <asp:Label ID="ddlGlycuresisTreatedState" runat="server" RepeatDirection="Horizontal"
-                                                    RepeatLayout="Flow" TabIndex="61" Width="80px" />
+                                               
+                                                    <asp:Label ID="ddlGlycuresisTreatedState" runat="server" RepeatDirection="Horizontal"
+                                                        RepeatLayout="Flow" TabIndex="61" Width="80px" />
                                                 </asp:Panel>
                                             </td>
                                         </tr>
@@ -602,7 +561,8 @@
                             </tr>
                             <tr>
                                 <td>心功能分级:
-                                <asp:Label AutoPostBack="false" ID="ddlKilipLever" runat="server" />
+                               
+                                    <asp:Label AutoPostBack="false" ID="ddlKilipLever" runat="server" />
                                     &nbsp;
                                 </td>
                             </tr>
@@ -619,9 +579,11 @@
                             </tr>
                             <tr>
                                 <td>就诊后首次血压: 收缩压
-                                <asp:Label ID="txtBloodPressure" runat="server" Width="80px" CssClass="TextBoxSyle"></asp:Label>
+                               
+                                    <asp:Label ID="txtBloodPressure" runat="server" Width="80px" CssClass="TextBoxSyle"></asp:Label>
                                     &nbsp;&nbsp;舒张压
-                                <asp:Label ID="txtDiastolicPressure" runat="server" Width="80px" CssClass="TextBoxSyle"></asp:Label>
+                               
+                                    <asp:Label ID="txtDiastolicPressure" runat="server" Width="80px" CssClass="TextBoxSyle"></asp:Label>
                                 </td>
                             </tr>
                             <tr>
@@ -693,7 +655,8 @@
                             </tr>
                             <tr>
                                 <td>是否向患者或家属提出静脉溶栓的建议:&nbsp;
-                                <asp:Label AutoPostBack="false" ID="rdbIntroduceThrombolysisSuggestion" runat="server" />
+                               
+                                    <asp:Label AutoPostBack="false" ID="rdbIntroduceThrombolysisSuggestion" runat="server" />
                                 </td>
                             </tr>
                             <tr>
@@ -703,7 +666,8 @@
                                             <td>向患者或家属提出静脉溶栓建议的时间:
                                             </td>
                                             <td>&nbsp;
-                                            <asp:Label ID="txbIntroduceThrombolysisSuggestionDate" runat="server" />
+                                           
+                                                <asp:Label ID="txbIntroduceThrombolysisSuggestionDate" runat="server" />
                                             </td>
                                         </tr>
                                     </table>
@@ -711,7 +675,8 @@
                             </tr>
                             <tr>
                                 <td>是否进行了静脉溶栓治疗:&nbsp;
-                                <asp:Label ID="rdbThrombolysisTreateConfirm" runat="server" />
+                               
+                                    <asp:Label ID="rdbThrombolysisTreateConfirm" runat="server" />
                                 </td>
                             </tr>
                             <tr>
@@ -743,7 +708,8 @@
                             </tr>
                             <tr>
                                 <td>开始静脉溶栓距离就诊时间（D2N）:
-                                <asp:Label ID="rblTreatTime" runat="server" />
+                               
+                                    <asp:Label ID="rblTreatTime" runat="server" />
                                 </td>
                             </tr>
                             <%--    静脉溶栓--%>
@@ -757,26 +723,33 @@
                                                     <table border="0" cellpadding="0" cellspacing="0" class="styleLeft">
                                                         <tr>
                                                             <td class="Column1JiBing">尿激酶: &nbsp;&nbsp;
-                                                            <asp:Label ID="rblUrokinase" runat="server" />
+                                                           
+                                                                <asp:Label ID="rblUrokinase" runat="server" />
                                                                 &nbsp;&nbsp;&nbsp;&nbsp;
-                                                            <asp:Panel ID="qitaNiaoJiMei" runat="server">
-                                                                其他：<asp:Label ID="txtUrokinaseOther" runat="server" />
-                                                                &nbsp;万U
-                                                            </asp:Panel>
+                                                           
+                                                                <asp:Panel ID="qitaNiaoJiMei" runat="server">
+                                                                    其他：<asp:Label ID="txtUrokinaseOther" runat="server" />
+                                                                    &nbsp;万U
+                                                           
+                                                                </asp:Panel>
                                                             </td>
                                                             <td class="Column2JiBing">阿替普酶:
-                                                            <asp:Label ID="rblAlteplase" runat="server" />
+                                                           
+                                                                <asp:Label ID="rblAlteplase" runat="server" />
                                                             </td>
                                                             <td>瑞替普酶:
-                                                            <asp:Label ID="rblReteplase" runat="server" />
+                                                           
+                                                                <asp:Label ID="rblReteplase" runat="server" />
                                                             </td>
                                                         </tr>
                                                         <tr>
                                                             <td>是否再通:&nbsp;<asp:Label ID="rblPass" runat="server" />
                                                             </td>
                                                             <td>并发症:
-                                                            <asp:Label ID="chkReperfusionArrhythmia" runat="server" Text="再灌注心律失常," />&nbsp;
-                                                            <asp:Label ID="chkAnaphylaxis" runat="server" Text="过敏反应 " />&nbsp;
+                                                           
+                                                                <asp:Label ID="chkReperfusionArrhythmia" runat="server" Text="再灌注心律失常," />&nbsp;
+                                                           
+                                                                <asp:Label ID="chkAnaphylaxis" runat="server" Text="过敏反应 " />&nbsp;
                                                             </td>
                                                             <td>是否出血：<asp:Label ID="chkBlood" AutoPostBack="true" runat="server" Text="出血 " />
                                                                 --<asp:Label ID="rblBleed" runat="server" />
@@ -823,10 +796,12 @@
                                             </tr>
                                             <tr>
                                                 <td>是否应用血管紧张素转换酶抑制剂（ACEI）:
-                                                <asp:Label ID="rblACEIConfirm" runat="server" />
+                                               
+                                                    <asp:Label ID="rblACEIConfirm" runat="server" />
                                                 </td>
                                                 <td>是否应用β-受体阻滞剂:
-                                                <asp:Label ID="rblBRBConfrim" runat="server" />
+                                               
+                                                    <asp:Label ID="rblBRBConfrim" runat="server" />
                                                 </td>
                                             </tr>
                                         </table>
@@ -925,12 +900,14 @@
                                     <table border="0" cellpadding="0" cellspacing="0">
                                         <tr>
                                             <td class="Column1JiBing11">在院24h内是否进行了心肺复苏:
-                                            <asp:Label ID="rblCPR" runat="server" />
+                                           
+                                                <asp:Label ID="rblCPR" runat="server" />
                                             </td>
                                             <td>
                                                 <asp:Panel ID="panetxtCPRTimes" runat="server">
                                                     &nbsp; 次数:
-                                                <asp:Label ID="txtCPRTimes" runat="server" />
+                                               
+                                                    <asp:Label ID="txtCPRTimes" runat="server" />
                                                 </asp:Panel>
                                             </td>
                                         </tr>
@@ -942,7 +919,8 @@
                                     <table border="0" cellpadding="0" cellspacing="0">
                                         <tr>
                                             <td class="Column1JiBing11">在院24h内的转归:
-                                            <asp:Label ID="rblTreatResult" runat="server" />
+                                           
+                                                <asp:Label ID="rblTreatResult" runat="server" />
                                             </td>
                                         </tr>
                                         <tr>
@@ -961,11 +939,15 @@
                                                             </td>
                                                             <td>
                                                                 <asp:Label ID="chkDeadForVentriclarArrhythmias" runat="server" Text="室性心律失常（室速，室颤）," />&nbsp;
-                                                            <asp:Label ID="chkDeadForCardiacArrest" runat="server" Text="心跳骤停/电机械分离," />&nbsp;
-                                                            <asp:Label ID="chkDeadForCardiogenicShock" runat="server" Text="心源性休克," />&nbsp;
-                                                            <asp:Label ID="chkDeadForACVD" runat="server" Text="急性脑血管病, " />
+                                                           
+                                                                <asp:Label ID="chkDeadForCardiacArrest" runat="server" Text="心跳骤停/电机械分离," />&nbsp;
+                                                           
+                                                                <asp:Label ID="chkDeadForCardiogenicShock" runat="server" Text="心源性休克," />&nbsp;
+                                                           
+                                                                <asp:Label ID="chkDeadForACVD" runat="server" Text="急性脑血管病, " />
                                                                 <asp:Label ID="chkDeadForGIH" runat="server" Text="消化道大出血, " />&nbsp;
-                                                            <asp:Label ID="chkDeadForOther" runat="server" Text="其它," />
+                                                           
+                                                                <asp:Label ID="chkDeadForOther" runat="server" Text="其它," />
                                                             </td>
                                                         </tr>
                                                     </table>
@@ -980,7 +962,8 @@
                                     <table border="0" cellpadding="0" cellspacing="0">
                                         <tr>
                                             <td class="Column1JiBing11">转上级医院:
-                                            <asp:Label ID="rblTransUpHospitalConfirm" runat="server" />
+                                           
+                                                <asp:Label ID="rblTransUpHospitalConfirm" runat="server" />
                                             </td>
                                             <td>
                                                 <asp:Panel ID="PanelpanelrblTreatResult" runat="server">
@@ -1003,7 +986,8 @@
                                     <table border="0" cellpadding="0" cellspacing="0">
                                         <tr>
                                             <td>患者转院前是否已与上级医院联系准备下一步的治疗:
-                                            <asp:Label ID="rblConnectUpHospitalConfirm" runat="server" />
+                                           
+                                                <asp:Label ID="rblConnectUpHospitalConfirm" runat="server" />
                                             </td>
                                         </tr>
                                     </table>
@@ -1016,7 +1000,8 @@
                                             <td class="Column1JiBing11">患者转上级医院时间:
                                             </td>
                                             <td>&nbsp;
-                                            <asp:Label ID="txbTransUpHospitalDate" runat="server" />
+                                           
+                                                <asp:Label ID="txbTransUpHospitalDate" runat="server" />
                                             </td>
                                         </tr>
                                     </table>
@@ -1037,7 +1022,7 @@
                 <tr>
                     <td align="center" class="userfont3">
                         <input id="Button1" onclick="window.print()" type="button" value="打印" name="Button"
-                            class="ButtonSave1" class="NOPRINT" />
+                            class="btn btn-info NOPRINT" />
                     </td>
                 </tr>
                 <tr>

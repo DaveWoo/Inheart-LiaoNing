@@ -68,11 +68,6 @@ function ShowConfirmClose(blnValue) {
     }
 }
 
-if (window.print) {
-    document.write('<form><input type=button name=print value="Print" onClick="window.print()"></form>');
-}
-
-
 function ST1() {
     alert("急性ST段抬高性心肌梗死（STEMI） <br\>满足（1）或（2）任一项：  <br\>（1）缺血症状(静息时发作疼痛，气短，压榨样不适；或逐渐加重的上述症状；研究者确认症状继发于缺血)；   <br\>（2）ECG变化与心肌梗死改变一致：   <br\>    在没有既往左室高电压或传导异常的情况下在2个连续导联新出现显著的Q波(或V1-V2出现显著增高的R波)；<br\>≥2个连续导联有ST段抬高0.1mV以上; <br\>    出现新的左束支传导阻滞； <br\>（3）心肌标志物：<br\>    肌钙蛋白：定量检测位于心肌坏死的诊断范围内，否则至少其他的心肌标志物之一必须>2倍ULN； CK-MB ≥ULN。 ", "急性ST段抬高性心肌梗死（STEMI）", "#000000", 600, 300);
 }

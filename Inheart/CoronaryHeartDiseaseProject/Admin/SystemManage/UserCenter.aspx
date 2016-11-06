@@ -58,21 +58,21 @@
                 <td width="25%" height="25">原密码
                 </td>
                 <td width="75%" height="25">
-                    <input type="password" name="oldpass" class="form-control">
+                    <input type="password" name="oldpass" placeholder="请输入原密码" class="form-control">
                 </td>
             </tr>
             <tr bgcolor="#FFFFFF">
                 <td height="25">新密码
                 </td>
                 <td height="25">
-                    <input type="password" name="newpass" class="form-control" />
+                    <input type="password" name="newpass" placeholder="请输入新密码" class="form-control" />
                 </td>
             </tr>
             <tr bgcolor="#FFFFFF">
                 <td height="25">确认密码
                 </td>
                 <td height="25">
-                    <input type="password"  name="repass" class="form-control">
+                    <input type="password"  name="repass" placeholder="请再次输入新密码" class="form-control">
                 </td>
             </tr>
             <tr bgcolor="#FFFFFF">
@@ -85,7 +85,6 @@
                 </td>
             </tr>
         </table>
-    <%--<uc1:session ID="Session1" runat="server" />--%>
         <uc1:IsAdmin ID="IsAdmin1" runat="server" />
     </form>
     </body>

@@ -9,16 +9,11 @@
     <link href="Content/bootstrap.min.css" type="text/css" rel="stylesheet" />
     <script src="Scripts\jquery-1.9.1.min.js" type="text/javascript"></script>
     <script src="Scripts\bootstrap.min.js" type="text/javascript"></script>
-    <script src="Scripts/My97DatePicker/WdatePicker.js" type="text/javascript"></script>
+    <script src="Scripts\My97DatePicker\WdatePicker.js" type="text/javascript"></script>
     <script src="Scripts\Calendar3.js" type="text/javascript"></script>
     <script language="javascript" src="/Scripts/pi.js" type="text/javascript"></script>
     <title>病例表单</title>
-    <script language="javascript" src="Scripts/Preview.js" type="text/javascript">
-            if (window.print) {
-            document.write('<form><input type=button name=print value="Print" onClick="window.print()"></form>');
-        }
-
-    </script>
+    <script language="javascript" src="Scripts/Preview.js" type="text/javascript">   </script>
 </head>
 <body onunload="return '你确实要关闭吗?'">
     <form id="form1" runat="server">
