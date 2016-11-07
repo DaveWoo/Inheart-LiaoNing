@@ -9,6 +9,7 @@
     <script type="text/javascript" src="/Scripts/bootstrap.min.js"></script>
     <script type="text/javascript" src="/Scripts/jquery-1.9.1.min.js"></script>
     <script type="text/javascript" src="/Scripts/check.js"></script>
+    <title>病例报告</title>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -23,7 +24,7 @@
                     <td colspan="4" height="25">
                         <div align="right">
                             <input id="btnImportExcel" name="Submit822" type="button" value="导出Excel" runat="server"
-                                align="right" class="Button" onserverclick="ImportExcel_Click" />&nbsp;&nbsp;
+                                align="right" class="btn btn-info" onserverclick="ImportExcel_Click" />&nbsp;&nbsp;
                         </div>
                     </td>
                 </tr>

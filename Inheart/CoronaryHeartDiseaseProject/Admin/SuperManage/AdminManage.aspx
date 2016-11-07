@@ -79,7 +79,7 @@
                     <tr bgcolor="#ffffff">
                         <td height="25" colspan="4">
                             <div align="left">
-                                <input type="button" class="btn btn-info widthButton" name="Submit822" value="添加管理员" onclick="javascript: window.location = 'AddAdmin.aspx';">&nbsp;
+                                <input type="button" Class="btn btn-info widthButton" name="Submit822" value="添加管理员" onclick="javascript: window.location = 'AddAdmin.aspx';">&nbsp;
                        
                             </div>
                         </td>

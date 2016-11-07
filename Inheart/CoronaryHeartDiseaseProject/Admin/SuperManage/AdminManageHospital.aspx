@@ -60,9 +60,9 @@
                     <tr bgcolor="#ffffff">
                         <td height="25" colspan="4">
                             <div align="left">
-                                <input type="button" class="btn btn-info widthButton" name="Submit822" value="添加医院" onclick="javascript: window.location = 'AddHospital.aspx';">&nbsp;
+                                <input type="button" Class="btn btn-info widthButton" name="Submit822" value="添加医院" onclick="javascript: window.location = 'AddHospital.aspx';">&nbsp;
                                
-                                <input type="submit" class="btn btn-info widthButton" name="Submit3" value="将所选医院删除" id="Submit1" onserverclick="Submit1_ServerClick" runat="server">
+                                <input type="submit" Class="btn btn-info widthButton" name="Submit3" value="将所选医院删除" id="Submit1" onserverclick="Submit1_ServerClick" runat="server">
 
                                 <span class="label label-default">选中全部</span>
                                 <input type="checkbox" name="chkall" value="on" onclick="CheckAll(this.form)">

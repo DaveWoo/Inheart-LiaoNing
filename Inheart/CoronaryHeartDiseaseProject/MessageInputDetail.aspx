@@ -1022,7 +1022,7 @@
                 <tr>
                     <td align="center" class="userfont3">
                         <input id="Button1" onclick="window.print()" type="button" value="打印" name="Button"
-                            class="btn btn-info NOPRINT" />
+                            Class="btn btn-info NOPRINT" />
                     </td>
                 </tr>
                 <tr>

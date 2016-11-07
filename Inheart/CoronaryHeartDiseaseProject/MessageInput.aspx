@@ -681,7 +681,7 @@
                                                         </asp:Panel>
                                                     </td>
                                                     <td style="width: 110px;">
-                                                        <button tabindex="39" type="button" onclick="javascript:ST1()" class="btn btn-info">
+                                                        <button tabindex="39" type="button" onclick="javascript:ST1()" Class="btn btn-info">
                                                             诊断标准</button>
                                                     </td>
                                                 </tr>
@@ -1553,7 +1553,7 @@
                         &nbsp;&nbsp;      
                         <asp:Button ID="btnSubmit" runat="server" Text="提交" CssClass="btn btn-info" OnClick="btnSubmit_Click" />
                         &nbsp;&nbsp;&nbsp;
-                        <asp:Button ID="btnEnterPrint" Text="进入打印页面" OnClick="btnEnterPrint_Click" class="btn btn-info"
+                        <asp:Button ID="btnEnterPrint" Text="进入打印页面" OnClick="btnEnterPrint_Click" Class="btn btn-info"
                             runat="server" Width="145px" />
                     </td>
                 </tr>

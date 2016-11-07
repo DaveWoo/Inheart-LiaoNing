@@ -117,3 +117,11 @@ img {
     text-align: center;
     bottom: 0px;
 }
+
+.btn {
+    border-radius: 1px !important;
+}
+
+.form-control {
+    border-radius: 1px !important;
+}

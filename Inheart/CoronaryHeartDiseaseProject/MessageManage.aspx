@@ -19,7 +19,7 @@
                     <asp:ListItem>请选择</asp:ListItem>
                 </asp:DropDownList>
                 <asp:TextBox ID="txtCondition" runat="server" Height="35" Style="vertical-align: middle;" placeholder="请输入"></asp:TextBox>
-                <asp:Button runat="server" ID="Button1" Text="查询" OnClick="Search_Click" CssClass="btn2 btn-info widthButton "
+                <asp:Button runat="server" ID="Button1" Text="查询" OnClick="Search_Click" CssClass="btn btn-info widthButton "
                     Height="35px" />
                 <asp:Label ID="lblMessage" runat="server" ForeColor="Red" />
             </div>
@@ -113,7 +113,7 @@
                         <td colspan="4" height="25">
                             <div align="left">
                                 <input id="btnAddMedical" name="Submit822" onclick="javascript: window.location = 'MessageInput.aspx';"
-                                    type="button" value="添加病例" runat="server" align="left" class="btn2 btn-info" />
+                                    type="button" value="添加病例" runat="server" align="left" Class="btn btn-info" />
                                 &nbsp;                       
                             </div>
                         </td>

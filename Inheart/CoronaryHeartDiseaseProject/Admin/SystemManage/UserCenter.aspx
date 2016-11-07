@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <link rel="stylesheet" href="../../Styles/admin.css"
+    <link rel="stylesheet" href="../../Styles/admin.css" />
     <link rel="stylesheet" href="/Content/bootstrap.min.css" />
     <script type="text/javascript" src="/Scripts/bootstrap.min.js"></script>
     <script type="text/javascript" src="/Scripts/jquery-1.9.1.min.js"></script>
@@ -26,7 +26,7 @@
         </tr>
     </table>
     <form id="myform" runat="server" onsubmit="return checkReSetPwd()">
-        <table width="98%%" border="0" align="center" cellpadding="3" cellspacing="1" class="tableborder">
+        <table width="98%" border="0" align="center" cellpadding="3" cellspacing="1" class="tableborder">
             <tr class="header">
                 <td height="25" colspan="2">修改管理员密码&nbsp;
                 </td>
@@ -56,9 +56,9 @@
                 <td height="25">&nbsp;
                 </td>
                 <td height="25">
-                    <input type="submit" value="保存密码" name="B1" class="btn btn-info" id="Submit2" onserverclick="Submit1_ServerClick"
+                    <input type="submit" value="保存密码" name="B1" Class="btn btn-info" id="Submit2" onserverclick="Submit1_ServerClick"
                         runat="server" onclick="return Submit2_onclick()">
-                    <input type="reset" name="Submit2" class="btn btn-info" value="重置">
+                    <input type="reset" name="Submit2" Class="btn btn-info" value="重置">
                 </td>
             </tr>
         </table>

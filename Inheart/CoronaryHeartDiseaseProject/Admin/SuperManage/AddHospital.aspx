@@ -4,19 +4,21 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />    
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../../Styles/admin.css" />
     <link rel="stylesheet" href="/Content/bootstrap.min.css" />
     <script type="text/javascript" src="/Scripts/bootstrap.min.js"></script>
     <script type="text/javascript" src="/Scripts/jquery-1.9.1.min.js"></script>
     <script type="text/javascript" src="/Scripts/check.js"></script>
     <title>修改资料</title>
+
 </head>
 <body>
     <table width="100%" border="0" align="center" cellpadding="3" cellspacing="1">
         <tr>
             <td>
-                <table width="98%%" border="0" align="center" cellpadding="3" cellspacing="1">
+                <table width="98%" border="0" align="center" cellpadding="3" cellspacing="1">
                     <tr>
                         <td height="25" colspan="2">网站导航: &nbsp;<a href="AddHospital.aspx"><b>添加医院</b></a> &nbsp;|&nbsp; <a href="AdminManageHospital.aspx">管理医院</a>&nbsp; |
                         </td>

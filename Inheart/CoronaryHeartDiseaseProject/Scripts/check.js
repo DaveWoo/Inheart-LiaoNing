@@ -48,7 +48,7 @@ function checkReSetPwd() {
         alert("原密码不能为空！！");
         return false;
     }
-    if (document.myform.newpass.value.length < 7) {
+    if (document.myform.newpass.value.length < 6) {
         alert("密码长度不能小于6位！！");
         return false;
     }

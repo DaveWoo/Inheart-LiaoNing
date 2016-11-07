@@ -1,4 +1,4 @@
-<%@ Page Language="C#" AutoEventWireup="true" CodeFile="ViewLogs.aspx.cs" Inherits="CoronaryHeartDiseaseProject.Admin.SuperManage.ViewLogs" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="ViewLogs.aspx.cs" Inherits="CoronaryHeartDiseaseProject.Admin.SuperManage.ViewLogs" %>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -57,7 +57,7 @@
                 <td height="25" colspan="4">
                     <div align="left">
                         <input id="btnClear" name="Submit822" type="button" value="清空所有登陆记录" runat="server"
-                            align="left" class="btn btn-info" onserverclick="Clear_Click" />&nbsp;&nbsp;
+                            align="left" Class="btn btn-info" onserverclick="Clear_Click" />&nbsp;&nbsp;
                    
                     </div>
                 </td>
