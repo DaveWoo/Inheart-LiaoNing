@@ -28,7 +28,7 @@
     <form id="myform" runat="server" onsubmit="return checkUser()">
         <table width="98%" border="0" align="center" cellpadding="3" cellspacing="1" class="tableborder">
             <tr class="header">
-                <td height="25" colspan="2">添加管理员&nbsp;
+                <td height="30px" colspan="2">添加管理员&nbsp;
                 </td>
             </tr>
             <tr bgcolor="#FFFFFF">

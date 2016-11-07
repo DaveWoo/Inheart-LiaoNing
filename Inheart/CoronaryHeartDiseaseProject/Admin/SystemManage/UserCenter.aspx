@@ -28,28 +28,28 @@
     <form id="myform" runat="server" onsubmit="return checkReSetPwd()">
         <table width="98%" border="0" align="center" cellpadding="3" cellspacing="1" class="tableborder">
             <tr class="header">
-                <td height="25" colspan="2">修改管理员密码&nbsp;
+                <td height="30px" colspan="2">修改管理员密码&nbsp;
                 </td>
             </tr>
             <tr bgcolor="#FFFFFF">
                 <td width="25%" height="25">原密码
                 </td>
                 <td width="75%" height="25">
-                    <input type="password" name="oldpass" placeholder="请输入原密码" class="form-control">
+                    <input type="password" name="oldpass" placeholder="请输入原密码" class="form-control-user">
                 </td>
             </tr>
             <tr bgcolor="#FFFFFF">
                 <td height="25">新密码
                 </td>
                 <td height="25">
-                    <input type="password" name="newpass" placeholder="请输入新密码" class="form-control" />
+                    <input type="password" name="newpass" placeholder="请输入新密码" class="form-control-user" />
                 </td>
             </tr>
             <tr bgcolor="#FFFFFF">
                 <td height="25">确认密码
                 </td>
                 <td height="25">
-                    <input type="password" name="repass" placeholder="请再次输入新密码" class="form-control">
+                    <input type="password" name="repass" placeholder="请再次输入新密码" class="form-control-user">
                 </td>
             </tr>
             <tr bgcolor="#FFFFFF">

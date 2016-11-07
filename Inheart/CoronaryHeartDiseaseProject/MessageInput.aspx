@@ -42,6 +42,7 @@
                             <tr>
                                 <td class="subTitleTip">提示：<br />
                                     1、请在收治10天内录入病例；提交10天后将不允许修改。
+                                   
                                     <asp:Label ID="lblErrorMessage" runat="server" Text="" ForeColor="Red"></asp:Label>
                                 </td>
                             </tr>
@@ -159,6 +160,10 @@
                                                 小时
                                            
                                             
+
+                                               
+
+
 
                                                 <asp:CustomValidator ID="cusValidatorAge" runat="server" ControlToValidate="txtDiseaseHour"
                                                     Display="Dynamic" ErrorMessage="无效时间." OnServerValidate="ServerValidation" ValidateEmptyText="false"></asp:CustomValidator>
@@ -465,10 +470,7 @@
                                                     <td>
                                                         <asp:Panel runat="server" ID="PanelddlHypertensionLasted">
                                                             病程(年):&nbsp;
-                                                       
-                                                        
-
-                                                            <asp:DropDownList TabIndex="28" ID="ddlHypertensionLasted" CssClass="form-control" runat="server" RepeatDirection="Horizontal"
+                                                             <asp:DropDownList TabIndex="28" ID="ddlHypertensionLasted" CssClass="form-control" runat="server" RepeatDirection="Horizontal"
                                                                 RepeatLayout="Flow" Width="120px">
                                                                 <asp:ListItem>0</asp:ListItem>
                                                                 <asp:ListItem>1</asp:ListItem>
@@ -496,6 +498,8 @@
                                                             <br />
                                                             治疗状况:													   
                                                         
+                                                           
+
                                                             <asp:DropDownList TabIndex="29" ID="ddlHypertensionTreatedState" CssClass="form-control" runat="server" RepeatDirection="Horizontal"
                                                                 RepeatLayout="Flow" Width="120px">
                                                                 <asp:ListItem>未治疗</asp:ListItem>
@@ -530,8 +534,7 @@
                                                     </td>
                                                     <td>
                                                         <asp:Panel runat="server" ID="PanelddlGlycuresisLasted">
-                                                            病程(年):&nbsp;													   
-                                                        
+                                                            病程(年):&nbsp;			
                                                             <asp:DropDownList TabIndex="31" ID="ddlGlycuresisLasted" CssClass="form-control" runat="server" RepeatDirection="Horizontal"
                                                                 RepeatLayout="Flow" Width="120px">
                                                                 <asp:ListItem>0</asp:ListItem>
@@ -560,6 +563,8 @@
                                                             <br />
                                                             治疗状况:													   
                                                         
+                                                           
+
                                                             <asp:DropDownList TabIndex="32" ID="ddlGlycuresisTreatedState" CssClass="form-control" runat="server" RepeatDirection="Horizontal"
                                                                 RepeatLayout="Flow" Width="120px">
                                                                 <asp:ListItem>未治疗</asp:ListItem>
@@ -681,7 +686,7 @@
                                                         </asp:Panel>
                                                     </td>
                                                     <td style="width: 110px;">
-                                                        <button tabindex="39" type="button" onclick="javascript:ST1()" Class="btn btn-info">
+                                                        <button tabindex="39" type="button" onclick="javascript:ST1()" class="btn btn-info">
                                                             诊断标准</button>
                                                     </td>
                                                 </tr>
@@ -737,6 +742,8 @@
                                                                             <asp:CheckBox ID="chkAVBII" Text="II度" runat="server" />
                                                                             <asp:CheckBox ID="chkAVBIII" Text="III度" runat="server" />)
                                                                            
+                                                                           
+
                                                                             <br />
                                                                             <asp:CheckBox ID="chkAFS" Text="左束支传导阻滞 " runat="server" />
                                                                             <asp:CheckBox ID="chkRBBB" Text="右束支传导阻滞 " runat="server" />
@@ -876,16 +883,11 @@
                                         <tr>
                                             <td class="Column1JiBing1">就诊后首次血压:
                                             </td>
-                                            <td>收缩压                                           
-                                            
-                                                <asp:TextBox ID="txtBloodPressure" TabIndex="49" runat="server" Width="80px" Height="24px" CssClass="TextBoxSyle"></asp:TextBox>mmHg
+                                            <td>收缩压
+                                                <asp:TextBox ID="txtBloodPressure" TabIndex="49" runat="server" CssClass="form-control-patient"></asp:TextBox>mmHg
                                             </td>
-                                            <td>舒张压                                           
-                                            
-                                                <asp:TextBox ID="txtDiastolicPressure" TabIndex="50" runat="server" Width="80px" Height="24px" CssClass="TextBoxSyle"></asp:TextBox>mmHg
-                                           
-                                            
-
+                                            <td>&nbsp;&nbsp;舒张压    
+                                                <asp:TextBox ID="txtDiastolicPressure" TabIndex="50" runat="server"  CssClass="form-control-patient"></asp:TextBox>mmHg
                                                 <asp:CustomValidator ID="CustomValidator1" ControlToValidate="txtDiastolicPressure"
                                                     runat="server" ValidateEmptyText="false" ErrorMessage="请输入数字." OnServerValidate="ServerValidation" />
                                                 <asp:CustomValidator ID="CustomValidatorBloodPressure" ControlToValidate="txtBloodPressure"
@@ -901,10 +903,8 @@
                                         <tr>
                                             <td class="Column1JiBing1">首次心率：</td>
                                             <td>
-                                                <asp:TextBox TabIndex="51" ToolTip="不为空" ID="txtFirstTimeHeartRate" runat="server" Width="40px" Height="24px"></asp:TextBox>
+                                                <asp:TextBox TabIndex="51" ToolTip="不为空" CssClass="form-control-patient" ID="txtFirstTimeHeartRate" runat="server" ></asp:TextBox>
                                                 &nbsp;次/分
-                                           
-                                            
 
                                                 <asp:CustomValidator ID="CustomValidator8" ControlToValidate="txtFirstTimeHeartRate"
                                                     runat="server" ValidateEmptyText="false" ErrorMessage="请输入数字" OnServerValidate="ServerValidation" />
@@ -956,13 +956,10 @@
                                         <tr>
                                             <td class="Column1JiBing1">首次cTNT结果：</td>
                                             <td>
-                                                <asp:TextBox TabIndex="55" ID="txtCNTResult" Height="24px" runat="server"></asp:TextBox>
+                                                <asp:TextBox TabIndex="55" ID="txtCNTResult"  CssClass="form-control-patient" runat="server"></asp:TextBox>
                                                 <asp:CustomValidator ID="customValidator4" runat="server" ControlToValidate="txtCNTResult"
                                                     ErrorMessage="请输入数字." Display="Dynamic" ValidateEmptyText="false" OnServerValidate="ServerValidation" />
-                                                （正常值：<asp:TextBox ID="txtRegularCNT" runat="server" Width="116px" Height="24px"></asp:TextBox>(pg/ml))
-                                           
-                                            
-
+                                                （正常值：<asp:TextBox ID="txtRegularCNT" runat="server" CssClass="form-control-patient" ></asp:TextBox>(pg/ml))
                                                 <asp:CustomValidator ID="customValidator5" runat="server" ControlToValidate="txtRegularCNT"
                                                     ErrorMessage="请输入数字." Display="Dynamic" ValidateEmptyText="false" OnServerValidate="ServerValidation" />
                                             </td>
@@ -1102,11 +1099,8 @@
                                                                             <asp:ListItem>100 万U</asp:ListItem>
                                                                             <asp:ListItem>150 万U</asp:ListItem>
                                                                         </asp:RadioButtonList>
-                                                                        &nbsp;&nbsp;&nbsp;&nbsp;其他：<asp:TextBox ID="txtUrokinaseOther" Height="24px" runat="server"></asp:TextBox>
+                                                                        &nbsp;&nbsp;&nbsp;&nbsp;其他：<asp:TextBox ID="txtUrokinaseOther" CssClass="form-control-patient"  runat="server"></asp:TextBox>
                                                                         &nbsp;(万U)
-                                                                   
-                                                                    
-
                                                                         <asp:CustomValidator ID="customValidator6" runat="server" ControlToValidate="txtUrokinaseOther"
                                                                             Display="Dynamic" ErrorMessage="请输入数字." OnServerValidate="ServerValidation" ValidateEmptyText="false" />
                                                                     </td>
@@ -1151,9 +1145,6 @@
                                                                                 <td>
                                                                                     <span style="color: Red; font-weight: bold">并发症:</span>
                                                                                     <asp:CheckBox TabIndex="75" ID="chkReperfusionArrhythmia" runat="server" Text="再灌注心律失常" />&nbsp;
-                                                                               
-                                                                                
-
                                                                                     <asp:CheckBox TabIndex="76" ID="chkAnaphylaxis" runat="server" Text="过敏反应 " />&nbsp;
                                                                                 </td>
                                                                                 <td>
@@ -1371,8 +1362,9 @@
                                                 <td class="Column1">D2B时间:
                                                 </td>
                                                 <td>
-                                                    <asp:TextBox ID="txtD2BTime" Height="24px" runat="server"></asp:TextBox>
+                                                    <asp:TextBox ID="txtD2BTime" CssClass="form-control-patient" runat="server"></asp:TextBox>
                                                     分钟
+                                                   
                                                     <asp:CustomValidator ID="customValidator7" runat="server" ControlToValidate="txtD2BTime"
                                                         Display="Dynamic" ErrorMessage="请输入数字." OnServerValidate="ServerValidation" ValidateEmptyText="false" />
                                                 </td>
@@ -1408,10 +1400,9 @@
                                                         </asp:RadioButtonList>
                                                     </td>
                                                     <td>
-                                                        <asp:Panel CssClass="form-control" ID="panetxtCPRTimes" runat="server">
-                                                            &nbsp; [次数:
-                                                            <asp:TextBox TabIndex="121" ID="txtCPRTimes" Height="22px" runat="server"></asp:TextBox>
-                                                            ]
+                                                        <asp:Panel ID="panetxtCPRTimes" runat="server">
+                                                            &nbsp; [次数:                                                           
+                                                            <asp:TextBox TabIndex="121" ID="txtCPRTimes" runat="server"></asp:TextBox>]                                                           
                                                             <asp:CustomValidator ID="customValidator2" runat="server" ControlToValidate="txtCPRTimes"
                                                                 Display="Dynamic" ErrorMessage="请输入数字." OnServerValidate="ServerValidation" ValidateEmptyText="false" />
                                                         </asp:Panel>
@@ -1458,10 +1449,10 @@
                                                                         <td class="Column1">死亡原因:</td>
                                                                         <td class="tdTopBottomLine" style="border-left: 1px dashed #000;">
                                                                             <asp:CheckBox TabIndex="125" ID="chkDeadForVentriclarArrhythmias" runat="server" Text="室性心律失常（室速，室颤）" />&nbsp;
-                                                                            <asp:CheckBox ID="chkDeadForCardiacArrest" runat="server" Text="心跳骤停/电机械分离" />&nbsp;
+                                                                            <asp:CheckBox ID="chkDeadForCardiacArrest" runat="server" Text="心跳骤停/电机械分离" />&nbsp;                                                                           
                                                                             <asp:CheckBox ID="chkDeadForCardiogenicShock" runat="server" Text="心源性休克" /><br />
-                                                                            <asp:CheckBox ID="chkDeadForACVD" runat="server" Text="急性脑血管病 " />&nbsp;
-                                                                            <asp:CheckBox ID="chkDeadForGIH" runat="server" Text="消化道大出血 " />&nbsp;
+                                                                            <asp:CheckBox ID="chkDeadForACVD" runat="server" Text="急性脑血管病 " />&nbsp;                                                                           
+                                                                            <asp:CheckBox ID="chkDeadForGIH" runat="server" Text="消化道大出血 " />&nbsp;                                                                           
                                                                             <asp:CheckBox ID="chkDeadForOther" runat="server" Text="其它" />
                                                                         </td>
                                                                     </tr>
@@ -1550,15 +1541,16 @@
                     <td align="center">
                         <asp:Button ID="btnSave" runat="server" CssClass="btn btn-info" OnClick="btnSave_Click"
                             Text="保存" />
-                        &nbsp;&nbsp;      
+                        &nbsp;&nbsp;                             
                         <asp:Button ID="btnSubmit" runat="server" Text="提交" CssClass="btn btn-info" OnClick="btnSubmit_Click" />
-                        &nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;                       
                         <asp:Button ID="btnEnterPrint" Text="进入打印页面" OnClick="btnEnterPrint_Click" Class="btn btn-info"
                             runat="server" Width="145px" />
                     </td>
                 </tr>
                 <tr>
                     <td style="padding-bottom: 160px;">&nbsp;                    
+                       
                         <uc1:User ID="User1" runat="server" />
                     </td>
                 </tr>
