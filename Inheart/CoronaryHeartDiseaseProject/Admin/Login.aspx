@@ -3,18 +3,16 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>辽宁省冠心病急救网络信息平台 -- 系统登陆</title>
-    <link href="../Styles/admin.css" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" href="/Content/bootstrap.min.css">
-    <script src="/Scripts/bootstrap.min.js"></script>
-    <script src="/Scripts/jquery-1.9.1.min.js"></script>
-    <style>
-    </style>
+    <link rel="stylesheet" href="../Styles/admin.css" />
+    <link rel="stylesheet" href="/Content/bootstrap.min.css" />
+    <script type="text/javascript" src="/Scripts/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/Scripts/jquery-1.9.1.min.js"></script>
     <base onmouseover="window.status='辽宁省冠心病急救网络信息平台';return true" />
+    <title>辽宁省冠心病急救网络信息平台 -- 系统登陆</title>
 </head>
 <body>
-    <form name="form1" id="form1" runat="server">      
-        <table style="margin-top:90px;" width="320" border="0" align="center" cellpadding="3" cellspacing="1" class="tableborder">
+    <form name="form1" id="form1" runat="server">
+        <table style="margin-top: 90px;" width="320" border="0" align="center" cellpadding="3" cellspacing="1" class="tableborder">
             <tr class="headerLongin">
                 <td height="25" colspan="2">
                     <div align="center">
@@ -32,7 +30,7 @@
             <tr>
                 <td style="width: 80px; height: 25px; padding-left: 20px;">密码：</td>
                 <td height="25">
-                    <input name="password" type="password" id="password" class="form-control" maxlength="16"  placeholder="请输入您的密码" title="请输入您的密码"
+                    <input name="password" type="password" id="password" class="form-control" maxlength="16" placeholder="请输入您的密码" title="请输入您的密码"
                         tabindex="3" />
                 </td>
             </tr>
@@ -42,10 +40,10 @@
                 <td>
                     <div class="form-group">
                         <div class="col-xs-2" style="margin-left: 0; padding-left: 0">
-                            <input name="verify" type="text" title="请输入验证码" size="5" maxlength="4" tabindex="4" class="form-control"  placeholder="验证码"
+                            <input name="verify" type="text" title="请输入验证码" size="5" maxlength="4" tabindex="4" class="form-control" placeholder="验证码"
                                 style="width: 100px;" />
                         </div>
-                        <div class="col-xs-1" style="margin-left:40px;">
+                        <div class="col-xs-1" style="margin-left: 40px;">
                             <asp:Image ID="Image1" runat="server" Width="60px" Height="32px" ImageUrl="~/Verfiy.aspx" ImageAlign="Baseline"></asp:Image>
                         </div>
                     </div>

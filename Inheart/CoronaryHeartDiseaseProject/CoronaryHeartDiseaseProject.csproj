@@ -244,7 +244,6 @@
     <Content Include="Styles\main.css" />
     <Content Include="Admin\Default.aspx" />
     <Content Include="Scripts\menu.js" />
-    <Content Include="Admin\Content.aspx" />
     <Content Include="Styles\Site.css" />
     <Content Include="UserCenter.aspx" />
     <Content Include="Verfiy.aspx" />
@@ -436,10 +435,6 @@
     </Compile>
     <Compile Include="Admin\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Admin\Content.aspx.cs">
-      <DependentUpon>Content.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Login.aspx.cs">

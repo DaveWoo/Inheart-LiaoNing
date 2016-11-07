@@ -3,35 +3,26 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <link href="Styles/main.css" type="text/css" rel="stylesheet" />
+    <link rel="stylesheet" href="Styles/main.css" />
     <link rel="stylesheet" href="/Content/bootstrap.min.css" />
     <script type="text/javascript" src="/Scripts/bootstrap.min.js"></script>
     <script type="text/javascript" src="/Scripts/jquery-1.9.1.min.js"></script>
-    <script language="javascript" type="text/javascript">
-        function CheckAll(form) {
-            for (var i = 0; i < form.elements.length; i++) {
-                var e = form.elements[i];
-                if (e.name != 'chkall')
-                    if (e.disabled == 0) {
-                        e.checked = form.chkall.checked;
-                    }
-            }
-        }
-    </script>
+    <script type="text/javascript" src="/Scripts/check.js"></script>
+    <title>病例管理</title>
 </head>
 <body>
-    <div style="margin-left: 10px; margin-right: 10px">        
-        <form id="form1" runat="server" >
+    <div style="margin-left: 10px; margin-right: 10px">
+        <form id="form1" runat="server">
             <div style="height: 20px;" class="input-group" id="search-bar">
                 <span class="glyphicon glyphicon-search" style="font-size: 25px; vertical-align: middle"></span>&nbsp;
                 <asp:DropDownList ID="ddlCondition" runat="server" Height="35" Style="vertical-align: middle">
                     <asp:ListItem>请选择</asp:ListItem>
                 </asp:DropDownList>
                 <asp:TextBox ID="txtCondition" runat="server" Height="35" Style="vertical-align: middle;" placeholder="请输入"></asp:TextBox>
-                <asp:Button runat="server" ID="Button1" Text="查询" OnClick="Search_Click" CssClass="btn2 btn-info widthButton "
+                <asp:Button runat="server" ID="Button1" Text="查询" OnClick="Search_Click" CssClass="btn btn-info widthButton "
                     Height="35px" />
                 <asp:Label ID="lblMessage" runat="server" ForeColor="Red" />
-            </div>        
+            </div>
             <div>
                 <asp:Label ID="Label1" runat="server"></asp:Label>&nbsp;  
                 <asp:DataList ID="dgMessage" runat="server" Width="100%">
@@ -122,7 +113,7 @@
                         <td colspan="4" height="25">
                             <div align="left">
                                 <input id="btnAddMedical" name="Submit822" onclick="javascript: window.location = 'MessageInput.aspx';"
-                                    type="button" value="添加病例" runat="server" align="left" class="btn2 btn-info" />
+                                    type="button" value="添加病例" runat="server" align="left" Class="btn btn-info" />
                                 &nbsp;                       
                             </div>
                         </td>

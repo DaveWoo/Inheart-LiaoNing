@@ -1,60 +1,24 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" Inherits="CoronaryHeartDiseaseProject.Admin.SuperManage.AddHospital" %>
 
-<%@ Register src="../inc/IsSuperAdmin.ascx" tagname="IsSuperAdmin" tagprefix="uc1" %>
+<%@ Register Src="../inc/IsSuperAdmin.ascx" TagName="IsSuperAdmin" TagPrefix="uc1" %>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <link rel="stylesheet" href="/Content/bootstrap.min.css">
-    <script src="/Scripts/bootstrap.min.js"></script>
-    <script src="/Scripts/jquery-1.9.1.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../Styles/admin.css" />
+    <link rel="stylesheet" href="/Content/bootstrap.min.css" />
+    <script type="text/javascript" src="/Scripts/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/Scripts/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="/Scripts/check.js"></script>
     <title>修改资料</title>
-    <link href="../../Styles/admin.css" rel="stylesheet" type="text/css" />
-    <script type="text/javascript" language="javascript">
-        String.prototype.trim = function () {
-            return this.replace(/(^\s*)|(\s*$)/g, '');
-        }
 
-        String.prototype.ltrim = function () {
-            return this.replace(/(^\s*)/g, '');
-        }
-
-        String.prototype.rtrim = function () {
-            return this.replace(/(\s*$)/g, '');
-        }
-    </script>
-    <script type="text/javascript" language="javascript">
-        function check() {
-            if (document.myform.hospitalname.value.trim() == "") {
-                alert("医院名称名不能为空！！");
-                return false;
-            }
-
-            if (document.myform.hospitalname.value.length > 16) {
-                alert("医院名称长度不能长于16个汉字或者字符！！");
-                return false;
-            }
-            if (document.myform.comment.value.trim() == "") {
-                alert("备注不能为空！！");
-                return false;
-            }
-            if (document.myform.comment.value.length > 32) {
-                alert("备注长度不能长于32个汉字！！");
-                return false;
-            }
-        }
-
-        function Submit2_onclick() {
-
-        }
-
-    </script>
 </head>
 <body>
     <table width="100%" border="0" align="center" cellpadding="3" cellspacing="1">
         <tr>
             <td>
-                <table width="98%%" border="0" align="center" cellpadding="3" cellspacing="1">
+                <table width="98%" border="0" align="center" cellpadding="3" cellspacing="1">
                     <tr>
                         <td height="25" colspan="2">网站导航: &nbsp;<a href="AddHospital.aspx"><b>添加医院</b></a> &nbsp;|&nbsp; <a href="AdminManageHospital.aspx">管理医院</a>&nbsp; |
                         </td>
@@ -63,7 +27,7 @@
             </td>
         </tr>
     </table>
-    <form id="myform" runat="server" onsubmit="return check()">
+    <form id="myform" runat="server" onsubmit="return checkHospital()">
         <table width="98%%" border="0" align="center" cellpadding="5" cellspacing="1" class="tableborder">
             <tr class="header">
                 <td height="25" colspan="2">添加医院&nbsp;
@@ -102,5 +66,5 @@
         <br />
         <uc1:IsSuperAdmin ID="IsSuperAdmin1" runat="server" />
     </form>
-    </body>
+</body>
 </html>

@@ -3,22 +3,13 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
-    <link href="Styles/main.css" type="text/css" rel="stylesheet" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="Styles/main.css" />
     <link rel="stylesheet" href="/Content/bootstrap.min.css" />
     <script type="text/javascript" src="/Scripts/bootstrap.min.js"></script>
-    <script type="text/javascript"  src="/Scripts/jquery-1.9.1.min.js"></script>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <script language="javascript" type="text/javascript">
-        function CheckAll(form) {
-            for (var i = 0; i < form.elements.length; i++) {
-                var e = form.elements[i];
-                if (e.name != 'chkall')
-                    if (e.disabled == 0) {
-                        e.checked = form.chkall.checked;
-                    }
-            }
-        }
-    </script>
+    <script type="text/javascript" src="/Scripts/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="/Scripts/check.js"></script>
+    <title>病例报告</title>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -33,7 +24,7 @@
                     <td colspan="4" height="25">
                         <div align="right">
                             <input id="btnImportExcel" name="Submit822" type="button" value="导出Excel" runat="server"
-                                align="right" class="Button" onserverclick="ImportExcel_Click" />&nbsp;&nbsp;
+                                align="right" class="btn btn-info" onserverclick="ImportExcel_Click" />&nbsp;&nbsp;
                         </div>
                     </td>
                 </tr>

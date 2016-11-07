@@ -1,6 +1,7 @@
 TD {
     table-layout: fixed;
     font-size: 14px;
+    -ms-word-break: break-all;
     word-break: break-all;
     line-height: 200%;
     border: 1px solid #F0F5FD;
@@ -8,14 +9,10 @@ TD {
 
 .subTitle {
     display: block;
-    -webkit-margin-before: 1.33em;
-    -webkit-margin-after: 0.33em;
-    -webkit-margin-start: 0px;
-    -webkit-margin-end: 0px;
+    -webkit-margin-start: ;
     font-weight: bold;
     padding-left: 0px;
     background-color: #F0F5FD;
-    font-weight: bold;
     color: #2A5485;
     font-size: 22px;
 }
@@ -64,7 +61,7 @@ fieldset {
     display: block;
     margin: 0;
     padding: 0;
-    border: 2 solid #0cf;
+    border: 2px solid #0cf;
 }
 
 legend {
@@ -574,30 +571,8 @@ FORM {
     width: 150px;
 }
 
-.style12 {
-    width: 150px;
-}
-
-.btn2 {
-    display: inline-block;
-    padding: 6px 12px;
-    margin-bottom: 0;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 1.42857143;
-    text-align: center;
-    white-space: nowrap;
-    vertical-align: middle;
-    -ms-touch-action: manipulation;
-    touch-action: manipulation;
-    cursor: pointer;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    background-image: none;
-    border: 1px solid transparent;
-    /* border-radius: 4px; */
+.btn {
+    border-radius: 1px !important;
 }
 
 #search-bar {
@@ -640,4 +615,38 @@ FORM {
     color: #FFFFFF;
     font-weight: bold;
     background-color: #66aadb;
+}
+
+.columnAge {
+    text-align: center;
+}
+
+.tableOverview1 {
+    width: 200px;
+    text-align: center;
+}
+
+.tableOverview2 {
+    width: 200px;
+    text-align: center;
+}
+
+.row1Summary {
+    text-align: center;
+    width: 33%;
+    height: 25px;
+    background-image: url('/Images/bj.jpg');
+}
+
+.row2Summary {
+    text-align: center;
+    height: 25px;
+    background-color: #F2F9FF;
+}
+
+.tableSummary {
+    width: 80%;
+    border-color: #C2BCBE;
+    border: 0;
+    vertical-align: middle;
 }

@@ -2,41 +2,16 @@
 
 <html>
 <head>
-    <meta charset="utf-8" />
-    <title>辽宁省冠心病急救网络信息平台--系统登陆</title>
-    <link href="Styles/admin.css" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" href="/Content/bootstrap.min.css">
-    <script src="/Scripts/bootstrap.min.js"></script>
-    <script src="/Scripts/jquery-1.9.1.min.js"></script>
+   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <link rel="stylesheet" href="Styles/admin.css" />
+    <link rel="stylesheet" href="/Content/bootstrap.min.css" />
+    <script type="text/javascript" src="/Scripts/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/Scripts/jquery-1.9.1.min.js"></script>
     <base onmouseover="window.status='辽宁省冠心病急救网络信息平台';return true" />
-    <style type="text/css">
-        html, body {
-            height: 100%;
-            margin: 0px;
-            background-image: url(../images/va_page_05.jpg);
-            background-repeat: repeat-x;
-            background-position: bottom;
-            background-color: #EDF5FA;
-            font-size: 18px;
-        }
-
-        .style1 {
-            width: 209px;
-        }
-
-        .foot {
-            margin-top: 150px;
-            position: relative;
-            margin-left: auto;
-            color: #4D4D4D;
-            line-height: 21px;
-            clear: both;
-            text-align: center;
-            bottom: 0px;
-        }
-    </style>
+    <title>辽宁省冠心病急救网络信息平台--系统登陆</title>
 </head>
-<body background="images/bg.gif">
+<body>
     <form name="form1" id="form1" class="form-horizontal" runat="server">
         <p>
             &nbsp;
@@ -58,14 +33,14 @@
             <tr>
                 <td style="padding-right: 20px; padding-left: 20px;">
                     <div style="margin-top: -40px">
-                        <asp:Image runat="server" ImageUrl="~/Images/112.png" Width="120"  />
+                        <asp:Image runat="server" ImageUrl="~/Images/112.png" Width="120" />
                     </div>
                 </td>
                 <td>
                     <table style="margin-top: 20px">
                         <tr>
                             <td style="width: 80px;">地&nbsp;&nbsp;&nbsp;区：</td>
-                            <td height="25" class="style1">
+                            <td height="25" class="loginleft">
                                &nbsp;&nbsp;&nbsp;<%=HospitalRegion%>
                             </td>
                         </tr>
@@ -77,14 +52,14 @@
                         </tr>
                         <tr>
                             <td height="25">用户名：</td>
-                            <td height="25" class="style1">
+                            <td height="25" class="loginleft">
                                 <input name="username" type="text" id="username" maxlength="16" style="width:200px" placeholder="请输入您的用户名"   title="请输入您的用户名"
                                     class="form-control" tabindex="2" />
                             </td>
                         </tr>
                         <tr>
                             <td height="25">密&nbsp;&nbsp;&nbsp;码：</td>
-                            <td height="25" class="style1">
+                            <td height="25" class="loginleft">
                                 <input name="password" type="password" id="password" maxlength="16" style="width:200px" placeholder="请输入您的密码"   title="请输入您的密码"
                                     class="form-control" tabindex="3" />
                             </td>

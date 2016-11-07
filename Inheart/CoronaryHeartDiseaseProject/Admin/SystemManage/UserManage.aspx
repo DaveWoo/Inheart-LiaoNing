@@ -6,10 +6,10 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>修改资料</title>
-    <link href="../../Styles/admin.css" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" href="/Content/bootstrap.min.css">
-    <script src="/Scripts/bootstrap.min.js"></script>
-    <script src="/Scripts/jquery-1.9.1.min.js"></script>
+    <link rel="stylesheet" href="../../Styles/admin.css" />
+    <link rel="stylesheet" href="/Content/bootstrap.min.css"/>
+    <script type="text/javascript" src="/Scripts/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/Scripts/jquery-1.9.1.min.js"></script>
     <style>
         .co1-1 {
             width: 30%;
@@ -97,8 +97,8 @@
                     <tr bgcolor="#ffffff">
                         <td height="25" colspan="4">
                             <div align="left">
-                                <input type="button" class="btn btn-info" name="Submit822" value="添加新用户" onclick="javascript: window.location = 'AddUser.aspx';">
-                                <input type="submit" class="btn btn-info" name="Submit3" value="将所选用户删除" id="Submit1" onserverclick="Submit1_ServerClick"
+                                <input type="button" Class="btn btn-info" name="Submit822" value="添加新用户" onclick="javascript: window.location = 'AddUser.aspx';">
+                                <input type="submit" Class="btn btn-info" name="Submit3" value="将所选用户删除" id="Submit1" onserverclick="Submit1_ServerClick"
                                     runat="server" style="width: 150px;" />
                             </div>
                         </td>
