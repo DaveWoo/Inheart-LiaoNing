@@ -1,53 +1,16 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" Inherits="CoronaryHeartDiseaseProject.Admin.AddUser" %>
 
-<%@ Register src="../inc/IsAdmin.ascx" tagname="IsAdmin" tagprefix="uc1" %>
+<%@ Register Src="../inc/IsAdmin.ascx" TagName="IsAdmin" TagPrefix="uc1" %>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="../../Styles/admin.css" />
+    <link rel="stylesheet" href="/Content/bootstrap.min.css" />
+    <script type="text/javascript" src="/Scripts/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/Scripts/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="/Scripts/check.js"></script>
     <title>修改资料</title>
-    <link href="../../Styles/admin.css" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" href="/Content/bootstrap.min.css">
-    <script src="/Scripts/bootstrap.min.js"></script>
-    <script src="/Scripts/jquery-1.9.1.min.js"></script>
-    <script type="text/javascript" language="javascript">
-        function check() {
-            if (document.myform.username.value == "") {
-                alert("用户名不能为空！！");
-                return false;
-            }
-
-            if (document.myform.username.value.length > 12) {
-                alert("用户名不能不能长于12！！");
-                return false;
-            }
-
-            if (document.myform.newpass.value == "") {
-                alert("密码不能为空！！");
-                return false;
-            }
-
-            if (document.myform.newpass.value.length < 6) {
-                alert("密码长度不能小于6位！！");
-                return false;
-            }
-
-            if (document.myform.repass.value != document.myform.newpass.value) {
-                alert("两次密码输入不一样！！");
-                return false;
-            }
-
-            if (document.myform.newpass.value.length > 12) {
-                alert("密码长度不能长于12！！");
-                return false;
-            }
-        }
-
-        function Submit2_onclick() {
-
-        }
-
-    </script>
 </head>
 <body>
     <table width="100%" border="0" align="center" cellpadding="3" cellspacing="1">
@@ -62,7 +25,7 @@
             </td>
         </tr>
     </table>
-    <form id="myform" runat="server" onsubmit="return check()">
+    <form id="myform" runat="server" onsubmit="return checkUser()">
         <table width="98%%" border="0" align="center" cellpadding="3" cellspacing="1" class="tableborder">
             <tr class="header">
                 <td height="25" colspan="2">添加新用户</td>
@@ -70,19 +33,19 @@
             <tr bgcolor="#FFFFFF">
                 <td width="25%" height="25">新用户用名</td>
                 <td width="75%" height="25">
-                    <input type="text" class="form-control"  name="username" placeholder="户用名" />
+                    <input type="text" class="form-control" name="username" placeholder="户用名" />
                 </td>
             </tr>
             <tr bgcolor="#FFFFFF">
                 <td height="25">用户密码</td>
                 <td height="25">
-                    <input type="password" class="form-control"  name="newpass" placeholder="用户密码"/>
+                    <input type="password" class="form-control" name="newpass" placeholder="用户密码" />
                 </td>
             </tr>
             <tr bgcolor="#FFFFFF">
                 <td height="25">确认密码</td>
                 <td height="25">
-                    <input type="password" class="form-control"  name="repass" placeholder="确认密码" />
+                    <input type="password" class="form-control" name="repass" placeholder="确认密码" />
                 </td>
             </tr>
             <tr bgcolor="#FFFFFF">
@@ -98,9 +61,9 @@
         <br />
         <br />
         <br />
-    <%--    <uc1:session ID="Session1" runat="server" />
+        <%--    <uc1:session ID="Session1" runat="server" />
     <uc2:IsAdmin ID="IsAdmin1" runat="server" />--%>
         <uc1:IsAdmin ID="IsAdmin1" runat="server" />
     </form>
-    </body>
+</body>
 </html>

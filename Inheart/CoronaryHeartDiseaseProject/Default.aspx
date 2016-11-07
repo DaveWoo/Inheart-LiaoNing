@@ -3,19 +3,19 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <title>辽宁省冠心病急救网络信息平台</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <link rel="stylesheet" href="/Content/bootstrap.min.css" />
     <link rel="stylesheet" href="/Styles/home.css" />
     <script type="text/javascript" src="/Scripts/bootstrap.min.js"></script>
     <script type="text/javascript" src="/Scripts/jquery-1.9.1.min.js"></script>
     <script type="text/javascript" src="/Scripts/Chart.min.js"></script>
-
+    <title>辽宁省冠心病急救网络信息平台</title>
 </head>
 <body>
     <table width="800" border="0" align="center" cellpadding="0" cellspacing="0" style="margin-top: 50px;">
         <tr>
             <td>
-                <h2 style="color: Blue; text-align: center; font-family:KaiTi" class="t1">辽宁省冠心病急救网络信息平台
+                <h2 style="color: Blue; text-align: center; font-family: KaiTi" class="t1">辽宁省冠心病急救网络信息平台
                 </h2>
             </td>
         </tr>
@@ -23,7 +23,7 @@
     <table width="800" border="0" align="center" cellpadding="0" cellspacing="0">
         <tr>
             <td>
-                <div class="title-1" >
+                <div class="title-1">
                     &nbsp;&nbsp; 系统说明
                 </div>
                 <div style="font-family: 楷体; font-size: 14px; margin: 0px; padding: 0px;">
@@ -40,7 +40,7 @@
     <table width="800" border="0" align="center" cellpadding="0" cellspacing="0">
         <tr>
             <td>
-                <div class="title-1" >
+                <div class="title-1">
                     &nbsp;&nbsp; 选择医院所在城市 点击进入
                 </div>
             </td>

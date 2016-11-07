@@ -1,39 +1,15 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" Inherits="CoronaryHeartDiseaseProject.MessageManageSupperAdmin" %>
 
-<%@ Register src="../inc/IsSuperAdmin.ascx" tagname="IsSuperAdmin" tagprefix="uc1" %>
+<%@ Register Src="../inc/IsSuperAdmin.ascx" TagName="IsSuperAdmin" TagPrefix="uc1" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <link href="../../Styles/main.css" type="text/css" rel="stylesheet" />
+    <link rel="stylesheet" href="../../Styles/main.css" />
     <link rel="stylesheet" href="/Content/bootstrap.min.css" />
     <script type="text/javascript" src="/Scripts/bootstrap.min.js"></script>
     <script type="text/javascript" src="/Scripts/jquery-1.9.1.min.js"></script>
-    <script language="javascript" type="text/javascript">
-        function CheckAll(form) {
-            for (var i = 0; i < form.elements.length; i++) {
-                var e = form.elements[i];
-                if (e.name != 'chkall')
-                    if (e.disabled == 0) {
-                        e.checked = form.chkall.checked;
-                    }
-            }
-        }
-    </script>
-    <title></title>
-    <style type="text/css">
-        .tableborder {
-            background: #D6E0EF;
-            border: 1px solid #698CC3;
-        }      
-
-        .header {
-            font: 9pt Tahoma, Verdana;
-            color: #FFFFFF;
-            font-weight: bold;
-            background-color: #66aadb;
-        }
-    </style>
+    <script type="text/javascript" src="/Scripts/check.js"></script>
 </head>
 <body>
     <div id="div-body">

@@ -1,73 +1,49 @@
 <%@ Page Language="C#" AutoEventWireup="true" Inherits="CoronaryHeartDiseaseProject.UserCenter" %>
 
-<%@ Register src="Admin/inc/User.ascx" tagname="User" tagprefix="uc1" %>
+<%@ Register Src="Admin/inc/User.ascx" TagName="User" TagPrefix="uc1" %>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <link rel="stylesheet" href="/Content/bootstrap.min.css" />
     <script type="text/javascript" src="/Scripts/bootstrap.min.js"></script>
     <script type="text/javascript" src="/Scripts/jquery-1.9.1.min.js"></script>
-    <title>ĞŞ¸Ä×ÊÁÏ</title>
-    <link href="../../Styles/admin.css" rel="stylesheet" type="text/css" />
-    <%--ÃÜÂëÑéÖ¤--%>
-    <script type="text/javascript" language="javascript">
-        function check() {
-            if (document.myform.oldpass.value == "") {
-                alert("Ô­ÃÜÂë²»ÄÜÎª¿Õ£¡£¡");
-                return false;
-            }
-            if (document.myform.newpass.value.length < 6) {
-                alert("ÃÜÂë³¤¶È²»ÄÜĞ¡ÓÚ6Î»£¡£¡");
-                return false;
-            }
-            if (document.myform.newpass.value == "") {
-                alert("ĞÂÃÜÂë²»ÄÜÎª¿Õ£¡£¡");
-                return false;
-            }
-            if (document.myform.repass.value != document.myform.newpass.value) {
-                alert("Á½´ÎÃÜÂëÊäÈë²»Ò»Ñù£¡£¡");
-                return false;
-            }
-        }
-        function Submit2_onclick() {
-
-        }
-
-    </script>
+    <link rel="stylesheet" href="../../Styles/admin.css"
+    <script type="text/javascript" src="/Scripts/check.js"></script>
+    <title>ä¿®æ”¹èµ„æ–™</title>
 </head>
 <body>
-    <form id="myform" runat="server" onsubmit="return check()">
+    <form id="myform" runat="server" onsubmit="return   <title>ä¿®æ”¹èµ„æ–™</title>()">
         <table width="98%%" border="0" align="center" cellpadding="3" cellspacing="1" class="tableborder">
             <tr class="header">
-                <td height="25" colspan="2">ĞŞ¸ÄÃÜÂë&nbsp;
+                <td height="25" colspan="2">ä¿®æ”¹å¯†ç &nbsp;
                 </td>
             </tr>
             <tr bgcolor="#FFFFFF">
-                <td width="25%" height="25">Ô­ÃÜÂë</td>
+                <td width="25%" height="25">åŸå¯†ç </td>
                 <td width="75%" height="25">
-                    <input type="password" class="form-control" placeholder="ÇëÊäÈëÔ­ÃÜÂë" name="oldpass" size="35">
+                    <input type="password" class="form-control" placeholder="è¯·è¾“å…¥åŸå¯†ç " name="oldpass" size="35">
                 </td>
             </tr>
             <tr bgcolor="#FFFFFF">
-                <td height="25">ĞÂÃÜÂë</td>
+                <td height="25">æ–°å¯†ç </td>
                 <td height="25">
-                    <input type="password" class="form-control" placeholder="ÇëÊäÈëÃÜÂë" name="newpass" size="35" />
+                    <input type="password" class="form-control" placeholder="è¯·è¾“å…¥å¯†ç " name="newpass" size="35" />
                 </td>
             </tr>
             <tr bgcolor="#FFFFFF">
-                <td height="25">È·ÈÏÃÜÂë</td>
+                <td height="25">ç¡®è®¤å¯†ç </td>
                 <td height="25">
-                    <input type="password"  class="form-control" placeholder="ÇëÄúÔÙ´ÎÊäÈëÃÜÂë" name="repass" size="35">
+                    <input type="password" class="form-control" placeholder="è¯·æ‚¨å†æ¬¡è¾“å…¥å¯†ç " name="repass" size="35">
                 </td>
             </tr>
             <tr bgcolor="#FFFFFF">
                 <td height="25">&nbsp;
                 </td>
                 <td height="25">
-                    <input type="submit" value="±£´æÃÜÂë" name="B1" class="btn btn-info" id="Submit2" onserverclick="Submit1_ServerClick"
+                    <input type="submit" value="ä¿å­˜å¯†ç " name="B1" class="btn btn-info" id="Submit2" onserverclick="Submit1_ServerClick"
                         runat="server" onclick="return Submit2_onclick()">
-                    <input type="reset" name="Submit2" class="btn btn-info" value="ÖØÖÃ">
+                    <input type="reset" name="Submit2" class="btn btn-info" value="é‡ç½®">
                 </td>
             </tr>
         </table>

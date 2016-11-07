@@ -4,11 +4,12 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <html>
 <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="../Styles/default.css" />
+    <script type="text/javascript" src="/Scripts/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/Scripts/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="../Scripts/menu.js"></script>
     <title>辽宁省冠心病急救网络信息平台</title>
-    <link href="../Styles/default.css" type="text/css" rel="stylesheet" />
-    <script src="/Scripts/bootstrap.min.js"></script>
-    <script src="/Scripts/jquery-1.9.1.min.js"></script>
-    <script language="javascript" src="../Scripts/menu.js" type="text/javascript"></script>
 </head>
 <body onload="javascript:border_left('left_tab1','left_menu_cnt1');">
     <form id="form1" runat="server">
@@ -77,8 +78,8 @@
                                                         target="content3"><span>病例管理</span></a></li>
                                                     <%--   <li id="now15"><a title="报表管理" onclick="show_title('报表管理')" href="Content.aspx" target="content3"
                                                     href="Content.aspx" target="content3" /><span>报表管理</span></a></li>--%>
-                                                      <li id="now16"><a title="查看日志" onclick="show_title('查看日志')" href="SystemManage/ViewLogs.aspx"
-                                                    target="content3" href="Content.aspx" target="content3" /><span>查看日志</span></a></li>
+                                                    <li id="now16"><a title="查看日志" onclick="show_title('查看日志')" href="SystemManage/ViewLogs.aspx"
+                                                        target="content3" href="Content.aspx" target="content3" /><span>查看日志</span></a></li>
                                                 </ul>
                                             </div>
                                         </div>

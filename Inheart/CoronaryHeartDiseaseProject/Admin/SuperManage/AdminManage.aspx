@@ -1,33 +1,15 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" Inherits="CoronaryHeartDiseaseProject.Admin.SuperManage.AdminManage" %>
 
-<%@ Register src="../inc/IsSuperAdmin.ascx" tagname="IsSuperAdmin" tagprefix="uc1" %>
+<%@ Register Src="../inc/IsSuperAdmin.ascx" TagName="IsSuperAdmin" TagPrefix="uc1" %>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <link rel="stylesheet" href="/Content/bootstrap.min.css">
-    <script src="/Scripts/bootstrap.min.js"></script>
-    <script src="/Scripts/jquery-1.9.1.min.js"></script>
+    <link rel="stylesheet" href="/Content/bootstrap.min.css" />
+    <link rel="stylesheet" href="../../Styles/admin.css" />
+    <script type="text/javascript" src="/Scripts/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/Scripts/jquery-1.9.1.min.js"></script>
     <title>修改资料</title>
-    <link href="../../Styles/admin.css" rel="stylesheet" type="text/css" />
-    <style>
-        body {
-            word-break: break-all;
-            word-wrap: break-word;
-        }
-    </style>
-    <script type="text/javascript" language="javascript">
-        function CheckAll(form) {
-            for (var i = 0; i < form.elements.length; i++) {
-                var e = form.elements[i];
-                if (e.name != 'chkall')
-                    if (e.disabled == 0) {
-                        e.checked = form.chkall.checked;
-                    }
-
-            }
-        }
-    </script>
 </head>
 <body>
     <div style="margin-left: 10px">

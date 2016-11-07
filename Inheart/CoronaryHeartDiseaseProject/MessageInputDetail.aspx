@@ -3,10 +3,10 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <link href="Styles/messageDetail.css" type="text/css" rel="stylesheet" />
-    <link href="Content/bootstrap.min.css" type="text/css" rel="stylesheet" />
-    <script src="Scripts\jquery-1.9.1.min.js" type="text/javascript"></script>
-    <script src="Scripts\bootstrap.min.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="Styles/messageDetail.css" />
+    <link rel="stylesheet" href="Content/bootstrap.min.css" />
+    <script type="text/javascript" src="Scripts\jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="Scripts\bootstrap.min.js"></script>
     <%--这个属性可以在打印时有效--%>
     <style type="text/css" media="print">
         .Noprint {

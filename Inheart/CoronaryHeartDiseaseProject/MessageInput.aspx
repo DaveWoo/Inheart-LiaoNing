@@ -5,15 +5,15 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <link href="Styles/main.css" type="text/css" rel="stylesheet" />
-    <link href="Content/bootstrap.min.css" type="text/css" rel="stylesheet" />
-    <script src="Scripts\jquery-1.9.1.min.js" type="text/javascript"></script>
-    <script src="Scripts\bootstrap.min.js" type="text/javascript"></script>
-    <script src="Scripts\My97DatePicker\WdatePicker.js" type="text/javascript"></script>
-    <script src="Scripts\Calendar3.js" type="text/javascript"></script>
-    <script language="javascript" src="/Scripts/pi.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="Styles/main.css" />
+    <link rel="stylesheet" href="Content/bootstrap.min.css" />
+    <script type="text/javascript" src="Scripts\jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="Scripts\bootstrap.min.js"></script>
+    <script type="text/javascript" src="Scripts\My97DatePicker\WdatePicker.js"></script>
+    <script type="text/javascript" src="Scripts\Calendar3.js"></script>
+    <script type="text/javascript" src="/Scripts/pi.js"></script>
+    <script type="text/javascript" src="Scripts/Preview.js"></script>
     <title>病例表单</title>
-    <script language="javascript" src="Scripts/Preview.js" type="text/javascript">   </script>
 </head>
 <body onunload="return '你确实要关闭吗?'">
     <form id="form1" runat="server">

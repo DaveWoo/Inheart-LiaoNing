@@ -2,28 +2,16 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
-    <title>ÐÞ¸Ä×ÊÁÏ</title>
-    <link href="../../Styles/admin.css" rel="stylesheet" type="text/css" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="../../Styles/admin.css" />
     <link rel="stylesheet" href="/Content/bootstrap.min.css" />
     <script type="text/javascript" src="/Scripts/bootstrap.min.js"></script>
     <script type="text/javascript" src="/Scripts/jquery-1.9.1.min.js"></script>
-    <script type="text/javascript" language="javascript">
-        function CheckAll(form) {
-            for (var i = 0; i < form.elements.length; i++) {
-                var e = form.elements[i];
-                if (e.name != 'chkall')
-                    if (e.disabled == 0) {
-                        e.checked = form.chkall.checked;
-                    }
-
-            }
-        }
-
-    </script>
+    <script type="text/javascript" src="/Scripts/check.js"></script>
+    <title>ä¿®æ”¹èµ„æ–™</title>
 </head>
 <body>
-    <form id="divbody" name="listform" runat="server" onsubmit="return confirm('È·ÈÏÒªÖ´ÐÐ´Ë²Ù×÷£¿');">
+    <form id="divbody" name="listform" runat="server" onsubmit="return confirm('ç¡®è®¤è¦æ‰§è¡Œæ­¤æ“ä½œï¼Ÿ');">
         <asp:Label ID="Label1" runat="server"></asp:Label>&nbsp;
    
         <asp:DataList ID="DataListUserLog" runat="server" Width="100%">
@@ -31,13 +19,13 @@
                 <table width="100%" border="0" align="center" cellpadding="3" cellspacing="1" class="tableborder">
                     <tr class="header">
                         <td width="10%" height="25">
-                            <div align="left">Ò½Ôº</div>
+                            <div align="left">åŒ»é™¢</div>
                         </td>
                         <td width="10%" height="25">
-                            <div align="left">ÓÃ»§ID</div>
+                            <div align="left">ç”¨æˆ·ID</div>
                         </td>
                         <td width="10%" height="25">
-                            <div align="left">µÇÂ¼Ê±¼ä</div>
+                            <div align="left">ç™»å½•æ—¶é—´</div>
                         </td>
                     </tr>
                 </table>
@@ -68,7 +56,7 @@
             <tr bgcolor="#ffffff">
                 <td height="25" colspan="4">
                     <div align="left">
-                        <input id="btnClear" name="Submit822" type="button" value="Çå¿ÕËùÓÐµÇÂ½¼ÇÂ¼" runat="server"
+                        <input id="btnClear" name="Submit822" type="button" value="æ¸…ç©ºæ‰€æœ‰ç™»é™†è®°å½•" runat="server"
                             align="left" class="btn btn-info" onserverclick="Clear_Click" />&nbsp;&nbsp;
                    
                     </div>

@@ -5,71 +5,11 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
-    <link href="../../Styles/main.css" type="text/css" rel="stylesheet" />
+    <link rel="stylesheet" href="../../Styles/main.css" />
     <link rel="stylesheet" href="/Content/bootstrap.min.css" />
     <script type="text/javascript" src="/Scripts/bootstrap.min.js"></script>
     <script type="text/javascript" src="/Scripts/jquery-1.9.1.min.js"></script>
-    <title></title>
-    <script src="../../Scripts/calendar3.js" type="text/javascript"></script>
-    <style>
-        body {
-            font-size: 14px;
-        }
-
-        .header {
-            font: 9pt Tahoma, Verdana;
-            font-weight: bold;
-        }
-
-        .headerCell {
-            font: 9pt Tahoma, Verdana;
-            color: #333;
-            font-weight: bold;
-            background-color: #c7d1e0;
-        }
-
-        .style12 {
-            width: 228px;
-        }
-
-        #query {
-            margin-left: 23px;
-        }
-
-        .tableOverview1 {
-            width: 200px;
-            text-align: center;
-        }
-
-        .tableOverview2 {
-            width: 200px;
-            text-align: center;
-        }
-
-        .row1 {
-            text-align: center;
-            width: 33%;
-            height: 25px;
-            background-image: url('/Images/bj.jpg');
-        }
-
-        .table1 {
-            width: 80%;
-            border-color: #C2BCBE;
-            border: 1px;
-            vertical-align: middle;
-        }
-
-        .row2 {
-            text-align: center;
-            height: 25px;
-            background-color: #F2F9FF;
-        }
-
-        .Column5 {
-            text-align: center;
-        }
-    </style>
+    <title>数据统计</title>
 </head>
 <body style="padding-left: 10px;">
     <form id="form1" runat="server">
@@ -100,8 +40,8 @@
             </div>
         </asp:Panel>
         <asp:Panel runat="server" ID="paneOverView" Visible="false">
-            <table cellpadding="0" cellspacing="0" class="table1" align="left" style="margin-top: 50px;">
-                <tr class="row1">
+            <table cellpadding="0" cellspacing="0" class="tableSummary" align="left" style="margin-top: 50px;">
+                <tr class="row1Summary">
                     <td colspan="2" style="text-align: center; font-weight: bold;font-size:16px">2016年上报统计
                     </td>
                 </tr>
@@ -112,7 +52,7 @@
                         <%=Total%>
                     </td>
                 </tr>
-                <tr class="row1">
+                <tr class="row1Summary">
                     <td class="tableOverview1">患者性别
                     </td>
                     <td class="tableOverview2">
@@ -131,7 +71,7 @@
                         <%=Equation%>
                     </td>
                 </tr>
-                <tr class="row1">
+                <tr class="row1Summary">
                     <td class="tableOverview1">溶栓人数
                     </td>
                     <td class="tableOverview2">
@@ -145,7 +85,7 @@
                         <%=TotalJiZhen%>
                     </td>
                 </tr>
-                <tr class="row1">
+                <tr class="row1Summary">
                     <td class="tableOverview1">死亡人数
                     </td>
                     <td class="tableOverview2">
@@ -162,131 +102,131 @@
             </table>
         </asp:Panel>
         <asp:Panel runat="server" ID="panelSum" Visible="false">
-            <table cellpadding="0" cellspacing="0" class="table1" align="center">
+            <table cellpadding="0" cellspacing="0" class="tableSummary" align="center">
                 <tr>
-                    <td class="row1">
+                    <td class="row1Summary">
                         <strong>总数</strong>
                     </td>
                 </tr>
                 <tr>
-                    <td class="row2">
+                    <td class="row2Summary">
                         <%=Total%>
                     </td>
                 </tr>
             </table>
         </asp:Panel>
         <asp:Panel runat="server" ID="panelSex" Visible="false">
-            <table cellpadding="0" cellspacing="0" class="table1" align="center">
+            <table cellpadding="0" cellspacing="0" class="tableSummary" align="center">
                 <tr>
-                    <td class="row1">
+                    <td class="row1Summary">
                         <strong>男</strong>
                     </td>
-                    <td class="row1">
+                    <td class="row1Summary">
                         <strong>女</strong>
                     </td>
                 </tr>
                 <tr>
-                    <td class="row2">
+                    <td class="row2Summary">
                         <%=Female%>
                     </td>
-                    <td class="row2">
+                    <td class="row2Summary">
                         <%=Male%>
                     </td>
                 </tr>
             </table>
         </asp:Panel>
         <asp:Panel runat="server" ID="panelAge" Visible="false">
-            <table cellpadding="0" cellspacing="0" class="table1" align="center">
+            <table cellpadding="0" cellspacing="0" class="tableSummary" align="center">
                 <tr>
                     <td colspan="5" style="text-align:center;font-size:16px;font-weight:bold">年龄分布图</td>
                 </tr>
-                <tr class="row1">
-                    <td class="Column5">
+                <tr class="row1Summary">
+                    <td class="columnAge">
                         <strong>40岁以下</strong>
                     </td>
-                    <td class="Column5">
+                    <td class="columnAge">
                         <strong>41～50岁</strong>
                     </td>
-                    <td class="Column5">
+                    <td class="columnAge">
                         <strong>51～60岁</strong>
                     </td>
-                    <td class="Column5">
+                    <td class="columnAge">
                         <strong>61～70岁</strong>
                     </td>
-                    <td class="Column5">
+                    <td class="columnAge">
                         <strong>70岁以上</strong>
                     </td>
                 </tr>
                 <tr>
-                    <td class="Column5">
+                    <td class="columnAge">
                         <%=BelowForty%>
                     </td>
-                    <td class="Column5">
+                    <td class="columnAge">
                         <%=FortyFifty%>
                     </td>
-                    <td class="Column5">
+                    <td class="columnAge">
                         <%=FiftySixty%>
                     </td>
-                    <td class="Column5">
+                    <td class="columnAge">
                         <%=SixtySeventy%>
                     </td>
-                    <td class="Column5">
+                    <td class="columnAge">
                         <%=SeventyOldeer%>
                     </td>
                 </tr>
             </table>
         </asp:Panel>
         <asp:Panel runat="server" ID="panelThrombolysis" Visible="false">
-            <table cellpadding="0" cellspacing="0" class="table1" align="center">
+            <table cellpadding="0" cellspacing="0" class="tableSummary" align="center">
                 <tr>
-                    <td class="row1">
+                    <td class="row1Summary">
                         <strong>溶栓人数</strong>
                     </td>
                 </tr>
                 <tr>
-                    <td class="row2">
+                    <td class="row2Summary">
                         <%=TotalRongShuan%>
                     </td>
                 </tr>
             </table>
         </asp:Panel>
         <asp:Panel runat="server" ID="panelEmergencyTreate" Visible="false">
-            <table cellpadding="0" cellspacing="0" class="table1" align="center">
+            <table cellpadding="0" cellspacing="0" class="tableSummary" align="center">
                 <tr>
-                    <td class="row1">
+                    <td class="row1Summary">
                         <strong>急诊介入治疗</strong>
                     </td>
                 </tr>
                 <tr>
-                    <td class="row2">
+                    <td class="row2Summary">
                         <%=TotalJiZhen%>
                     </td>
                 </tr>
             </table>
         </asp:Panel>
         <asp:Panel runat="server" ID="panelDeathCount" Visible="false">
-            <table cellpadding="0" cellspacing="0" class="table1" align="center">
+            <table cellpadding="0" cellspacing="0" class="tableSummary" align="center">
                 <tr>
-                    <td class="row1">
+                    <td class="row1Summary">
                         <strong>死亡人数</strong>
                     </td>
                 </tr>
                 <tr>
-                    <td class="row2">
+                    <td class="row2Summary">
                         <%=TotalDeath%>
                     </td>
                 </tr>
             </table>
         </asp:Panel>
         <asp:Panel runat="server" ID="panelTransferUpHospitalCount" Visible="false">
-            <table cellpadding="0" cellspacing="0" class="table1" align="center">
+            <table cellpadding="0" cellspacing="0" class="tableSummary" align="center">
                 <tr>
-                    <td class="row1">
+                    <td class="row1Summary">
                         <strong>转上级医院人数</strong>
                     </td>
                 </tr>
                 <tr>
-                    <td class="row2">
+                    <td class="row2Summary">
                         <%=TotalTransfer%>
                     </td>
                 </tr>

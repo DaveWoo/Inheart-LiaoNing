@@ -641,3 +641,37 @@ FORM {
     font-weight: bold;
     background-color: #66aadb;
 }
+
+.columnAge {
+    text-align: center;
+}
+
+.tableOverview1 {
+    width: 200px;
+    text-align: center;
+}
+
+.tableOverview2 {
+    width: 200px;
+    text-align: center;
+}
+
+.row1Summary {
+    text-align: center;
+    width: 33%;
+    height: 25px;
+    background-image: url('/Images/bj.jpg');
+}
+
+.row2Summary {
+    text-align: center;
+    height: 25px;
+    background-color: #F2F9FF;
+}
+
+.tableSummary {
+    width: 80%;
+    border-color: #C2BCBE;
+    border: 1px;
+    vertical-align: middle;
+}
