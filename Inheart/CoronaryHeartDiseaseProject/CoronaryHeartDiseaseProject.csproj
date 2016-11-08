@@ -66,6 +66,7 @@
     <Content Include="Admin\inc\IsSuperAdmin.ascx" />
     <Content Include="Admin\Login.aspx" />
     <Content Include="Admin\Logout.aspx" />
+    <Content Include="Admin\SuperAdmin2.aspx" />
     <Content Include="Admin\SuperManage\AddAdmin.aspx" />
     <Content Include="Admin\SuperManage\AdminCenter.aspx" />
     <Content Include="Admin\SuperManage\AdminManage.aspx" />
@@ -202,6 +203,7 @@
     <Content Include="Content\bootstrap.min.css.map" />
     <Content Include="Content\bootstrap.css.map" />
     <None Include="Scripts\jquery-1.9.1.intellisense.js" />
+    <Content Include="Scripts\default.js" />
     <Content Include="Scripts\jquery-1.9.1.js" />
     <Content Include="Scripts\jquery-1.9.1.min.js" />
     <Content Include="Scripts\JScript.js" />
@@ -237,6 +239,7 @@
     <Content Include="Scripts\pi.js" />
     <Content Include="Scripts\Preview.js" />
     <Content Include="Styles\admin.css" />
+    <Content Include="Styles\default-nav.css" />
     <Content Include="Styles\home.css" />
     <Content Include="Styles\messageDetail.css" />
     <Content Include="Styles\default.css" />
@@ -258,6 +261,10 @@
     <Content Include="Scripts\jquery-1.9.1.min.map" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admin\SuperAdmin2.aspx.cs">
+      <DependentUpon>SuperAdmin2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="Admin\SuperManage\AddHospital.aspx.designer.cs">
       <DependentUpon>AddHospital.aspx</DependentUpon>
     </Compile>
