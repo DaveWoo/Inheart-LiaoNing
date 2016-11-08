@@ -12,7 +12,7 @@ namespace CoronaryHeartDiseaseProject.Admin
 		public string userName = string.Empty;
 		private static SiteUser userNormal;
 		/// <summary>
-		/// 
+		/// 页面加载
 		/// </summary>
 		/// <param name="sender"></param>
 		/// <param name="e"></param>

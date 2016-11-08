@@ -8,10 +8,8 @@ namespace CoronaryHeartDiseaseProject.Admin
 	public partial class UserCenter : System.Web.UI.Page
 	{
 		/// <summary>
-		/// 
+		/// 页面加载
 		/// </summary>
-		/// <param name="sender"></param>
-		/// <param name="e"></param>
 		protected void Page_Load(object sender, EventArgs e)
 		{
 		}

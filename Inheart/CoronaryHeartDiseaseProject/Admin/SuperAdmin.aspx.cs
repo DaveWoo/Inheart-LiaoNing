@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using DreamWork.BussinessLogic;
 /// <summary>
 /// 
@@ -8,10 +8,8 @@ public partial class SuperAdmin : System.Web.UI.Page
 	public string UserName = string.Empty;
 	public string UserRole = string.Empty;
 	/// <summary>
-	/// 
+	/// 页面加载
 	/// </summary>
-	/// <param name="sender"></param>
-	/// <param name="e"></param>
 	protected void Page_Load(object sender, EventArgs e)
 	{
 		SiteUser user = (SiteUser)Session["sa"];

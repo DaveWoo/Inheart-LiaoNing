@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using DreamWork.BussinessLogic;
 
 /// <summary>
@@ -10,10 +10,8 @@ public partial class index : System.Web.UI.Page
 	public string UserRole = string.Empty;
 	public string HospitalName = string.Empty;
 	/// <summary>
-	/// 
+	/// 页面加载
 	/// </summary>
-	/// <param name="sender"></param>
-	/// <param name="e"></param>
 	protected void Page_Load(object sender, EventArgs e)
 	{
 		SiteUser user = (SiteUser)Session["user"];

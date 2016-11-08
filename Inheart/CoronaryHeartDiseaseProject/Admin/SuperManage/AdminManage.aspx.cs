@@ -5,8 +5,9 @@
 	using System.Web.UI;
 	using DreamWork.BussinessLogic;
 	using DreamWork.ObjectModel;
+
 	/// <summary>
-	/// 
+	/// 管理员管理类
 	/// </summary>
 	public partial class AdminManage : System.Web.UI.Page
 	{
@@ -15,11 +16,10 @@
 		public int MaxAdminPages;
 		public int PageStartIndex;
 		public int TotalNums;
+
 		/// <summary>
-		/// 
+		/// 页面加载
 		/// </summary>
-		/// <param name="sender"></param>
-		/// <param name="e"></param>
 		protected void Page_Load(object sender, EventArgs e)
 		{
 			if (!Page.IsPostBack)
@@ -58,10 +58,11 @@
 				}
 			}
 		}
+
 		/// <summary>
-		/// 
+		/// 获得页面数
 		/// </summary>
-		/// <returns></returns>
+		/// <returns>返回管理员的最多页数</returns>
 		public int GetMaxAdminPages()
 		{
 			int MaxAdminPages;
@@ -143,11 +144,10 @@
 				this.Label1.Text = "<font color=red><b>对不起，暂时还没有管理员</b></font>";
 			}
 		}
+
 		/// <summary>
-		/// 
+		/// 管理员管理操作
 		/// </summary>
-		/// <param name="sender"></param>
-		/// <param name="e"></param>
 		protected void Submit1_ServerClick(object sender, EventArgs e)
 		{
 			// Delete all selected hospital
@@ -183,11 +183,12 @@
 				this.Response.Write(BaseSystem.ShowWindow("信息提示：请先选择要删除的医院！！"));
 			}
 		}
+
 		/// <summary>
-		/// 
+		/// 显示地域信息
 		/// </summary>
-		/// <param name="ID"></param>
-		/// <returns></returns>
+		/// <param name="ID">地域ID</param>
+		/// <returns>返回地域信息</returns>
 		public string ShowRegionName(string ID)
 		{
 			int id = int.Parse(ID);
@@ -199,25 +200,22 @@
 				return region.RegionName;
 			}
 		}
+
 		/// <summary>
-		/// 
+		/// 显示操作信息
 		/// </summary>
-		/// <param name="ID"></param>
-		/// <returns></returns>
+		/// <param name="ID">病例ID</param>
+		/// <returns>返回可操作的html</returns>
 		public string ShowTxt(string ID)
 		{
 			string htmlstring = "";
 			string htmlstring1 = "";
 
 			htmlstring += "<img src=\"../../images/EditNews.png\" alt='修改' title='修改' border=\"0\">&nbsp;";
-
 			htmlstring += "<img src=\"../../images/DelNews.png\" alt='删除' title='删除' border=\"0\">&nbsp;";
-
 			htmlstring1 = "<a href=\"ModifyAdmin.aspx?ID=" + ID + "\">";
 			htmlstring1 += "<img src=\"../../images/EditNews.png\" alt='修改' title='修改' border=\"0\"></a>&nbsp; <a href=\"?action=del&ID=" + ID + "\" onclick=\"return confirm('确认要删除？');\">";
 			htmlstring1 += "<img src=\"../../images/DelNews.png\" alt='删除' title='删除' border=\"0\"></a>&nbsp;";
-
-			//  return htmlstring1 += "<input name=\"Pid\" type=\"checkbox\" id=\"Checkbox24\"  onclick=\"if(this.checked){news" + ID + ".style.backgroundColor='#DBEAF5';}else{news" + ID + ".style.backgroundColor='#ffffff';}\" value=\"" + ID + "\">";
 
 			return htmlstring1;
 		}

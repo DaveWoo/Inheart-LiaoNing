@@ -5,7 +5,7 @@
 	using DreamWork.BussinessLogic;
 	using DreamWork.ObjectModel;
 	/// <summary>
-	/// 
+	/// 医院管理类
 	/// </summary>
 	public partial class AdminManageHospital : System.Web.UI.Page
 	{
@@ -15,10 +15,8 @@
 		public int TotalNums;
 		public int PageStartIndex;
 		/// <summary>
-		/// 
+		/// 页面加载
 		/// </summary>
-		/// <param name="sender"></param>
-		/// <param name="e"></param>
 		protected void Page_Load(object sender, EventArgs e)
 		{
 			if (!Page.IsPostBack)
@@ -64,9 +62,9 @@
 			}
 		}
 		/// <summary>
-		/// 
+		/// 获得做多医院的页数
 		/// </summary>
-		/// <returns></returns>
+		/// <returns>返回获医院的页数</returns>
 		public int GetMaxHospitalPages()
 		{
 			int MaxAdminPages;

@@ -5,17 +5,17 @@
 	using System.Web.UI.WebControls;
 	using DreamWork.BussinessLogic;
 	using DreamWork.ObjectModel;
+
 	/// <summary>
-	/// 
+	/// 添加管理员类
 	/// </summary>
 	public partial class AddAdmin : System.Web.UI.Page
 	{
 		public string MenuListCheckBox;
+
 		/// <summary>
-		/// 
+		/// 页面加载
 		/// </summary>
-		/// <param name="sender"></param>
-		/// <param name="e"></param>
 		protected void Page_Load(object sender, EventArgs e)
 		{
 			if (!Page.IsPostBack)
@@ -32,11 +32,10 @@
 				}
 			}
 		}
+
 		/// <summary>
-		/// 
+		/// 添加新管理员事件
 		/// </summary>
-		/// <param name="sender"></param>
-		/// <param name="e"></param>
 		protected void Submit1_ServerClick(object sender, EventArgs e)
 		{
 			string userName = Request.Form["username"].Trim();

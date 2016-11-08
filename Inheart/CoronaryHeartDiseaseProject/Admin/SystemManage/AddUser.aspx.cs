@@ -11,10 +11,8 @@ namespace CoronaryHeartDiseaseProject.Admin
 		public string MenuListCheckBox;
 		private static SiteUser userAdmin;
 		/// <summary>
-		/// 
+		/// 页面加载
 		/// </summary>
-		/// <param name="sender"></param>
-		/// <param name="e"></param>
 		protected void Page_Load(object sender, EventArgs e)
 		{
 			if (!Page.IsPostBack)

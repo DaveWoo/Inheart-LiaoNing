@@ -17,10 +17,8 @@ namespace CoronaryHeartDiseaseProject.Admin
 		private static SiteUser userAdmin;
 		private List<SiteUser> userList;
 		/// <summary>
-		/// 
+		/// 页面加载
 		/// </summary>
-		/// <param name="sender"></param>
-		/// <param name="e"></param>
 		protected void Page_Load(object sender, EventArgs e)
 		{
 			if (!Page.IsPostBack)

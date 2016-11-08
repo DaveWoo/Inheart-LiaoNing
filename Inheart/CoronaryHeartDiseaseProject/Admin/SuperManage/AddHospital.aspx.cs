@@ -6,16 +6,15 @@
 	using DreamWork.ObjectModel;
 
 	/// <summary>
-	/// 
+	/// 添加医院类
 	/// </summary>
 	public partial class AddHospital : System.Web.UI.Page
 	{
 		public string MenuListCheckBox;
+
 		/// <summary>
-		/// 
+		/// 页面加载
 		/// </summary>
-		/// <param name="sender"></param>
-		/// <param name="e"></param>
 		protected void Page_Load(object sender, EventArgs e)
 		{
 			List<Region> regions = SiteManagement.GetRegion();
@@ -25,11 +24,10 @@
 				this.Region.Items.Add(item.RegionName);
 			}
 		}
+
 		/// <summary>
-		/// 
+		/// 添加新新医院事件
 		/// </summary>
-		/// <param name="sender"></param>
-		/// <param name="e"></param>
 		protected void Submit1_ServerClick(object sender, EventArgs e)
 		{
 			if (this.Region.SelectedIndex == 0)

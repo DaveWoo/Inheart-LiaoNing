@@ -23,7 +23,7 @@
 		private int TotalNums;
 		private static SiteUser user;
 		/// <summary>
-		/// 
+		/// 页面加载
 		/// </summary>
 		/// <param name="sender"></param>
 		/// <param name="e"></param>

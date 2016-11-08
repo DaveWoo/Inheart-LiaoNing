@@ -16,6 +16,9 @@
 
         private static SiteUser superAdmin;
 
+		/// <summary>
+		/// 页面加载
+		/// </summary>
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!Page.IsPostBack)
