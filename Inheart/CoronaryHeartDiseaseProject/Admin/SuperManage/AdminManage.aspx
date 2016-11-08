@@ -12,7 +12,7 @@
     <title>修改资料</title>
 </head>
 <body>
-    <div style="margin-left: 10px">
+    <form id="myform" name="listform" runat="server" onsubmit="return confirm('确认要执行此操作？');">
         <table width="100%" border="0" align="center" cellpadding="3" cellspacing="1">
             <tr>
                 <td>
@@ -26,9 +26,7 @@
                 </td>
             </tr>
         </table>
-        <form id="Form1" name="listform" runat="server" onsubmit="return confirm('确认要执行此操作？');">
-            <asp:Label ID="Label1" runat="server"></asp:Label>&nbsp;
-   
+        <asp:Label ID="Label1" runat="server"></asp:Label>&nbsp;          
         <asp:DataList ID="DataListUser" runat="server" Width="100%">
             <HeaderTemplate>
                 <table width="100%" border="0" align="left" cellpadding="1" cellspacing="1" class="tableborder">
@@ -79,36 +77,32 @@
                     <tr bgcolor="#ffffff">
                         <td height="25" colspan="4">
                             <div align="left">
-                                <input type="button" Class="btn btn-info widthButton" name="Submit822" value="添加管理员" onclick="javascript: window.location = 'AddAdmin.aspx';">&nbsp;
-                       
+                                <input type="button" class="btn btn-info widthButton" name="Submit822" value="添加管理员" onclick="javascript: window.location = 'AddAdmin.aspx';">&nbsp;
                             </div>
                         </td>
                     </tr>
                 </table>
             </FooterTemplate>
         </asp:DataList>
-            <table width="100%" border="0" align="center" cellpadding="3" cellspacing="1" class="tableborder">
-                <tr bgcolor="#ffffff">
-                    <td height="25" colspan="4">
-                        <div align="left">
-                            &nbsp;&nbsp;
-                   
-                        </div>
-                    </td>
-                </tr>
-            </table>
-            <table width="100%" border="0" cellpadding="0" cellspacing="0">
-                <tr bgcolor="#ffffff">
-                    <td height="25" colspan="4">备注：<span style="color: #ff0000"> 1.多选框背景色为蓝色代表已选中信息,所有操作均为不可恢复，在操作时请管理员慎重。<br />
-                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;                                      
+        <table width="100%" border="0" align="center" cellpadding="3" cellspacing="1" class="tableborder">
+            <tr bgcolor="#ffffff">
+                <td height="25" colspan="4">
+                    <div align="left">
+                        &nbsp;&nbsp;
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <table width="100%" border="0" cellpadding="0" cellspacing="0">
+            <tr bgcolor="#ffffff">
+                <td height="25" colspan="4">备注：<span style="color: #ff0000"> 1.多选框背景色为蓝色代表已选中信息,所有操作均为不可恢复，在操作时请管理员慎重。<br />
+                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;   
                     <br />
-                    </span>
-                    </td>
-                </tr>
-            </table>
-        </form>
-        <%#Eval("ID")%>
-    </div>
+                </span>
+                </td>
+            </tr>
+        </table>
+    </form>
     <uc1:IsSuperAdmin ID="IsSuperAdmin1" runat="server" />
 </body>
 </html>

@@ -13,20 +13,20 @@
     <title>修改资料</title>
 </head>
 <body>
-    <table width="100%" border="0" align="center" cellpadding="3" cellspacing="1">
-        <tr>
-            <td>
-                <table width="98%" border="0" align="center" cellpadding="3" cellspacing="1">
-                    <tr>
-                        <td height="25" colspan="2">网站导航: &nbsp;<a href="AddUser.aspx"><b>添加新用户</b></a> &nbsp;|&nbsp; <a href="UserManage.aspx">用户管理</a>&nbsp; | <a href="UserCenter.aspx">修改管理员密码 </a>
-                        </td>
-                    </tr>
-                </table>
-            </td>
-        </tr>
-    </table>
     <form id="myform" runat="server" onsubmit="return checkUser()">
-        <table width="98%" border="0" align="center" cellpadding="3" cellspacing="1" class="tableborder">
+        <table width="100%" border="0" align="center" cellpadding="3" cellspacing="1">
+            <tr>
+                <td>
+                    <table width="100%" border="0" align="center" cellpadding="3" cellspacing="1">
+                        <tr>
+                            <td height="25" colspan="2">网站导航: &nbsp;<a href="AddUser.aspx"><b>添加新用户</b></a> &nbsp;|&nbsp; <a href="UserManage.aspx">用户管理</a>&nbsp; | <a href="UserCenter.aspx">修改管理员密码 </a>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table width="100%" border="0" align="center" cellpadding="3" cellspacing="1" class="tableborder">
             <tr class="header">
                 <td height="30px" colspan="2">添加新用户</td>
             </tr>
@@ -52,9 +52,9 @@
                 <td height="25">&nbsp;
                 </td>
                 <td height="25">
-                    <input type="submit" value="添加新用户" name="B1" Class="btn btn-info " id="Submit2" onserverclick="Submit1_ServerClick"
+                    <input type="submit" value="添加新用户" name="B1" class="btn btn-info " id="Submit2" onserverclick="Submit1_ServerClick"
                         runat="server" onclick="return Submit2_onclick()" />
-                    <input type="reset" name="Submit2" Class="btn btn-info " value="重置" />
+                    <input type="reset" name="Submit2" class="btn btn-info " value="重置" />
                 </td>
             </tr>
         </table>

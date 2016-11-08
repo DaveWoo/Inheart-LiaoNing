@@ -13,20 +13,20 @@
     <title>修改资料</title>
 </head>
 <body>
-    <table width="100%" border="0" align="center" cellpadding="3" cellspacing="1">
-        <tr>
-            <td>
-                <table width="98%" border="0" align="center" cellpadding="3" cellspacing="1">
-                    <tr>
-                        <td height="25" colspan="2">网站导航: &nbsp;<a href="AddAdmin.aspx">添加管理员</a> &nbsp;|&nbsp; <a href="AdminManage.aspx">管理管理员</a>&nbsp; | <a href="AdminCenter.aspx"><b>修改密码</b></a> |
-                        </td>
-                    </tr>
-                </table>
-            </td>
-        </tr>
-    </table>
     <form id="myform" runat="server" onsubmit="return checkReSetPwd()">
-        <table width="98%" border="0" align="center" cellpadding="3" cellspacing="1" class="tableborder">
+        <table width="100%" border="0" align="center" cellpadding="3" cellspacing="1">
+            <tr>
+                <td>
+                    <table width="100%" border="0" align="center" cellpadding="3" cellspacing="1">
+                        <tr>
+                            <td height="25" colspan="2">网站导航: &nbsp;<a href="AddAdmin.aspx">添加管理员</a> &nbsp;|&nbsp; <a href="AdminManage.aspx">管理管理员</a>&nbsp; | <a href="AdminCenter.aspx"><b>修改密码</b></a> |
+                        </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table width="100%" border="0" align="center" cellpadding="3" cellspacing="1" class="tableborder">
             <tr class="header">
                 <td height="30px" colspan="2">修改超级管理员密码&nbsp;
                 </td>
@@ -53,14 +53,13 @@
                 <td height="25">&nbsp;
                 </td>
                 <td height="25">
-                    <input type="submit" Class="btn btn-info widthButton" value="保存密码" name="B1" id="Submit2" onserverclick="Submit1_SavePassword_ServerClick"
+                    <input type="submit" class="btn btn-info widthButton" value="保存密码" name="B1" id="Submit2" onserverclick="Submit1_SavePassword_ServerClick"
                         runat="server">
-                    <input type="reset" Class="btn btn-info widthButton" name="Submit2" value="重置">
+                    <input type="reset" class="btn btn-info widthButton" name="Submit2" value="重置">
                 </td>
             </tr>
         </table>
         <uc1:IsSuperAdmin ID="IsSuperAdmin1" runat="server" />
     </form>
-
 </body>
 </html>

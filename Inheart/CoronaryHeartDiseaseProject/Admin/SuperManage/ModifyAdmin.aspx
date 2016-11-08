@@ -13,23 +13,24 @@
     <title>修改资料</title>
 </head>
 <body>
-    <table width="100%" border="0" align="center" cellpadding="3" cellspacing="1">
-        <tr>
-            <td>
-                <table width="98%" border="0" align="center" cellpadding="3" cellspacing="1">
-                    <tr>
-                        <td height="25" colspan="2">网站导航: &nbsp;<a href="AddAdmin.aspx">添加管理员</a> &nbsp;|&nbsp; <a href="AdminManage.aspx">管理管理员</a>&nbsp; | <a href="AdminCenter.aspx">修改管理员密码</a> |
-                        </td>
-                    </tr>
-                </table>
-            </td>
-        </tr>
-    </table>
     <form id="myform" runat="server" onsubmit="return checkUser()">
-        <table width="98%" border="0" align="center" cellpadding="3" cellspacing="1" class="tableborder">
+        <table width="100%" border="0" align="center" cellpadding="3" cellspacing="1">
+            <tr>
+                <td>
+                    <table width="100%" border="0" align="center" cellpadding="3" cellspacing="1">
+                        <tr>
+                            <td height="25" colspan="2">网站导航: &nbsp;<a href="AddAdmin.aspx">添加管理员</a> &nbsp;|&nbsp; <a href="AdminManage.aspx">管理管理员</a>&nbsp; | <a href="AdminCenter.aspx">修改管理员密码</a> |
+                        </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table width="100%" border="0" align="center" cellpadding="3" cellspacing="1" class="tableborder">
             <tr class="header">
                 <td height="30px" colspan="2">修改管理员&nbsp;
-                <asp:TextBox ID="TextBox1" runat="server" Width="61px" Visible="false"></asp:TextBox>
+               
+                    <asp:TextBox ID="TextBox1" runat="server" Width="61px" Visible="false"></asp:TextBox>
                 </td>
             </tr>
             <tr bgcolor="#FFFFFF">

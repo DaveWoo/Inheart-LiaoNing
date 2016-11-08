@@ -644,10 +644,10 @@ FORM {
     background-color: #F2F9FF;
 }
 
-.tableSummary {
+.tableSummary {98%
     width: 80%;
     border-color: #C2BCBE;
-    border: 0;
+    border: 0;98%
     vertical-align: middle;
 }
 .form-control-patient {

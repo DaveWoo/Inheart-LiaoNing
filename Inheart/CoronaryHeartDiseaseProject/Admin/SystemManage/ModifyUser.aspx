@@ -16,7 +16,7 @@
     <table width="100%" border="0" align="center" cellpadding="3" cellspacing="1">
         <tr>
             <td>
-                <table width="98%" border="0" align="center" cellpadding="3" cellspacing="1">
+                <table width="100%" border="0" align="center" cellpadding="3" cellspacing="1">
                     <tr>
                         <td height="25" colspan="2">网站导航: &nbsp;<a href="AddUser.aspx">添加新用户</a> &nbsp;|&nbsp; <a href="UserManage.aspx">用户管理</a>&nbsp; | <a href="UserCenter.aspx">修改管理员密码</a>
                         </td>
@@ -26,7 +26,7 @@
         </tr>
     </table>
     <form id="myform" runat="server" onsubmit="return checkUser()">
-        <table width="98%" border="0" align="center" cellpadding="3" cellspacing="1" class="tableborder">
+        <table width="100%" border="0" align="center" cellpadding="3" cellspacing="1" class="tableborder">
             <tr class="header">
                 <td height="30px" colspan="2">修改用户&nbsp;
                 <asp:TextBox ID="TextBox1" runat="server" Width="61px" Visible="false"></asp:TextBox>

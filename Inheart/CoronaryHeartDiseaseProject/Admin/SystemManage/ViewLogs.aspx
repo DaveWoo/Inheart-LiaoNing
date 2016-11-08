@@ -4,24 +4,13 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>修改资料</title>
-    <link rel="stylesheet" href="../../Styles/admin.css"
+    <link rel="stylesheet" href="../../Styles/admin.css" />
     <link rel="stylesheet" href="/Content/bootstrap.min.css"/>
     <script type="text/javascript" src="/Scripts/bootstrap.min.js"></script>
     <script type="text/javascript" src="/Scripts/jquery-1.9.1.min.js"></script>
-    <script type="text/javascript" language="javascript">
-        function CheckAll(form) {
-            for (var i = 0; i < form.elements.length; i++) {
-                var e = form.elements[i];
-                if (e.name != 'chkall')
-                    if (e.disabled == 0) {
-                        e.checked = form.chkall.checked;
-                    }
-            }
-        }
-    </script>
 </head>
 <body>
-    <form id="divbody" name="listform" runat="server" onsubmit="return confirm('确认要执行此操作？');">
+    <form id="myform" runat="server" onsubmit="return confirm('确认要执行此操作？');">
         <asp:Label ID="Label1" runat="server"></asp:Label>&nbsp;   
         <asp:DataList ID="DataListUserLog" runat="server" Width="100%">
             <HeaderTemplate>

@@ -15,20 +15,20 @@
 
 </head>
 <body>
-    <table width="100%" border="0" align="center" cellpadding="3" cellspacing="1">
-        <tr>
-            <td>
-                <table width="98%" border="0" align="center" cellpadding="3" cellspacing="1">
-                    <tr>
-                        <td height="25" colspan="2">网站导航: &nbsp;<a href="AddHospital.aspx"><b>添加医院</b></a> &nbsp;|&nbsp; <a href="AdminManageHospital.aspx">管理医院</a>&nbsp; |
-                        </td>
-                    </tr>
-                </table>
-            </td>
-        </tr>
-    </table>
     <form id="myform" runat="server" onsubmit="return checkHospital()">
-        <table width="98%%" border="0" align="center" cellpadding="5" cellspacing="1" class="tableborder">
+        <table width="100%" border="0" align="center" cellpadding="3" cellspacing="1">
+            <tr>
+                <td>
+                    <table width="100%" border="0" align="center" cellpadding="3" cellspacing="1">
+                        <tr>
+                            <td height="25" colspan="2">网站导航: &nbsp;<a href="AddHospital.aspx"><b>添加医院</b></a> &nbsp;|&nbsp; <a href="AdminManageHospital.aspx">管理医院</a>&nbsp; |
+                        </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table width="100%" border="0" align="center" cellpadding="5" cellspacing="1" class="tableborder">
             <tr class="header">
                 <td height="30px" colspan="2">添加医院&nbsp;
                 </td>
