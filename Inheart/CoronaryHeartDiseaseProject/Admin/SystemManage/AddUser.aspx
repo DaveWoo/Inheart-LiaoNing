@@ -28,24 +28,24 @@
     <form id="myform" runat="server" onsubmit="return checkUser()">
         <table width="98%" border="0" align="center" cellpadding="3" cellspacing="1" class="tableborder">
             <tr class="header">
-                <td height="25" colspan="2">添加新用户</td>
+                <td height="30px" colspan="2">添加新用户</td>
             </tr>
             <tr bgcolor="#FFFFFF">
                 <td width="25%" height="25">新用户用名</td>
                 <td width="75%" height="25">
-                    <input type="text" class="form-control" name="username" placeholder="户用名" />
+                    <input type="text" class="form-control-user" name="username" placeholder="户用名" />
                 </td>
             </tr>
             <tr bgcolor="#FFFFFF">
                 <td height="25">用户密码</td>
                 <td height="25">
-                    <input type="password" class="form-control" name="newpass" placeholder="用户密码" />
+                    <input type="password" class="form-control-user" name="newpass" placeholder="用户密码" />
                 </td>
             </tr>
             <tr bgcolor="#FFFFFF">
                 <td height="25">确认密码</td>
                 <td height="25">
-                    <input type="password" class="form-control" name="repass" placeholder="确认密码" />
+                    <input type="password" class="form-control-user" name="repass" placeholder="确认密码" />
                 </td>
             </tr>
             <tr bgcolor="#FFFFFF">

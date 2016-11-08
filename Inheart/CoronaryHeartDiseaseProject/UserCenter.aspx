@@ -13,28 +13,27 @@
     <title>修改资料</title>
 </head>
 <body>
-    <form id="myform" runat="server" onsubmit="return   <title>修改资料</title>()">
-        <table width="98%" border="0" align="center" cellpadding="3" cellspacing="1" class="tableborder">
+    <form id="divbody" runat="server" onsubmit="return   <title>修改资料</title>()">
+        <table width="100%" border="0" align="center" cellpadding="3" cellspacing="1" class="tableborder">
             <tr class="header">
-                <td height="25" colspan="2">修改密码&nbsp;
-                </td>
+                <td height="30px" colspan="2">修改密码&nbsp;</td>
             </tr>
             <tr bgcolor="#FFFFFF">
                 <td width="25%" height="25">原密码</td>
                 <td width="75%" height="25">
-                    <input type="password" class="form-control" placeholder="请输入原密码" name="oldpass" size="35">
+                    <input type="password" class="form-control-user" placeholder="请输入原密码" name="oldpass" size="35">
                 </td>
             </tr>
             <tr bgcolor="#FFFFFF">
                 <td height="25">新密码</td>
                 <td height="25">
-                    <input type="password" class="form-control" placeholder="请输入密码" name="newpass" size="35" />
+                    <input type="password" class="form-control-user" placeholder="请输入密码" name="newpass" size="35" />
                 </td>
             </tr>
             <tr bgcolor="#FFFFFF">
                 <td height="25">确认密码</td>
                 <td height="25">
-                    <input type="password" class="form-control" placeholder="请您再次输入密码" name="repass" size="35">
+                    <input type="password" class="form-control-user" placeholder="请您再次输入密码" name="repass" size="35">
                 </td>
             </tr>
             <tr bgcolor="#FFFFFF">

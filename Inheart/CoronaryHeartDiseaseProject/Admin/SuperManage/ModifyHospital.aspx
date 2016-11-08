@@ -28,8 +28,7 @@
     <form id="myform" runat="server" onsubmit="return checkHospitalName()">
         <table width="98%" border="0" align="center" cellpadding="3" cellspacing="1" class="tableborder">
             <tr class="header">
-                <td height="25" colspan="2">管理医院&nbsp;
-                </td>
+                <td height="30px" colspan="2">管理医院&nbsp;</td>
             </tr>
             <tr bgcolor="#FFFFFF">
                 <td width="25%" height="25">医院名称</td>

@@ -22,7 +22,7 @@
         <p>
             &nbsp;
         </p>
-        <table border="0" align="center" cellpadding="3" cellspacing="1" class="tableborder" style="width: 500px;">
+        <table border="0" align="center" cellpadding="3" cellspacing="1" class="tableborder" >
             <tr class="headerLongin">
                 <td colspan="2">
                     <div>
@@ -31,13 +31,13 @@
                 </td>
             </tr>
             <tr>
-                <td style="padding-right: 20px; padding-left: 20px;">
+                <td style="padding-right: 0; padding-left: 20px;">
                     <div style="margin-top: -40px">
                         <asp:Image runat="server" ImageUrl="~/Images/112.png" Width="120" />
                     </div>
                 </td>
                 <td>
-                    <table style="margin-top: 20px">
+                    <table style="margin-top: 20px;margin-left:20px;">
                         <tr>
                             <td style="width: 80px;">地&nbsp;&nbsp;&nbsp;区：</td>
                             <td height="25" class="loginleft">
@@ -67,20 +67,18 @@
                         <tr>
                             <td>验证码：</td>
                             <td>
-                                <div class="form-group">
-                                    <div class="col-xs-2" style="width:100px">
-                                        <input name="verify" type="text" title="请输入验证码" placeholder="验证码" size="5" maxlength="4" tabindex="4" class="form-control"
-                                            text-align: center; vertical-align: top" />
-                                    </div>
-                                    <div class="col-xs-1">
-                                        <asp:Image ID="ValImage" runat="server" Width="60px" Height="32px" ImageUrl="~/Verfiy.aspx" ImageAlign="Baseline"></asp:Image>
+                                <div class="form-group" >
+                                    <div class="col-xs-3" style="padding-right:0;width:139px;">
+                                        <input style="width:139px;" name="verify" type="text" title="请输入验证码" placeholder="验证码" size="5" maxlength="4" tabindex="4" class="form-control" /></div>
+                                    <div class="col-xs-2" style="padding-right:0; margin-right:0;margin-top:2px">
+                                        <asp:Image ID="ValImage" runat="server" Width="60px" Height="30px" ImageUrl="~/Verfiy.aspx" ImageAlign="Baseline"></asp:Image>
                                     </div>
                                 </div>
                             </td>
                         </tr>
                         <tr>
                             <td colspan="2" style="padding-bottom: 20px">
-                                <input type="submit" value="登录系统" name="B12" class="btn btn-success " style="margin-left: 80px;width:200px"
+                                <input type="submit" value="登录系统" name="B12" class="btn btn-success " style="margin-left: 85px;width:200px"
                                     id="Submit1" onserverclick="Submit_ServerClick" runat="server" tabindex="5" />
                                 &nbsp;&nbsp;&nbsp;&nbsp;
                             </td>

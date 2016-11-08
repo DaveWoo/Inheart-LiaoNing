@@ -30,7 +30,7 @@
     <form id="myform" runat="server" onsubmit="return checkHospital()">
         <table width="98%%" border="0" align="center" cellpadding="5" cellspacing="1" class="tableborder">
             <tr class="header">
-                <td height="25" colspan="2">添加医院&nbsp;
+                <td height="30px" colspan="2">添加医院&nbsp;
                 </td>
             </tr>
             <tr bgcolor="#FFFFFF">

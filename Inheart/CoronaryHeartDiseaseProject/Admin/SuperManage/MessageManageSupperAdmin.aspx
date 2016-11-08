@@ -31,25 +31,25 @@
                 <FooterTemplate>
                 </FooterTemplate>
                 <HeaderTemplate>
-                    <table width="100%" border="0" align="center" cellpadding="3" cellspacing="1" class="tableborder">
+                    <table width="100%" border="0" align="left" cellpadding="3" cellspacing="1" class="tableborder">
                         <tr class="header">
                             <td width="15%" height="25">
-                                <div align="center">录入时间</div>
+                                <div align="left">录入时间</div>
                             </td>
                             <td width="10%" height="25">
-                                <div align="center">患者姓名</div>
+                                <div align="left">患者姓名</div>
                             </td>
                             <td width="5%" height="25">
-                                <div align="center">性别</div>
+                                <div align="left">性别</div>
                             </td>
                             <td width="5%" height="25">
-                                <div align="center">年龄</div>
+                                <div align="left">年龄</div>
                             </td>
                             <td width="10%" height="25">
-                                <div align="center">医生</div>
+                                <div align="left">医生</div>
                             </td>
                             <td width="5%" height="25">
-                                <div align="center">状态</div>
+                                <div align="left">状态</div>
                             </td>
                         </tr>
                     </table>
@@ -58,34 +58,34 @@
                     <table width="100%" border="1" align="center" cellpadding="3" cellspacing="1" class="tableborder">
                         <tr bgcolor="#ffffff" id="news<%#Eval("ReportID") %>">
                             <td height="25" width="15%">
-                                <div align="center">
+                                <div align="left">
                                     <%#Eval("CreateDate")%>
                                 </div>
                             </td>
                             <td height="25" width="10%">
-                                <div align="center">
+                                <div align="left">
                                     <a href='<%#EnterCase(Eval("ID").ToString(),Eval("IsLocked").ToString(),Eval("ReportID").ToString())%>'
                                         title="进入病例">
                                         <%#Eval("PatientName")%></a>
                                 </div>
                             </td>
                             <td height="25" width="5%">
-                                <div align="center">
+                                <div align="left">
                                     <%#Eval("Sex")%>
                                 </div>
                             </td>
                             <td height="25" width="5%">
-                                <div align="center">
+                                <div align="left">
                                     <%#Eval("Age")%>
                                 </div>
                             </td>
                             <td height="25" width="10%">
-                                <div align="center">
+                                <div align="left">
                                     <%#Eval("Creater")%>
                                 </div>
                             </td>
                             <td height="25" width="5%">
-                                <div align="center">
+                                <div align="left">
                                     <%#ShowLock(Eval("IsLocked").ToString())%>
                                 </div>
                             </td>
@@ -93,7 +93,7 @@
                     </table>
                 </ItemTemplate>
             </asp:DataList>
-                <table align="center" border="0" cellpadding="3" cellspacing="1" class="tableborder"
+                <table align="left" border="0" cellpadding="3" cellspacing="1" class="tableborder"
                     width="100%">
                     <tr bgcolor="#ffffff">
                         <td colspan="4" height="25">

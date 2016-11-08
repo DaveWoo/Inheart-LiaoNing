@@ -5,8 +5,6 @@ VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{E2EF4E2C-D3A7-4B28-920D-B3E08B53FE9F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DreamWork.Report", "DreamWork.Report\DreamWork.Report.csproj", "{8886C400-33EF-4311-92DB-B44AB5A984EB}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoronaryHeartDiseaseProject", "CoronaryHeartDiseaseProject\CoronaryHeartDiseaseProject.csproj", "{1E872235-E84B-4645-B60A-34565D4FF172}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DreamWork.BussinessLogic", "DreamWork.BussinessLogic\DreamWork.BussinessLogic.csproj", "{0C10AA64-AE9D-4CA9-87CD-33A768504C45}"
@@ -16,6 +14,17 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Prepare", "Prepare", "{26F7DAF2-A066-4782-ABEB-020257002621}"
 	ProjectSection(SolutionItems) = preProject
 		SQL\Insert.sql = SQL\Insert.sql
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Record", "Record", "{1A6D2973-6116-4AE6-AC24-E1B57DC54715}"
+	ProjectSection(SolutionItems) = preProject
+		Record\admin1.zip = Record\admin1.zip
+		Record\admin2.zip = Record\admin2.zip
+		Record\sa.zip = Record\sa.zip
+		Record\user1.zip = Record\user1.zip
+		Record\user2.zip = Record\user2.zip
+		Record\user3.zip = Record\user3.zip
+		Record\user_病例录入.zip = Record\user_病例录入.zip
 	EndProjectSection
 EndProject
 Global
@@ -28,16 +37,6 @@ Global
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{8886C400-33EF-4311-92DB-B44AB5A984EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8886C400-33EF-4311-92DB-B44AB5A984EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8886C400-33EF-4311-92DB-B44AB5A984EB}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
-		{8886C400-33EF-4311-92DB-B44AB5A984EB}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
-		{8886C400-33EF-4311-92DB-B44AB5A984EB}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{8886C400-33EF-4311-92DB-B44AB5A984EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8886C400-33EF-4311-92DB-B44AB5A984EB}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8886C400-33EF-4311-92DB-B44AB5A984EB}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
-		{8886C400-33EF-4311-92DB-B44AB5A984EB}.Release|Mixed Platforms.Build.0 = Release|Any CPU
-		{8886C400-33EF-4311-92DB-B44AB5A984EB}.Release|x86.ActiveCfg = Release|Any CPU
 		{1E872235-E84B-4645-B60A-34565D4FF172}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{1E872235-E84B-4645-B60A-34565D4FF172}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1E872235-E84B-4645-B60A-34565D4FF172}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU

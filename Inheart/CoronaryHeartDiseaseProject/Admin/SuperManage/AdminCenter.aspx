@@ -28,7 +28,7 @@
     <form id="myform" runat="server" onsubmit="return checkReSetPwd()">
         <table width="98%" border="0" align="center" cellpadding="3" cellspacing="1" class="tableborder">
             <tr class="header">
-                <td height="25" colspan="2">修改超级管理员密码&nbsp;
+                <td height="30px" colspan="2">修改超级管理员密码&nbsp;
                 </td>
             </tr>
             <tr bgcolor="#FFFFFF">

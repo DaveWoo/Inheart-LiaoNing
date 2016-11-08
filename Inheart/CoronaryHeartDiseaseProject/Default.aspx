@@ -113,7 +113,7 @@
     <div class="foot">
         联系电话：024-24016114 - 电子信箱：lzqlr@medmail.com.cn<br />
         辽宁省人民医院版权所有<br />
-        <span class="cRed">&copy;2012</span>
+        <span class="cRed">&copy;2016</span>
     </div>
 </body>
 </html>
