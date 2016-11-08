@@ -96,9 +96,9 @@ namespace DreamWork.BussinessLogic
 					context.ContextOptions.LazyLoadingEnabled = true;
 					List<User> userTable = new List<User>();
 					userTable = (from p in context.Users
-								 where (p.UserName == userName.Trim()
-								 && p.Password == strPassword
-								 && p.Hospital.HospitalName == hospitalName)
+								 where (p.UserName.Trim() == userName.Trim()
+								 && p.Password.Trim() == strPassword.Trim()
+								 && p.Hospital.HospitalName.Trim() == hospitalName.Trim())
 								 select p).ToList<User>();
 					if (userTable.Count > 0)
 					{

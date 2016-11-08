@@ -5,6 +5,9 @@ namespace CoronaryHeartDiseaseProject
 	using DreamWork.BussinessLogic;
 	using DreamWork.ObjectModel;
 
+	/// <summary>
+	///
+	/// </summary>
 	public partial class MessageDetail
 	{
 		#region ReportSummation
@@ -25,6 +28,9 @@ namespace CoronaryHeartDiseaseProject
 
 		#region Init ReportSummation
 
+		/// <summary>
+		///
+		/// </summary>
 		private void InitReportSummation()
 		{
 			InitPerson();
@@ -53,6 +59,11 @@ namespace CoronaryHeartDiseaseProject
 			}
 		}
 
+		/// <summary>
+		///
+		/// </summary>
+		/// <param name="value"></param>
+		/// <param name="label"></param>
 		private void SetLabelValue(string value, Label label)
 		{
 			if (string.IsNullOrEmpty(value))
@@ -62,6 +73,9 @@ namespace CoronaryHeartDiseaseProject
 			label.Text = value;
 		}
 
+		/// <summary>
+		///
+		/// </summary>
 		private void InitPerson()
 		{
 			txtPatientName.Text = person.Name;
@@ -83,6 +97,9 @@ namespace CoronaryHeartDiseaseProject
 			SetLabelValue(person.Occupation, DropDownListJob);
 		}
 
+		/// <summary>
+		///
+		/// </summary>
 		private void InitReportLinChuangZhengZhuang()
 		{
 			SetLabelValue2(reportZhuSuAndXianBingShi.ChestPainExist, rblChestPainExist);
@@ -134,6 +151,9 @@ namespace CoronaryHeartDiseaseProject
 			SetCheckBox(reportZhuSuAndXianBingShi.RelievingFactorsRest, chkRelievingFactorsRest);
 		}
 
+		/// <summary>
+		///
+		/// </summary>
 		private void InitReportJiWangBingShi()
 		{
 			SetLabelValue2(reportJiWangBingShi.HypertensionConfirm, rblHypertensionConfirm);
@@ -149,6 +169,9 @@ namespace CoronaryHeartDiseaseProject
 			SetLabelValue2(reportJiWangBingShi.AnemiaOrOtherConfirm, rblAnemiaOrOtherConfirm);
 		}
 
+		/// <summary>
+		///
+		/// </summary>
 		private void InitReportChuBuZhengDuan()
 		{
 			txtFirstTimeHeartRate.Text = reportChuBuZhenDuan.FirstTimeHeartRate;
@@ -175,6 +198,9 @@ namespace CoronaryHeartDiseaseProject
 			txtDiastolicPressure.Text = reportChuBuZhenDuan.DiastolicPressure;
 		}
 
+		/// <summary>
+		///
+		/// </summary>
 		private void InitReportBinLiBanSuiZhuangTai()
 		{
 			SetLabelValue2(reportBinLiBanSuiZhuangTai.HypotensionExist, ddlHypotensionExist);
@@ -202,6 +228,9 @@ namespace CoronaryHeartDiseaseProject
 			SetLabelValue2(reportBinLiBanSuiZhuangTai.KilipLevel, ddlKilipLever);
 		}
 
+		/// <summary>
+		///
+		/// </summary>
 		private void InitReportJinMaiRongShuan()
 		{
 			SetLabelValue2(reportJinMaiRongShuan.Urokinase, rblUrokinase);
@@ -215,6 +244,9 @@ namespace CoronaryHeartDiseaseProject
 			SetLabelValue2(reportJinMaiRongShuan.TreatTime, rblTreatTime);
 		}
 
+		/// <summary>
+		///
+		/// </summary>
 		private void InitReportFuZhuYongYao()
 		{
 			SetLabelValue2(reportFuZhuYongYao.AspirinDosage, rblAspirinDosage);
@@ -232,12 +264,18 @@ namespace CoronaryHeartDiseaseProject
 			SetLabelValue2(reportFuZhuYongYao.BRBConfrim, rblBRBConfrim);
 		}
 
+		/// <summary>
+		///
+		/// </summary>
 		private void InitReportJieRuZhiLiao()
 		{
 			txtD2BTime.Text = reportJieRuZhiLiao.D2BTime;
 			SetLabelValue2(reportJieRuZhiLiao.Succeed, rblSucceed);
 		}
 
+		/// <summary>
+		///
+		/// </summary>
 		private void InitReportTreatResult()
 		{
 			SetLabelValue2(reportLinChuangZhuanGui.CPR, rblCPR);
@@ -294,6 +332,11 @@ namespace CoronaryHeartDiseaseProject
 
 		#region Common Method
 
+		/// <summary>
+		///
+		/// </summary>
+		/// <param name="radioButtonList"></param>
+		/// <returns></returns>
 		private string GetRadioButtonListValue(RadioButtonList radioButtonList)
 		{
 			string value = string.Empty;
@@ -304,6 +347,11 @@ namespace CoronaryHeartDiseaseProject
 			return value;
 		}
 
+		/// <summary>
+		///
+		/// </summary>
+		/// <param name="dropDownList"></param>
+		/// <returns></returns>
 		private string GetDropDownListValue(DropDownList dropDownList)
 		{
 			string value = string.Empty;
@@ -314,6 +362,11 @@ namespace CoronaryHeartDiseaseProject
 			return value;
 		}
 
+		/// <summary>
+		///
+		/// </summary>
+		/// <param name="dateTime"></param>
+		/// <returns></returns>
 		private string SetDateTime(DateTime? dateTime)
 		{
 			if (dateTime == null)
@@ -326,6 +379,11 @@ namespace CoronaryHeartDiseaseProject
 			}
 		}
 
+		/// <summary>
+		///
+		/// </summary>
+		/// <param name="dateTime"></param>
+		/// <returns></returns>
 		private DateTime? ConvertToDateTime(string dateTime)
 		{
 			try
@@ -338,11 +396,21 @@ namespace CoronaryHeartDiseaseProject
 			}
 		}
 
+		/// <summary>
+		///
+		/// </summary>
+		/// <param name="value"></param>
+		/// <param name="radioButtonList"></param>
 		private void SetLabelValue2(string value, Label radioButtonList)
 		{
 			radioButtonList.Text = value;
 		}
 
+		/// <summary>
+		///
+		/// </summary>
+		/// <param name="value"></param>
+		/// <param name="dropDownList"></param>
 		private void SetDropDownListValue(string value, DropDownList dropDownList)
 		{
 			if (string.IsNullOrEmpty(value))
@@ -360,6 +428,11 @@ namespace CoronaryHeartDiseaseProject
 			}
 		}
 
+		/// <summary>
+		///
+		/// </summary>
+		/// <param name="value"></param>
+		/// <param name="dropDownList"></param>
 		private void SetNummeralDropDownList(string value, DropDownList dropDownList)
 		{
 			for (int i = 0; i < dropDownList.Items.Count; i++)
@@ -373,6 +446,11 @@ namespace CoronaryHeartDiseaseProject
 			}
 		}
 
+		/// <summary>
+		///
+		/// </summary>
+		/// <param name="value"></param>
+		/// <param name="checkBox"></param>
 		private void SetCheckBox(bool? value, CheckBox checkBox)
 		{
 			if (value == null)
@@ -385,6 +463,11 @@ namespace CoronaryHeartDiseaseProject
 			}
 		}
 
+		/// <summary>
+		///
+		/// </summary>
+		/// <param name="value"></param>
+		/// <param name="checkBox"></param>
 		private void SetCheckBox(bool? value, Label checkBox)
 		{
 			if (value == null)
@@ -398,10 +481,18 @@ namespace CoronaryHeartDiseaseProject
 
 		#endregion Common Method
 
+		/// <summary>
+		///
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
 		protected void btnSave_Click(object sender, EventArgs e)
 		{
 		}
 
+		/// <summary>
+		///
+		/// </summary>
 		private void RestReportData()
 		{
 			person = null;
@@ -415,6 +506,9 @@ namespace CoronaryHeartDiseaseProject
 			reportSummation = null;
 		}
 
+		/// <summary>
+		///
+		/// </summary>
 		private void InitReport()
 		{
 			bool isLocked = bool.Parse(Request.QueryString["IsLocked"]);
@@ -446,6 +540,9 @@ namespace CoronaryHeartDiseaseProject
 			}
 		}
 
+		/// <summary>
+		///
+		/// </summary>
 		protected void SetControlVisible1()
 		{
 			if (!string.IsNullOrWhiteSpace(lbChubuzhenduan.Text))

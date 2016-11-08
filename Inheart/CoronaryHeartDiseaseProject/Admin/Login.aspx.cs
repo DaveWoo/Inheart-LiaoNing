@@ -2,9 +2,16 @@
 {
 	using System;
 	using DreamWork.BussinessLogic;
-
+	/// <summary>
+	/// 
+	/// </summary>
 	public partial class AdminLogin : System.Web.UI.Page
 	{
+		/// <summary>
+		/// 
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
 		protected void Page_Load(object sender, EventArgs e)
 		{
 			// this.ValImage.ImageUrl = "verfiy.aspx";

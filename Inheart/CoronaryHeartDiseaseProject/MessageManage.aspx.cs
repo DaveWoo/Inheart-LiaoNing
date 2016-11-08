@@ -4,12 +4,13 @@
 	using System.Collections.Generic;
 	using System.Data;
 	using System.Linq;
-	using System.Web.UI;
 	using System.Web.UI.WebControls;
 	using DreamWork.BussinessLogic;
 
 	public partial class MessageManage : System.Web.UI.Page
 	{
+		#region 私有变量
+
 		private const string conditionDefault = "请选择";
 		private const string conditionDoctor = "医生";
 		private const string conditionPatient = "患者姓名";
@@ -20,6 +21,14 @@
 		private int PageStartIndex;
 		private int TotalNums;
 
+		#endregion 私有变量
+
+		/// <summary>
+		/// 进入病例
+		/// </summary>
+		/// <param name="Num">第几页</param>
+		/// <param name="IsLocked">是否锁定</param>
+		/// <param name="ReportID">病例ID</param>
 		public string EnterCase(string Num, string IsLocked, string ReportID)
 		{
 			string htmlstring = string.Empty;
@@ -43,6 +52,10 @@
 			return htmlstring;
 		}
 
+		/// <summary>
+		/// 获得最大页数
+		/// </summary>
+		/// <returns>最大页数</returns>
 		public int GetMaxPages()
 		{
 			int MaxPages;
@@ -119,7 +132,7 @@
 				{
 					this.PagePageID = 1;
 				}
-                this.Label1.Text = string.Format("共有<span class=badge><b>{0}</b></span>条记录 每页显示<span class=badge><b>{1}</b></span> 条 共<span class=badge><b>{2}</b></span class=badge>页 当前页 <font color=red><b>{3}</b></font>/{4}页{5}{6}{7}{8}{9}", this.TotalNums, this.PageSize, this.MaxPages, this.PagePageID, this.MaxPages, HtmlFirstString, HtmlPrevString, HtmlNextString, HtmlLastString, HtmlSelectString);
+				this.Label1.Text = string.Format("共有<span class=badge><b>{0}</b></span>条记录 每页显示<span class=badge><b>{1}</b></span> 条 共<span class=badge><b>{2}</b></span class=badge>页 当前页 <font color=red><b>{3}</b></font>/{4}页{5}{6}{7}{8}{9}", this.TotalNums, this.PageSize, this.MaxPages, this.PagePageID, this.MaxPages, HtmlFirstString, HtmlPrevString, HtmlNextString, HtmlLastString, HtmlSelectString);
 			}
 			else
 			{
@@ -127,6 +140,11 @@
 			}
 		}
 
+		/// <summary>
+		/// 显示锁的图标
+		/// </summary>
+		/// <param name="isLock">是否显示锁的图标</param>
+		/// <returns>isLock：true，显示锁定状态；其他情况显示不锁定</returns>
 		public string ShowLock(string isLock)
 		{
 			bool locked = Boolean.Parse(isLock);
@@ -143,6 +161,13 @@
 			return htmlstring;
 		}
 
+		/// <summary>
+		/// 显示操作内容信息
+		/// </summary>
+		/// <param name="Num">第几条记录</param>
+		/// <param name="isLocked">是否锁定</param>
+		/// <param name="ReportID">病例ID</param>
+		/// <returns>操作内容html</returns>
 		public string ShowTxt(string Num, string isLocked, string ReportID)
 		{
 			string htmlstring1 = "";
@@ -158,6 +183,9 @@
 			return htmlstring1;
 		}
 
+		/// <summary>
+		/// 查询
+		/// </summary>
 		protected void Search_Click(object sender, EventArgs e)
 		{
 			if (this.ddlCondition.SelectedItem.Text.Trim() == conditionDefault)
@@ -171,6 +199,8 @@
 			{
 				user = (SiteUser)this.Session["admin"];
 			}
+
+			// 根据查询条件进行检索
 			List<MedicalReportSource> medicalReportSourceList = new List<MedicalReportSource>();
 			MedicalReportBLO medicalReportBLO = new MedicalReportBLO();
 			if (string.IsNullOrEmpty(this.txtCondition.Text))
@@ -194,15 +224,18 @@
 
 			this.BindProduceData(medicalReportSourceList, PageStartIndex, PageStartIndex, PageSize);
 
+			// 绑定数据
 			this.SetDataSource(medicalReportSourceList);
 		}
 
+		// 页面初始化
 		protected void Page_Load(object sender, EventArgs e)
 		{
 			if (!this.Page.IsPostBack)
 			{
 				this.ddlCondition.Items.Clear();
 				user = (SiteUser)this.Session["user"];
+				//初始化查询条件
 				List<string> conditionList = new List<string>();
 				conditionList.Add(conditionDefault);
 				conditionList.Add(conditionPatient);
@@ -217,6 +250,7 @@
 					user = (SiteUser)this.Session["admin"];
 					this.btnAddMedical.Visible = false;
 				}
+				// 将初始化的查询条件绑定到前台
 				foreach (var conditon in conditionList)
 				{
 					ListItem item = new ListItem();
@@ -230,6 +264,7 @@
 					DelItem = this.Request.QueryString["ReportID"];
 					if (!string.IsNullOrEmpty(DelItem))
 					{
+						// 删除数据
 						bool isSucess = Int32.TryParse(DelItem, out resultID);
 						if (isSucess)
 						{
@@ -247,9 +282,8 @@
 						this.PageStartIndex = 1;
 					}
 					this.PageStartIndex = Convert.ToInt32(this.PagePageID - 1);
-
+					// 绑定数据
 					List<MedicalReportSource> medicalReportSourceList = this.GetAllReportSummation();
-					//List<MedicalReportSource> medicalReportSourceList = GetDataSource();
 					this.TotalNums = medicalReportSourceList.Count();
 					this.MaxPages = this.GetMaxPages();
 					this.BindProduceData(medicalReportSourceList, PageStartIndex, PageStartIndex, PageSize);
@@ -257,6 +291,13 @@
 			}
 		}
 
+		/// <summary>
+		/// 绑定病例集合数据
+		/// </summary>
+		/// <param name="medicalReportSourceList">病例集合</param>
+		/// <param name="DataStartIndex">开始index</param>
+		/// <param name="PageStartIndex">页面开始index</param>
+		/// <param name="PageSize">页面显示数目</param>
 		private void BindProduceData(List<MedicalReportSource> medicalReportSourceList, int DataStartIndex, int PageStartIndex, int PageSize)
 		{
 			List<MedicalReportSource> bindingList = new List<MedicalReportSource>();
@@ -275,6 +316,10 @@
 			this.ShowBottomUrl();
 		}
 
+		/// <summary>
+		/// 删除病例
+		/// </summary>
+		/// <param name="arr">病例集合</param>
 		private void DeleteCheckedReport(string[] arr)
 		{
 			MedicalReportBLO medicalReportBLO = new MedicalReportBLO();
@@ -289,6 +334,10 @@
 			}
 		}
 
+		/// <summary>
+		/// 获得所有病例
+		/// </summary>
+		/// <returns>获得所有病例</returns>
 		private List<MedicalReportSource> GetAllReportSummation()
 		{
 			List<MedicalReportSource> medicalReportSourceList = new List<MedicalReportSource>();
@@ -300,8 +349,14 @@
 			return medicalReportSourceList;
 		}
 
+		/// <summary>
+		/// 设定模板的基本数据
+		/// </summary>
+		/// <param name="medicalReportSourceList">病例信息集合</param>
 		private void SetDataSource(List<MedicalReportSource> medicalReportSourceList)
 		{
+			#region 设定模板
+
 			DataTable dtSource = new DataTable();
 			DataColumn colID = new DataColumn("ID", typeof(string));
 			DataColumn colPatientID = new DataColumn("PatientID", typeof(Guid));
@@ -332,6 +387,11 @@
 			dtSource.Columns.Add(colSex);
 			dtSource.Columns.Add(colLock);
 			dtSource.Columns.Add(colSubmit);
+
+			#endregion 设定模板
+
+			#region 绑定数据
+
 			int i = 1;
 			foreach (MedicalReportSource item in medicalReportSourceList)
 			{
@@ -345,8 +405,8 @@
 					row[colAge] = age;
 				}
 
+				// 设定列值
 				row[colSex] = item.Person.Sex.Trim();
-
 				row[colCreater] = item.Creater;
 				row[colHospital] = item.HospitalName;
 				row[colSimplyTreate] = item.ReportSummation.DiseaseDescriber;
@@ -381,6 +441,8 @@
 			}
 			this.dgMessage.DataSource = dtSource;
 			this.dgMessage.DataBind();
+
+			#endregion 绑定数据
 		}
 	}
 }

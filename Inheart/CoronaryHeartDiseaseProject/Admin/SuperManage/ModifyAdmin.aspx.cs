@@ -2,13 +2,19 @@
 {
 	using System;
 	using DreamWork.BussinessLogic;
-
+	/// <summary>
+	/// 
+	/// </summary>
 	public partial class ModifyAdmin : System.Web.UI.Page
 	{
 		public string Username, Password, MenuListCheckBox;
 		public string UserName = string.Empty;
 		private static SiteUser userNormal;
-
+		/// <summary>
+		/// 
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
 		protected void Page_Load(object sender, EventArgs e)
 		{
 			if (!Page.IsPostBack)
@@ -28,7 +34,11 @@
 				}
 			}
 		}
-
+		/// <summary>
+		/// 
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
 		protected void Submit1_ServerClick(object sender, EventArgs e)
 		{
 			string username = Request.Form["username"].Trim();

@@ -4,33 +4,24 @@
 	using System.Web.UI;
 	using System.Web.UI.WebControls;
 
-	public class MyTemplate : ITemplate
-	{
-		private Control control;
-
-		public MyTemplate(Control control)
-		{
-			this.control = control;
-		}
-
-		#region ITemplate Members
-
-		public void InstantiateIn(Control container)
-		{
-			container.Controls.Add(this.control);
-		}
-
-		#endregion ITemplate Members
-	}
-
+	/// <summary>
+	/// 表格模板类
+	/// </summary>
 	public class GridViewTemplate : ITemplate
 	{
+		#region 私有变量
+
 		private DataControlRowType templateType;
 		private string columnName;
 		private string dataField;
 		private Control control;
 		private Control container;
 
+		#endregion 私有变量
+
+		/// <summary>
+		/// 表格模板类的初始化器
+		/// </summary>
 		public GridViewTemplate(DataControlRowType type, string colname, string dataField, Control control)
 		{
 			this.templateType = type;
@@ -39,20 +30,22 @@
 			this.control = control;
 		}
 
+		/// <summary>
+		/// 定义使用子控件填充模板化ASP.NET服务器控件的行为。子控件表示在页面上定义的内联模板。
+		/// </summary>
+		/// <param name="container"></param>
 		public void InstantiateIn(System.Web.UI.Control container)
 		{
 			this.container = container;
-			// Create the content for the different row types.
+			// 为不同的行类型创建内容。
 			switch (templateType)
 			{
 				case DataControlRowType.Header:
-					// Create the controls to put in the header
-					// section and set their properties.
+					// 为不同的行类型创建内容。并设置其属性。
 					Label lc = new Label();
 					lc.Text = "<b>" + columnName + "</b>";
 
-					// Add the controls to the Controls collection
-					// of the container.
+					// 将控件添加到容器的Controls集合。
 					container.Controls.Add(lc);
 					if (this.control != null)
 					{
@@ -61,22 +54,17 @@
 					break;
 
 				case DataControlRowType.DataRow:
-					// Create the controls to put in a data row
-					// section and set their properties.
+					// 创建要放入数据行部分的控件并设置其属性。
 					Label firstName = new Label();
-					// To support data binding, register the event-handling methods
-					// to perform the data binding. Each control needs its own event
-					// handler.
+					// 要支持数据绑定，请注册事件处理方法以执行数据绑定。 每个控件都需要自己的事件处理程序。
 					container.Controls.Add(firstName);
 					firstName.DataBinding += new EventHandler(this.FirstName_DataBinding);
 
 					break;
 
-				// Insert cases to create the content for the other
-				// row types, if desired.
-
+				// 如果需要，可以插入大小写以创建其他行类型的内容。
 				default:
-					// Insert code to handle unexpected values.
+					// 插入代码以处理意外的值。
 					break;
 			}
 		}
@@ -87,16 +75,13 @@
 			{
 				return;
 			}
-			// Get the Label control to bind the value. The Label control
-			// is contained in the object that raised the DataBinding
-			// event (the sender parameter).
+			// 获取Label控件以绑定值。 Label控件包含在引发DataBinding事件的对象（sender参数）中。
 			Label l = (Label)sender;
 
 			// Get the GridViewRow object that contains the Label control.
 			GridViewRow row = (GridViewRow)l.NamingContainer;
 
-			// Get the field value from the GridViewRow object and
-			// assign it to the Text property of the Label control.
+			// 获取包含Label控件的GridViewRow对象。
 			if (DataBinder.Eval(row.DataItem, dataField) == null)
 			{
 				l.Text = string.Empty;

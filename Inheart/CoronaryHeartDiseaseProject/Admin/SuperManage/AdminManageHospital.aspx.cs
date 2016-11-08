@@ -4,7 +4,9 @@
 	using System.Collections.Generic;
 	using DreamWork.BussinessLogic;
 	using DreamWork.ObjectModel;
-
+	/// <summary>
+	/// 
+	/// </summary>
 	public partial class AdminManageHospital : System.Web.UI.Page
 	{
 		public int PageSize = 12;
@@ -12,7 +14,11 @@
 		public int MaxAdminPages;
 		public int TotalNums;
 		public int PageStartIndex;
-
+		/// <summary>
+		/// 
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
 		protected void Page_Load(object sender, EventArgs e)
 		{
 			if (!Page.IsPostBack)
@@ -57,7 +63,10 @@
 				}
 			}
 		}
-
+		/// <summary>
+		/// 
+		/// </summary>
+		/// <returns></returns>
 		public int GetMaxHospitalPages()
 		{
 			int MaxAdminPages;
@@ -139,7 +148,11 @@
 				this.Label1.Text = "<font color=red><b>对不起，暂时还没有管理员</b></font>";
 			}
 		}
-
+		/// <summary>
+		/// 
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
 		protected void Submit1_ServerClick(object sender, EventArgs e)
 		{
 			DeleteBLO deleteBLO = new DeleteBLO();
@@ -176,7 +189,11 @@
 				this.Response.Write(BaseSystem.ShowWindow("信息提示：请先选择要删除的医院！！"));
 			}
 		}
-
+		/// <summary>
+		/// 
+		/// </summary>
+		/// <param name="ID"></param>
+		/// <returns></returns>
 		public string ShowTxt(string ID)
 		{
 			string htmlstring = "";
@@ -193,7 +210,11 @@
 			// return htmlstring += "<input disabled name=\"Pid\" type=\"checkbox\" id=\"Checkbox24\"  onclick=\"if(this.checked){news" + AdminID + ".style.backgroundColor='#DBEAF5';}else{news" + AdminID + ".style.backgroundColor='#ffffff';}\" value=\"" + AdminID + "\">";
 			return htmlstring1 += "<input name=\"Pid\" type=\"checkbox\" id=\"Checkbox24\"  onclick=\"if(this.checked){news" + ID + ".style.backgroundColor='#DBEAF5';}else{news" + ID + ".style.backgroundColor='#ffffff';}\" value=\"" + ID + "\">";
 		}
-
+		/// <summary>
+		/// 
+		/// </summary>
+		/// <param name="ID"></param>
+		/// <returns></returns>
 		public string ShowRegionName(string ID)
 		{
 			int id = int.Parse(ID);

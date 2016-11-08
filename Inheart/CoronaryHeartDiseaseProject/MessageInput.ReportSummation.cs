@@ -5,6 +5,9 @@ namespace CoronaryHeartDiseaseProject
 	using DreamWork.BussinessLogic;
 	using DreamWork.ObjectModel;
 
+	/// <summary>
+	/// 
+	/// </summary>
 	public partial class MessageInput
 	{
 		#region ReportSummation
@@ -26,7 +29,9 @@ namespace CoronaryHeartDiseaseProject
 		public static Report_Summation reportSummation = null;
 
 		#region Set Report_Summation
-
+		/// <summary>
+		/// 
+		/// </summary>
 		private void SetReportSummation()
 		{
 			if (reportSummation == null)
@@ -91,7 +96,9 @@ namespace CoronaryHeartDiseaseProject
 			reportSummation.ZhuSuAndXianBingShiID = reportZhuSuAndXianBingShi.ID;
 			reportSummation.LinChuangZhuanGuiID = reportLinChuangZhuanGui.ID;
 		}
-
+		/// <summary>
+		/// 
+		/// </summary>
 		private void SetPerson()
 		{
 			if (person == null)
@@ -108,7 +115,9 @@ namespace CoronaryHeartDiseaseProject
 			person.Birthday = ConvertToDateTime(txbBirthDay.Text.ToString());// GetDateTimeValue(ddlYear, ddlMonth, ddlday);
 			person.Occupation = GetDropDownListValue(DropDownListJob);
 		}
-
+		/// <summary>
+		/// 
+		/// </summary>
 		private void SetReportLinChuangZhengZhuang()
 		{
 			if (reportZhuSuAndXianBingShi == null)
@@ -165,7 +174,9 @@ namespace CoronaryHeartDiseaseProject
 			//reportLinChuangZhengZhuang.LastedTime = txtLastedTime.Text.Trim().ToString();
 			//reportLinChuangZhengZhuang.LastedMinutes = txtLastedTimeMinutes.Text.Trim().ToString();
 		}
-
+		/// <summary>
+		/// 
+		/// </summary>
 		private void SetReportJiWangBingShi()
 		{
 			if (reportJiWangBingShi == null)
@@ -188,7 +199,9 @@ namespace CoronaryHeartDiseaseProject
 			reportJiWangBingShi.PeripheralVascularConfirm = GetRadioButtonListValue(rblPeripheralVascularConfirm);
 			reportJiWangBingShi.AnemiaOrOtherConfirm = GetRadioButtonListValue(rblAnemiaOrOtherConfirm);
 		}
-
+		/// <summary>
+		/// 
+		/// </summary>
 		private void SetReportChuBuZhengDuan()
 		{
 			if (reportChuBuZhenDuan == null)
@@ -226,7 +239,9 @@ namespace CoronaryHeartDiseaseProject
 			reportChuBuZhenDuan.BloodPressure = txtBloodPressure.Text.Trim().ToString();
 			reportChuBuZhenDuan.DiastolicPressure = txtDiastolicPressure.Text.Trim().ToString();
 		}
-
+		/// <summary>
+		/// 
+		/// </summary>
 		private void SetReportBinLiBanSuiZhuangTai()
 		{
 			if (reportBinLiBanSuiZhuangTai == null)
@@ -263,7 +278,9 @@ namespace CoronaryHeartDiseaseProject
 
 			reportBinLiBanSuiZhuangTai.KilipLevel = GetRadioButtonListValue(ddlKilipLever);
 		}
-
+		/// <summary>
+		/// 
+		/// </summary>
 		private void SetReportJinMaiRongShuan()
 		{
 			if (reportJinMaiRongShuan == null)
@@ -285,7 +302,9 @@ namespace CoronaryHeartDiseaseProject
 			reportJinMaiRongShuan.ReperfusionArrhythmia = chkReperfusionArrhythmia.Checked;
 			reportJinMaiRongShuan.TreatTime = GetRadioButtonListValue(rblTreatTime);
 		}
-
+		/// <summary>
+		/// 
+		/// </summary>
 		private void SetReportFuZhuYongYao()
 		{
 			if (reportFuZhuYongYao == null)
@@ -309,7 +328,9 @@ namespace CoronaryHeartDiseaseProject
 			reportFuZhuYongYao.ACEIConfirm = GetRadioButtonListValue(rblACEIConfirm);
 			reportFuZhuYongYao.BRBConfrim = GetRadioButtonListValue(rblBRBConfrim);
 		}
-
+		/// <summary>
+		/// 
+		/// </summary>
 		private void SetReportJieRuZhiLiao2()
 		{
 			if (reportJieRuZhiLiao == null)
@@ -324,7 +345,9 @@ namespace CoronaryHeartDiseaseProject
 			reportJieRuZhiLiao.D2BTime = txtD2BTime.Text.Trim().ToString();
 			reportJieRuZhiLiao.Succeed = GetRadioButtonListValue(rblSucceed);
 		}
-
+		/// <summary>
+		/// 
+		/// </summary>
 		private void SetReportLinChuangZhuanGui()
 		{
 			if (reportLinChuangZhuanGui == null)
@@ -370,7 +393,9 @@ namespace CoronaryHeartDiseaseProject
 			//reportTreatResult.UpHospitalLaboratory = GetRadioButtonListValue(rblUpHospitalLaboratory);
 			//reportTreatResult.CheckOutDate = ConvertToDateTime(txbCheckOutDate.Text.ToString());
 		}
-
+		/// <summary>
+		/// 
+		/// </summary>
 		private void SetReportJieRuZhiliao()
 		{
 			if (reportWeiJinXingJiZhenGuanMaiJieRuZhiLiao == null)
@@ -388,7 +413,9 @@ namespace CoronaryHeartDiseaseProject
 			reportWeiJinXingJiZhenGuanMaiJieRuZhiLiao.UnEmergencyCoronaryTreateForEmergency = chkUnEmergencyCoronaryTreateForEmergency.Checked;
 			reportWeiJinXingJiZhenGuanMaiJieRuZhiLiao.UnEmergencyCoronaryTreateForContraindication = chkUnEmergencyCoronaryTreateForContraindication.Checked;
 		}
-
+		/// <summary>
+		/// 
+		/// </summary>
 		private void SetReportJingMaiRongSuanLiYou()
 		{
 			if (reportWeiJinXingJingMaiRongSuanLiYou == null)
@@ -410,7 +437,9 @@ namespace CoronaryHeartDiseaseProject
 		#endregion Set Report_Summation
 
 		#region Init ReportSummation
-
+		/// <summary>
+		/// 
+		/// </summary>
 		private void InitReportSummation()
 		{
 			InitPerson();
@@ -438,7 +467,9 @@ namespace CoronaryHeartDiseaseProject
 				this.chkBlood.Checked = true;
 			}
 		}
-
+		/// <summary>
+		/// 
+		/// </summary>
 		private void InitPerson()
 		{
 			txtPatientName.Text = person.Name;
@@ -459,7 +490,9 @@ namespace CoronaryHeartDiseaseProject
 
 			SetDropDownListValue(person.Occupation, DropDownListJob);
 		}
-
+		/// <summary>
+		/// 
+		/// </summary>
 		private void InitReportLinChuangZhengZhuang()
 		{
 			SetRadioButtonListValue(reportZhuSuAndXianBingShi.ChestPainExist, rblChestPainExist);
@@ -510,7 +543,9 @@ namespace CoronaryHeartDiseaseProject
 			SetCheckBox(reportZhuSuAndXianBingShi.RelievingFactorsOther, chkRelievingFactorsOther);
 			SetCheckBox(reportZhuSuAndXianBingShi.RelievingFactorsRest, chkRelievingFactorsRest);
 		}
-
+		/// <summary>
+		/// 
+		/// </summary>
 		private void InitReportJiWangBingShi()
 		{
 			SetRadioButtonListValue(reportJiWangBingShi.HypertensionConfirm, rblHypertensionConfirm);
@@ -525,7 +560,9 @@ namespace CoronaryHeartDiseaseProject
 			SetRadioButtonListValue(reportJiWangBingShi.PeripheralVascularConfirm, rblPeripheralVascularConfirm);
 			SetRadioButtonListValue(reportJiWangBingShi.AnemiaOrOtherConfirm, rblAnemiaOrOtherConfirm);
 		}
-
+		/// <summary>
+		/// 
+		/// </summary>
 		private void InitReportChuBuZhengDuan()
 		{
 			txtFirstTimeHeartRate.Text = reportChuBuZhenDuan.FirstTimeHeartRate;
@@ -553,7 +590,9 @@ namespace CoronaryHeartDiseaseProject
 			txtBloodPressure.Text = reportChuBuZhenDuan.BloodPressure;
 			txtDiastolicPressure.Text = reportChuBuZhenDuan.DiastolicPressure;
 		}
-
+		/// <summary>
+		/// 
+		/// </summary>
 		private void InitReportBinLiBanSuiZhuangTai()
 		{
 			SetRadioButtonListValue(reportBinLiBanSuiZhuangTai.HypotensionExist, ddlHypotensionExist);
@@ -580,7 +619,9 @@ namespace CoronaryHeartDiseaseProject
 			SetRadioButtonListValue(reportBinLiBanSuiZhuangTai.OGLBExist, ddlOGLBExist);
 			SetRadioButtonListValue(reportBinLiBanSuiZhuangTai.KilipLevel, ddlKilipLever);
 		}
-
+		/// <summary>
+		/// 
+		/// </summary>
 		private void InitReportJinMaiRongShuan()
 		{
 			SetRadioButtonListValue(reportJinMaiRongShuan.Urokinase, rblUrokinase);
@@ -593,7 +634,9 @@ namespace CoronaryHeartDiseaseProject
 			SetCheckBox(reportJinMaiRongShuan.ReperfusionArrhythmia, chkReperfusionArrhythmia);
 			SetRadioButtonListValue(reportJinMaiRongShuan.TreatTime, rblTreatTime);
 		}
-
+		/// <summary>
+		/// 
+		/// </summary>
 		private void InitReportFuZhuYongYao()
 		{
 			SetRadioButtonListValue(reportFuZhuYongYao.AspirinDosage, rblAspirinDosage);
@@ -610,13 +653,17 @@ namespace CoronaryHeartDiseaseProject
 			SetRadioButtonListValue(reportFuZhuYongYao.ACEIConfirm, rblACEIConfirm);
 			SetRadioButtonListValue(reportFuZhuYongYao.BRBConfrim, rblBRBConfrim);
 		}
-
+		/// <summary>
+		/// 
+		/// </summary>
 		private void InitReportJieRuZhiLiao()
 		{
 			txtD2BTime.Text = reportJieRuZhiLiao.D2BTime;
 			SetRadioButtonListValue(reportJieRuZhiLiao.Succeed, rblSucceed);
 		}
-
+		/// <summary>
+		/// 
+		/// </summary>
 		private void InitReportTreatResult()
 		{
 			SetRadioButtonListValue(reportLinChuangZhuanGui.CPR, rblCPR);
@@ -665,7 +712,11 @@ namespace CoronaryHeartDiseaseProject
 		#endregion Init ReportSummation
 
 		#region Common Method
-
+		/// <summary>
+		/// 
+		/// </summary>
+		/// <param name="radioButtonList"></param>
+		/// <returns></returns>
 		private string GetRadioButtonListValue(RadioButtonList radioButtonList)
 		{
 			string value = string.Empty;
@@ -675,7 +726,11 @@ namespace CoronaryHeartDiseaseProject
 			}
 			return value;
 		}
-
+		/// <summary>
+		/// 
+		/// </summary>
+		/// <param name="dropDownList"></param>
+		/// <returns></returns>
 		private string GetDropDownListValue(DropDownList dropDownList)
 		{
 			string value = string.Empty;
@@ -685,7 +740,11 @@ namespace CoronaryHeartDiseaseProject
 			}
 			return value;
 		}
-
+		/// <summary>
+		/// 
+		/// </summary>
+		/// <param name="dateTime"></param>
+		/// <returns></returns>
 		private string SetDateTime(DateTime? dateTime)
 		{
 			if (dateTime == null)
@@ -697,7 +756,11 @@ namespace CoronaryHeartDiseaseProject
 				return dateTime.ToString();
 			}
 		}
-
+		/// <summary>
+		/// 
+		/// </summary>
+		/// <param name="dateTime"></param>
+		/// <returns></returns>
 		private DateTime? ConvertToDateTime(string dateTime)
 		{
 			try
@@ -709,7 +772,11 @@ namespace CoronaryHeartDiseaseProject
 				return null;
 			}
 		}
-
+		/// <summary>
+		/// 
+		/// </summary>
+		/// <param name="value"></param>
+		/// <param name="radioButtonList"></param>
 		private void SetRadioButtonListValue(string value, RadioButtonList radioButtonList)
 		{
 			if (string.IsNullOrEmpty(value))
@@ -727,7 +794,11 @@ namespace CoronaryHeartDiseaseProject
 				}
 			}
 		}
-
+		/// <summary>
+		/// 
+		/// </summary>
+		/// <param name="value"></param>
+		/// <param name="dropDownList"></param>
 		private void SetDropDownListValue(string value, DropDownList dropDownList)
 		{
 			if (string.IsNullOrEmpty(value))
@@ -744,7 +815,11 @@ namespace CoronaryHeartDiseaseProject
 				}
 			}
 		}
-
+		/// <summary>
+		/// 
+		/// </summary>
+		/// <param name="value"></param>
+		/// <param name="dropDownList"></param>
 		private void SetNummeralDropDownList(string value, DropDownList dropDownList)
 		{
 			for (int i = 0; i < dropDownList.Items.Count; i++)
@@ -757,7 +832,11 @@ namespace CoronaryHeartDiseaseProject
 				}
 			}
 		}
-
+		/// <summary>
+		/// 
+		/// </summary>
+		/// <param name="value"></param>
+		/// <param name="checkBox"></param>
 		private void SetCheckBox(bool? value, CheckBox checkBox)
 		{
 			if (value == null)
@@ -769,7 +848,13 @@ namespace CoronaryHeartDiseaseProject
 				checkBox.Checked = Boolean.Parse(value.ToString());
 			}
 		}
-
+		/// <summary>
+		/// 
+		/// </summary>
+		/// <param name="ddlYear"></param>
+		/// <param name="ddlMonth"></param>
+		/// <param name="ddlDay"></param>
+		/// <returns></returns>
 		private DateTime GetDateTimeValue(DropDownList ddlYear, DropDownList ddlMonth, DropDownList ddlDay)
 		{
 			DateTime dt;
@@ -809,7 +894,13 @@ namespace CoronaryHeartDiseaseProject
 
 			return dt;
 		}
-
+		/// <summary>
+		/// 
+		/// </summary>
+		/// <param name="ddlYear"></param>
+		/// <param name="ddlMonth"></param>
+		/// <param name="ddlDay"></param>
+		/// <param name="dateTime"></param>
 		private void SetDateTimeValue(DropDownList ddlYear, DropDownList ddlMonth, DropDownList ddlDay, DateTime? dateTime)
 		{
 			DateTime dt = new DateTime();
@@ -838,7 +929,15 @@ namespace CoronaryHeartDiseaseProject
 
 			SetNummeralDropDownList(valDay.ToString(), ddlDay);
 		}
-
+		/// <summary>
+		/// 
+		/// </summary>
+		/// <param name="ddlYear"></param>
+		/// <param name="ddlMonth"></param>
+		/// <param name="ddlDay"></param>
+		/// <param name="ddlHour"></param>
+		/// <param name="ddlMinute"></param>
+		/// <returns></returns>
 		private DateTime GetDateTimeValue(DropDownList ddlYear, DropDownList ddlMonth, DropDownList ddlDay, DropDownList ddlHour, DropDownList ddlMinute)
 		{
 			DateTime dt;
@@ -891,7 +990,15 @@ namespace CoronaryHeartDiseaseProject
 
 			return dt;
 		}
-
+		/// <summary>
+		/// 
+		/// </summary>
+		/// <param name="ddlYear"></param>
+		/// <param name="ddlMonth"></param>
+		/// <param name="ddlDay"></param>
+		/// <param name="ddlHour"></param>
+		/// <param name="ddlMinute"></param>
+		/// <param name="dateTime"></param>
 		private void SetDateTimeValue(DropDownList ddlYear, DropDownList ddlMonth, DropDownList ddlDay, DropDownList ddlHour, DropDownList ddlMinute, DateTime? dateTime)
 		{
 			DateTime dt = new DateTime();
@@ -928,7 +1035,11 @@ namespace CoronaryHeartDiseaseProject
 		}
 
 		#endregion Common Method
-
+		/// <summary>
+		/// 
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
 		protected void btnSave_Click(object sender, EventArgs e)
 		{
 			if (Page.IsValid)
@@ -956,7 +1067,11 @@ namespace CoronaryHeartDiseaseProject
 				}
 			}
 		}
-
+		/// <summary>
+		/// 
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
 		protected void btnSubmit_Click(object sender, EventArgs e)
 		{
 			if (Page.IsValid)
@@ -984,6 +1099,10 @@ namespace CoronaryHeartDiseaseProject
 			}
 		}
 
+		/// <summary>
+		/// 
+		/// </summary>
+		/// <param name="isSubmit"></param>
 		private void SaveReportSummation(bool isSubmit)
 		{
 			SetReportSummation();
@@ -1006,6 +1125,9 @@ namespace CoronaryHeartDiseaseProject
 			//   RestReportData();
 		}
 
+		/// <summary>
+		/// 
+		/// </summary>
 		private void RestReportData()
 		{
 			person = null;
@@ -1019,6 +1141,9 @@ namespace CoronaryHeartDiseaseProject
 			reportSummation = null;
 		}
 
+		/// <summary>
+		/// 
+		/// </summary>
 		private void InitReport()
 		{
 			isLocked = bool.Parse(Request.QueryString["IsLocked"]);
@@ -1061,6 +1186,9 @@ namespace CoronaryHeartDiseaseProject
 			}
 		}
 
+		/// <summary>
+		/// 
+		/// </summary>
 		protected void SetControlVisible1()
 		{
 			if (rblCPR.Text == "有")
@@ -1189,6 +1317,9 @@ namespace CoronaryHeartDiseaseProject
 			#endregion 接诊时临床症状
 		}
 
+		/// <summary>
+		/// 
+		/// </summary>
 		protected void SetControlVisible()
 		{
 			this.rdbThrombolysisTreateConfirm_SelectedIndexChanged(null, null);

@@ -4,14 +4,20 @@
 	using System.Web.UI;
 	using DreamWork.ObjectModel;
 	using DreamWork.BussinessLogic;
-
+	/// <summary>
+	/// 
+	/// </summary>
 	public partial class ModifyHospital : System.Web.UI.Page
 	{
 		public string MenuListCheckBox;
 		uint hospitalID = 0;
 		public string hospitalNameOriginal = string.Empty;
 		public string comment = string.Empty;
-
+		/// <summary>
+		/// 
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
 		protected void Page_Load(object sender, EventArgs e)
 		{
 			if (!Page.IsPostBack)
@@ -19,7 +25,9 @@
 				this.GetHospitalName();
 			}
 		}
-
+		/// <summary>
+		/// 
+		/// </summary>
 		private void GetHospitalName()
 		{
 			string id = this.Request.QueryString["ID"];
@@ -36,7 +44,11 @@
 				comment = hos.Description;
 			}
 		}
-
+		/// <summary>
+		/// 
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
 		protected void Submit1_ServerClick(object sender, EventArgs e)
 		{
 			this.GetHospitalName();

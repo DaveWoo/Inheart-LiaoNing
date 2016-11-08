@@ -103,7 +103,6 @@
     <Content Include="Images\liaoning2.png" />
     <Content Include="Images\va_page_05.jpg" />
     <Content Include="MessageInputDetail.aspx" />
-    <Content Include="MessageManageReporting.aspx" />
     <Content Include="Images\alertInfo.png" />
     <Content Include="Images\bar1.gif" />
     <Content Include="Images\bg.gif" />
@@ -407,13 +406,6 @@
       <DependentUpon>MessageInputDetail.aspx</DependentUpon>
     </Compile>
     <Compile Include="Help\2Excel.cs" />
-    <Compile Include="MessageManageReporting.aspx.cs">
-      <DependentUpon>MessageManageReporting.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="MessageManageReporting.aspx.designer.cs">
-      <DependentUpon>MessageManageReporting.aspx</DependentUpon>
-    </Compile>
     <Compile Include="MessageInput.aspx.cs">
       <DependentUpon>MessageInput.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

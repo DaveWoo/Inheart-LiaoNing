@@ -4,7 +4,9 @@ namespace CoronaryHeartDiseaseProject.Admin
 	using System.Collections.Generic;
 	using System.Web.UI;
 	using DreamWork.BussinessLogic;
-
+	/// <summary>
+	/// 
+	/// </summary>
 	public partial class UserManage : System.Web.UI.Page
 	{
 		public int PageSize = 12;
@@ -14,7 +16,11 @@ namespace CoronaryHeartDiseaseProject.Admin
 		public int PageStartIndex;
 		private static SiteUser userAdmin;
 		private List<SiteUser> userList;
-
+		/// <summary>
+		/// 
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
 		protected void Page_Load(object sender, EventArgs e)
 		{
 			if (!Page.IsPostBack)
@@ -55,7 +61,10 @@ namespace CoronaryHeartDiseaseProject.Admin
 				}
 			}
 		}
-
+		/// <summary>
+		/// 
+		/// </summary>
+		/// <returns></returns>
 		public int GetMaxUserPages()
 		{
 			int MaxAdminPages;
@@ -76,7 +85,7 @@ namespace CoronaryHeartDiseaseProject.Admin
 		}
 
 		/// <summary>
-		/// nn
+		/// 
 		/// </summary>
 		public void ShowBottomUrl()
 		{
@@ -141,7 +150,11 @@ namespace CoronaryHeartDiseaseProject.Admin
 				this.Label1.Text = "<font color=red><b>对不起，暂时还没有用户</b></font>";
 			}
 		}
-
+		/// <summary>
+		/// 
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
 		protected void Submit1_ServerClick(object sender, EventArgs e)
 		{
 			// Delete all selected hospital
@@ -177,7 +190,11 @@ namespace CoronaryHeartDiseaseProject.Admin
 				this.Response.Write(BaseSystem.ShowWindow("信息提示：请先选择要删除的医院！！"));
 			}
 		}
-
+		/// <summary>
+		/// 
+		/// </summary>
+		/// <param name="ID"></param>
+		/// <returns></returns>
 		public string ShowTxt(string ID)
 		{
 			string htmlstring = "";

@@ -5,7 +5,9 @@
 	using System.Web.UI;
 	using DreamWork.BussinessLogic;
 	using DreamWork.ObjectModel;
-
+	/// <summary>
+	/// 
+	/// </summary>
 	public partial class AdminManage : System.Web.UI.Page
 	{
 		public int PageSize = 12;
@@ -13,7 +15,11 @@
 		public int MaxAdminPages;
 		public int PageStartIndex;
 		public int TotalNums;
-
+		/// <summary>
+		/// 
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
 		protected void Page_Load(object sender, EventArgs e)
 		{
 			if (!Page.IsPostBack)
@@ -52,7 +58,10 @@
 				}
 			}
 		}
-
+		/// <summary>
+		/// 
+		/// </summary>
+		/// <returns></returns>
 		public int GetMaxAdminPages()
 		{
 			int MaxAdminPages;
@@ -134,7 +143,11 @@
 				this.Label1.Text = "<font color=red><b>对不起，暂时还没有管理员</b></font>";
 			}
 		}
-
+		/// <summary>
+		/// 
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
 		protected void Submit1_ServerClick(object sender, EventArgs e)
 		{
 			// Delete all selected hospital
@@ -170,7 +183,11 @@
 				this.Response.Write(BaseSystem.ShowWindow("信息提示：请先选择要删除的医院！！"));
 			}
 		}
-
+		/// <summary>
+		/// 
+		/// </summary>
+		/// <param name="ID"></param>
+		/// <returns></returns>
 		public string ShowRegionName(string ID)
 		{
 			int id = int.Parse(ID);
@@ -182,7 +199,11 @@
 				return region.RegionName;
 			}
 		}
-
+		/// <summary>
+		/// 
+		/// </summary>
+		/// <param name="ID"></param>
+		/// <returns></returns>
 		public string ShowTxt(string ID)
 		{
 			string htmlstring = "";

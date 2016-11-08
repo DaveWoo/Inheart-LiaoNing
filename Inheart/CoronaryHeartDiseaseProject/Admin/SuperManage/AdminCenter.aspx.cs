@@ -2,13 +2,24 @@
 {
 	using System;
 	using DreamWork.BussinessLogic;
-
+	/// <summary>
+	/// 
+	/// </summary>
 	public partial class AdminCenter : System.Web.UI.Page
 	{
+		/// <summary>
+		/// 
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
 		protected void Page_Load(object sender, EventArgs e)
 		{
 		}
-
+		/// <summary>
+		/// 
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
 		protected void Submit1_SavePassword_ServerClick(object sender, EventArgs e)
 		{
 			// 获取当前管理员的用户名和密码

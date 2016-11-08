@@ -5,11 +5,17 @@
 	using System.Web.UI.WebControls;
 	using DreamWork.BussinessLogic;
 	using DreamWork.ObjectModel;
-
+	/// <summary>
+	/// 
+	/// </summary>
 	public partial class AddAdmin : System.Web.UI.Page
 	{
 		public string MenuListCheckBox;
-
+		/// <summary>
+		/// 
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
 		protected void Page_Load(object sender, EventArgs e)
 		{
 			if (!Page.IsPostBack)
@@ -26,7 +32,11 @@
 				}
 			}
 		}
-
+		/// <summary>
+		/// 
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
 		protected void Submit1_ServerClick(object sender, EventArgs e)
 		{
 			string userName = Request.Form["username"].Trim();

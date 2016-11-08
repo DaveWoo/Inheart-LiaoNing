@@ -5,10 +5,16 @@
 	using System.Web.UI.WebControls;
 	using DreamWork.BussinessLogic;
 
+	/// <summary>
+	/// 病例报告类
+	/// </summary>
 	public class Report
 	{
 		private static Dictionary<string, string> fieldList = new Dictionary<string, string>();
 
+		/// <summary>
+		/// 初始化病例
+		/// </summary>
 		public static Dictionary<string, string> SetInitSource()
 		{
 			#region 基本信息
@@ -207,15 +213,25 @@
 			HeaderList.Add("TransUpHospitalDate", "患者转上级医院时间");
 
 			#endregion 临床转归
-	
+
+			#region 修改信息
+
 			HeaderList.Add("CreateDate", "创建时间");
 			HeaderList.Add("LastUpdateDate", "最后更新日期");
 			HeaderList.Add("Creater", "病例录入者");
 			HeaderList.Add("HospitalName", "所在医院名称");
 
+			#endregion 修改信息
+
 			return HeaderList;
 		}
 
+		/// <summary>
+		/// 数据绑定
+		/// </summary>
+		/// <param name="gridView">表格1信息</param>
+		/// <param name="user">用户信息</param>
+		/// <param name="gridView2">复制表格1信息</param>
 		public static void BindingData(GridView gridView, SiteUser user, ref GridView gridView2)
 		{
 			gridView.AllowPaging = false;
@@ -230,6 +246,11 @@
 			gridView.DataBind();
 		}
 
+		/// <summary>
+		/// 数据绑定
+		/// </summary>
+		/// <param name="gridView">表格1信息</param>
+		/// <param name="user">用户信息</param>
 		public static void BindingData(GridView gridView, SiteUser user)
 		{
 			gridView.AllowPaging = false;
@@ -242,6 +263,11 @@
 			gridView.DataBind();
 		}
 
+		/// <summary>
+		/// 获得所有病例报告
+		/// </summary>
+		/// <param name="user">用户信息</param>
+		/// <returns返回指定用户的所有病例报告></returns>
 		public static List<MedicalReportSource> GetAllReportSummation(SiteUser user)
 		{
 			List<MedicalReportSource> medicalReportSourceList = new List<MedicalReportSource>();
@@ -253,6 +279,11 @@
 			return medicalReportSourceList;
 		}
 
+		/// <summary>
+		/// 获得病例类的属性
+		/// </summary>
+		/// <param name="item">病例实例</param>
+		/// <param name="parentName">属性名称</param>
 		public static void GetProperty(object item, string parentName)
 		{
 			foreach (var property in item.GetType().GetProperties())
@@ -264,6 +295,7 @@
 				{
 					continue;
 				}
+				// 获得实例信息
 				if (property.PropertyType.BaseType.Name == "EntityObject"
 					&& property.Name != parentName
 					&& !item.GetType().Equals(property.PropertyType)
@@ -280,6 +312,11 @@
 			}
 		}
 
+		/// <summary>
+		/// 给指定实例的属性设定值
+		/// </summary>
+		/// <param name="property">属性名称</param>
+		/// <param name="parentName">指定属性的上级名字</param>
 		public static void SetListItems(System.Reflection.PropertyInfo property, string parentName)
 		{
 			string fieldName = string.Empty;
@@ -304,6 +341,11 @@
 			}
 		}
 
+		/// <summary>
+		/// 绑定数据
+		/// </summary>
+		/// <param name="gridView">表格1信息</param>
+		/// <param name="HeaderList">待绑定的值</param>
 		public static void SetDataBind(GridView gridView, Dictionary<string, string> HeaderList)
 		{
 			foreach (var key in HeaderList.Keys)
@@ -319,7 +361,9 @@
 					fieldName = fieldList[key];
 				}
 
+				// 绑定表体
 				boundField.ItemTemplate = new GridViewTemplate(DataControlRowType.DataRow, headerText, fieldName, null);
+				// 绑定表头
 				boundField.HeaderTemplate = new GridViewTemplate(DataControlRowType.Header, headerText, fieldName, null);
 				gridView.Columns.Add(boundField);
 			}

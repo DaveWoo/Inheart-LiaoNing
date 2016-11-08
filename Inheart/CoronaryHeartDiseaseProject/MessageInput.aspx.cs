@@ -9,11 +9,19 @@
 	using DreamWork.BussinessLogic;
 	using DreamWork.ObjectModel;
 
+	/// <summary>
+	///
+	/// </summary>
 	public partial class MessageInput : System.Web.UI.Page
 	{
 		public static Person currentPerson;
 		private MedicalReportBLO medicalReportBLO = new MedicalReportBLO();
 
+		/// <summary>
+		///
+		/// </summary>
+		/// <param name="controls"></param>
+		/// <returns></returns>
 		private string CheckControlValue(ControlCollection controls)
 		{
 			StringBuilder errorMessage = new StringBuilder();
@@ -96,10 +104,11 @@
 			return errorMessage.ToString();
 		}
 
-		protected void BirthChanged(object sender, EventArgs e)
-		{
-		}
-
+		/// <summary>
+		///
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
 		protected void Page_Load(object sender, EventArgs e)
 		{
 			if (!Page.IsPostBack)
@@ -116,14 +125,25 @@
 			}
 		}
 
+		/// <summary>
+		/// 出生日期事件
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
 		protected void txbBirthDay_TextChanged(object sender, EventArgs e)
 		{
 			if (!string.IsNullOrEmpty(txbBirthDay.Text))
 			{
+				// 自动计算年龄
 				this.txtAge.Text = (DateTime.Now.Year - Convert.ToDateTime(txbBirthDay.Text).Year).ToString();
 			}
 		}
 
+		/// <summary>
+		///
+		/// </summary>
+		/// <param name="input"></param>
+		/// <returns></returns>
 		private bool CheckBoolValue(object input)
 		{
 			bool result = false;
@@ -138,6 +158,11 @@
 			return result;
 		}
 
+		/// <summary>
+		///
+		/// </summary>
+		/// <param name="input"></param>
+		/// <returns></returns>
 		private int ConvertToInt(string input)
 		{
 			int result = 0;
@@ -145,6 +170,11 @@
 			return result;
 		}
 
+		/// <summary>
+		///
+		/// </summary>
+		/// <param name="input"></param>
+		/// <returns></returns>
 		private string ConvertToString(object input)
 		{
 			if (input == null)
@@ -172,6 +202,13 @@
 				return false;
 		}
 
+		/// <summary>
+		///
+		/// </summary>
+		/// <param name="year"></param>
+		/// <param name="monty"></param>
+		/// <param name="day"></param>
+		/// <returns></returns>
 		protected DropDownList BindDateForDays(DropDownList year, DropDownList monty, DropDownList day)
 		{
 			System.Collections.Generic.IEnumerable<int> days = null;
@@ -211,20 +248,11 @@
 			return day;
 		}
 
-		protected void ddlMonth_SelectedIndexChanged(object sender, EventArgs e)
-		{
-			#region Birthday
-
-			//this.BindDateForDays(ddlYear, ddlMonth, ddlday);
-
-			if (!string.IsNullOrEmpty(txbBirthDay.Text))
-			{
-				this.txtAge.Text = (DateTime.Now.Year - Convert.ToInt32(txbBirthDay.Text)).ToString();
-			}
-
-			#endregion Birthday
-		}
-
+		/// <summary>
+		///
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
 		protected void ddlMonthDisease_SelectedIndexChanged(object sender, EventArgs e)
 		{
 			#region Disease start time
@@ -234,6 +262,11 @@
 			#endregion Disease start time
 		}
 
+		/// <summary>
+		///
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
 		protected void ddlMonthFirstBackTime_SelectedIndexChanged(object sender, EventArgs e)
 		{
 			#region Fisrt back  time
@@ -243,6 +276,11 @@
 			#endregion Fisrt back  time
 		}
 
+		/// <summary>
+		///
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
 		protected void ddlMonthFirstGetBloodTime_SelectedIndexChanged(object sender, EventArgs e)
 		{
 			#region Get First blood time
@@ -252,6 +290,11 @@
 			#endregion Get First blood time
 		}
 
+		/// <summary>
+		///
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
 		protected void ddlMonthFirstImage_SelectedIndexChanged(object sender, EventArgs e)
 		{
 			#region Fisrt image start time
@@ -261,6 +304,11 @@
 			#endregion Fisrt image start time
 		}
 
+		/// <summary>
+		///
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
 		protected void ddlMonthTranseferDate_SelectedIndexChanged(object sender, EventArgs e)
 		{
 			#region trnsfer start time
@@ -270,6 +318,11 @@
 			#endregion trnsfer start time
 		}
 
+		/// <summary>
+		///
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
 		protected void ddlMonthTreat_SelectedIndexChanged(object sender, EventArgs e)
 		{
 			#region Treat start time
@@ -281,6 +334,11 @@
 
 		#region Visible Contrls
 
+		/// <summary>
+		///
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
 		protected void chkBlood_CheckedChanged(object sender, EventArgs e)
 		{
 			if (this.chkBlood.Checked)
@@ -295,6 +353,11 @@
 			}
 		}
 
+		/// <summary>
+		///
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
 		protected void chkThrombolyticForDisagree_CheckedChanged(object sender, EventArgs e)
 		{
 			//if (chkThrombolyticForDisagree.Text == "有")
@@ -307,6 +370,11 @@
 			//}
 		}
 
+		/// <summary>
+		///
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
 		protected void ddlArrhythmiaExist_SelectedIndexChanged(object sender, EventArgs e)
 		{
 			if (this.ddlArrhythmiaExist.Text == "有")
@@ -334,6 +402,11 @@
 			}
 		}
 
+		/// <summary>
+		///
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
 		protected void ddlDiseaseTime_SelectedIndexChanged(object sender, EventArgs e)
 		{
 			//if (ddlDiseaseTimeState.Text == "已知")
@@ -346,28 +419,11 @@
 			//}
 		}
 
-		protected void ddlMonthVisit_SelectedIndexChanged(object sender, EventArgs e)
-		{
-			#region Visit date
-
-			//this.BindDateForDays(ddlYearVisit, ddlMonthVisit, ddlDayVisit);
-
-			//if (!string.IsNullOrEmpty(ddlYear.SelectedValue))
-			//{
-			//    this.ddlYearFirstImage.Text = ddlYear.SelectedValue;
-			//    this.ddlYearFirstGetBloodTime.Text = ddlYear.SelectedValue;
-			//    this.ddlYearFisrtBackTime.Text = ddlYear.SelectedValue;
-			//}
-			//if (!string.IsNullOrEmpty(ddlMonth.SelectedValue))
-			//{
-			//    this.ddlMonthFirstImage.Text = ddlMonth.SelectedValue;
-			//    this.ddlMonthFirstGetBloodTime.Text = ddlMonth.SelectedValue;
-			//    this.ddlMonthFirstBackTime.Text = ddlMonth.SelectedValue;
-			//}
-
-			#endregion Visit date
-		}
-
+		/// <summary>
+		///
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
 		protected void rblCerebralHemorrhageConfirm_SelectedIndexChanged(object sender, EventArgs e)
 		{
 			if (rblCerebralHemorrhageConfirm.Text == "肯定")
@@ -381,6 +437,11 @@
 			}
 		}
 
+		/// <summary>
+		///
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
 		protected void rblConcomitantSymptomExist_SelectedIndexChanged(object sender, EventArgs e)
 		{
 			if (rblConcomitantSymptomExist.Text == "有")
@@ -394,6 +455,11 @@
 			}
 		}
 
+		/// <summary>
+		///
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
 		protected void rblConnectUpHospitalConfirm_SelectedIndexChanged(object sender, EventArgs e)
 		{
 			//if (this.rblConnectUpHospitalConfirm.Text == "是")
@@ -406,6 +472,11 @@
 			//}
 		}
 
+		/// <summary>
+		///
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
 		protected void rblCPR_SelectedIndexChanged(object sender, EventArgs e)
 		{
 			if (rblCPR.Text == "是")
@@ -418,6 +489,11 @@
 			}
 		}
 
+		/// <summary>
+		///
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
 		protected void rblGlycuresisConfirm_SelectedIndexChanged(object sender, EventArgs e)
 		{
 			if (rblGlycuresisConfirm.Text == "肯定")
@@ -432,6 +508,11 @@
 			}
 		}
 
+		/// <summary>
+		///
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
 		protected void rblHypertensionConfirm_SelectedIndexChanged(object sender, EventArgs e)
 		{
 			if (rblHypertensionConfirm.Text == "肯定")
@@ -446,6 +527,11 @@
 			}
 		}
 
+		/// <summary>
+		///
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
 		protected void rblIncentiveExist_SelectedIndexChanged(object sender, EventArgs e)
 		{
 			if (rblIncentiveExist.Text == "有")
@@ -459,6 +545,11 @@
 			}
 		}
 
+		/// <summary>
+		///
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
 		protected void rblLoadStatinUsed_SelectedIndexChanged(object sender, EventArgs e)
 		{
 			if (rblLoadStatinUsed.Text == "是")
@@ -478,6 +569,11 @@
 			}
 		}
 
+		/// <summary>
+		///
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
 		protected void rblPositionExist_SelectedIndexChanged(object sender, EventArgs e)
 		{
 			if (rblPositionExist.Text == "有")
@@ -491,6 +587,11 @@
 			}
 		}
 
+		/// <summary>
+		///
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
 		protected void rblRadiationPainExist_SelectedIndexChanged(object sender, EventArgs e)
 		{
 			if (rblRadiationPainExist.Text == "有")
@@ -504,6 +605,11 @@
 			}
 		}
 
+		/// <summary>
+		///
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
 		protected void rdbThrombolysisTreateConfirm_SelectedIndexChanged1(object sender, EventArgs e)
 		{
 			if (rdbThrombolysisTreateConfirm.Text == "是")
@@ -518,6 +624,11 @@
 			}
 		}
 
+		/// <summary>
+		///
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
 		protected void rblTransUpHospitalConfirm_SelectedIndexChanged(object sender, EventArgs e)
 		{
 			if (rblTransUpHospitalConfirm.Text == "是")
@@ -530,6 +641,11 @@
 			}
 		}
 
+		/// <summary>
+		///
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
 		protected void rblTreatResult_SelectedIndexChanged(object sender, EventArgs e)
 		{
 			if (rblTreatResult.Text == "死亡")
@@ -550,6 +666,11 @@
 			}
 		}
 
+		/// <summary>
+		///
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
 		protected void rdAcuteST_CheckedChanged(object sender, EventArgs e)
 		{
 			if (rdAcuteST.Checked)
@@ -569,6 +690,11 @@
 			}
 		}
 
+		/// <summary>
+		///
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
 		protected void rdAcuteST_UnCheckedChanged(object sender, EventArgs e)
 		{
 			this.rdAcuteST.Checked = false;
@@ -576,6 +702,10 @@
 
 		#endregion Visible Contrls
 
+		/// <summary>
+		///
+		/// </summary>
+		/// <param name="isEnable"></param>
 		protected void EnableExpendContent(bool isEnable)
 		{
 			//   this.PanelrblChestPainType.Visible = isEnable;
@@ -603,6 +733,11 @@
 
 		#endregion Dave
 
+		/// <summary>
+		///
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
 		protected void rdbThrombolysisTreateConfirm_SelectedIndexChanged(object sender, EventArgs e)
 		{
 			if (rdbThrombolysisTreateConfirm.Text == "否")
@@ -615,12 +750,22 @@
 			}
 		}
 
+		/// <summary>
+		///
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
 		protected void niaoJiMei_CheckedChanged(object sender, EventArgs e)
 		{
 			this.rblAlteplase.Text = null;
 			this.rblReteplase.Text = null;
 		}
 
+		/// <summary>
+		///
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
 		protected void aiTiPuMei_CheckedChanged(object sender, EventArgs e)
 		{
 			this.rblUrokinase.Text = null;
@@ -628,6 +773,11 @@
 			this.txtUrokinaseOther.Text = null;
 		}
 
+		/// <summary>
+		///
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
 		protected void ruiTiPuMei_CheckedChanged(object sender, EventArgs e)
 		{
 			this.rblUrokinase.Text = null;
@@ -635,6 +785,11 @@
 			this.txtUrokinaseOther.Text = null;
 		}
 
+		/// <summary>
+		///
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
 		protected void rblReteplase_SelectedIndexChanged(object sender, EventArgs e)
 		{
 			this.ruiTiPuMei.Checked = true;
@@ -644,6 +799,11 @@
 			this.aiTiPuMei.Checked = false;
 		}
 
+		/// <summary>
+		///
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
 		protected void rblAlteplase_SelectedIndexChanged(object sender, EventArgs e)
 		{
 			this.aiTiPuMei.Checked = true;
@@ -653,6 +813,11 @@
 			this.ruiTiPuMei.Checked = false;
 		}
 
+		/// <summary>
+		///
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
 		protected void rblUrokinase_SelectedIndexChanged(object sender, EventArgs e)
 		{
 			this.niaoJiMei.Checked = true;
@@ -662,6 +827,11 @@
 			this.aiTiPuMei.Checked = false;
 		}
 
+		/// <summary>
+		///
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
 		protected void btnEnterPrint_Click(object sender, EventArgs e)
 		{
 			string htmlstring = string.Empty;
