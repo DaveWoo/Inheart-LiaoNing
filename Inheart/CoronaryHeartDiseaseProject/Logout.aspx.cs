@@ -1,4 +1,7 @@
-﻿public partial class Logout : System.Web.UI.Page
+﻿/// <summary>
+/// 注销类
+/// </summary>
+public partial class Logout : System.Web.UI.Page
 {
 	/// <summary>
 	/// 页面加载

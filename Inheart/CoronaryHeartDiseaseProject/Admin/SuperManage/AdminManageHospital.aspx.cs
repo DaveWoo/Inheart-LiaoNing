@@ -4,6 +4,7 @@
 	using System.Collections.Generic;
 	using DreamWork.BussinessLogic;
 	using DreamWork.ObjectModel;
+
 	/// <summary>
 	/// 医院管理类
 	/// </summary>
@@ -14,6 +15,7 @@
 		public int MaxAdminPages;
 		public int TotalNums;
 		public int PageStartIndex;
+
 		/// <summary>
 		/// 页面加载
 		/// </summary>
@@ -61,6 +63,7 @@
 				}
 			}
 		}
+
 		/// <summary>
 		/// 获得做多医院的页数
 		/// </summary>
@@ -146,15 +149,13 @@
 				this.Label1.Text = "<font color=red><b>对不起，暂时还没有管理员</b></font>";
 			}
 		}
+
 		/// <summary>
-		/// 
+		/// 删除管理员
 		/// </summary>
-		/// <param name="sender"></param>
-		/// <param name="e"></param>
 		protected void Submit1_ServerClick(object sender, EventArgs e)
 		{
 			DeleteBLO deleteBLO = new DeleteBLO();
-			// Delete all selected hospital
 			string AllDelItems;
 			AllDelItems = this.Request.Form["Pid"];
 			if (AllDelItems != null)
@@ -187,11 +188,12 @@
 				this.Response.Write(BaseSystem.ShowWindow("信息提示：请先选择要删除的医院！！"));
 			}
 		}
+
 		/// <summary>
-		/// 
+		/// 显示操作信息
 		/// </summary>
-		/// <param name="ID"></param>
-		/// <returns></returns>
+		/// <param name="ID">病例ID</param>
+		/// <returns>返回可操作的html</returns>
 		public string ShowTxt(string ID)
 		{
 			string htmlstring = "";
@@ -208,11 +210,12 @@
 			// return htmlstring += "<input disabled name=\"Pid\" type=\"checkbox\" id=\"Checkbox24\"  onclick=\"if(this.checked){news" + AdminID + ".style.backgroundColor='#DBEAF5';}else{news" + AdminID + ".style.backgroundColor='#ffffff';}\" value=\"" + AdminID + "\">";
 			return htmlstring1 += "<input name=\"Pid\" type=\"checkbox\" id=\"Checkbox24\"  onclick=\"if(this.checked){news" + ID + ".style.backgroundColor='#DBEAF5';}else{news" + ID + ".style.backgroundColor='#ffffff';}\" value=\"" + ID + "\">";
 		}
+
 		/// <summary>
-		/// 
+		/// 显示地域信息
 		/// </summary>
-		/// <param name="ID"></param>
-		/// <returns></returns>
+		/// <param name="ID">地域ID</param>
+		/// <returns>返回地域信息</returns>
 		public string ShowRegionName(string ID)
 		{
 			int id = int.Parse(ID);

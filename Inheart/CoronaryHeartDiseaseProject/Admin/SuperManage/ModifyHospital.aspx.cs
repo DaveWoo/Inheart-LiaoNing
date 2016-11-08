@@ -2,17 +2,19 @@
 {
 	using System;
 	using System.Web.UI;
-	using DreamWork.ObjectModel;
 	using DreamWork.BussinessLogic;
+	using DreamWork.ObjectModel;
+
 	/// <summary>
-	/// 
+	/// 医院修改类
 	/// </summary>
 	public partial class ModifyHospital : System.Web.UI.Page
 	{
 		public string MenuListCheckBox;
-		uint hospitalID = 0;
+		private uint hospitalID = 0;
 		public string hospitalNameOriginal = string.Empty;
 		public string comment = string.Empty;
+
 		/// <summary>
 		/// 页面加载
 		/// </summary>
@@ -23,8 +25,9 @@
 				this.GetHospitalName();
 			}
 		}
+
 		/// <summary>
-		/// 
+		/// 获得医院名称
 		/// </summary>
 		private void GetHospitalName()
 		{
@@ -42,11 +45,10 @@
 				comment = hos.Description;
 			}
 		}
+
 		/// <summary>
-		/// 
+		/// 医院信息修改
 		/// </summary>
-		/// <param name="sender"></param>
-		/// <param name="e"></param>
 		protected void Submit1_ServerClick(object sender, EventArgs e)
 		{
 			this.GetHospitalName();
@@ -75,6 +77,7 @@
 				bool isSucess = uint.TryParse(id, out hospitalID);
 			}
 
+			// 修改医院具体信息
 			string message = string.Empty;
 			bool isSuccess = SiteManagement.UpdateHospital(hospitalID, hospitalname, comment, out message);
 

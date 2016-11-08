@@ -4,8 +4,9 @@ namespace CoronaryHeartDiseaseProject.Admin
 	using System.Collections.Generic;
 	using System.Web.UI;
 	using DreamWork.BussinessLogic;
+
 	/// <summary>
-	/// 
+	/// 用户管理中心类
 	/// </summary>
 	public partial class UserManage : System.Web.UI.Page
 	{
@@ -16,6 +17,7 @@ namespace CoronaryHeartDiseaseProject.Admin
 		public int PageStartIndex;
 		private static SiteUser userAdmin;
 		private List<SiteUser> userList;
+
 		/// <summary>
 		/// 页面加载
 		/// </summary>
@@ -59,10 +61,11 @@ namespace CoronaryHeartDiseaseProject.Admin
 				}
 			}
 		}
+
 		/// <summary>
-		/// 
+		/// 获得最大页面数
 		/// </summary>
-		/// <returns></returns>
+		/// <returns>返回最大页面数</returns>
 		public int GetMaxUserPages()
 		{
 			int MaxAdminPages;
@@ -83,7 +86,7 @@ namespace CoronaryHeartDiseaseProject.Admin
 		}
 
 		/// <summary>
-		/// 
+		/// 显示文章列表的页码
 		/// </summary>
 		public void ShowBottomUrl()
 		{
@@ -148,14 +151,12 @@ namespace CoronaryHeartDiseaseProject.Admin
 				this.Label1.Text = "<font color=red><b>对不起，暂时还没有用户</b></font>";
 			}
 		}
+
 		/// <summary>
-		/// 
+		/// 提交删除操作
 		/// </summary>
-		/// <param name="sender"></param>
-		/// <param name="e"></param>
 		protected void Submit1_ServerClick(object sender, EventArgs e)
 		{
-			// Delete all selected hospital
 			string AllDelItems;
 			AllDelItems = this.Request.Form["Pid"];
 			if (AllDelItems != null)
@@ -188,25 +189,23 @@ namespace CoronaryHeartDiseaseProject.Admin
 				this.Response.Write(BaseSystem.ShowWindow("信息提示：请先选择要删除的医院！！"));
 			}
 		}
+
 		/// <summary>
-		/// 
+		/// 显示操作信息
 		/// </summary>
-		/// <param name="ID"></param>
-		/// <returns></returns>
+		/// <param name="ID">病例ID</param>
+		/// <returns>返回可操作的html</returns>
 		public string ShowTxt(string ID)
 		{
 			string htmlstring = "";
 			string htmlstring1 = "";
 
 			htmlstring += "<img src=\"../../images/EditNews.png\" alt='修改' title='修改' border=\"0\">&nbsp;";
-
 			htmlstring += "<img src=\"../../images/DelNews.png\" alt='删除' title='删除' border=\"0\">&nbsp;";
-
 			htmlstring1 = "<a href=\"ModifyUser.aspx?ID=" + ID + "\">";
 			htmlstring1 += "<img src=\"../../images/EditNews.png\" alt='修改' title='修改' border=\"0\"></a>&nbsp; <a href=\"?action=del&ID=" + ID + "\" onclick=\"return confirm('确认要删除？');\">";
 			htmlstring1 += "<img src=\"../../images/DelNews.png\" alt='删除' title='删除' border=\"0\"></a>&nbsp;";
 
-			// return htmlstring += "<input disabled name=\"Pid\" type=\"checkbox\" id=\"Checkbox24\"  onclick=\"if(this.checked){news" + AdminID + ".style.backgroundColor='#DBEAF5';}else{news" + AdminID + ".style.backgroundColor='#ffffff';}\" value=\"" + AdminID + "\">";
 			return htmlstring1 += "<input name=\"Pid\" type=\"checkbox\" id=\"Checkbox24\"  onclick=\"if(this.checked){news" + ID + ".style.backgroundColor='#DBEAF5';}else{news" + ID + ".style.backgroundColor='#ffffff';}\" value=\"" + ID + "\">";
 		}
 	}

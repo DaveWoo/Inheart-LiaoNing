@@ -3,19 +3,19 @@ namespace CoronaryHeartDiseaseProject.Admin
 	using System;
 	using System.Web.UI;
 	using DreamWork.BussinessLogic;
+
 	/// <summary>
-	/// 
+	/// 修改用户密码类
 	/// </summary>
 	public partial class ModifyUser : System.Web.UI.Page
 	{
 		public string Username, Password, MenuListCheckBox;
 		public string userName = string.Empty;
 		private static SiteUser userNormal;
+
 		/// <summary>
 		/// 页面加载
 		/// </summary>
-		/// <param name="sender"></param>
-		/// <param name="e"></param>
 		protected void Page_Load(object sender, EventArgs e)
 		{
 			if (!Page.IsPostBack)
@@ -35,11 +35,10 @@ namespace CoronaryHeartDiseaseProject.Admin
 				}
 			}
 		}
+
 		/// <summary>
-		/// 
+		/// 提交用户密码修改
 		/// </summary>
-		/// <param name="sender"></param>
-		/// <param name="e"></param>
 		protected void Submit1_ServerClick(object sender, EventArgs e)
 		{
 			string username = Request.Form["username"].Trim();

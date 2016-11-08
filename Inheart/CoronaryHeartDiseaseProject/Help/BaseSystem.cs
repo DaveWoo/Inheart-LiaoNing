@@ -45,6 +45,15 @@
 
 		#region 数据绑定
 
+		/// <summary>
+		/// 绑定病例集合数据
+		/// </summary>
+		/// <typeparam name="T">模板</typeparam>
+		/// <param name="dataList">数据集合</param>
+		/// <param name="bindingData">绑定数据</param>
+		/// <param name="DataStartIndex">数据开始索引</param>
+		/// <param name="PageStartIndex">页面开始索引</param>
+		/// <param name="PageSize">页面尺寸</param>
 		public static void BindProduceData<T>(System.Web.UI.WebControls.DataList dataList, List<T> bindingData, int DataStartIndex, int PageStartIndex, int PageSize)
 		{
 			List<T> bindingList = new List<T>();

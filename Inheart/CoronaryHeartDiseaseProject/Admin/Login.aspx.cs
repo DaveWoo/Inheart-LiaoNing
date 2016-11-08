@@ -2,8 +2,9 @@
 {
 	using System;
 	using DreamWork.BussinessLogic;
+
 	/// <summary>
-	/// 
+	/// 管理员登陆类
 	/// </summary>
 	public partial class AdminLogin : System.Web.UI.Page
 	{

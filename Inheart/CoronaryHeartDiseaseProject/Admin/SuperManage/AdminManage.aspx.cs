@@ -150,7 +150,6 @@
 		/// </summary>
 		protected void Submit1_ServerClick(object sender, EventArgs e)
 		{
-			// Delete all selected hospital
 			string AllDelItems;
 			AllDelItems = this.Request.Form["Pid"];
 			if (AllDelItems != null)

@@ -2,19 +2,19 @@
 {
 	using System;
 	using DreamWork.BussinessLogic;
+
 	/// <summary>
-	/// 
+	/// 修改管理员密码类
 	/// </summary>
 	public partial class ModifyAdmin : System.Web.UI.Page
 	{
 		public string Username, Password, MenuListCheckBox;
 		public string UserName = string.Empty;
 		private static SiteUser userNormal;
+
 		/// <summary>
 		/// 页面加载
 		/// </summary>
-		/// <param name="sender"></param>
-		/// <param name="e"></param>
 		protected void Page_Load(object sender, EventArgs e)
 		{
 			if (!Page.IsPostBack)
@@ -34,11 +34,10 @@
 				}
 			}
 		}
+
 		/// <summary>
-		/// 
+		/// 提交管理员密码修改
 		/// </summary>
-		/// <param name="sender"></param>
-		/// <param name="e"></param>
 		protected void Submit1_ServerClick(object sender, EventArgs e)
 		{
 			string username = Request.Form["username"].Trim();

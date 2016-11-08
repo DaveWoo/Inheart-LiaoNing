@@ -16,8 +16,6 @@ namespace CoronaryHeartDiseaseProject.Admin
 		/// <summary>
 		/// 
 		/// </summary>
-		/// <param name="sender"></param>
-		/// <param name="e"></param>
 		protected void Submit1_ServerClick(object sender, EventArgs e)
 		{
 			// 获取当前管理员的用户名和密码

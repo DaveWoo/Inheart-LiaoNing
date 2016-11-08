@@ -1,29 +1,26 @@
 namespace CoronaryHeartDiseaseProject.Admin
 {
 	using System;
-	using System.Web.UI;
 	using DreamWork.BussinessLogic;
+
 	/// <summary>
-	/// 
+	/// 添加用户类
 	/// </summary>
 	public partial class AddUser : System.Web.UI.Page
 	{
 		public string MenuListCheckBox;
 		private static SiteUser userAdmin;
+
 		/// <summary>
 		/// 页面加载
 		/// </summary>
 		protected void Page_Load(object sender, EventArgs e)
 		{
-			if (!Page.IsPostBack)
-			{
-			}
 		}
+
 		/// <summary>
-		/// 
+		/// 添加新用户事件
 		/// </summary>
-		/// <param name="sender"></param>
-		/// <param name="e"></param>
 		protected void Submit1_ServerClick(object sender, EventArgs e)
 		{
 			string userName = Request.Form["username"].Trim();

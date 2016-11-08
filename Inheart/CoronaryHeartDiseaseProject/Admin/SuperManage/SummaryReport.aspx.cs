@@ -6,8 +6,9 @@
 	using System.Linq;
 	using System.Web.UI.DataVisualization.Charting;
 	using DreamWork.BussinessLogic;
+
 	/// <summary>
-	/// 
+	/// 病例报告类
 	/// </summary>
 	public partial class SummaryReport : System.Web.UI.Page
 	{
@@ -35,6 +36,7 @@
 
 		public static double AvaAge;
 		public static string Equation;
+
 		/// <summary>
 		/// 页面加载
 		/// </summary>
@@ -100,11 +102,10 @@
 				}
 			}
 		}
+
 		/// <summary>
-		/// 
+		/// 页面显示控制
 		/// </summary>
-		/// <param name="sender"></param>
-		/// <param name="e"></param>
 		protected void Go_Click(object sender, EventArgs e)
 		{
 			#region set start/end time
@@ -145,10 +146,11 @@
 
 			#endregion set start/end time
 		}
+
 		/// <summary>
-		/// 
+		/// 获得资源
 		/// </summary>
-		/// <param name="user"></param>
+		/// <param name="user">用户信息</param>
 		private void GetMainSource(SiteUser user)
 		{
 			List<MedicalReportSource> medicalReportSourceListAll = Report.GetAllReportSummation(user);
@@ -165,11 +167,9 @@
 				endTime = d;
 			}
 
-
 			var v1 = medicalReportSourceListAll.FindAll(p =>
 				(p.ReportSummation.CreateDate != null)
 					  && p.ReportSummation.CreateDate < endTime).ToList();
-
 
 			var v2 = medicalReportSourceListAll.FindAll(p =>
 					   (p.ReportSummation.CreateDate != null)
@@ -224,19 +224,11 @@
 
 			EndTime = endTime.ToShortDateString();
 		}
+
 		/// <summary>
-		/// 
+		/// 设定显示年龄
 		/// </summary>
-		/// <returns></returns>
-		private Dictionary<string, int> SetDisplayForSum()
-		{
-			Total = medicalReportSourceList.Count();
-			return null;
-		}
-		/// <summary>
-		/// 
-		/// </summary>
-		/// <returns></returns>
+		/// <returns>返回年龄分布列表</returns>
 		private Dictionary<string, int> SetDisplayForAge()
 		{
 			Dictionary<string, int> dicTemp = new Dictionary<string, int>();
@@ -273,10 +265,11 @@
 
 			return dicTemp;
 		}
+
 		/// <summary>
-		/// 
+		/// 设定显示性别
 		/// </summary>
-		/// <returns></returns>
+		/// <returns>返回性别集合</returns>
 		private Dictionary<string, int> SetDisplayForSex()
 		{
 			Dictionary<string, int> dicTemp = new Dictionary<string, int>();
@@ -313,10 +306,11 @@
 
 			return dicTemp;
 		}
+
 		/// <summary>
-		/// 
+		/// 设定显示溶栓人数
 		/// </summary>
-		/// <returns></returns>
+		/// <returns>返回溶栓人数列表</returns>
 		private Dictionary<string, int> SetDisplayForThrombolysis()
 		{
 			Dictionary<string, int> dicTemp = new Dictionary<string, int>();
@@ -331,10 +325,11 @@
 			}
 			return dicTemp;
 		}
+
 		/// <summary>
-		/// 
+		/// 设定显示急诊介入人数
 		/// </summary>
-		/// <returns></returns>
+		/// <returns>返回急诊介入人数列表</returns>
 		private Dictionary<string, int> SetDisplayForEmergencyTreate()
 		{
 			Male = medicalReportSourceList.Where(p => p.ReportLinChuangZhuanGui.EmergencyCoronaryTreateConfirm == "是" && p.Person.Sex == "男").Count();
@@ -349,10 +344,11 @@
 			}
 			return dicTemp;
 		}
+
 		/// <summary>
-		/// 
+		/// 设定显示死亡人数
 		/// </summary>
-		/// <returns></returns>
+		/// <returns>返回死亡人数列表</returns>
 		private Dictionary<string, int> SetDisplayForDeathCount()
 		{
 			Male = medicalReportSourceList.Where(p => p.ReportLinChuangZhuanGui.TreatResult == "死亡" && p.Person.Sex == "男").Count();
@@ -367,10 +363,11 @@
 			}
 			return dicTemp;
 		}
+
 		/// <summary>
-		/// 
+		/// 设定转上级医院人数
 		/// </summary>
-		/// <returns></returns>
+		/// <returns>返回转上级医院人数列表</returns>
 		private Dictionary<string, int> SetDisplayForTransUpHospitalConfirm()
 		{
 			Male = medicalReportSourceList.Where(p => p.ReportLinChuangZhuanGui.TransUpHospitalConfirm == "是" && p.Person.Sex == "男").Count();
@@ -385,12 +382,13 @@
 			}
 			return dicTemp;
 		}
+
 		/// <summary>
-		/// 
+		/// 图表生成
 		/// </summary>
-		/// <param name="values"></param>
-		/// <param name="imgName"></param>
-		/// <returns></returns>
+		/// <param name="values">图表值</param>
+		/// <param name="imgName">图表名</param>
+		/// <returns>图标图片</returns>
 		private string GenerateRSDistributionChartImage(Dictionary<string, int> values, string imgName)
 		{
 			string imgUrl = AppDomain.CurrentDomain.BaseDirectory + "Images\\";

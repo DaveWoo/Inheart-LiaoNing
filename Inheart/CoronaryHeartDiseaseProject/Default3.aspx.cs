@@ -2,13 +2,14 @@
 using DreamWork.BussinessLogic;
 
 /// <summary>
-/// 
+/// 病例首页
 /// </summary>
 public partial class index : System.Web.UI.Page
 {
 	public string UserName = string.Empty;
 	public string UserRole = string.Empty;
 	public string HospitalName = string.Empty;
+
 	/// <summary>
 	/// 页面加载
 	/// </summary>

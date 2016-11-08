@@ -5,7 +5,7 @@
 	using DreamWork.ObjectModel;
 	using System.Collections.Generic;
 	/// <summary>
-	/// 
+	/// 用户登陆类
 	/// </summary>
 	public partial class Login : System.Web.UI.Page
 	{
@@ -14,6 +14,7 @@
 		string hospitialName;
 		protected void Page_Load(object sender, EventArgs e)
 		{
+			// 地区
 			hospitialRegion = Request.QueryString["hr"];
 			hospitialName = Request.QueryString["hn"];
 
@@ -22,6 +23,7 @@
 			{
 				return;
 			}
+			// 医院名称
 			HospitalRegion = region.RegionName;
 			List<Hospital> hospitialList = SiteManagement.GetAllHospital(hospitialRegion);
 			foreach (var item in hospitialList)
@@ -35,7 +37,7 @@
 			}
 		}
 		/// <summary>
-		/// 
+		/// 提交用户登陆信息
 		/// </summary>
 		/// <param name="sender"></param>
 		/// <param name="e"></param>

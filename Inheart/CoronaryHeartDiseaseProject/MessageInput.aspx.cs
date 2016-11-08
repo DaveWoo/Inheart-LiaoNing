@@ -10,7 +10,7 @@
 	using DreamWork.ObjectModel;
 
 	/// <summary>
-	///
+	///病例录入类
 	/// </summary>
 	public partial class MessageInput : System.Web.UI.Page
 	{
