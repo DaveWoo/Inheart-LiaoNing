@@ -87,19 +87,19 @@
                                             </ul>
                                             <div id="left_menu_cnt3" class="left_menu_cnt">
                                                 <ul id="dleft_tab3">
-                                                    <li id="now21"><a title="患者总人数" onclick="show_title('患者总人数')" href="SuperManage/SummaryReport.aspx?type=Sum"
+                                                    <li id="row21"><a title="患者总人数" onclick="show_title('患者总人数')" href="SuperManage/SummaryReport.aspx?type=Sum"
                                                         target="content3"><span>患者总人数</span></a></li>
-                                                    <li id="now22"><a title="患者性别" onclick="show_title('患者性别')" href="SuperManage/SummaryReport.aspx?type=Sex"
+                                                    <li id="row22"><a title="患者性别" onclick="show_title('患者性别')" href="SuperManage/SummaryReport.aspx?type=Sex"
                                                         target="content3"><span>患者性别</span></a></li>
-                                                    <li id="now23"><a title="患者年龄" onclick="show_title('患者年龄')" href="SuperManage/SummaryReport.aspx?type=Age"
+                                                    <li id="row23"><a title="患者年龄" onclick="show_title('患者年龄')" href="SuperManage/SummaryReport.aspx?type=Age"
                                                         target="content3"><span>患者年龄</span></a></li>
-                                                    <li id="now24"><a title="溶栓人数" onclick="show_title('溶栓人数')" href="SuperManage/SummaryReport.aspx?type=ThrombolysisCount"
+                                                    <li id="row24"><a title="溶栓人数" onclick="show_title('溶栓人数')" href="SuperManage/SummaryReport.aspx?type=ThrombolysisCount"
                                                         target="content3"><span>溶栓人数</span></a></li>
-                                                    <li id="now25"><a title="急诊介入人数" onclick="show_title('急诊介入')" href="SuperManage/SummaryReport.aspx?type=EmergencyTreate"
+                                                    <li id="row25"><a title="急诊介入人数" onclick="show_title('急诊介入')" href="SuperManage/SummaryReport.aspx?type=EmergencyTreate"
                                                         target="content3"><span>急诊介入人数</span></a></li>
-                                                    <li id="now26"><a title="死亡人数" onclick="show_title('死亡人数')" href="SuperManage/SummaryReport.aspx?type=DeathCount"
+                                                    <li id="row26"><a title="死亡人数" onclick="show_title('死亡人数')" href="SuperManage/SummaryReport.aspx?type=DeathCount"
                                                         target="content3"><span>死亡人数</span></a></li>
-                                                    <li id="now27"><a title="转上级医院患者数" onclick="show_title('转上级医院')" href="SuperManage/SummaryReport.aspx?type=TransferUpHospitalCount"
+                                                    <li id="row27"><a title="转上级医院患者数" onclick="show_title('转上级医院')" href="SuperManage/SummaryReport.aspx?type=TransferUpHospitalCount"
                                                         target="content3"><span>转上级医院患者数</span></a></li>
                                                 </ul>
                                             </div>

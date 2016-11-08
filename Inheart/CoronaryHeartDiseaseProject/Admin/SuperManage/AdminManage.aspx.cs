@@ -136,7 +136,7 @@
 					}
 				}
 				HtmlSelectString += "</select>";
-				this.Label1.Text = "共有<font color=red><b>" + TotalNums + "</b></font>条记录 每页显示<font color=red><b>" + PageSize + "</b></font> 条 共<font color=red><b>" + MaxAdminPages + "</b></font>页 当前页 <font color=red><b>" + AdminPagePageID + "</b></font>/" + MaxAdminPages +
+				this.Label1.Text = "共有<span class=badge><b>" + TotalNums + "</b></span>条记录 每页显示<span class=badge><b>" + PageSize + "</b></span> 条 共<span class=badge><b>" + MaxAdminPages + "</b></span>页 当前页 <span class='badge'><b>" + AdminPagePageID + "/" + MaxAdminPages + "</b></span>" +
 					"页" + HtmlFirstString + HtmlPrevString + HtmlNextString + HtmlLastString + HtmlSelectString;
 			}
 			else

@@ -28,9 +28,8 @@
             </tr>
         </table>
         <form id="Form1" name="listform" runat="server" onsubmit="return confirm('确认要执行此操作？');">
-            <asp:Label ID="Label1" runat="server"></asp:Label>&nbsp;
-   
-        <a href="../../Help/">Help</a><asp:DataList ID="DataListHospital" runat="server" Width="100%">
+            <asp:Label ID="Label1" runat="server"></asp:Label>&nbsp;   
+            <asp:DataList ID="DataListHospital" runat="server" Width="100%">
             <HeaderTemplate>
                 <table width="100%" border="0" align="left" cellpadding="3" cellspacing="1" class="tableborder">
                     <tr class="header">
