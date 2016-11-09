@@ -59,17 +59,17 @@ var pageInitModule = (function (mod) {
             $(this).parent().siblings().find(".sub-menu").slideUp();
             $(this).parent().find(".sub-menu").slideToggle();
         })
-        var _strcurrenturl = window.location.href.toLowerCase();
+        var _frameUrl = $("iframe[name='content3']")[0].src;
         $(".sidebar a[href]").each(function () {
-            var tag = $(this).attr("href").toLowerCase();
+            var tag = $(this).attr("href");
             var isActive = false;
             $(".breadcrumb>li a[href]").each(function (index) {
-                if (tag == $(this).attr("href").toLowerCase()) {
+                if (tag == $(this).attr("href")) {
                     isActive = true;
                     return false;
                 }
             })
-            if (_strcurrenturl.indexOf(tag) > -1 || isActive) {
+            if (_frameUrl.indexOf(tag) > -1 || isActive) {
                 $(this).parent().addClass("active");
                 if ($(this).parents("ul").attr("class") == "sub-menu") {
                     $(this).parents("ul").slideDown();
@@ -82,21 +82,21 @@ var pageInitModule = (function (mod) {
 })(window.pageInitModule || {});
 
 /* 左侧菜单 */
-function border_left(left_tabid) {
+function border_left(navOjb) {
     var oItem = $('.nav li');
     for (var i = 0; i < oItem.length; i++) {
         $(oItem[i]).removeClass("active")
     }
-    $(left_tabid).parent().addClass("active");
-    if ($(left_tabid).parents("ul").attr("class") == "sub-menu") {
-        $(left_tabid).parents("ul").slideDown();
-        $(left_tabid).parents(".has-sub").addClass("active");
+    $(navOjb).parent().addClass("active");
+    if ($(navOjb).parents("ul").attr("class") == "sub-menu") {
+        $(navOjb).parents("ul").slideDown();
+        $(navOjb).parents(".has-sub").addClass("active");
     }
 }
 
 
 //修改标题
-function show_title(str, left_tabid) {
-    document.getElementById("spanTitle").innerHTML = str;
-    border_left(left_tabid);
+function show_title(str, navOjb) {
+    document.getElementById("title").innerHTML = str;
+    border_left(navOjb);
 }

@@ -49,7 +49,7 @@ INPUT
 {
     font-size: 14px;
     vertical-align: middle;
-    font-family: tahoma,Arial,Helvetica,sans-serif;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
 P
@@ -70,7 +70,7 @@ BODY
     color: #222;
     word-break: break-all;
     line-height: 150%;
-    font-family: Arial,tahoma,Helvetica,sans-serif;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
     height: 100%;
     text-align: center;
 }

@@ -23,7 +23,7 @@
     -webkit-overflow-scrolling: -blackberry-touch;
     border-right: 1px solid #ccc;
     overflow-y: auto;
-    overflow-x: hidden;
+    overflow-x: auto;
     height: 100%;
 }
 
@@ -140,10 +140,8 @@
 }
 
 .tabContent {
-    position: fixed;
     left: 0;
     top: 50px;
-    margin-left: 220px;
     padding: 0;
     background-color: #f1f1f1;
     -webkit-overflow-scrolling: touch;

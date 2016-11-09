@@ -46,7 +46,7 @@ BODY
     scrollbar-3dlight-color: #cccccc;
     scrollbar-arrow-color: #330000;
     scrollbar-track-color: #fefefe;
-    font-family: Tahoma,Ariall,ËÎÌו;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
     scrollbar-darkshadow-color: #ffffff;
     background-color: #ffffff;
 }
@@ -76,7 +76,7 @@ TD
 .subTitleTip
 {
     color: #999999;
-    font-family: "ËÎÌו" , Verdana, Arial, Helvetica, sans-serif;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size: 14px;
 }
 .colorHave
@@ -231,7 +231,7 @@ TH
     color: Black;
     height: 30px;
     text-align: center;
-    font-family: Tahoma,Ariall,ËÎÌו;
+   font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
 .foot
@@ -817,7 +817,7 @@ FORM
     background: #24B1DC;
     filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr='#84B0DC',endColorstr='#ffffff', gradientType='0')progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='#8b9b99', Positive='true');
     color: black;
-    font-family: Comic Sans MS;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size: 14px;
     font-weight: bold;
     cursor: pointer;
@@ -830,7 +830,7 @@ FORM
     background: #24B1DC;
     filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr='#84B0DC',endColorstr='#ffffff', gradientType='0')progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='#8b9b99', Positive='true');
     color: black;
-    font-family: Comic Sans MS;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size: 18px;
     font-weight: bold;
     cursor: pointer;
@@ -846,7 +846,7 @@ FORM
     background: #24B1DC;
     filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr='#84B0DC',endColorstr='#ffffff', gradientType='0')progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='#8b9b99', Positive='true');
     color: black;
-    font-family: Comic Sans MS;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size: 18px;
     font-weight: bold;
     cursor: pointer;

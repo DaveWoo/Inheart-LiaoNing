@@ -245,7 +245,6 @@
     <Content Include="Styles\default.css" />
     <Content Include="Styles\main.css" />
     <Content Include="Admin\Default.aspx" />
-    <Content Include="Scripts\menu.js" />
     <Content Include="Styles\Site.css" />
     <Content Include="UserCenter.aspx" />
     <Content Include="Verfiy.aspx" />

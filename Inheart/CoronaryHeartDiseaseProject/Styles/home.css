@@ -1,11 +1,10 @@
 ﻿html, body {
     height: 100%;
     margin: 0px;
-    background-image: url(../images/va_page_05.jpg);
     background-repeat: repeat-x;
     background-position: bottom;
-    background-color: #EDF5FA;
     font-size: 18px;
+    background-color: #f1f1f1;
 }
 
 A:link {
@@ -107,6 +106,6 @@ li {
     padding-left: 0px;
     background-image: url(../images/win_top2.png);
     clear: both;
-    font-family: 微软雅黑;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
     margin-right: auto;
 }

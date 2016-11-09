@@ -10,8 +10,8 @@
     <base onmouseover="window.status='辽宁省冠心病急救网络信息平台';return true" />
     <title>辽宁省冠心病急救网络信息平台 -- 系统登陆</title>
 </head>
-<body>
-    <form name="form1" id="form1" runat="server">
+<body style="background-color: #f1f1f1;">
+    <form name="form1" id="form1" runat="server" >
         <table style="margin-top: 90px;" width="320" border="0" align="center" cellpadding="3" cellspacing="1" class="tableborder">
             <tr class="headerLongin">
                 <td height="30" colspan="2">
