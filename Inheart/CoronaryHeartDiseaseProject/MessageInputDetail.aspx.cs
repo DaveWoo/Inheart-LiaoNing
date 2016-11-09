@@ -23,7 +23,7 @@
 				{
 					InitReport();
 				}
-				SetControlVisible1();
+				SetControlVisible();
 			}
 		}
 	}

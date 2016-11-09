@@ -69,6 +69,9 @@
 			}
 		}
 
+		/// <summary>
+		/// 数据绑定
+		/// </summary>
 		private void FirstName_DataBinding(Object sender, EventArgs e)
 		{
 			if (string.IsNullOrWhiteSpace(dataField))

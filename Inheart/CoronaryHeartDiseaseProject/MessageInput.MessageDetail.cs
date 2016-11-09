@@ -6,11 +6,11 @@ namespace CoronaryHeartDiseaseProject
 	using DreamWork.ObjectModel;
 
 	/// <summary>
-	///
+	/// 病例显示类
 	/// </summary>
 	public partial class MessageDetail
 	{
-		#region ReportSummation
+		#region 初始化病例数据
 
 		private Person person = null;
 		public static Report_ZhuSuAndXianBingShi reportZhuSuAndXianBingShi = null;
@@ -23,13 +23,14 @@ namespace CoronaryHeartDiseaseProject
 		public static Report_WeiJinXingJiZhenGuanMaiJieRuZhiLiao reportWeiJinXingJiZhenGuanMaiJieRuZhiLiao = null;
 		public static Report_WeiJinXingJingMaiRongSuanLiYou reportWeiJinXingJingMaiRongSuanLiYou = null;
 		public static Report_JieRuZhiLiao reportJieRuZhiLiao = null;
-
 		public static Report_Summation reportSummation = null;
 
-		#region Init ReportSummation
+		#endregion 初始化病例数据
+
+		#region 设置设定报告数据
 
 		/// <summary>
-		///
+		/// 初始化设定报告数据
 		/// </summary>
 		private void InitReportSummation()
 		{
@@ -43,44 +44,22 @@ namespace CoronaryHeartDiseaseProject
 			InitReportJieRuZhiLiao();
 			InitReportTreatResult();
 
-			//SetDropDownListValue(reportSummation.DiseaseTimeState, ddlDiseaseTimeState);
-			//SetDateTimeValue(ddlYearDiseaseStartTime, ddlMonthDiseaseStartTime, ddlDayDiseaseStartTime, ddlHourDiseaseStartTime, ddlMinutesDiseaseStartTime, reportSummation.DiseaseTime);
-			//SetDateTimeValue(ddlYearVisit, ddlMonthVisit, ddlDayVisit, ddlHourVisit, ddlMinutesVisit, reportSummation.TreatDate);
 			txtDiseaseHour.Text = reportSummation.DiseaseHour.ToString();
 			txbTreatTime.Text = SetDateTime(reportSummation.TreatDate);
 			txtDiseaseHour.Text = reportSummation.DiseaseHour.ToString();
-			SetLabelValue(reportSummation.TrafficWay, ddlTrafficWay);
-			SetLabelValue(reportSummation.DiseaseDescriber, ddlDiseaseDescriber);
-			SetLabelValue(reportSummation.Reliability, ddlReliability);
-
-			if (!string.IsNullOrEmpty(reportJinMaiRongShuan.Bleed))
-			{
-				// this.chkBlood.Checked = true;
-			}
+			SetLabelValueNonEmpty(reportSummation.TrafficWay, ddlTrafficWay);
+			SetLabelValueNonEmpty(reportSummation.DiseaseDescriber, ddlDiseaseDescriber);
+			SetLabelValueNonEmpty(reportSummation.Reliability, ddlReliability);
 		}
 
 		/// <summary>
-		///
-		/// </summary>
-		/// <param name="value"></param>
-		/// <param name="label"></param>
-		private void SetLabelValue(string value, Label label)
-		{
-			if (string.IsNullOrEmpty(value))
-			{
-				return;
-			}
-			label.Text = value;
-		}
-
-		/// <summary>
-		///
+		/// 初始化病人基本信息
 		/// </summary>
 		private void InitPerson()
 		{
 			txtPatientName.Text = person.Name;
-			SetLabelValue(person.Sex, dropDownSex);
-			SetLabelValue(person.Nationality, dropNationality);
+			SetLabelValueNonEmpty(person.Sex, dropDownSex);
+			SetLabelValueNonEmpty(person.Nationality, dropNationality);
 			if (person.Birthday != null)
 			{
 				txbBirthDay.Text = person.Birthday.Value.ToString("yyyy-MM-dd");
@@ -94,55 +73,45 @@ namespace CoronaryHeartDiseaseProject
 				this.txtAge.Text = (DateTime.Now.Year - Convert.ToDateTime(txbBirthDay.Text).Year).ToString();
 			}
 
-			SetLabelValue(person.Occupation, DropDownListJob);
+			SetLabelValueNonEmpty(person.Occupation, DropDownListJob);
 		}
 
 		/// <summary>
-		///
+		/// 初始化临床症状
 		/// </summary>
 		private void InitReportLinChuangZhengZhuang()
 		{
-			SetLabelValue2(reportZhuSuAndXianBingShi.ChestPainExist, rblChestPainExist);
-			// SetRadioButtonListValue(reportLinChuangZhengZhuang.ChestPainType, rblChestPainType);
-			SetLabelValue2(reportZhuSuAndXianBingShi.IncentiveExist, rblIncentiveExist);
+			SetLabelValue(reportZhuSuAndXianBingShi.ChestPainExist, rblChestPainExist);
+			SetLabelValue(reportZhuSuAndXianBingShi.IncentiveExist, rblIncentiveExist);
 			SetCheckBox(reportZhuSuAndXianBingShi.IncentiveTypeColdStimulation, chkIncentiveTypeColdStimulation);
 			SetCheckBox(reportZhuSuAndXianBingShi.IncentiveTypeDefecate, chkIncentiveTypeDefecate);
 			SetCheckBox(reportZhuSuAndXianBingShi.IncentiveTypeEatMuch, chkIncentiveTypeEatMuch);
 			SetCheckBox(reportZhuSuAndXianBingShi.IncentiveTypeExcite, chkIncentiveTypeExcite);
 			SetCheckBox(reportZhuSuAndXianBingShi.IncentiveTypeOther, chkIncentiveTypeOther);
 			SetCheckBox(reportZhuSuAndXianBingShi.IncentiveTypePhysical, chkIncentiveTypePhysical);
-
-			SetLabelValue2(reportZhuSuAndXianBingShi.PositionExist, rblPositionExist);
+			SetLabelValue(reportZhuSuAndXianBingShi.PositionExist, rblPositionExist);
 			SetCheckBox(reportZhuSuAndXianBingShi.PositionTypeBelowXiphoid, chkPositionTypeBelowXiphoid);
 			SetCheckBox(reportZhuSuAndXianBingShi.PositionTypeChest, chkPositionTypeChest);
 			SetCheckBox(reportZhuSuAndXianBingShi.PositionTypeOther, chkPositionTypeOther);
 			SetCheckBox(reportZhuSuAndXianBingShi.PositionTypePrecordium, chkPositionTypePrecordium);
 			SetCheckBox(reportZhuSuAndXianBingShi.PositionTypeShoulder, chkPositionTypeShoulder);
-
 			SetCheckBox(reportZhuSuAndXianBingShi.IncentiveTypeColdStimulation, chkIncentiveTypeColdStimulation);
 			SetCheckBox(reportZhuSuAndXianBingShi.IncentiveTypeColdStimulation, chkIncentiveTypeColdStimulation);
-
-			//txtLastedTime.Text = reportLinChuangZhengZhuang.LastedTime;
-			//txtLastedTimeMinutes.Text = reportLinChuangZhengZhuang.LastedMinutes;
-
 			SetCheckBox(reportZhuSuAndXianBingShi.PropertiesTypeChestCut, chkPropertiesTypeChestCut);
 			SetCheckBox(reportZhuSuAndXianBingShi.PropertiesTypeChestPain, chkPropertiesTypeChestPain);
 			SetCheckBox(reportZhuSuAndXianBingShi.PropertiesTypeOther, chkPropertiesTypeOther);
 			SetCheckBox(reportZhuSuAndXianBingShi.PropertiesTypePharyngeal, chkPropertiesTypePharyngeal);
-
-			SetLabelValue2(reportZhuSuAndXianBingShi.RadiationPainExist, rblRadiationPainExist);
+			SetLabelValue(reportZhuSuAndXianBingShi.RadiationPainExist, rblRadiationPainExist);
 			SetCheckBox(reportZhuSuAndXianBingShi.RadiationPainTypeEpigastralgia, chkRadiationPainTypeEpigastralgia);
 			SetCheckBox(reportZhuSuAndXianBingShi.RadiationPainTypeLeftShoulder, chkRadiationPainTypeLeftShoulder);
 			SetCheckBox(reportZhuSuAndXianBingShi.RadiationPainTypeOther, chkRadiationPainTypeOther);
 			SetCheckBox(reportZhuSuAndXianBingShi.RadiationPainTypePharyngeal, chkRadiationPainTypePharyngeal);
-
-			SetLabelValue2(reportZhuSuAndXianBingShi.ConcomitantSymptomExist, rblConcomitantSymptomExist);
+			SetLabelValue(reportZhuSuAndXianBingShi.ConcomitantSymptomExist, rblConcomitantSymptomExist);
 			SetCheckBox(reportZhuSuAndXianBingShi.ConcomitantSymptomTypeAmaurosis, chkConcomitantSymptomTypeAmaurosis);
 			SetCheckBox(reportZhuSuAndXianBingShi.ConcomitantSymptomTypeOther, chkConcomitantSymptomTypeOther);
 			SetCheckBox(reportZhuSuAndXianBingShi.ConcomitantSymptomTypePalpitation, chkConcomitantSymptomTypePalpitation);
 			SetCheckBox(reportZhuSuAndXianBingShi.ConcomitantSymptomTypeSyncope, chkConcomitantSymptomTypeSyncope);
 			SetCheckBox(reportZhuSuAndXianBingShi.ConcomitantSymptomTypeTiredBreath, chkConcomitantSymptomTypeTiredBreath);
-
 			SetCheckBox(reportZhuSuAndXianBingShi.RelievingFactorsBlackCa, chkRelievingFactorsBlackCa);
 			SetCheckBox(reportZhuSuAndXianBingShi.RelievingFactorsCaRivalry, chkRelievingFactorsCaRivalry);
 			SetCheckBox(reportZhuSuAndXianBingShi.RelievingFactorsLastRespond, chkRelievingFactorsLastRespond);
@@ -152,25 +121,25 @@ namespace CoronaryHeartDiseaseProject
 		}
 
 		/// <summary>
-		///
+		/// 初始化既往病史
 		/// </summary>
 		private void InitReportJiWangBingShi()
 		{
-			SetLabelValue2(reportJiWangBingShi.HypertensionConfirm, rblHypertensionConfirm);
-			SetLabelValue2(reportJiWangBingShi.MIConfirm, rblMIConfirm);
-			SetLabelValue(reportJiWangBingShi.HypertensionLasted, ddlHypertensionLasted);
-			SetLabelValue(reportJiWangBingShi.HypertensionTreatedState, ddlHypertensionTreatedState);
-			SetLabelValue(reportJiWangBingShi.GlycuresisConfirm, rblGlycuresisConfirm);
-			SetLabelValue(reportJiWangBingShi.GlycuresisLasted, ddlGlycuresisLasted);
-			SetLabelValue(reportJiWangBingShi.GlycuresisTreatedState, ddlGlycuresisTreatedState);
-			SetLabelValue(reportJiWangBingShi.CerebralHemorrhageConfirm, rblCerebralHemorrhageConfirm);
-			SetLabelValue2(reportJiWangBingShi.CerebralHemorrhageTreateLasted, rblCerebralHemorrhageTreateLasted);
-			SetLabelValue2(reportJiWangBingShi.PeripheralVascularConfirm, rblPeripheralVascularConfirm);
-			SetLabelValue2(reportJiWangBingShi.AnemiaOrOtherConfirm, rblAnemiaOrOtherConfirm);
+			SetLabelValue(reportJiWangBingShi.HypertensionConfirm, rblHypertensionConfirm);
+			SetLabelValue(reportJiWangBingShi.MIConfirm, rblMIConfirm);
+			SetLabelValueNonEmpty(reportJiWangBingShi.HypertensionLasted, ddlHypertensionLasted);
+			SetLabelValueNonEmpty(reportJiWangBingShi.HypertensionTreatedState, ddlHypertensionTreatedState);
+			SetLabelValueNonEmpty(reportJiWangBingShi.GlycuresisConfirm, rblGlycuresisConfirm);
+			SetLabelValueNonEmpty(reportJiWangBingShi.GlycuresisLasted, ddlGlycuresisLasted);
+			SetLabelValueNonEmpty(reportJiWangBingShi.GlycuresisTreatedState, ddlGlycuresisTreatedState);
+			SetLabelValueNonEmpty(reportJiWangBingShi.CerebralHemorrhageConfirm, rblCerebralHemorrhageConfirm);
+			SetLabelValue(reportJiWangBingShi.CerebralHemorrhageTreateLasted, rblCerebralHemorrhageTreateLasted);
+			SetLabelValue(reportJiWangBingShi.PeripheralVascularConfirm, rblPeripheralVascularConfirm);
+			SetLabelValue(reportJiWangBingShi.AnemiaOrOtherConfirm, rblAnemiaOrOtherConfirm);
 		}
 
 		/// <summary>
-		///
+		/// 初步诊断
 		/// </summary>
 		private void InitReportChuBuZhengDuan()
 		{
@@ -180,11 +149,8 @@ namespace CoronaryHeartDiseaseProject
 			txtFisrtTimeReturn.Text = reportChuBuZhenDuan.FisrtTimeReturn.ToString();
 			txtCNTResult.Text = reportChuBuZhenDuan.CNTResult;
 			txtRegularCNT.Text = reportChuBuZhenDuan.RegularCNT;
-
 			string strAcuteST = reportChuBuZhenDuan.AcuteST;
-
 			lbChubuzhenduan.Text = strAcuteST;
-
 			SetCheckBox(reportChuBuZhenDuan.Anteroseptal, chkAnteroseptal);
 			SetCheckBox(reportChuBuZhenDuan.Antetheca, chkAntetheca);
 			SetCheckBox(reportChuBuZhenDuan.Extensive, chkExtensive);
@@ -193,19 +159,18 @@ namespace CoronaryHeartDiseaseProject
 			SetCheckBox(reportChuBuZhenDuan.InteriorWall, chkInteriorWall);
 			SetCheckBox(reportChuBuZhenDuan.BackWall, chkBackWall);
 			SetCheckBox(reportChuBuZhenDuan.RightVentricular, chkRightVentricular);
-
 			txtBloodPressure.Text = reportChuBuZhenDuan.BloodPressure;
 			txtDiastolicPressure.Text = reportChuBuZhenDuan.DiastolicPressure;
 		}
 
 		/// <summary>
-		///
+		/// 初始化疾病伴随状态
 		/// </summary>
 		private void InitReportBinLiBanSuiZhuangTai()
 		{
-			SetLabelValue2(reportBinLiBanSuiZhuangTai.HypotensionExist, ddlHypotensionExist);
-			SetLabelValue2(reportBinLiBanSuiZhuangTai.CardiogenicShockExist, ddlCardiogenicShockExist);
-			SetLabelValue2(reportBinLiBanSuiZhuangTai.ArrhythmiaExist, ddlArrhythmiaExist);
+			SetLabelValue(reportBinLiBanSuiZhuangTai.HypotensionExist, ddlHypotensionExist);
+			SetLabelValue(reportBinLiBanSuiZhuangTai.CardiogenicShockExist, ddlCardiogenicShockExist);
+			SetLabelValue(reportBinLiBanSuiZhuangTai.ArrhythmiaExist, ddlArrhythmiaExist);
 
 			SetCheckBox(reportBinLiBanSuiZhuangTai.VPB, chkVPB);
 			SetCheckBox(reportBinLiBanSuiZhuangTai.VT, chkVT);
@@ -221,37 +186,37 @@ namespace CoronaryHeartDiseaseProject
 			SetCheckBox(reportBinLiBanSuiZhuangTai.RBBB, chkRBBB);
 			SetCheckBox(reportBinLiBanSuiZhuangTai.AVBOther, chkAVBOther);
 
-			SetLabelValue2(reportBinLiBanSuiZhuangTai.MitralValveProlapseOrBreakExist, ddlMitralValveProlapseOrBreakExist);
-			SetLabelValue2(reportBinLiBanSuiZhuangTai.PerforationofVentricularSeptumConfirm, rblPerforationofVentricularSeptumConfirm);
-			SetLabelValue2(reportBinLiBanSuiZhuangTai.StrokeExist, ddlStrokeExist);
-			SetLabelValue2(reportBinLiBanSuiZhuangTai.OGLBExist, ddlOGLBExist);
-			SetLabelValue2(reportBinLiBanSuiZhuangTai.KilipLevel, ddlKilipLever);
+			SetLabelValue(reportBinLiBanSuiZhuangTai.MitralValveProlapseOrBreakExist, ddlMitralValveProlapseOrBreakExist);
+			SetLabelValue(reportBinLiBanSuiZhuangTai.PerforationofVentricularSeptumConfirm, rblPerforationofVentricularSeptumConfirm);
+			SetLabelValue(reportBinLiBanSuiZhuangTai.StrokeExist, ddlStrokeExist);
+			SetLabelValue(reportBinLiBanSuiZhuangTai.OGLBExist, ddlOGLBExist);
+			SetLabelValue(reportBinLiBanSuiZhuangTai.KilipLevel, ddlKilipLever);
 		}
 
 		/// <summary>
-		///
+		/// 初始化静脉溶栓
 		/// </summary>
 		private void InitReportJinMaiRongShuan()
 		{
-			SetLabelValue2(reportJinMaiRongShuan.Urokinase, rblUrokinase);
+			SetLabelValue(reportJinMaiRongShuan.Urokinase, rblUrokinase);
 			txtUrokinaseOther.Text = reportJinMaiRongShuan.UrokinaseOther;
-			SetLabelValue2(reportJinMaiRongShuan.Alteplase, rblAlteplase);
-			SetLabelValue2(reportJinMaiRongShuan.Reteplase, rblReteplase);
-			SetLabelValue2(reportJinMaiRongShuan.Pass, rblPass);
+			SetLabelValue(reportJinMaiRongShuan.Alteplase, rblAlteplase);
+			SetLabelValue(reportJinMaiRongShuan.Reteplase, rblReteplase);
+			SetLabelValue(reportJinMaiRongShuan.Pass, rblPass);
 			SetCheckBox(reportJinMaiRongShuan.Anaphylaxis, chkAnaphylaxis);
-			SetLabelValue2(reportJinMaiRongShuan.Bleed, rblBleed);
+			SetLabelValue(reportJinMaiRongShuan.Bleed, rblBleed);
 			SetCheckBox(reportJinMaiRongShuan.ReperfusionArrhythmia, chkReperfusionArrhythmia);
-			SetLabelValue2(reportJinMaiRongShuan.TreatTime, rblTreatTime);
+			SetLabelValue(reportJinMaiRongShuan.TreatTime, rblTreatTime);
 		}
 
 		/// <summary>
-		///
+		/// 初始化辅助用药
 		/// </summary>
 		private void InitReportFuZhuYongYao()
 		{
-			SetLabelValue2(reportFuZhuYongYao.AspirinDosage, rblAspirinDosage);
-			SetLabelValue2(reportFuZhuYongYao.ClopidogrelDosage, rblClopidogrelDosage);
-			SetLabelValue2(reportFuZhuYongYao.LoadStatinUsed, rblLoadStatinUsed);
+			SetLabelValue(reportFuZhuYongYao.AspirinDosage, rblAspirinDosage);
+			SetLabelValue(reportFuZhuYongYao.ClopidogrelDosage, rblClopidogrelDosage);
+			SetLabelValue(reportFuZhuYongYao.LoadStatinUsed, rblLoadStatinUsed);
 
 			SetCheckBox(reportFuZhuYongYao.Simvastatin, chkSimvastatin);
 			SetCheckBox(reportFuZhuYongYao.Pitavastatin, chkPravastatin);
@@ -260,30 +225,30 @@ namespace CoronaryHeartDiseaseProject
 			SetCheckBox(reportFuZhuYongYao.Rosuvastatin, chkRosuvastatin);
 			SetCheckBox(reportFuZhuYongYao.Pitavastatin, chkPitavastatin);
 
-			SetLabelValue2(reportFuZhuYongYao.ACEIConfirm, rblACEIConfirm);
-			SetLabelValue2(reportFuZhuYongYao.BRBConfrim, rblBRBConfrim);
+			SetLabelValue(reportFuZhuYongYao.ACEIConfirm, rblACEIConfirm);
+			SetLabelValue(reportFuZhuYongYao.BRBConfrim, rblBRBConfrim);
 		}
 
 		/// <summary>
-		///
+		/// 初始化介入治疗
 		/// </summary>
 		private void InitReportJieRuZhiLiao()
 		{
 			txtD2BTime.Text = reportJieRuZhiLiao.D2BTime;
-			SetLabelValue2(reportJieRuZhiLiao.Succeed, rblSucceed);
+			SetLabelValue(reportJieRuZhiLiao.Succeed, rblSucceed);
 		}
 
 		/// <summary>
-		///
+		/// 初始化诊断结果
 		/// </summary>
 		private void InitReportTreatResult()
 		{
-			SetLabelValue2(reportLinChuangZhuanGui.CPR, rblCPR);
+			SetLabelValue(reportLinChuangZhuanGui.CPR, rblCPR);
 			txtCPRTimes.Text = reportLinChuangZhuanGui.CPRTimes;
-			SetLabelValue2(reportLinChuangZhuanGui.TreatResult, rblTreatResult);
-			SetLabelValue2(reportLinChuangZhuanGui.IntroduceThrombolysisSuggestionConfirm, rdbIntroduceThrombolysisSuggestion);
+			SetLabelValue(reportLinChuangZhuanGui.TreatResult, rblTreatResult);
+			SetLabelValue(reportLinChuangZhuanGui.IntroduceThrombolysisSuggestionConfirm, rdbIntroduceThrombolysisSuggestion);
 			txbIntroduceThrombolysisSuggestionDate.Text = reportLinChuangZhuanGui.IntroduceThrombolysisSuggestionDate.ToString();
-			SetLabelValue2(reportLinChuangZhuanGui.ThrombolysisTreateConfirm, rdbThrombolysisTreateConfirm);
+			SetLabelValue(reportLinChuangZhuanGui.ThrombolysisTreateConfirm, rdbThrombolysisTreateConfirm);
 			SetCheckBox(reportWeiJinXingJingMaiRongSuanLiYou.UnThrombolysisReasonForPatientDisagree, chkUnThrombolysisReasonForPatientDisagree);
 			SetCheckBox(reportWeiJinXingJingMaiRongSuanLiYou.UnThrombolysisReasonForUnSute, chkUnThrombolysisReasonForUnSute);
 			SetCheckBox(reportWeiJinXingJingMaiRongSuanLiYou.UnThrombolyticForContraindication, chkUnThrombolyticForContraindication);
@@ -298,45 +263,69 @@ namespace CoronaryHeartDiseaseProject
 			SetCheckBox(reportLinChuangZhuanGui.DeadForGIH, chkDeadForGIH);
 			SetCheckBox(reportLinChuangZhuanGui.DeadForOther, chkDeadForOther);
 
-			SetLabelValue2(reportLinChuangZhuanGui.IntroduceEmergencyCoronaryConfirm, rblIntroduceEmergencyCoronaryConfirm);
+			SetLabelValue(reportLinChuangZhuanGui.IntroduceEmergencyCoronaryConfirm, rblIntroduceEmergencyCoronaryConfirm);
 			txtIntroduceEmergencyCoronaryDate.Text = reportLinChuangZhuanGui.IntroduceEmergencyCoronaryDate.ToString();
-			SetLabelValue2(reportLinChuangZhuanGui.EmergencyCoronaryTreateConfirm, rdbEmergencyCoronaryTreateConfirm);
+			SetLabelValue(reportLinChuangZhuanGui.EmergencyCoronaryTreateConfirm, rdbEmergencyCoronaryTreateConfirm);
 			SetCheckBox(reportWeiJinXingJiZhenGuanMaiJieRuZhiLiao.UnEmergencyCoronaryTreateForContraindication, chkUnEmergencyCoronaryTreateForContraindication);
 			SetCheckBox(reportWeiJinXingJiZhenGuanMaiJieRuZhiLiao.UnEmergencyCoronaryTreateForEmergency, chkUnEmergencyCoronaryTreateForEmergency);
 			SetCheckBox(reportWeiJinXingJiZhenGuanMaiJieRuZhiLiao.UnEmergencyCoronaryTreateForHospitalUnable, chkUnEmergencyCoronaryTreateForHospitalUnable);
 			SetCheckBox(reportWeiJinXingJiZhenGuanMaiJieRuZhiLiao.UnEmergencyCoronaryTreateForOverTreateTime, chkUnEmergencyCoronaryTreateForOverTreateTime);
 			SetCheckBox(reportWeiJinXingJiZhenGuanMaiJieRuZhiLiao.UnEmergencyCoronaryTreateForPatientDisagree, chkUnEmergencyCoronaryTreateForPatientDisagree);
 
-			SetLabelValue2(reportLinChuangZhuanGui.AgreeEmergencyCoronaryConfirm, rblAgreeEmergencyCoronaryConfirm);
+			SetLabelValue(reportLinChuangZhuanGui.AgreeEmergencyCoronaryConfirm, rblAgreeEmergencyCoronaryConfirm);
 			SetCheckBox(reportLinChuangZhuanGui.ThrombolyticForDisagree, chkThrombolyticForDisagree);
 			SetCheckBox(reportLinChuangZhuanGui.ThrombolyticForEconomicReason, chkThrombolyticForEconomicReason);
 			SetCheckBox(reportLinChuangZhuanGui.ThrombolyticForDream, chkThrombolyticForDream);
 			SetCheckBox(reportLinChuangZhuanGui.ThrombolyticForTimeLimited, chkThrombolyticForTimeLimited);
 
-			SetLabelValue2(reportLinChuangZhuanGui.TransUpHospitalConfirm, rblTransUpHospitalConfirm);
-			SetLabelValue2(reportLinChuangZhuanGui.TransUpHospitalLever, rblTransUpHospitalLever);
+			SetLabelValue(reportLinChuangZhuanGui.TransUpHospitalConfirm, rblTransUpHospitalConfirm);
+			SetLabelValue(reportLinChuangZhuanGui.TransUpHospitalLever, rblTransUpHospitalLever);
 			txbTransUpHospitalDate.Text = reportLinChuangZhuanGui.TransUpHospitalDate.ToString();
 
-			SetLabelValue2(reportLinChuangZhuanGui.EmergencyCoronaryTreateConfirm, rdbEmergencyCoronaryTreateConfirm);
+			SetLabelValue(reportLinChuangZhuanGui.EmergencyCoronaryTreateConfirm, rdbEmergencyCoronaryTreateConfirm);
 			//SetCheckBox(reportWeiJinXingJiZhenGuanMaiJieRuZhiLiao.UnEmergencyCoronaryTreateForContraindication, chkUnEmergencyCoronaryTreateForContraindication);
 			//SetCheckBox(reportWeiJinXingJiZhenGuanMaiJieRuZhiLiao.UnEmergencyCoronaryTreateForEmergency, chkUnEmergencyCoronaryTreateForEmergency);
 			//SetCheckBox(reportWeiJinXingJiZhenGuanMaiJieRuZhiLiao.UnEmergencyCoronaryTreateForHospitalUnable, chkUnEmergencyCoronaryTreateForHospitalUnable);
 			//SetCheckBox(reportWeiJinXingJiZhenGuanMaiJieRuZhiLiao.UnEmergencyCoronaryTreateForOverTreateTime, chkUnEmergencyCoronaryTreateForOverTreateTime);
 			//SetCheckBox(reportWeiJinXingJiZhenGuanMaiJieRuZhiLiao.UnEmergencyCoronaryTreateForPatientDisagree, chkUnEmergencyCoronaryTreateForPatientDisagree);
-			SetLabelValue2(reportLinChuangZhuanGui.ConnectUpHospitalConfirm, rblConnectUpHospitalConfirm);
+			SetLabelValue(reportLinChuangZhuanGui.ConnectUpHospitalConfirm, rblConnectUpHospitalConfirm);
 			//SetRadioButtonListValue(reportTreatResult.UpHospitalLaboratory, rblUpHospitalLaboratory);
 			//txbCheckOutDate.Text = reportTreatResult.CheckOutDate.ToString();
 		}
 
-		#endregion Init ReportSummation
+		#endregion 设置设定报告数据
 
-		#region Common Method
+		#region 公共方法
 
 		/// <summary>
-		///
+		/// 设置label值
 		/// </summary>
-		/// <param name="radioButtonList"></param>
-		/// <returns></returns>
+		/// <param name="value">值</param>
+		/// <param name="label">label名</param>
+		private void SetLabelValueNonEmpty(string value, Label label)
+		{
+			if (string.IsNullOrEmpty(value))
+			{
+				return;
+			}
+			label.Text = value;
+		}
+
+		/// <summary>
+		/// 设置label值--可为空置
+		/// </summary>
+		/// <param name="value">值</param>
+		/// <param name="label">label名</param>
+		private void SetLabelValue(string value, Label radioButtonList)
+		{
+			radioButtonList.Text = value;
+		}
+
+		/// <summary>
+		/// 获得RadioButton的值
+		/// </summary>
+		/// <param name="radioButtonList">RadioButton列表</param>
+		/// <returns>返回RadioButton的值</returns>
 		private string GetRadioButtonListValue(RadioButtonList radioButtonList)
 		{
 			string value = string.Empty;
@@ -348,10 +337,11 @@ namespace CoronaryHeartDiseaseProject
 		}
 
 		/// <summary>
-		///
+		/// <summary>
+		/// 设置RadioButton的值
 		/// </summary>
-		/// <param name="dropDownList"></param>
-		/// <returns></returns>
+		/// <param name="value">值</param>
+		/// <param name="radioButtonList">RadioButton列表</param>
 		private string GetDropDownListValue(DropDownList dropDownList)
 		{
 			string value = string.Empty;
@@ -363,10 +353,10 @@ namespace CoronaryHeartDiseaseProject
 		}
 
 		/// <summary>
-		///
+		/// 设定时间
 		/// </summary>
-		/// <param name="dateTime"></param>
-		/// <returns></returns>
+		/// <param name="dateTime">时间</param>
+		/// <returns>返回时间</returns>
 		private string SetDateTime(DateTime? dateTime)
 		{
 			if (dateTime == null)
@@ -380,10 +370,10 @@ namespace CoronaryHeartDiseaseProject
 		}
 
 		/// <summary>
-		///
+		/// 将string类型转化为datatime类型
 		/// </summary>
-		/// <param name="dateTime"></param>
-		/// <returns></returns>
+		/// <param name="dateTime">string类型时间</param>
+		/// <returns>返回datatime类型类型时间</returns>
 		private DateTime? ConvertToDateTime(string dateTime)
 		{
 			try
@@ -397,20 +387,10 @@ namespace CoronaryHeartDiseaseProject
 		}
 
 		/// <summary>
-		///
+		/// 获得下拉框值
 		/// </summary>
-		/// <param name="value"></param>
-		/// <param name="radioButtonList"></param>
-		private void SetLabelValue2(string value, Label radioButtonList)
-		{
-			radioButtonList.Text = value;
-		}
-
-		/// <summary>
-		///
-		/// </summary>
-		/// <param name="value"></param>
-		/// <param name="dropDownList"></param>
+		/// <param name="dropDownList">下拉框</param>
+		/// <returns>下拉框值</returns>
 		private void SetDropDownListValue(string value, DropDownList dropDownList)
 		{
 			if (string.IsNullOrEmpty(value))
@@ -429,10 +409,10 @@ namespace CoronaryHeartDiseaseProject
 		}
 
 		/// <summary>
-		///
+		/// 设置下拉框
 		/// </summary>
-		/// <param name="value"></param>
-		/// <param name="dropDownList"></param>
+		/// <param name="value">值</param>
+		/// <param name="dropDownList">下拉框</param>
 		private void SetNummeralDropDownList(string value, DropDownList dropDownList)
 		{
 			for (int i = 0; i < dropDownList.Items.Count; i++)
@@ -447,10 +427,10 @@ namespace CoronaryHeartDiseaseProject
 		}
 
 		/// <summary>
-		///
+		/// 设置数字下拉框
 		/// </summary>
-		/// <param name="value"></param>
-		/// <param name="checkBox"></param>
+		/// <param name="value">值</param>
+		/// <param name="dropDownList">下拉框</param>
 		private void SetCheckBox(bool? value, CheckBox checkBox)
 		{
 			if (value == null)
@@ -464,10 +444,10 @@ namespace CoronaryHeartDiseaseProject
 		}
 
 		/// <summary>
-		///
+		/// 设置复选框值
 		/// </summary>
-		/// <param name="value"></param>
-		/// <param name="checkBox"></param>
+		/// <param name="value">值</param>
+		/// <param name="checkBox">复选框</param>
 		private void SetCheckBox(bool? value, Label checkBox)
 		{
 			if (value == null)
@@ -481,44 +461,14 @@ namespace CoronaryHeartDiseaseProject
 
 		#endregion Common Method
 
-		/// <summary>
-		///
-		/// </summary>
-		/// <param name="sender"></param>
-		/// <param name="e"></param>
-		protected void btnSave_Click(object sender, EventArgs e)
-		{
-		}
 
 		/// <summary>
-		///
-		/// </summary>
-		private void RestReportData()
-		{
-			person = null;
-			reportZhuSuAndXianBingShi = null;
-			reportJiWangBingShi = null;
-			reportChuBuZhenDuan = null;
-			reportBinLiBanSuiZhuangTai = null;
-			reportJinMaiRongShuan = null;
-			reportFuZhuYongYao = null;
-			reportLinChuangZhuanGui = null;
-			reportSummation = null;
-		}
-
-		/// <summary>
-		///
+		/// 初始化病例
 		/// </summary>
 		private void InitReport()
 		{
 			bool isLocked = bool.Parse(Request.QueryString["IsLocked"]);
 			int reportID = int.Parse(Request.QueryString["ReportID"]);
-
-			//bool isLocked = true;
-			//int reportID = 49;
-			if (isLocked || (SiteUser)Session["user"] == null)
-			{
-			}
 
 			reportSummation = medicalReportBLO.GetReportSummationByReportID(reportID);
 
@@ -535,23 +485,18 @@ namespace CoronaryHeartDiseaseProject
 				reportWeiJinXingJiZhenGuanMaiJieRuZhiLiao = reportSummation.Report_WeiJinXingJiZhenGuanMaiJieRuZhiLiao;
 				reportWeiJinXingJingMaiRongSuanLiYou = reportSummation.Report_WeiJinXingJingMaiRongSuanLiYou;
 				reportJieRuZhiLiao = reportSummation.Report_JieRuZhiLiao;
-
 				this.InitReportSummation();
 			}
 		}
 
 		/// <summary>
-		///
+		/// 设定控件集合的初始显示
 		/// </summary>
-		protected void SetControlVisible1()
+		protected void SetControlVisible()
 		{
 			if (!string.IsNullOrWhiteSpace(lbChubuzhenduan.Text))
 			{
 				PanelrdAcuteST.Visible = true;
-			}
-			else
-			{
-				//PanelrdAcuteST.Visible = false;
 			}
 
 			if (string.IsNullOrWhiteSpace(txtUrokinaseOther.Text))
@@ -571,15 +516,6 @@ namespace CoronaryHeartDiseaseProject
 				this.panetxtCPRTimes.Visible = false;
 			}
 
-			//if (rblChestPainExist.Text == "有")
-			//{
-			//    this.PanelrblChestPainType.Visible = true;
-			//}
-			//else
-			//{
-			//    this.PanelrblChestPainType.Visible = false;
-			//}
-
 			if (rblTreatResult.Text == "死亡")
 			{
 				this.panelrblTreatResult.Visible = true;
@@ -588,15 +524,6 @@ namespace CoronaryHeartDiseaseProject
 			{
 				this.panelrblTreatResult.Visible = false;
 			}
-
-			//if (ddlDiseaseTimeState.Text == "已知")
-			//{
-			//    this.Panel1ddlYearDiseaseStartTime.Visible = true;
-			//}
-			//else
-			//{
-			//    this.Panel1ddlYearDiseaseStartTime.Visible = false;
-			//}
 
 			if (rblTransUpHospitalConfirm.Text == "是")
 			{
@@ -615,15 +542,6 @@ namespace CoronaryHeartDiseaseProject
 			{
 				this.PanelrblPositionType.Visible = false;
 			}
-
-			//if (this.rblConnectUpHospitalConfirm.Text == "是")
-			//{
-			//    this.PanelrblUpHospitalLaboratory.Visible = true;
-			//}
-			//else
-			//{
-			//    this.PanelrblUpHospitalLaboratory.Visible = false;
-			//}
 
 			if (rblCPR.Text == "是")
 			{
@@ -687,7 +605,5 @@ namespace CoronaryHeartDiseaseProject
 
 			#endregion 接诊时临床症状
 		}
-
-		#endregion ReportSummation
 	}
 }

@@ -1504,7 +1504,7 @@
                                                                         <td colspan="2">
                                                                             <span style="color: Blue">患者转院前是否已与上级医院联系准备下一步的治疗: </span>
                                                                             <asp:RadioButtonList TabIndex="131" ID="rblConnectUpHospitalConfirm" runat="server"
-                                                                                AutoPostBack="true" OnSelectedIndexChanged="rblConnectUpHospitalConfirm_SelectedIndexChanged"
+                                                                                AutoPostBack="true" 
                                                                                 RepeatDirection="Horizontal" RepeatLayout="Flow">
                                                                                 <asp:ListItem>是</asp:ListItem>
                                                                                 <asp:ListItem>否</asp:ListItem>
