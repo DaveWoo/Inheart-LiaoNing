@@ -7,6 +7,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <script type="text/javascript" src="/Scripts/jquery-1.9.1.min.js"></script>
     <script type="text/javascript" src="../Scripts/default.js"></script>
+    <script type="text/javascript" src="../Scripts/bootstrap.min.js"></script>
     <link rel="stylesheet" href="/Content/bootstrap.min.css" />
     <link rel="stylesheet" href="../Styles/default-nav.css" type="text/css" />
     <title>辽宁省冠心病急救网络信息平台</title>

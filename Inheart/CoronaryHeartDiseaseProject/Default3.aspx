@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/Content/bootstrap.min.css" />
     <script type="text/javascript" src="/Scripts/jquery-1.9.1.min.js"></script>
     <script type="text/javascript" src="../Scripts/default.js"></script>
-    <link rel="stylesheet" href="/Content/bootstrap.min.css" />
+    <script type="text/javascript" src="../Scripts/bootstrap.min.js"></script>
     <link rel="stylesheet" href="../Styles/default-nav.css" type="text/css" />
     <title>辽宁省冠心病急救网络信息平台</title>
 </head>
