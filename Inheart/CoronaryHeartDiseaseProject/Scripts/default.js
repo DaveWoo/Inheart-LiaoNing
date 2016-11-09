@@ -60,11 +60,11 @@ var pageInitModule = (function (mod) {
             $(this).parent().find(".sub-menu").slideToggle();
         })
         var _strcurrenturl = window.location.href.toLowerCase();
-        $(".sidebar a[tag]").each(function () {
-            var tag = $(this).attr("tag").toLowerCase();
+        $(".sidebar a[href]").each(function () {
+            var tag = $(this).attr("href").toLowerCase();
             var isActive = false;
-            $(".breadcrumb>li a[tag]").each(function (index) {
-                if (tag == $(this).attr("tag").toLowerCase()) {
+            $(".breadcrumb>li a[href]").each(function (index) {
+                if (tag == $(this).attr("href").toLowerCase()) {
                     isActive = true;
                     return false;
                 }
@@ -80,3 +80,23 @@ var pageInitModule = (function (mod) {
     }
     return mod;
 })(window.pageInitModule || {});
+
+/* 左侧菜单 */
+function border_left(left_tabid) {
+    var oItem = $('.nav li');
+    for (var i = 0; i < oItem.length; i++) {
+        $(oItem[i]).removeClass("active")
+    }
+    $(left_tabid).parent().addClass("active");
+    if ($(left_tabid).parents("ul").attr("class") == "sub-menu") {
+        $(left_tabid).parents("ul").slideDown();
+        $(left_tabid).parents(".has-sub").addClass("active");
+    }
+}
+
+
+//修改标题
+function show_title(str, left_tabid) {
+    document.getElementById("spanTitle").innerHTML = str;
+    border_left(left_tabid);
+}

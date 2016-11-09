@@ -5,14 +5,13 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <link rel="stylesheet" href="../Styles/default.css" type="text/css" />
-    <link rel="stylesheet" href="../Styles/default-nav.css" type="text/css" />
-
-    <link rel="stylesheet" href="/Content/bootstrap.min.css" />
-    <script type="text/javascript" src="/Scripts/bootstrap.min.js"></script>
-    <script type="text/javascript" src="/Scripts/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="../Scripts/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="../Scripts/bootstrap.min.js"></script>
     <script type="text/javascript" src="../Scripts/menu.js"></script>
     <script type="text/javascript" src="../Scripts/default.js"></script>
+    <link rel="stylesheet" href="/Content/bootstrap.min.css" />
+    <link rel="stylesheet" href="../Styles/default.css" type="text/css" />
+    <link rel="stylesheet" href="../Styles/default-nav.css" type="text/css" />
 
     <title>辽宁省冠心病急救网络信息平台</title>
     <style type="text/css">
@@ -26,6 +25,7 @@
         <table id="indextablebody" cellpadding="0">
             <thead>
                 <tr>
+                    <div id="spanTitle"></div>
                     <th style="padding-left: 10px; text-align: center; font-size: 18px;" class="auto-style1">超级管理管理平台</th>
                     <th>
                         <a>用户ID ：<%=UserName%></a>&nbsp;&nbsp; <a>身份 ：<%=UserRole%></a>
@@ -39,51 +39,51 @@
                             <div class="sidebar">
                                 <ul class="nav">
                                     <li class="has-sub">
-                                        <a href="#" tag="admin"><span>医院</span><i class="fa fa-caret-right fa-fw pull-right"></i></a>
+                                        <a href="SuperManage/AddHospital.aspx" tag="admin" onclick="border_left(this);" target="content3" ><span>医院</span><i class="fa fa-caret-right fa-fw pull-right"></i></a>
                                         <ul class="sub-menu">
-                                            <li><a title="添加医院" href="SuperManage/AddHospital.aspx" onclick="show_title('添加医院')"
+                                            <li><a title="添加医院" href="SuperManage/AddHospital.aspx" onclick="show_title('添加医院',this)"
                                                 target="content3"><i class="fa fa-circle-o fa-fw"></i>添加医院</a></li>
-                                            <li><a title="管理医院" href="SuperManage/AdminManageHospital.aspx" onclick="show_title('管理医院')"
+                                            <li><a title="管理医院" href="SuperManage/AdminManageHospital.aspx" onclick="show_title('管理医院',this)"
                                                 target="content3"><i class="fa fa-circle-o fa-fw"></i>管理医院</a></li>
                                         </ul>
                                     </li>
 
                                     <li class="has-sub">
-                                        <a href="SuperManage/AddAdmin.aspx" tag="admin"><span>管理员</span><i class="fa fa-caret-right fa-fw pull-right"></i></a>
+                                        <a href="SuperManage/AddAdmin.aspx" tag="admin" target="content3" onclick="border_left(this);"><span>管理员</span><i class="fa fa-caret-right fa-fw pull-right"></i></a>
                                         <ul class="sub-menu">
-                                            <li><a title="添加管理员" onclick="show_title('添加管理员')" href="SuperManage/AddAdmin.aspx"
+                                            <li><a title="添加管理员" onclick="show_title('添加管理员',this)" href="SuperManage/AddAdmin.aspx"
                                                 target="content3"><i class="fa fa-circle-o fa-fw"></i>添加管理员</a></li>
-                                            <li><a title="管理管理员" onclick="show_title('管理管理员')" href="SuperManage/AdminManage.aspx"
+                                            <li><a title="管理管理员" onclick="show_title('管理管理员',this)" href="SuperManage/AdminManage.aspx"
                                                 target="content3"><i class="fa fa-circle-o fa-fw"></i>管理管理员</a></li>
-                                            <li><a title="修改密码" onclick="show_title('修改密码')" href="SuperManage/AdminCenter.aspx"
+                                            <li><a title="修改密码" onclick="show_title('修改密码'),this)" href="SuperManage/AdminCenter.aspx"
                                                 target="content3"><i class="fa fa-circle-o fa-fw"></i>修改密码</a></li>
                                         </ul>
                                     </li>
                                     <li class="has-sub">
-                                        <a href="javascript:void(0);" tag="admin"><span>报表</span><i class="fa fa-caret-right fa-fw pull-right"></i></a>
+                                        <a tag="admin" href="SuperManage/SummaryReport.aspx?type=All" target="content3" onclick="border_left(this);"><span>报表</span><i class="fa fa-caret-right fa-fw pull-right"></i></a>
                                         <ul class="sub-menu">
-                                            <li><a title="患者总人数" onclick="show_title('患者总人数')" href="SuperManage/SummaryReport.aspx?type=Sum"
+                                            <li><a title="患者总人数" onclick="show_title('患者总人数',this)" href="SuperManage/SummaryReport.aspx?type=Sum"
                                                 target="content3"><i class="fa fa-circle-o fa-fw"></i>患者总人数</a></li>
-                                            <li><a title="患者性别" onclick="show_title('患者性别')" href="SuperManage/SummaryReport.aspx?type=Sex"
+                                            <li><a title="患者性别" onclick="show_title('患者性别',this)" href="SuperManage/SummaryReport.aspx?type=Sex"
                                                 target="content3"><i class="fa fa-circle-o fa-fw"></i>患者性别</a></li>
-                                            <li><a title="患者年龄" onclick="show_title('患者年龄')" href="SuperManage/SummaryReport.aspx?type=Age"
+                                            <li><a title="患者年龄" onclick="show_title('患者年龄',this)" href="SuperManage/SummaryReport.aspx?type=Age"
                                                 target="content3"><i class="fa fa-circle-o fa-fw"></i>患者年龄</a></li>
-                                            <li><a title="溶栓人数" onclick="show_title('溶栓人数')" href="SuperManage/SummaryReport.aspx?type=ThrombolysisCount"
+                                            <li><a title="溶栓人数" onclick="show_title('溶栓人数',this)" href="SuperManage/SummaryReport.aspx?type=ThrombolysisCount"
                                                 target="content3"><i class="fa fa-circle-o fa-fw"></i>溶栓人数</a></li>
-                                            <li><a title="急诊介入人数" onclick="show_title('急诊介入')" href="SuperManage/SummaryReport.aspx?type=EmergencyTreate"
+                                            <li><a title="急诊介入人数" onclick="show_title('急诊介入',this)" href="SuperManage/SummaryReport.aspx?type=EmergencyTreate"
                                                 target="content3"><i class="fa fa-circle-o fa-fw"></i>急诊介入人数</a></li>
-                                            <li><a title="死亡人数" onclick="show_title('死亡人数')" href="SuperManage/SummaryReport.aspx?type=DeathCount"
+                                            <li><a title="死亡人数" onclick="show_title('死亡人数',this)" href="SuperManage/SummaryReport.aspx?type=DeathCount"
                                                 target="content3"><i class="fa fa-circle-o fa-fw"></i>死亡人数</a></li>
-                                            <li><a title="转上级医院患者数" onclick="show_title('转上级医院')" href="SuperManage/SummaryReport.aspx?type=TransferUpHospitalCount"
+                                            <li><a title="转上级医院患者数" onclick="show_title('转上级医院',this)" href="SuperManage/SummaryReport.aspx?type=TransferUpHospitalCount"
                                                 target="content3"><i class="fa fa-circle-o fa-fw"></i>转上级医院患者数</a></li>
                                         </ul>
                                     </li>
                                     <li class="has-sub">
-                                        <a href="SuperManage/MessageManageSupperAdmin.aspx" tag="admin"><span>管理</span><i class="fa fa-caret-right fa-fw pull-right"></i></a>
+                                        <a href="SuperManage/MessageManageSupperAdmin.aspx" tag="admin" target="content3" onclick="border_left(this);"><span>管理</span><i class="fa fa-caret-right fa-fw pull-right"></i></a>
                                         <ul class="sub-menu">
-                                            <li><a title="病例管理" onclick="show_title('病例管理')" href="SuperManage/MessageManageSupperAdmin.aspx"
+                                            <li><a title="病例管理" onclick="show_title('病例管理',this)" href="SuperManage/MessageManageSupperAdmin.aspx"
                                                 target="content3"><i class="fa fa-circle-o fa-fw"></i>病例管理</a></li>
-                                            <li><a title="查看日志" onclick="show_title('查看日志')" href="SuperManage/ViewLogs.aspx"
+                                            <li><a title="查看日志" onclick="show_title('查看日志',this)" href="SuperManage/ViewLogs.aspx"
                                                 target="content3"><i class="fa fa-circle-o fa-fw"></i>查看日志</a> </li>
                                         </ul>
                                     </li>
@@ -97,12 +97,6 @@
                 </tr>
             </tbody>
         </table>
-        <script type="text/javascript">
-            // 修改标题
-            function show_title(str) {
-                document.getElementById("spanTitle").innerHTML = str;
-            }
-        </script>
         <uc1:IsSuperAdmin ID="IsSuperAdmin1" runat="server" />
     </form>
 </body>

@@ -98,12 +98,7 @@
                 </tr>
             </tbody>
         </table>
-        <script type="text/javascript">
-            //修改标题
-            function show_title(str) {
-                document.getElementById("spanTitle").innerHTML = str;
-            }
-        </script>
+   
         <uc1:IsAdmin ID="IsAdmin1" runat="server" />
     </form>
 </body>
