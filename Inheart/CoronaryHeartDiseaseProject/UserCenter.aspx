@@ -14,21 +14,6 @@
 </head>
 <body>
     <form id="myform" runat="server" onsubmit="return   <title>修改资料</title>()">
-        <table width="100%" border="0" align="center" cellpadding="3" cellspacing="1">
-            <tr>
-                <td>
-                    <table width="100%" border="0" align="center" cellpadding="3" cellspacing="1" style="border: 0">
-                        <tr>
-                            <td height="25" colspan="2">网站导航: &nbsp;
-                                <a href="MessageManage.aspx">病例查询</a>&nbsp;|&nbsp; 
-                                <a href="MessageInput.aspx">病例录入</span></a>&nbsp;|&nbsp; 
-                                <a href="UserCenter.aspx"><span class="label label-info">修改密码</span></a>
-                            </td>
-                        </tr>
-                    </table>
-                </td>
-            </tr>
-        </table>
         <table width="100%" border="0" align="center" cellpadding="3" cellspacing="1" class="tableborder">
             <tr class="header">
                 <td height="30px" colspan="2">修改密码&nbsp;</td>

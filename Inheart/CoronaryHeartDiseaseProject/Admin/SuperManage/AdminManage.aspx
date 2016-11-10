@@ -13,19 +13,6 @@
 </head>
 <body>
     <form id="myform" name="listform" runat="server" onsubmit="return confirm('确认要执行此操作？');">
-        <table width="100%" border="0" align="center" cellpadding="3" cellspacing="1">
-            <tr>
-                <td>
-                    <table width="100%" border="0" align="center" cellpadding="3" cellspacing="1">
-                        <tr>
-                            <td height="25" colspan="2">网站导航: &nbsp;<a href="AddAdmin.aspx">添加管理员</a> &nbsp;|&nbsp; <a href="AdminManage.aspx">
-                                <span class="label label-info">管理管理员</span></a>&nbsp; | <a href="AdminCenter.aspx">修改密码</a> 
-                            </td>
-                        </tr>
-                    </table>
-                </td>
-            </tr>
-        </table>
         <asp:Label ID="Label1" runat="server"></asp:Label>&nbsp;          
         <asp:DataList ID="DataListUser" runat="server" Width="100%">
             <HeaderTemplate>

@@ -149,3 +149,12 @@
     width: 100%;
     height: 100%;
 }
+
+.nav_bar_top {
+    height: 30px;
+    border-right: 1px solid #ccc;
+    margin-top: 10px;
+}
+.nav_name {
+    margin-left:12px;
+}

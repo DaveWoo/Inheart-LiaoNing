@@ -15,18 +15,7 @@
 </head>
 <body>
     <form id="myform" runat="server">
-        <table width="100%" border="0" align="center" cellpadding="3" cellspacing="1">
-            <tr>
-                <td>
-                    <table width="100%" border="0" align="center" cellpadding="3" cellspacing="1" style="border: 0">
-                        <tr>
-                            <td height="25" colspan="2">网站导航: &nbsp;<a href="MessageManageAdmin.aspx"><span class="label label-info">病例管理</span></a> &nbsp;|&nbsp; <a href="ViewLogs.aspx">查看日志</a>
-                            </td>
-                        </tr>
-                    </table>
-                </td>
-            </tr>
-        </table>
+   
         <div style="height: 20px;" class="input-group" id="search-bar">
             <span class="glyphicon glyphicon-search" style="font-size: 25px; vertical-align: middle"></span>&nbsp;
                 <asp:DropDownList ID="ddlCondition" runat="server" Height="35" Style="vertical-align: middle">

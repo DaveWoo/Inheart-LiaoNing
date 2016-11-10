@@ -16,18 +16,6 @@
 </head>
 <body>
     <form id="myform" runat="server" onsubmit="return checkHospital()">
-        <table width="100%" border="0" align="center" >
-            <tr>
-                <td>
-                    <table width="100%" border="0" align="center">
-                        <tr>
-                            <td height="25" colspan="2">网站导航: &nbsp;<a href="AddHospital.aspx"><span class="label label-info" >添加医院</span></a> &nbsp;|&nbsp; <a href="AdminManageHospital.aspx">管理医院</a>&nbsp; 
-                        </td>
-                        </tr>
-                    </table>
-                </td>
-            </tr>
-        </table>
         <table width="100%" border="0" align="center" class="tableborder">
             <tr class="header">
                 <td height="30px" colspan="2">添加医院&nbsp;

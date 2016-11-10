@@ -24,8 +24,8 @@
 }
 
 .tableborder {
-    background: #D6E0EF;
-    border: 1px solid #698CC3;
+    border: 1px solid #ccc;
+    background-color:#FAFAFA;
 }
 
 .singleborder {

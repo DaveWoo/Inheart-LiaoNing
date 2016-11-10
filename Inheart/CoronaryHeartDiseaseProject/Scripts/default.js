@@ -97,6 +97,6 @@ function nav_left(navOjb) {
 
 //修改标题
 function show_title(str, navOjb) {
-    //$("title").innerHTML = str;
+    $("#nav_title")[0].innerHTML = str;
     nav_left(navOjb);
 }

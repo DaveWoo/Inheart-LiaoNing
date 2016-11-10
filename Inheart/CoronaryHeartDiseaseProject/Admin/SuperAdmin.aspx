@@ -11,6 +11,7 @@
     <script type="text/javascript" src="../Scripts/default.js"></script>
     <link rel="stylesheet" href="/Content/bootstrap.min.css" />
     <link rel="stylesheet" href="../Styles/default-nav.css" type="text/css" />
+    <link rel="stylesheet" href="../../Styles/admin.css" />
     <title>辽宁省冠心病急救网络信息平台</title>
 </head>
 <body>
@@ -21,9 +22,8 @@
                 <button type="button" class="navbar-toggle show pull-left" data-target="sidebar">
                     <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
                 </button>
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
-                        aria-expanded="false" aria-controls="navbar">
-                    <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span><span class="icon-bar"></span>
                 </button>
                 
                 <a class="navbar-brand" target="content3">超级管理管理平台</a>
@@ -96,6 +96,9 @@
                 </ul>
             </div>
             <div class="tabContent ">
+
+                <div class="nav_bar_top"><span class="nav_name">网站导航: </span><span class="label label-info" id="nav_title">您好</span></div>
+
                 <iframe name="content3" src="SuperManage/AddHospital.aspx" onclick="show_title('添加医院',this)" frameborder="0" style="width: inherit; height: inherit; margin-left: 0; padding-left: 0"></iframe>
             </div>
         </div>

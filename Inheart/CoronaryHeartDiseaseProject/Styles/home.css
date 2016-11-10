@@ -1,9 +1,9 @@
 ﻿html, body {
     height: 100%;
-    margin: 0px;
-    background-repeat: repeat-x;
-    background-position: bottom;
+    margin: 0;
     font-size: 18px;
+    overflow-y: hidden;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
 A:link {
@@ -31,46 +31,21 @@ A:active {
 
 A:hover {
     line-height: 23px;
-    color: #fc7d01;
+    color: #269abc;
     font-size: 18px;
-    font-weight: normal;
+    font-weight: lighter;
     text-decoration: none;
 }
 
-.rs-topic .head ul li a:hover {
-    color: #546b8c;
-}
-
-.rs-topic .head ul li.sel th {
-    color: #333;
-    table-layout: fixed;
-    font-size: 16px;
-    word-break: break-all;
-    line-height: 200%;
-    border: 1px solid #F0F5FD;
-    background: #fafbfc;
-}
-
 th {
-    table-layout: fixed;
     font-size: 16px;
     word-break: break-all;
     line-height: 200%;
-    border: 1px solid #F0F5FD;
-}
-
-td {
-    table-layout: fixed;
-    font-size: 16px;
-    word-break: break-all;
-    line-height: 200%;
-    border: 1px solid #F0F5FD;
 }
 
 .relation-split {
     padding: 0 5px;
     color: #999;
-    font-size: 16px;
     line-height: 14px;
 }
 
@@ -86,25 +61,50 @@ li {
 }
 
 .foot {
-    margin-top: 150px;
-    position: relative;
-    margin-left: auto;
-    color: #4D4D4D;
-    line-height: 21px;
     clear: both;
+    background: #FAFAFA;
+    font-size: 12px;
+    height: 60px;
+    line-height: 53px;
+    margin-top: 50px;
+    border-color: #e8e8e8;
+    background-image: none;
+    padding: .6em .8em;
+    text-transform: none;
+    margin-bottom: 0;
+    position: relative;
+    margin-left: -10px;
+    padding-left: 40px;
+    margin-top: 200px;
     text-align: center;
-    bottom: 0px;
 }
 
 .title-1 {
     font-weight: bold;
-    font-size: 16px;
-    color: white;
-    height: 30px;
+    font-size: 18px;
+    color: #269abc;
+    border-color: #269abc;
+    height: 35px;
     text-align: left;
     padding-left: 0px;
-    background-image: url(../images/win_top2.png);
+    background: #FAFAFA;
     clear: both;
-    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
     margin-right: auto;
+    margin-bottom: 10px;
+    padding-top:5px;
+    padding-bottom:5px;
+}
+
+.sys_body {
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+}
+
+.t1 {
+    color: #269abc;
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 10px;
+    font-weight:bold;
 }

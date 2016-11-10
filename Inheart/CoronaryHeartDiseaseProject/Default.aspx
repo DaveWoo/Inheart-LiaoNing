@@ -15,8 +15,8 @@
     <table width="800" border="0" align="center" cellpadding="0" cellspacing="0" style="margin-top: 50px;">
         <tr>
             <td>
-                <h2 style="color: Blue; text-align: center; " class="t1">辽宁省冠心病急救网络信息平台
-                </h2>
+                <div class="t1">辽宁省冠心病急救网络信息平台
+                </div>
             </td>
         </tr>
     </table>
@@ -26,7 +26,7 @@
                 <div class="title-1">
                     &nbsp;&nbsp; 系统说明
                 </div>
-                <div style="font-size: 14px; margin: 0px; padding: 0px;">
+                <div class="sys_body">
                     <ul>
                         <li>本系统是为配合辽宁省医学高峰建设工程—“辽宁省基层医疗机构急性ST段抬高型心肌梗死规范化救治” 项目的实施而创建。</li>
                         <li>本系统使用者为全省范围内经过规范化建设、具有急性心肌梗死诊断和救治能力的县、区级综合医院或同等规模级别的医院心内科或急诊科相关医务人员。</li>
@@ -110,10 +110,9 @@
             </td>
         </tr>
     </table>
+
     <div class="foot">
-        联系电话：024-24016114 - 电子信箱：lzqlr@medmail.com.cn<br />
-        辽宁省人民医院版权所有<br />
-        <span class="cRed">&copy;2016</span>
+        联系电话：024-24016114 | 电子信箱：lzqlr@medmail.com.cn | 辽宁省人民医院版权所有 <span class="cRed">&copy;2016</span>
     </div>
 </body>
 </html>
