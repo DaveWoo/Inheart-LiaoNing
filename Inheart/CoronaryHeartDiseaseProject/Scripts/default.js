@@ -87,16 +87,29 @@ function nav_left(navOjb) {
     for (var i = 0; i < oItem.length; i++) {
         $(oItem[i]).removeClass("active")
     }
+
     $(navOjb).parent().addClass("active");
     if ($(navOjb).parents("ul").attr("class") == "sub-menu") {
         $(navOjb).parents("ul").slideDown();
         $(navOjb).parents(".has-sub").addClass("active");
     }
+
+
 }
 
 
 //修改标题
-function show_title(str, navOjb) {
+function show_title(str, navOjb, hostName) {
+    if (hostName != undefined) {
+        $("#nav_host")[0].innerHTML = hostName;
+
+        var oItem = $('.nav>li>a>i[title="nav"]');
+        for (var i = 0; i < oItem.length; i++) {
+            oItem[i].className = 'fa fa-caret-right fa-fw pull-right';
+        }
+
+        navOjb.childNodes[1].className = 'fa fa-caret-down fa-fw pull-right';
+    }
     $("#nav_title")[0].innerHTML = str;
     nav_left(navOjb);
 }

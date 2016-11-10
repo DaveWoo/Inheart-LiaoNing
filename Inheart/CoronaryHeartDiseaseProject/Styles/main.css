@@ -601,15 +601,14 @@ FORM {
 }
 
 .tableborder {
-    background: #D6E0EF;
-    border: 1px solid #698CC3;
+    background-color: #5bc0de;
+    border-color: #46b8da;
+    border: 1px solid #ccc;
 }
 
 .header {
-    font: 9pt Tahoma, Verdana;
     color: #FFFFFF;
     font-weight: bold;
-    background-color: #66aadb;
 }
 
 .columnAge {
@@ -685,14 +684,14 @@ FORM {
 
 
 .headerLongin {
-    font: 14pt Tahoma, Verdana;
+    font: 14pt;
     color: #3795d2;
     font-weight: bold;
     line-height: 40px;
-    text-align:center;
+    text-align: center;
 }
+
 .tableborderLogin {
     border: 1px solid #ccc;
-    background-color:#FAFAFA;
-  
+    background-color: #FAFAFA;
 }

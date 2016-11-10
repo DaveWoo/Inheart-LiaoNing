@@ -56,7 +56,7 @@
     }
 
     .sidebar .nav > li[class*=active] > a {
-        background-color: #00acac;
+        background-color: #5bc0de;
         color: #fff;
     }
 
@@ -81,7 +81,7 @@
         }
 
         .sidebar .sub-menu li[class*=active] > a {
-            color: #00acac !important;
+            color: #5bc0de !important;
         }
 
 .maincontent {
@@ -151,10 +151,16 @@
 }
 
 .nav_bar_top {
-    height: 30px;
+    height: 35px;
     border-right: 1px solid #ccc;
-    margin-top: 10px;
+    margin-top: 12px;
 }
 .nav_name {
     margin-left:12px;
+}
+
+.label {
+    font-size: 100% !important;
+    border-radius: 1px !important;
+    padding: .2em .6em .2em !important;
 }

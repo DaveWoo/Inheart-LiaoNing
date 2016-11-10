@@ -18,11 +18,11 @@
     <form id="myform" runat="server">
         <div class="input-group" id="search-bar">
             <span class="glyphicon glyphicon-search" style="font-size: 25px; vertical-align: middle"></span>&nbsp;
-                <asp:DropDownList ID="ddlCondition" runat="server" Height="35" Style="vertical-align: middle; width: 150px;">
+                <asp:DropDownList ID="ddlCondition" runat="server" Height="30px" Style="vertical-align: middle; width: 150px;">
                     <asp:ListItem>请选择</asp:ListItem>
                 </asp:DropDownList>
-            <asp:TextBox ID="txtCondition" runat="server" Height="35" Style="vertical-align: middle" placeholder="请输入"></asp:TextBox>
-            <asp:Button runat="server" ID="Button1" Text="查询" OnClick="Search_Click" CssClass="btn btn-info widthButton " Height="35px" />
+            <asp:TextBox ID="txtCondition" runat="server" Height="30px" Style="vertical-align: middle" placeholder="请输入"></asp:TextBox>
+            <asp:Button runat="server" ID="Button1" Text="查询" OnClick="Search_Click" CssClass="btn btn-info widthButton " Height="30px" />
             <asp:Label ID="lblMessage" runat="server" ForeColor="Red" />
         </div>
         <div>

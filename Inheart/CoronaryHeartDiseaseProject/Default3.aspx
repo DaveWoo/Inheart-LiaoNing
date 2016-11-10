@@ -9,6 +9,8 @@
     <script type="text/javascript" src="../Scripts/default.js"></script>
     <script type="text/javascript" src="../Scripts/bootstrap.min.js"></script>
     <link rel="stylesheet" href="../Styles/default-nav.css" type="text/css" />
+    <!--font-awesome字体库-->
+    <link href="/Content/font-awesome.min.css" rel="stylesheet" />
     <title>辽宁省冠心病急救网络信息平台</title>
 </head>
 <body>
@@ -26,8 +28,7 @@
                         aria-expanded="false" aria-controls="navbar">
                         <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
                     </button>
-
-                    <a class="navbar-brand" href="SuperManage/AddHospital.aspx" target="content3">病例录入平台&nbsp;&nbsp;-&nbsp;&nbsp; <span id="title" style="color: #9d9d9d;">管理</span></a>
+                    <a class="navbar-brand" href="SuperManage/AddHospital.aspx" target="content3">病例录入平台</a>
                 </div>
                 <div id="navbar" class="collapse navbar-collapse">
                     <ul class="nav navbar-nav navbar-right">
@@ -35,7 +36,7 @@
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
                                 aria-expanded="false"><i class="fa fa-user fa-fw"></i>&nbsp;<%=UserName%>&nbsp;<span class="caret"></span></a>
                             <ul class="dropdown-menu" role="menu">
-                                <li><a href="Logout.aspx">注销</a></li>
+                                <li><a href="Logout.aspx"><i class="glyphicon glyphicon-log-out"></i>&nbsp;&nbsp;注销</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -46,11 +47,11 @@
             <div class="sidebar">
                 <ul class="nav">
                     <li class="has-sub">
-                        <a href="MessageManage.aspx" tag="admin" target="content3" onclick="show_title('病例查询',this)"><span>管理</span><i class="fa fa-caret-right fa-fw pull-right"></i></a>
+                        <a href="MessageManage.aspx" tag="admin" target="content3" onclick="show_title('病例查询',this,'管理')"><span>管理</span><i title="nav" class="fa fa-caret-right fa-fw pull-right"></i></a>
                         <ul class="sub-menu">
                             <li><a title="病例查询" onclick="show_title('病例查询',this)" href="MessageManage.aspx"
                                 target="content3"><i class="glyphicon glyphicon-map-marker"></i>病例查询</a></li>
-                            <li><a title="病例录入" onclick="show_title('病例管理',this)" href="MessageInput.aspx"
+                            <li><a title="病例录入" onclick="show_title('病例录入',this)" href="MessageInput.aspx"
                                 target="content3"><i class="glyphicon glyphicon-map-marker"></i>病例录入</a></li>
                             <li><a title="修改密码" onclick="show_title('修改密码',this)" href="UserCenter.aspx"
                                 target="content3"><i class="glyphicon glyphicon-map-marker"></i>修改密码</a> </li>
@@ -59,6 +60,7 @@
                 </ul>
             </div>
             <div class="tabContent ">
+                <div class="nav_bar_top"><span class="nav_name">网站导航: > </span><span id="nav_host">管理</span> > <span class="label label-info" id="nav_title">病例查询</span></div>
                 <iframe name="content3" src="MessageManage.aspx" onclick="show_title('病例查询',this)" frameborder="0" style="width: inherit; height: inherit; margin-left: 0; padding-left: 0"></iframe>
             </div>
         </div>

@@ -11,13 +11,11 @@
     <title>辽宁省冠心病急救网络信息平台 -- 系统登陆</title>
 </head>
 <body>
-    <form name="form1" id="form1" runat="server" >
+    <form name="form1" id="form1" runat="server">
         <table style="margin-top: 90px;" width="320" border="0" align="center" cellpadding="3" cellspacing="1" class="tableborder">
             <tr class="headerLongin">
                 <td height="30" colspan="2">
-                    <div align="center">
-                        <strong><font color="#FFFFFF">管理员登陆</font></strong>
-                    </div>
+                    <span>管理员登陆</span>
                 </td>
             </tr>
             <tr>
@@ -39,11 +37,11 @@
                 </td>
                 <td>
                     <div class="form-group">
-                        <div class="col-xs-2" style="width: 139px;margin-left: 0; padding-left: 0;padding-right:0">
+                        <div class="col-xs-2" style="width: 139px; margin-left: 0; padding-left: 0; padding-right: 0">
                             <input name="verify" type="text" title="请输入验证码" size="5" maxlength="4" tabindex="4" class="form-control" placeholder="验证码"
                                 style="width: 139px;" />
                         </div>
-                        <div class="col-xs-2" style="padding-right:0;padding-left:0;padding-top:2px">
+                        <div class="col-xs-2" style="padding-right: 0; padding-left: 0; padding-top: 2px">
                             <asp:Image ID="Image1" runat="server" Width="60px" Height="30px" ImageUrl="~/Verfiy.aspx" ImageAlign="Baseline"></asp:Image>
                         </div>
                     </div>

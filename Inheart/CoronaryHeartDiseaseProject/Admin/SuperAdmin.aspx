@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="/Content/bootstrap.min.css" />
     <link rel="stylesheet" href="../Styles/default-nav.css" type="text/css" />
     <link rel="stylesheet" href="../../Styles/admin.css" />
+    <!--font-awesome字体库-->
+    <link href="/Content/font-awesome.min.css" rel="stylesheet" />
     <title>辽宁省冠心病急救网络信息平台</title>
 </head>
 <body>
@@ -45,7 +47,7 @@
             <div class="sidebar">
                 <ul class="nav">
                     <li class="has-sub">
-                        <a href="SuperManage/AddHospital.aspx" tag="admin" onclick="show_title('添加医院',this)" target="content3"><span>医院</span><i class="fa fa-caret-right fa-fw pull-right"></i></a>
+                        <a href="SuperManage/AddHospital.aspx" tag="admin" onclick="show_title('添加医院',this,'医院')" target="content3"><span>医院</span><i title="nav" class="fa fa-caret-right fa-fw pull-right"></i></a>
                         <ul class="sub-menu">
                             <li><a title="添加医院" href="SuperManage/AddHospital.aspx" onclick="show_title('添加医院',this)"
                                 target="content3"><i class="glyphicon glyphicon-map-marker"></i>添加医院</a></li>
@@ -55,18 +57,18 @@
                     </li>
 
                     <li class="has-sub">
-                        <a href="SuperManage/AddAdmin.aspx" tag="admin" target="content3" onclick="show_title('添加管理员',this)"><span>管理员</span><i class="fa fa-caret-right fa-fw pull-right"></i></a>
+                        <a href="SuperManage/AddAdmin.aspx" tag="admin" target="content3" onclick="show_title('添加管理员',this,'管理员')"><span>管理员</span><i title="nav" class="fa fa-caret-right fa-fw pull-right"></i></a>
                         <ul class="sub-menu">
                             <li><a title="添加管理员" onclick="show_title('添加管理员',this)" href="SuperManage/AddAdmin.aspx"
                                 target="content3"><i class="glyphicon glyphicon-map-marker"></i>添加管理员</a></li>
                             <li><a title="管理管理员" onclick="show_title('管理管理员',this)" href="SuperManage/AdminManage.aspx"
                                 target="content3"><i class="glyphicon glyphicon-map-marker"></i>管理管理员</a></li>
-                            <li><a title="修改密码" onclick="show_title('修改密码'),this)" href="SuperManage/AdminCenter.aspx"
+                            <li><a title="修改密码" onclick="show_title('修改密码',this)" href="SuperManage/AdminCenter.aspx"
                                 target="content3"><i class="glyphicon glyphicon-map-marker"></i>修改密码</a></li>
                         </ul>
                     </li>
                     <li class="has-sub">
-                        <a tag="admin" href="SuperManage/SummaryReport.aspx?type=All" target="content3" onclick="show_title('患者总人数',this)"><span>报表</span><i class="fa fa-caret-right fa-fw pull-right"></i></a>
+                        <a tag="admin" href="SuperManage/SummaryReport.aspx?type=All" target="content3" onclick="show_title('患者总人数',this,'报表')"><span>报表</span><i title="nav" class="fa fa-caret-right fa-fw pull-right"></i></a>
                         <ul class="sub-menu">
                             <li><a title="患者总人数" onclick="show_title('患者总人数',this)" href="SuperManage/SummaryReport.aspx?type=Sum"
                                 target="content3"><i class="glyphicon glyphicon-map-marker"></i>患者总人数</a></li>
@@ -85,7 +87,7 @@
                         </ul>
                     </li>
                     <li class="has-sub">
-                        <a href="SuperManage/MessageManageSupperAdmin.aspx" tag="admin" target="content3" onclick="show_title('病例管理',this)"><span>管理</span><i class="fa fa-caret-right fa-fw pull-right"></i></a>
+                        <a href="SuperManage/MessageManageSupperAdmin.aspx" tag="admin" target="content3" onclick="show_title('病例管理',this,'管理')"><span>管理</span><i title="nav" class="fa fa-caret-right fa-fw pull-right"></i></a>
                         <ul class="sub-menu">
                             <li><a title="病例管理" onclick="show_title('病例管理',this)" href="SuperManage/MessageManageSupperAdmin.aspx"
                                 target="content3"><i class="glyphicon glyphicon-map-marker"></i>病例管理</a></li>
@@ -96,8 +98,7 @@
                 </ul>
             </div>
             <div class="tabContent ">
-
-                <div class="nav_bar_top"><span class="nav_name">网站导航: </span><span class="label label-info" id="nav_title">您好</span></div>
+                <div class="nav_bar_top"><span class="nav_name">网站导航: > </span><span id="nav_host">管理</span> > <span class="label label-info" id="nav_title">医院</span></div>
 
                 <iframe name="content3" src="SuperManage/AddHospital.aspx" onclick="show_title('添加医院',this)" frameborder="0" style="width: inherit; height: inherit; margin-left: 0; padding-left: 0"></iframe>
             </div>

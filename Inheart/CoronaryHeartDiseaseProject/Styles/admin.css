@@ -1,16 +1,8 @@
 .header {
-    font: 12pt Tahoma, Verdana;
     color: #FFFFFF;
     font-weight: bold;
-    background-color: #66aadb;
-}
-
-.headerLongin {
-    font: 12pt Tahoma, Verdana;
-    color: #FFFFFF;
-    font-weight: bold;
-    background-color: #698CC3;
-    line-height: 40px;
+    background-color: #5bc0de;
+    border-color: #46b8da;
 }
 
 .header a {
@@ -18,14 +10,12 @@
 }
 
 .category {
-    font: 12pt Tahoma, Verdana;
     color: #000000;
     background-color: #EFEFEF;
 }
 
 .tableborder {
     border: 1px solid #ccc;
-    background-color:#FAFAFA;
 }
 
 .singleborder {
@@ -35,12 +25,8 @@
     background-color: #F8F8F8;
 }
 
-.smalltxt {
-    font: 12pt Tahoma, Verdana;
-}
 
 .outertxt {
-    font: 12pt Tahoma, Verdana;
     color: #000000;
 }
 
@@ -133,14 +119,15 @@ img {
     width: 200px;
 }
 
-.label {
-    font-size: 95% !important;
-    border-radius: 1px !important;
-    padding: .2em .6em .2em !important;
-}
-
 #myform {
     margin-left: 10px;
     margin-right: 10px;
     margin-top: 1px;
+}
+.headerLongin {
+    font: 14pt;
+    color: #3795d2;
+    font-weight: bold;
+    line-height: 40px;
+    text-align: center;
 }

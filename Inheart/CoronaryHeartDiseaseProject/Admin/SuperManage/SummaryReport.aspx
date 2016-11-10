@@ -41,25 +41,6 @@
             </div>
         </asp:Panel>
         <asp:Panel runat="server" ID="paneOverView" Visible="false">
-            <table width="100%" border="0" align="center" cellpadding="3" cellspacing="1">
-                <tr>
-                    <td>
-                        <table width="100%" border="0" align="center" cellpadding="3" cellspacing="1" style="border: 0">
-                            <tr>
-                                <td height="25" colspan="2">网站导航: &nbsp;
-                                    <a href="SuperManage/SummaryReport.aspx?type=Sum"><span class="label label-info">患者总人数</span></a> &nbsp;|&nbsp; 
-                                    <a href="SuperManage/SummaryReport.aspx?type=Sex">患者性别</a> &nbsp;|&nbsp; 
-                                    <a href="SuperManage/SummaryReport.aspx?type=Age">患者年龄</a> &nbsp;|&nbsp; 
-                                    <a href="SuperManage/SummaryReport.aspx?type=ThrombolysisCount">溶栓人数</a> &nbsp;|&nbsp; 
-                                    <a href="SuperManage/SummaryReport.aspx?type=EmergencyTreate">急诊介入人数</a> &nbsp;|&nbsp; 
-                                    <a href="SuperManage/SummaryReport.aspx?type=DeathCount">死亡人数</a> &nbsp;|&nbsp; 
-                                    <a href="SuperManage/SummaryReport.aspx?type=TransferUpHospitalCount">转上级医院患者数</a>
-                                </td>
-                            </tr>
-                        </table>
-                    </td>
-                </tr>
-            </table>
             <table cellpadding="0" cellspacing="0" class="tableSummary" align="left" style="margin-top: 50px;">
                 <tr class="row1Summary">
                     <td colspan="2" style="text-align: center; font-weight: bold; font-size: 16px">2016年上报统计
