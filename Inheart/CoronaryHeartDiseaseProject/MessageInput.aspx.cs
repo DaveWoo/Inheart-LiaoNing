@@ -249,7 +249,7 @@
 		#region 控件显示
 
 		/// <summary>
-		///
+		/// 出血选项
 		/// </summary>
 		protected void chkBlood_CheckedChanged(object sender, EventArgs e)
 		{
@@ -266,10 +266,8 @@
 		}
 
 		/// <summary>
-		///
+		/// 心律失常选项
 		/// </summary>
-		/// <param name="sender"></param>
-		/// <param name="e"></param>
 		protected void ddlArrhythmiaExist_SelectedIndexChanged(object sender, EventArgs e)
 		{
 			if (this.ddlArrhythmiaExist.Text == "有")
@@ -298,7 +296,7 @@
 		}
 
 		/// <summary>
-		///
+		/// 脑卒中选项
 		/// </summary>
 		protected void rblCerebralHemorrhageConfirm_SelectedIndexChanged(object sender, EventArgs e)
 		{
@@ -314,7 +312,7 @@
 		}
 
 		/// <summary>
-		///
+		/// 伴随症状选项
 		/// </summary>
 		protected void rblConcomitantSymptomExist_SelectedIndexChanged(object sender, EventArgs e)
 		{
@@ -329,7 +327,7 @@
 		}
 
 		/// <summary>
-		///
+		/// 在院24h内是否进行了心肺复苏选项
 		/// </summary>
 		protected void rblCPR_SelectedIndexChanged(object sender, EventArgs e)
 		{
@@ -344,7 +342,7 @@
 		}
 
 		/// <summary>
-		///
+		/// 糖尿病选项
 		/// </summary>
 		protected void rblGlycuresisConfirm_SelectedIndexChanged(object sender, EventArgs e)
 		{
@@ -361,7 +359,7 @@
 		}
 
 		/// <summary>
-		///
+		/// 高血压选项
 		/// </summary>
 		protected void rblHypertensionConfirm_SelectedIndexChanged(object sender, EventArgs e)
 		{
@@ -378,7 +376,7 @@
 		}
 
 		/// <summary>
-		///
+		/// 诱因选项
 		/// </summary>
 		protected void rblIncentiveExist_SelectedIndexChanged(object sender, EventArgs e)
 		{
@@ -393,7 +391,7 @@
 		}
 
 		/// <summary>
-		///
+		/// 是否应用他汀类药物选项
 		/// </summary>
 		protected void rblLoadStatinUsed_SelectedIndexChanged(object sender, EventArgs e)
 		{
@@ -415,7 +413,7 @@
 		}
 
 		/// <summary>
-		///
+		/// 部位选项
 		/// </summary>
 		protected void rblPositionExist_SelectedIndexChanged(object sender, EventArgs e)
 		{
@@ -430,7 +428,7 @@
 		}
 
 		/// <summary>
-		///
+		/// 放射痛部位选项
 		/// </summary>
 		protected void rblRadiationPainExist_SelectedIndexChanged(object sender, EventArgs e)
 		{
@@ -445,7 +443,7 @@
 		}
 
 		/// <summary>
-		///
+		/// 是否进行了静脉溶栓治疗选项
 		/// </summary>
 		protected void rdbThrombolysisTreateConfirm_SelectedIndexChanged1(object sender, EventArgs e)
 		{
@@ -462,7 +460,7 @@
 		}
 
 		/// <summary>
-		///
+		/// 转上级医院选项
 		/// </summary>
 		protected void rblTransUpHospitalConfirm_SelectedIndexChanged(object sender, EventArgs e)
 		{
@@ -477,7 +475,7 @@
 		}
 
 		/// <summary>
-		///
+		/// 在院24h内的转归选项
 		/// </summary>
 		protected void rblTreatResult_SelectedIndexChanged(object sender, EventArgs e)
 		{
@@ -500,7 +498,7 @@
 		}
 
 		/// <summary>
-		///
+		/// 急性ST段抬高性心肌梗死选项
 		/// </summary>
 		protected void rdAcuteST_CheckedChanged(object sender, EventArgs e)
 		{
@@ -522,7 +520,7 @@
 		}
 
 		/// <summary>
-		///
+		/// 段抬高性心肌梗死选项--未选中
 		/// </summary>
 		protected void rdAcuteST_UnCheckedChanged(object sender, EventArgs e)
 		{
@@ -532,9 +530,9 @@
 		#endregion 控件显示
 
 		/// <summary>
-		///
+		/// 控件是否开启
 		/// </summary>
-		/// <param name="isEnable"></param>
+		/// <param name="isEnable">是否开启</param>
 		protected void EnableExpendContent(bool isEnable)
 		{
 			this.PanelrblIncentiveType.Visible = isEnable;
@@ -558,7 +556,7 @@
 		#endregion 公共方法
 
 		/// <summary>
-		///
+		/// 是否进行了静脉溶栓治疗选项
 		/// </summary>
 		protected void rdbThrombolysisTreateConfirm_SelectedIndexChanged(object sender, EventArgs e)
 		{
@@ -573,7 +571,7 @@
 		}
 
 		/// <summary>
-		///
+		/// 静脉溶栓选项
 		/// </summary>
 		protected void niaoJiMei_CheckedChanged(object sender, EventArgs e)
 		{
@@ -582,7 +580,7 @@
 		}
 
 		/// <summary>
-		///
+		/// 阿替普酶选项
 		/// </summary>
 		protected void aiTiPuMei_CheckedChanged(object sender, EventArgs e)
 		{
@@ -592,7 +590,7 @@
 		}
 
 		/// <summary>
-		///
+		/// 瑞替普酶选项
 		/// </summary>
 		protected void ruiTiPuMei_CheckedChanged(object sender, EventArgs e)
 		{
@@ -602,7 +600,7 @@
 		}
 
 		/// <summary>
-		///
+		/// 瑞替普酶选项--次数
 		/// </summary>
 		protected void rblReteplase_SelectedIndexChanged(object sender, EventArgs e)
 		{
@@ -614,7 +612,7 @@
 		}
 
 		/// <summary>
-		///
+		/// 瑞替普酶选项--用量单位
 		/// </summary>
 		protected void rblAlteplase_SelectedIndexChanged(object sender, EventArgs e)
 		{
@@ -626,7 +624,7 @@
 		}
 
 		/// <summary>
-		///
+		/// 尿激酶选项
 		/// </summary>
 		protected void rblUrokinase_SelectedIndexChanged(object sender, EventArgs e)
 		{

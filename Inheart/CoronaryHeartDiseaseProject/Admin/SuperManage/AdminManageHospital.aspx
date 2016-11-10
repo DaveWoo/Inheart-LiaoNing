@@ -21,7 +21,7 @@
                     <table width="100%" border="0" align="center" cellpadding="3" cellspacing="1">
                         <tr>
                             <td height="25" colspan="2">网站导航: &nbsp;<a href="AddHospital.aspx">添加医院</a> &nbsp;|&nbsp; <a href="AdminManageHospital.aspx">
-                                <b>管理医院</b></a>&nbsp; |
+                                <span class="label label-info">管理医院</span></a>
                             </td>
                         </tr>
                     </table>

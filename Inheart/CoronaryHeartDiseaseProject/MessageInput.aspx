@@ -93,8 +93,7 @@
                                                     <asp:ListItem Text="外籍" Value="56"></asp:ListItem>
                                                 </asp:DropDownList>
                                             </td>
-                                            <td class="Column3">职业：
-                                            </td>
+                                            <td class="Column3">职业：</td>
                                             <td class="Column4">
                                                 <asp:DropDownList ID="DropDownListJob" CssClass="form-control" runat="server" TabIndex="4" ToolTip="不能为空" Width="166px">
                                                     <asp:ListItem Selected="True" Text="请选择" Value="-1"></asp:ListItem>
@@ -123,8 +122,7 @@
                                 <td>
                                     <table cellpadding="0" cellspacing="0" border="0">
                                         <tr>
-                                            <td class="Column1JiBing1">出生日期:
-                                            </td>
+                                            <td class="Column1JiBing1">出生日期:</td>
                                             <td class="Column2ZhuSuXianBingShi">
                                                 <asp:TextBox ID="txbBirthDay" CssClass="form-control" Width="165px" runat="server" AutoPostBack="true" onfocus="new Calendar().show(this);"
                                                     OnTextChanged="txbBirthDay_TextChanged" ToolTip="出生日期不能为空."></asp:TextBox>
@@ -153,18 +151,10 @@
                                             <td class="Column2ZhuSuXianBingShi">
                                                 <asp:TextBox ID="txbTreatTime" runat="server" CssClass="Wdate form-control" onfocus="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm'})" ToolTip="就诊时间不能为空." Height="26px" Width="165px"></asp:TextBox>
                                             </td>
-                                            <td class="Column3">发病时间:
-                                            </td>
+                                            <td class="Column3">发病时间:</td>
                                             <td class="Column4">
                                                 <asp:TextBox ID="txtDiseaseHour" runat="server" Width="99px" ToolTip="不能为空" />
                                                 小时
-                                           
-                                            
-
-                                               
-
-
-
                                                 <asp:CustomValidator ID="cusValidatorAge" runat="server" ControlToValidate="txtDiseaseHour"
                                                     Display="Dynamic" ErrorMessage="无效时间." OnServerValidate="ServerValidation" ValidateEmptyText="false"></asp:CustomValidator>
                                                 <script runat="server">
@@ -471,35 +461,32 @@
                                                         <asp:Panel runat="server" ID="PanelddlHypertensionLasted">
                                                             病程(年):&nbsp;
                                                              <asp:DropDownList TabIndex="28" ID="ddlHypertensionLasted" CssClass="form-control" runat="server" RepeatDirection="Horizontal"
-                                                                RepeatLayout="Flow" Width="120px">
-                                                                <asp:ListItem>0</asp:ListItem>
-                                                                <asp:ListItem>1</asp:ListItem>
-                                                                <asp:ListItem>2</asp:ListItem>
-                                                                <asp:ListItem>3</asp:ListItem>
-                                                                <asp:ListItem>4</asp:ListItem>
-                                                                <asp:ListItem>5</asp:ListItem>
-                                                                <asp:ListItem>6</asp:ListItem>
-                                                                <asp:ListItem>7</asp:ListItem>
-                                                                <asp:ListItem>8</asp:ListItem>
-                                                                <asp:ListItem>9</asp:ListItem>
-                                                                <asp:ListItem>10</asp:ListItem>
-                                                                <asp:ListItem>11</asp:ListItem>
-                                                                <asp:ListItem>12</asp:ListItem>
-                                                                <asp:ListItem>13</asp:ListItem>
-                                                                <asp:ListItem>14</asp:ListItem>
-                                                                <asp:ListItem>15</asp:ListItem>
-                                                                <asp:ListItem>16</asp:ListItem>
-                                                                <asp:ListItem>17</asp:ListItem>
-                                                                <asp:ListItem>18</asp:ListItem>
-                                                                <asp:ListItem>19</asp:ListItem>
-                                                                <asp:ListItem>20</asp:ListItem>
-                                                                <asp:ListItem>20年以上</asp:ListItem>
-                                                            </asp:DropDownList>
+                                                                 RepeatLayout="Flow" Width="120px">
+                                                                 <asp:ListItem>0</asp:ListItem>
+                                                                 <asp:ListItem>1</asp:ListItem>
+                                                                 <asp:ListItem>2</asp:ListItem>
+                                                                 <asp:ListItem>3</asp:ListItem>
+                                                                 <asp:ListItem>4</asp:ListItem>
+                                                                 <asp:ListItem>5</asp:ListItem>
+                                                                 <asp:ListItem>6</asp:ListItem>
+                                                                 <asp:ListItem>7</asp:ListItem>
+                                                                 <asp:ListItem>8</asp:ListItem>
+                                                                 <asp:ListItem>9</asp:ListItem>
+                                                                 <asp:ListItem>10</asp:ListItem>
+                                                                 <asp:ListItem>11</asp:ListItem>
+                                                                 <asp:ListItem>12</asp:ListItem>
+                                                                 <asp:ListItem>13</asp:ListItem>
+                                                                 <asp:ListItem>14</asp:ListItem>
+                                                                 <asp:ListItem>15</asp:ListItem>
+                                                                 <asp:ListItem>16</asp:ListItem>
+                                                                 <asp:ListItem>17</asp:ListItem>
+                                                                 <asp:ListItem>18</asp:ListItem>
+                                                                 <asp:ListItem>19</asp:ListItem>
+                                                                 <asp:ListItem>20</asp:ListItem>
+                                                                 <asp:ListItem>20年以上</asp:ListItem>
+                                                             </asp:DropDownList>
                                                             <br />
-                                                            治疗状况:													   
-                                                        
-                                                           
-
+                                                            治疗状况:
                                                             <asp:DropDownList TabIndex="29" ID="ddlHypertensionTreatedState" CssClass="form-control" runat="server" RepeatDirection="Horizontal"
                                                                 RepeatLayout="Flow" Width="120px">
                                                                 <asp:ListItem>未治疗</asp:ListItem>
@@ -561,10 +548,7 @@
                                                                 <asp:ListItem>20年以上</asp:ListItem>
                                                             </asp:DropDownList>
                                                             <br />
-                                                            治疗状况:													   
-                                                        
-                                                           
-
+                                                            治疗状况:	
                                                             <asp:DropDownList TabIndex="32" ID="ddlGlycuresisTreatedState" CssClass="form-control" runat="server" RepeatDirection="Horizontal"
                                                                 RepeatLayout="Flow" Width="120px">
                                                                 <asp:ListItem>未治疗</asp:ListItem>
@@ -740,10 +724,7 @@
                                                                             <br />
                                                                             房室传导阻滞（<asp:CheckBox ID="chkAVBI" Text="I度" runat="server" />
                                                                             <asp:CheckBox ID="chkAVBII" Text="II度" runat="server" />
-                                                                            <asp:CheckBox ID="chkAVBIII" Text="III度" runat="server" />)
-                                                                           
-                                                                           
-
+                                                                            <asp:CheckBox ID="chkAVBIII" Text="III度" runat="server" />)    
                                                                             <br />
                                                                             <asp:CheckBox ID="chkAFS" Text="左束支传导阻滞 " runat="server" />
                                                                             <asp:CheckBox ID="chkRBBB" Text="右束支传导阻滞 " runat="server" />
@@ -887,7 +868,7 @@
                                                 <asp:TextBox ID="txtBloodPressure" TabIndex="49" runat="server" CssClass="form-control-patient"></asp:TextBox>mmHg
                                             </td>
                                             <td>&nbsp;&nbsp;舒张压    
-                                                <asp:TextBox ID="txtDiastolicPressure" TabIndex="50" runat="server"  CssClass="form-control-patient"></asp:TextBox>mmHg
+                                                <asp:TextBox ID="txtDiastolicPressure" TabIndex="50" runat="server" CssClass="form-control-patient"></asp:TextBox>mmHg
                                                 <asp:CustomValidator ID="CustomValidator1" ControlToValidate="txtDiastolicPressure"
                                                     runat="server" ValidateEmptyText="false" ErrorMessage="请输入数字." OnServerValidate="ServerValidation" />
                                                 <asp:CustomValidator ID="CustomValidatorBloodPressure" ControlToValidate="txtBloodPressure"
@@ -903,7 +884,7 @@
                                         <tr>
                                             <td class="Column1JiBing1">首次心率：</td>
                                             <td>
-                                                <asp:TextBox TabIndex="51" ToolTip="不为空" CssClass="form-control-patient" ID="txtFirstTimeHeartRate" runat="server" ></asp:TextBox>
+                                                <asp:TextBox TabIndex="51" ToolTip="不为空" CssClass="form-control-patient" ID="txtFirstTimeHeartRate" runat="server"></asp:TextBox>
                                                 &nbsp;次/分
 
                                                 <asp:CustomValidator ID="CustomValidator8" ControlToValidate="txtFirstTimeHeartRate"
@@ -956,10 +937,10 @@
                                         <tr>
                                             <td class="Column1JiBing1">首次cTNT结果：</td>
                                             <td>
-                                                <asp:TextBox TabIndex="55" ID="txtCNTResult"  CssClass="form-control-patient" runat="server"></asp:TextBox>
+                                                <asp:TextBox TabIndex="55" ID="txtCNTResult" CssClass="form-control-patient" runat="server"></asp:TextBox>
                                                 <asp:CustomValidator ID="customValidator4" runat="server" ControlToValidate="txtCNTResult"
                                                     ErrorMessage="请输入数字." Display="Dynamic" ValidateEmptyText="false" OnServerValidate="ServerValidation" />
-                                                （正常值：<asp:TextBox ID="txtRegularCNT" runat="server" CssClass="form-control-patient" ></asp:TextBox>(pg/ml))
+                                                （正常值：<asp:TextBox ID="txtRegularCNT" runat="server" CssClass="form-control-patient"></asp:TextBox>(pg/ml))
                                                 <asp:CustomValidator ID="customValidator5" runat="server" ControlToValidate="txtRegularCNT"
                                                     ErrorMessage="请输入数字." Display="Dynamic" ValidateEmptyText="false" OnServerValidate="ServerValidation" />
                                             </td>
@@ -1099,7 +1080,7 @@
                                                                             <asp:ListItem>100 万U</asp:ListItem>
                                                                             <asp:ListItem>150 万U</asp:ListItem>
                                                                         </asp:RadioButtonList>
-                                                                        &nbsp;&nbsp;&nbsp;&nbsp;其他：<asp:TextBox ID="txtUrokinaseOther" CssClass="form-control-patient"  runat="server"></asp:TextBox>
+                                                                        &nbsp;&nbsp;&nbsp;&nbsp;其他：<asp:TextBox ID="txtUrokinaseOther" CssClass="form-control-patient" runat="server"></asp:TextBox>
                                                                         &nbsp;(万U)
                                                                         <asp:CustomValidator ID="customValidator6" runat="server" ControlToValidate="txtUrokinaseOther"
                                                                             Display="Dynamic" ErrorMessage="请输入数字." OnServerValidate="ServerValidation" ValidateEmptyText="false" />
@@ -1504,7 +1485,7 @@
                                                                         <td colspan="2">
                                                                             <span style="color: Blue">患者转院前是否已与上级医院联系准备下一步的治疗: </span>
                                                                             <asp:RadioButtonList TabIndex="131" ID="rblConnectUpHospitalConfirm" runat="server"
-                                                                                AutoPostBack="true" 
+                                                                                AutoPostBack="true"
                                                                                 RepeatDirection="Horizontal" RepeatLayout="Flow">
                                                                                 <asp:ListItem>是</asp:ListItem>
                                                                                 <asp:ListItem>否</asp:ListItem>
@@ -1533,6 +1514,7 @@
                         </table>
                     </td>
                 </tr>
+                <%--保存--%>
                 <tr>
                     <td style="padding-bottom: 100px;">&nbsp;
                     </td>

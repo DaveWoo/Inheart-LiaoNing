@@ -11,20 +11,34 @@
     <title>病例管理</title>
 </head>
 <body>
-    <div style="margin-left: 10px; margin-right: 10px">
-        <form id="form1" runat="server">
-            <div style="height: 20px;" class="input-group" id="search-bar">
-                <span class="glyphicon glyphicon-search" style="font-size: 25px; vertical-align: middle"></span>&nbsp;
+    <form id="myform" runat="server">
+        <table width="100%" border="0" align="center" cellpadding="3" cellspacing="1">
+            <tr>
+                <td>
+                    <table width="100%" border="0" align="center" cellpadding="3" cellspacing="1" style="border: 0">
+                        <tr>
+                            <td height="25" colspan="2">网站导航: &nbsp;
+                                <a href="MessageManage.aspx"><span class="label label-info">病例查询</span></a>&nbsp;|&nbsp; 
+                                <a href="MessageInput.aspx">病例录入</a>&nbsp;|&nbsp; 
+                                <a href="UserCenter.aspx">修改密码</a>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <div style="height: 20px;" class="input-group" id="search-bar">
+            <span class="glyphicon glyphicon-search" style="font-size: 25px; vertical-align: middle"></span>&nbsp;
                 <asp:DropDownList ID="ddlCondition" runat="server" Height="35" Style="vertical-align: middle">
                     <asp:ListItem>请选择</asp:ListItem>
                 </asp:DropDownList>
-                <asp:TextBox ID="txtCondition" runat="server" Height="35" Style="vertical-align: middle;" placeholder="请输入"></asp:TextBox>
-                <asp:Button runat="server" ID="Button1" Text="查询" OnClick="Search_Click" CssClass="btn btn-info widthButton "
-                    Height="35px" />
-                <asp:Label ID="lblMessage" runat="server" ForeColor="Red" />
-            </div>
-            <div>
-                <asp:Label ID="Label1" runat="server"></asp:Label>&nbsp;  
+            <asp:TextBox ID="txtCondition" runat="server" Height="35" Style="vertical-align: middle;" placeholder="请输入"></asp:TextBox>
+            <asp:Button runat="server" ID="Button1" Text="查询" OnClick="Search_Click" CssClass="btn btn-info widthButton "
+                Height="35px" />
+            <asp:Label ID="lblMessage" runat="server" ForeColor="Red" />
+        </div>
+        <div>
+            <asp:Label ID="Label1" runat="server"></asp:Label>&nbsp;  
                 <asp:DataList ID="dgMessage" runat="server" Width="100%">
                     <FooterTemplate>
                     </FooterTemplate>
@@ -107,20 +121,19 @@
                         </table>
                     </ItemTemplate>
                 </asp:DataList>
-                <table align="center" border="0" cellpadding="3" cellspacing="1" class="tableborder"
-                    width="100%">
-                    <tr bgcolor="#ffffff">
-                        <td colspan="4" height="25">
-                            <div align="left">
-                                <input id="btnAddMedical" name="Submit822" onclick="javascript: window.location = 'MessageInput.aspx';"
-                                    type="button" value="添加病例" runat="server" align="left" Class="btn btn-info" />
-                                &nbsp;                       
-                            </div>
-                        </td>
-                    </tr>
-                </table>
-            </div>
-        </form>
-    </div>
+            <table align="center" border="0" cellpadding="3" cellspacing="1" class="tableborder"
+                width="100%">
+                <tr bgcolor="#ffffff">
+                    <td colspan="4" height="25">
+                        <div align="left">
+                            <input id="btnAddMedical" name="Submit822" onclick="javascript: window.location = 'MessageInput.aspx';"
+                                type="button" value="添加病例" runat="server" align="left" class="btn btn-info" />
+                            &nbsp;                       
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </form>
 </body>
 </html>

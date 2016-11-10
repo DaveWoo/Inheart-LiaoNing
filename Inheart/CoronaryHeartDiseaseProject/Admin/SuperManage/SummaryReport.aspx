@@ -1,12 +1,13 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" Inherits="CoronaryHeartDiseaseProject.Admin.SummaryReport" %>
 
-<%@ Register src="../inc/IsSuperAdmin.ascx" tagname="IsSuperAdmin" tagprefix="uc1" %>
+<%@ Register Src="../inc/IsSuperAdmin.ascx" TagName="IsSuperAdmin" TagPrefix="uc1" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
     <link rel="stylesheet" href="../../Styles/main.css" />
     <link rel="stylesheet" href="/Content/bootstrap.min.css" />
+    <link rel="stylesheet" href="../../Styles/admin.css" />
     <script type="text/javascript" src="/Scripts/bootstrap.min.js"></script>
     <script type="text/javascript" src="/Scripts/jquery-1.9.1.min.js"></script>
     <title>数据统计</title>
@@ -15,7 +16,7 @@
     <form id="form1" runat="server">
         <asp:Panel runat="server" ID="panelQuery" Visible="false">
             <div style="margin-bottom: 50px;">
-                <table border="0" cellpadding="0" cellspacing="0" style="margin-top: 10px;" >
+                <table border="0" cellpadding="0" cellspacing="0" style="margin-top: 10px;">
                     <tr style="height: 60px;">
                         <td style="color: Red; font-size: 20px;" colspan="4" align="left">请选择统计时期，不选择则统计全部！
                         </td>
@@ -23,7 +24,7 @@
                     <tr style="height: 60px;">
                         <td>按时间段查询：
                         </td>
-                        <td >起                       
+                        <td>起                       
                             <asp:TextBox name="control_date" type="text" ID="controldate" size="10" MaxLength="10"
                                 onclick="new Calendar().show(this);" runat="server" Width="182px" />
                         </td>
@@ -32,7 +33,7 @@
                         </td>
                         <td>
                             <span class="glyphicon glyphicon-search"></span>
-                            <asp:Button runat="server" ID="Button1" Text="查询" OnClick="Go_Click"     CssClass="btn btn-info widthButton "
+                            <asp:Button runat="server" ID="Button1" Text="查询" OnClick="Go_Click" CssClass="btn btn-info widthButton "
                                 Height="35px" />
                         </td>
                     </tr>
@@ -40,9 +41,28 @@
             </div>
         </asp:Panel>
         <asp:Panel runat="server" ID="paneOverView" Visible="false">
+            <table width="100%" border="0" align="center" cellpadding="3" cellspacing="1">
+                <tr>
+                    <td>
+                        <table width="100%" border="0" align="center" cellpadding="3" cellspacing="1" style="border: 0">
+                            <tr>
+                                <td height="25" colspan="2">网站导航: &nbsp;
+                                    <a href="SuperManage/SummaryReport.aspx?type=Sum"><span class="label label-info">患者总人数</span></a> &nbsp;|&nbsp; 
+                                    <a href="SuperManage/SummaryReport.aspx?type=Sex">患者性别</a> &nbsp;|&nbsp; 
+                                    <a href="SuperManage/SummaryReport.aspx?type=Age">患者年龄</a> &nbsp;|&nbsp; 
+                                    <a href="SuperManage/SummaryReport.aspx?type=ThrombolysisCount">溶栓人数</a> &nbsp;|&nbsp; 
+                                    <a href="SuperManage/SummaryReport.aspx?type=EmergencyTreate">急诊介入人数</a> &nbsp;|&nbsp; 
+                                    <a href="SuperManage/SummaryReport.aspx?type=DeathCount">死亡人数</a> &nbsp;|&nbsp; 
+                                    <a href="SuperManage/SummaryReport.aspx?type=TransferUpHospitalCount">转上级医院患者数</a>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
             <table cellpadding="0" cellspacing="0" class="tableSummary" align="left" style="margin-top: 50px;">
                 <tr class="row1Summary">
-                    <td colspan="2" style="text-align: center; font-weight: bold;font-size:16px">2016年上报统计
+                    <td colspan="2" style="text-align: center; font-weight: bold; font-size: 16px">2016年上报统计
                     </td>
                 </tr>
                 <tr>
@@ -138,7 +158,7 @@
         <asp:Panel runat="server" ID="panelAge" Visible="false">
             <table cellpadding="0" cellspacing="0" class="tableSummary" align="center">
                 <tr>
-                    <td colspan="5" style="text-align:center;font-size:16px;font-weight:bold">年龄分布图</td>
+                    <td colspan="5" style="text-align: center; font-size: 16px; font-weight: bold">年龄分布图</td>
                 </tr>
                 <tr class="row1Summary">
                     <td class="columnAge">

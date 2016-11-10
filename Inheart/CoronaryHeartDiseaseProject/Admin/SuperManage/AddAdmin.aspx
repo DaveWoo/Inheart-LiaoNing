@@ -19,7 +19,7 @@
                 <td>
                     <table width="100%" border="0" align="center" cellpadding="3" cellspacing="1">
                         <tr>
-                            <td height="25" colspan="2">网站导航: &nbsp;<a href="AddAdmin.aspx"><b>添加管理员</b></a> &nbsp;|&nbsp; <a href="AdminManage.aspx">管理管理员</a>&nbsp; | <a href="AdminCenter.aspx">修改密码</a> |
+                            <td height="25" colspan="2">网站导航: &nbsp;<a href="AddAdmin.aspx"><span class="label label-info" >添加管理员</span></a> &nbsp;|&nbsp; <a href="AdminManage.aspx">管理管理员</a>&nbsp; | <a href="AdminCenter.aspx">修改密码</a> 
                         </td>
                         </tr>
                     </table>

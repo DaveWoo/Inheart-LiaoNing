@@ -33,7 +33,7 @@
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
                            aria-expanded="false"><i class="fa fa-user fa-fw"></i>&nbsp;<%=UserName%>&nbsp;<span class="caret"></span></a>
                         <ul class="dropdown-menu" role="menu">
-                            <li><a href="Logout.aspx"><i class="fa fa-sign-out fa-fw"></i>&nbsp;注销</a></li>
+                            <li><a href="Logout.aspx"><i class="glyphicon glyphicon-log-out"></i>&nbsp;&nbsp;注销</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -47,20 +47,20 @@
                         <a href="SystemManage/AddUser.aspx" tag="admin" target="content3" onclick="show_title('添加新用户',this)"><span>用户管理</span><i class="fa fa-caret-right fa-fw pull-right"></i></a>
                         <ul class="sub-menu">
                             <li><a title="添加新用户" onclick="show_title('添加新用户',this)" href="SystemManage/AddUser.aspx"
-                                target="content3"><i class="fa fa-circle-o fa-fw"></i>添加新用户</a></li>
+                                target="content3"><i class="glyphicon glyphicon-map-marker"></i>添加新用户</a></li>
                             <li><a title="管理用户" onclick="show_title('管理用户',this)" href="SystemManage/UserManage.aspx"
-                                target="content3"><i class="fa fa-circle-o fa-fw"></i>管理用户</a></li>
+                                target="content3"><i class="glyphicon glyphicon-map-marker"></i>管理用户</a></li>
                             <li><a title="修改用户密码" onclick="show_title('修改用户密码'),this)" href="SystemManage/UserCenter.aspx"
-                                target="content3"><i class="fa fa-circle-o fa-fw"></i>修改用户密码</a></li>
+                                target="content3"><i class="glyphicon glyphicon-map-marker"></i>修改用户密码</a></li>
                         </ul>
                     </li>
                     <li class="has-sub">
                         <a href="SystemManage/MessageManageAdmin.aspx" tag="admin" target="content3" onclick="show_title('管理',this)"><span>日常管理</span><i class="fa fa-caret-right fa-fw pull-right"></i></a>
                         <ul class="sub-menu">
                             <li><a title="病例管理" onclick="show_title('病例管理',this)" href="SystemManage/MessageManageAdmin.aspx"
-                                target="content3"><i class="fa fa-circle-o fa-fw"></i>病例管理</a></li>
+                                target="content3"><i class="glyphicon glyphicon-map-marker"></i>病例管理</a></li>
                             <li><a title="查看日志" onclick="show_title('查看日志',this)" href="SystemManage/ViewLogs.aspx"
-                                target="content3"><i class="fa fa-circle-o fa-fw"></i>查看日志</a> </li>
+                                target="content3"><i class="glyphicon glyphicon-map-marker"></i>查看日志</a> </li>
                         </ul>
                     </li>
                 </ul>

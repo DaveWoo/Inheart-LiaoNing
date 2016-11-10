@@ -7,6 +7,7 @@
 <head runat="server">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../../Styles/main.css" />
+    <link rel="stylesheet" href="../../Styles/admin.css" />
     <link rel="stylesheet" href="/Content/bootstrap.min.css" />
     <script type="text/javascript" src="/Scripts/bootstrap.min.js"></script>
     <script type="text/javascript" src="/Scripts/jquery-1.9.1.min.js"></script>
@@ -14,19 +15,30 @@
     <title>病例管理</title>
 </head>
 <body>
-    <div id="div-body">
-        <form id="form1" runat="server">
-            <div class="input-group" id="search-bar">
-                <span class="glyphicon glyphicon-search" style="font-size: 25px; vertical-align: middle"></span>&nbsp;
+    <form id="myform" runat="server">
+        <table width="100%" border="0" align="center" cellpadding="3" cellspacing="1">
+            <tr>
+                <td>
+                    <table width="100%" border="0" align="center" cellpadding="3" cellspacing="1" style="border: 0">
+                        <tr>
+                            <td height="25" colspan="2">网站导航: &nbsp;<a href="SuperManage/MessageManageSupperAdmin.aspx"><span class="label label-info">病例管理</span></a> &nbsp;|&nbsp; <a href="SuperManage/ViewLogs.aspx">查看日志</a>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <div class="input-group" id="search-bar">
+            <span class="glyphicon glyphicon-search" style="font-size: 25px; vertical-align: middle"></span>&nbsp;
                 <asp:DropDownList ID="ddlCondition" runat="server" Height="35" Style="vertical-align: middle; width: 150px;">
                     <asp:ListItem>请选择</asp:ListItem>
                 </asp:DropDownList>
-                <asp:TextBox ID="txtCondition" runat="server" Height="35" Style="vertical-align: middle" placeholder="请输入"></asp:TextBox>
-                <asp:Button runat="server" ID="Button1" Text="查询" OnClick="Search_Click" CssClass="btn btn-info widthButton " Height="35px" />
-                <asp:Label ID="lblMessage" runat="server" ForeColor="Red" />
-            </div>
-            <div>
-                <asp:Label ID="Label1" runat="server"></asp:Label>&nbsp;       
+            <asp:TextBox ID="txtCondition" runat="server" Height="35" Style="vertical-align: middle" placeholder="请输入"></asp:TextBox>
+            <asp:Button runat="server" ID="Button1" Text="查询" OnClick="Search_Click" CssClass="btn btn-info widthButton " Height="35px" />
+            <asp:Label ID="lblMessage" runat="server" ForeColor="Red" />
+        </div>
+        <div>
+            <asp:Label ID="Label1" runat="server"></asp:Label>&nbsp;       
             <asp:DataList ID="dgMessage" runat="server" Width="100%">
                 <FooterTemplate>
                 </FooterTemplate>
@@ -93,20 +105,20 @@
                     </table>
                 </ItemTemplate>
             </asp:DataList>
-                <table align="left" border="0" cellpadding="3" cellspacing="1" class="tableborder"
-                    width="100%">
-                    <tr bgcolor="#ffffff">
-                        <td colspan="4" height="25">
-                            <div align="left">
-                                <input id="btnImportExcel" name="Submit822" type="button" value="导出Excel" runat="server"
-                                    align="left" class="btn btn-info" onserverclick="ImportExcel_Click" />&nbsp;&nbsp;                           
-                            </div>
-                        </td>
-                    </tr>
-                </table>
-            </div>
-        </form>
-    </div>
+            <table align="left" border="0" cellpadding="3" cellspacing="1" class="tableborder"
+                width="100%">
+                <tr bgcolor="#ffffff">
+                    <td colspan="4" height="25">
+                        <div align="left">
+                            <input id="btnImportExcel" name="Submit822" type="button" value="导出Excel" runat="server"
+                                align="left" class="btn btn-info" onserverclick="ImportExcel_Click" />&nbsp;&nbsp;                           
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </form>
+
     <uc1:IsSuperAdmin ID="IsSuperAdmin1" runat="server" />
 </body>
 </html>

@@ -82,7 +82,7 @@ var pageInitModule = (function (mod) {
 })(window.pageInitModule || {});
 
 /* 左侧菜单 */
-function border_left(navOjb) {
+function nav_left(navOjb) {
     var oItem = $('.nav li');
     for (var i = 0; i < oItem.length; i++) {
         $(oItem[i]).removeClass("active")
@@ -97,6 +97,6 @@ function border_left(navOjb) {
 
 //修改标题
 function show_title(str, navOjb) {
-    document.getElementById("title").innerHTML = str;
-    border_left(navOjb);
+    //$("title").innerHTML = str;
+    nav_left(navOjb);
 }

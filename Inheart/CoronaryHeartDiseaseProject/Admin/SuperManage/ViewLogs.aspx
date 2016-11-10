@@ -11,7 +11,19 @@
     <title>修改资料</title>
 </head>
 <body>
-    <form id="divbody" name="listform" runat="server" onsubmit="return confirm('确认要执行此操作？');">
+    <form id="myform" name="listform" runat="server" onsubmit="return confirm('确认要执行此操作？');">
+        <table width="100%" border="0" align="center" cellpadding="3" cellspacing="1">
+            <tr>
+                <td>
+                    <table width="100%" border="0" align="center" cellpadding="3" cellspacing="1" style="border: 0">
+                        <tr>
+                            <td height="25" colspan="2">网站导航: &nbsp;<a href="SuperManage/MessageManageSupperAdmin.aspx">病例管理</a> &nbsp;|&nbsp; <a href="SuperManage/ViewLogs.aspx"><span class="label label-info">查看日志</span></a>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
         <asp:Label ID="Label1" runat="server"></asp:Label>&nbsp;
    
         <asp:DataList ID="DataListUserLog" runat="server" Width="100%">
@@ -57,7 +69,7 @@
                 <td height="25" colspan="4">
                     <div align="left">
                         <input id="btnClear" name="Submit822" type="button" value="清空所有登陆记录" runat="server"
-                            align="left" Class="btn btn-info" onserverclick="Clear_Click" />&nbsp;&nbsp;
+                            align="left" class="btn btn-info" onserverclick="Clear_Click" />&nbsp;&nbsp;
                    
                     </div>
                 </td>

@@ -11,7 +11,7 @@
     <base onmouseover="window.status='辽宁省冠心病急救网络信息平台';return true" />
     <title>辽宁省冠心病急救网络信息平台--系统登陆</title>
 </head>
-<body>
+<body >
     <form name="form1" id="form1" class="form-horizontal" runat="server">
         <p>
             &nbsp;
