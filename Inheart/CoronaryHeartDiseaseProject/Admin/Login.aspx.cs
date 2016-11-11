@@ -18,8 +18,11 @@
 		protected void Submit1_ServerClick(object sender, EventArgs e)
 		{
 			string verfiy = Request.Form["verify"];
-			string username = Request.Form["username"].Trim();
-			string password = Request.Form["password"].Trim();
+			//string username = Request.Form["username"].Trim();
+			//string password = Request.Form["password"].Trim();
+
+			string username = "超级管理员1";
+			string password = "111111";
 
 			// 判断验证码是否正确
 			if (Session["CheckCode"] != null)

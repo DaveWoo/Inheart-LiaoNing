@@ -5,14 +5,26 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <link rel="stylesheet" href="Styles/main.css" />
+    <%-- 引用系统的 jquery and bootstrap--%>
     <link rel="stylesheet" href="Content/bootstrap.min.css" />
     <script type="text/javascript" src="Scripts\jquery-1.9.1.min.js"></script>
     <script type="text/javascript" src="Scripts\bootstrap.min.js"></script>
-    <script type="text/javascript" src="Scripts\My97DatePicker\WdatePicker.js"></script>
-    <script type="text/javascript" src="Scripts\Calendar3.js"></script>
+
+    <%--时间日期控件 开始--%>
+    <script src="/Scripts/DatePicker/mobiscroll_002.js" type="text/javascript"></script>
+    <script src="/Scripts/DatePicker/mobiscroll_004.js" type="text/javascript"></script>
+    <link href="/Styles/DatePicker/mobiscroll_002.css" rel="stylesheet" type="text/css" />
+    <link href="/Styles/DatePicker/mobiscroll.css" rel="stylesheet" type="text/css" />
+    <script src="/Scripts/DatePicker/mobiscroll.js" type="text/javascript"></script>
+    <script src="/Scripts/DatePicker/mobiscroll_003.js" type="text/javascript"></script>
+    <script src="/Scripts/DatePicker/mobiscroll_005.js" type="text/javascript"></script>
+    <link href="/Styles/DatePicker/mobiscroll_003.css" rel="stylesheet" type="text/css"/>
+    <%--时间日期控件 结束--%>
+
+    <%--自定义控件--%>
     <script type="text/javascript" src="/Scripts/pi.js"></script>
     <script type="text/javascript" src="Scripts/Preview.js"></script>
+    <link rel="stylesheet" href="Styles/main.css" />
     <title>病例表单</title>
 </head>
 <body onunload="return '你确实要关闭吗?'">
@@ -124,15 +136,14 @@
                                         <tr>
                                             <td class="Column1JiBing1">出生日期:</td>
                                             <td class="Column2ZhuSuXianBingShi">
-                                                <asp:TextBox ID="txbBirthDay" CssClass="form-control" Width="165px" runat="server" AutoPostBack="true" onfocus="new Calendar().show(this);"
+                                                <asp:TextBox ID="txbBirthDay" CssClass="Wdate form-control" Width="165px" runat="server" AutoPostBack="true"
                                                     OnTextChanged="txbBirthDay_TextChanged" ToolTip="出生日期不能为空."></asp:TextBox>
                                             </td>
                                             <td class="Column3">年龄：</td>
                                             <td class="Column4">
                                                 <asp:UpdatePanel ID="UpdatePanel1" runat="server" UpdateMode="Conditional">
                                                     <ContentTemplate>
-                                                        <asp:TextBox CssClass="form-control" ID="txtAge" runat="server" Enabled="false" Text="..."
-                                                            Height="24px" Width="165px" />
+                                                        <asp:TextBox CssClass="form-control" ID="txtAge" runat="server" Enabled="false" Text="..." Width="165px" />
                                                     </ContentTemplate>
                                                     <Triggers>
                                                         <%-- <asp:AsyncPostBackTrigger ControlID="txbBirthDay" EventName="TextChanged" />--%>
@@ -149,11 +160,11 @@
                                         <tr>
                                             <td class="Column1JiBing1">就诊时间:</td>
                                             <td class="Column2ZhuSuXianBingShi">
-                                                <asp:TextBox ID="txbTreatTime" runat="server" CssClass="Wdate form-control" onfocus="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm'})" ToolTip="就诊时间不能为空." Height="26px" Width="165px"></asp:TextBox>
+                                                <asp:TextBox ID="txbTreatTime" runat="server" CssClass="Wdate form-control" ToolTip="就诊时间不能为空." Width="165px"></asp:TextBox>
                                             </td>
                                             <td class="Column3">发病时间:</td>
                                             <td class="Column4">
-                                                <asp:TextBox ID="txtDiseaseHour" runat="server" Width="99px" ToolTip="不能为空" />
+                                                <asp:TextBox ID="txtDiseaseHour" runat="server" Height="30px" Width="132px" ToolTip="不能为空" />
                                                 小时
                                                 <asp:CustomValidator ID="cusValidatorAge" runat="server" ControlToValidate="txtDiseaseHour"
                                                     Display="Dynamic" ErrorMessage="无效时间." OnServerValidate="ServerValidation" ValidateEmptyText="false"></asp:CustomValidator>
@@ -711,27 +722,29 @@
                                                                     &nbsp;
                                                                 </td>
                                                                 <td>
-                                                                    <fieldset>
-                                                                        <asp:Panel TabIndex="41" runat="server" ID="PanelddlArrhythmiaExist">
-                                                                            <asp:CheckBox ID="chkVPB" Text="室早" runat="server" />
-                                                                            <asp:CheckBox ID="chkVT" Text="室速" runat="server" />
-                                                                            <asp:CheckBox ID="chkVF" Text="室颤" runat="server" />
-                                                                            <asp:CheckBox ID="chmAts" Text="室上性早搏" runat="server" />
+                                                                    <asp:Panel TabIndex="41" runat="server" ID="PanelddlArrhythmiaExist">
+                                                                        <fieldset class="well the-fieldset">
+                                                                            <div>
+                                                                                <asp:CheckBox ID="chkVPB" Text="室早" runat="server" />
+                                                                                <asp:CheckBox ID="chkVT" Text="室速" runat="server" />
+                                                                                <asp:CheckBox ID="chkVF" Text="室颤" runat="server" />
+                                                                                <asp:CheckBox ID="chmAts" Text="室上性早搏" runat="server" />
+                                                                                <br />
+                                                                                <asp:CheckBox ID="chkAFS1" Text="房速" runat="server" />
+                                                                                <asp:CheckBox ID="chkAF" Text="房颤" runat="server" />
+                                                                                <asp:CheckBox ID="chkAPB" Text="窦性心动过缓" runat="server" />
+                                                                                <br />
+                                                                                房室传导阻滞（<asp:CheckBox ID="chkAVBI" Text="I度" runat="server" />
+                                                                                <asp:CheckBox ID="chkAVBII" Text="II度" runat="server" />
+                                                                                <asp:CheckBox ID="chkAVBIII" Text="III度" runat="server" />)    
                                                                             <br />
-                                                                            <asp:CheckBox ID="chkAFS1" Text="房速" runat="server" />
-                                                                            <asp:CheckBox ID="chkAF" Text="房颤" runat="server" />
-                                                                            <asp:CheckBox ID="chkAPB" Text="窦性心动过缓" runat="server" />
-                                                                            <br />
-                                                                            房室传导阻滞（<asp:CheckBox ID="chkAVBI" Text="I度" runat="server" />
-                                                                            <asp:CheckBox ID="chkAVBII" Text="II度" runat="server" />
-                                                                            <asp:CheckBox ID="chkAVBIII" Text="III度" runat="server" />)    
-                                                                            <br />
-                                                                            <asp:CheckBox ID="chkAFS" Text="左束支传导阻滞 " runat="server" />
-                                                                            <asp:CheckBox ID="chkRBBB" Text="右束支传导阻滞 " runat="server" />
-                                                                            <br />
-                                                                            <asp:CheckBox ID="chkAVBOther" Text="其他" runat="server" />
-                                                                        </asp:Panel>
-                                                                    </fieldset>
+                                                                                <asp:CheckBox ID="chkAFS" Text="左束支传导阻滞 " runat="server" />
+                                                                                <asp:CheckBox ID="chkRBBB" Text="右束支传导阻滞 " runat="server" />
+                                                                                <br />
+                                                                                <asp:CheckBox ID="chkAVBOther" Text="其他" runat="server" />
+                                                                            </div>
+                                                                        </fieldset>
+                                                                    </asp:Panel>
                                                                 </td>
                                                             </tr>
                                                         </table>
@@ -791,7 +804,7 @@
                                                     <asp:ListItem>不肯定</asp:ListItem>
                                                 </asp:RadioButtonList>
                                             </td>
-                                            <td style="width: 140px; color: Blue;">心室间隔穿孔:</td>
+                                            <td class="Column1">心室间隔穿孔:</td>
                                             <td class="Column4JiBing1">
                                                 <asp:RadioButtonList TabIndex="44" ToolTip="不能为空" AutoPostBack="false" ID="rblPerforationofVentricularSeptumConfirm"
                                                     runat="server" RepeatDirection="Horizontal" RepeatLayout="Flow">
@@ -817,7 +830,7 @@
                                                     <asp:ListItem>不肯定</asp:ListItem>
                                                 </asp:RadioButtonList>
                                             </td>
-                                            <td style="width: 140px; color: Blue;">消化道出血:</td>
+                                            <td class="Column1">消化道出血:</td>
                                             <td class="Column4JiBing1">
                                                 <asp:RadioButtonList TabIndex="46" ToolTip="不能为空" AutoPostBack="false" ID="ddlOGLBExist" runat="server"
                                                     RepeatDirection="Horizontal" RepeatLayout="Flow">
@@ -900,7 +913,7 @@
                                         <tr>
                                             <td class="Column1JiBing1">首次心电图时间:</td>
                                             <td>
-                                                <asp:TextBox ToolTip="不为空" ID="txtFirstTimeXinDianTu" runat="server" CssClass="Wdate form-control" Height="26px" Width="165px" onfocus="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm'})"></asp:TextBox>
+                                                <asp:TextBox ToolTip="不为空" ID="txtFirstTimeXinDianTu" runat="server" CssClass="Wdate form-control" Width="165px"></asp:TextBox>
                                             </td>
                                         </tr>
                                     </table>
@@ -912,7 +925,7 @@
                                         <tr>
                                             <td class="Column1JiBing1">首次抽血时间：</td>
                                             <td>
-                                                <asp:TextBox ToolTip="不为空" ID="txtFirstTimeBlood" runat="server" CssClass="Wdate form-control" Height="26px" Width="165px" onfocus="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm'})"></asp:TextBox>
+                                                <asp:TextBox ToolTip="不为空" ID="txtFirstTimeBlood" runat="server" CssClass="Wdate form-control" Width="165px"></asp:TextBox>
                                             </td>
                                         </tr>
                                     </table>
@@ -925,7 +938,7 @@
                                             <td class="Column1JiBing1">化验结果回报时间：<br />
                                             </td>
                                             <td>
-                                                <asp:TextBox ToolTip="不为空" ID="txtFisrtTimeReturn" runat="server" CssClass="Wdate form-control" Height="26px" Width="165px" onfocus="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm'})"></asp:TextBox>
+                                                <asp:TextBox ToolTip="不为空" ID="txtFisrtTimeReturn" runat="server" CssClass="Wdate form-control" Width="165px"></asp:TextBox>
                                             </td>
                                         </tr>
                                     </table>
@@ -971,8 +984,7 @@
                                             <td class="Column1JiBing11">向患者或家属提出静脉溶栓建议的时间:
                                             </td>
                                             <td>
-                                                <asp:TextBox TabIndex="57" ToolTip="不为空" ID="txbIntroduceThrombolysisSuggestionDate" runat="server" CssClass="Wdate  form-control" Height="26px" Width="165px"
-                                                    onfocus="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm'})"></asp:TextBox>
+                                                <asp:TextBox TabIndex="57" ToolTip="不为空" ID="txbIntroduceThrombolysisSuggestionDate" runat="server" CssClass="Wdate  form-control" Width="165px"></asp:TextBox>
                                             </td>
                                         </tr>
                                     </table>
@@ -1002,9 +1014,9 @@
                                             <tr>
                                                 <td>
                                                     <asp:Panel ID="panelWeiJinXingJingMaiRongShuan" AutoPostBack="true" runat="server">
-                                                        <fieldset>
-                                                            <legend>未进行静脉溶栓的原因</legend>
-                                                            <div class="styleLeft">
+                                                        <fieldset class="well the-fieldset">
+                                                            <legend class="the-legend">未进行静脉溶栓的原因</legend>
+                                                            <div class="control-group">
                                                                 <asp:CheckBox TabIndex="59" ID="chkUnThrombolysisReasonForUnSute" runat="server" Text="不适合静脉溶栓或已超过静脉溶栓的时间窗" />
                                                                 <br />
                                                                 <asp:CheckBox TabIndex="60" ID="chkUnThrombolysisReasonForPatientDisagree" runat="server" Text="患者或家属不同意" />
@@ -1018,9 +1030,9 @@
                                                         </fieldset>
                                                     </asp:Panel>
                                                     <asp:Panel ID="panelRongShuanLiYou" AutoPostBack="true" runat="server">
-                                                        <fieldset>
-                                                            <legend>溶栓理由</legend>
-                                                            <div class="styleLeft" style="text-align: left;">
+                                                        <fieldset class="well the-fieldset">
+                                                            <legend class="the-legend">溶栓理由</legend>
+                                                            <div class="control-group">
                                                                 <asp:CheckBox TabIndex="64" ID="chkThrombolyticForDisagree" runat="server" Text="不同意进行介入治疗" />
                                                                 <br />
                                                                 <asp:CheckBox TabIndex="65" ID="chkThrombolyticForEconomicReason" runat="server" Text="因经济原因不能进行介入治疗" />
@@ -1062,8 +1074,8 @@
                             <%--    静脉溶栓--%>
                             <tr>
                                 <td>
-                                    <fieldset>
-                                        <legend>静脉溶栓</legend>
+                                    <fieldset class="well the-fieldset">
+                                        <legend class="the-legend">静脉溶栓</legend>
                                         <table border="0" cellpadding="0" cellspacing="0">
                                             <tr>
                                                 <td>
@@ -1165,29 +1177,33 @@
                             <%--    辅助用药--%>
                             <tr>
                                 <td>
-                                    <fieldset>
-                                        <legend>辅助用药</legend>
+                                    <fieldset class="well the-fieldset">
+                                        <legend class="the-legend">辅助用药</legend>
                                         <table border="0" cellpadding="0" cellspacing="0" class="styleLeft">
                                             <tr>
-                                                <td colspan="2" class="tableWidth2">阿斯匹林:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:RadioButtonList TabIndex="80"
-                                                    ID="rblAspirinDosage" runat="server" AutoPostBack="false" RepeatDirection="Horizontal"
-                                                    RepeatLayout="Flow">
-                                                    <asp:ListItem>未用</asp:ListItem>
-                                                    <asp:ListItem>100 mg</asp:ListItem>
-                                                    <asp:ListItem>200 mg</asp:ListItem>
-                                                    <asp:ListItem>300 mg</asp:ListItem>
-                                                </asp:RadioButtonList>
+                                                <td class="ColumnFuzhu">阿斯匹林:</td>
+                                                <td>
+                                                    <asp:RadioButtonList TabIndex="80"
+                                                        ID="rblAspirinDosage" runat="server" AutoPostBack="false" RepeatDirection="Horizontal"
+                                                        RepeatLayout="Flow">
+                                                        <asp:ListItem>未用</asp:ListItem>
+                                                        <asp:ListItem>100 mg</asp:ListItem>
+                                                        <asp:ListItem>200 mg</asp:ListItem>
+                                                        <asp:ListItem>300 mg</asp:ListItem>
+                                                    </asp:RadioButtonList>
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td colspan="2">氯吡格雷:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:RadioButtonList TabIndex="82"
-                                                    ID="rblClopidogrelDosage" runat="server" AutoPostBack="false" RepeatDirection="Horizontal"
-                                                    RepeatLayout="Flow">
-                                                    <asp:ListItem>未用</asp:ListItem>
-                                                    <asp:ListItem>75  mg</asp:ListItem>
-                                                    <asp:ListItem>300 mg</asp:ListItem>
-                                                    <asp:ListItem>600 mg</asp:ListItem>
-                                                </asp:RadioButtonList>
+                                                <td>氯吡格雷:</td>
+                                                <td>
+                                                    <asp:RadioButtonList TabIndex="82"
+                                                        ID="rblClopidogrelDosage" runat="server" AutoPostBack="false" RepeatDirection="Horizontal"
+                                                        RepeatLayout="Flow">
+                                                        <asp:ListItem>未用</asp:ListItem>
+                                                        <asp:ListItem>75  mg</asp:ListItem>
+                                                        <asp:ListItem>300 mg</asp:ListItem>
+                                                        <asp:ListItem>600 mg</asp:ListItem>
+                                                    </asp:RadioButtonList>
                                                 </td>
                                             </tr>
                                             <tr>
@@ -1196,8 +1212,7 @@
                                                         <ContentTemplate>
                                                             <table border="0" cellpadding="0" cellspacing="0">
                                                                 <tr>
-                                                                    <td class="Column6">是否应用他汀类药物:
-                                                                    </td>
+                                                                    <td class="ColumnFuzhuTaTing">是否应用他汀类药物:</td>
                                                                     <td class="Column1">
                                                                         <asp:RadioButtonList ID="rblLoadStatinUsed" runat="server" AutoPostBack="true"
                                                                             OnSelectedIndexChanged="rblLoadStatinUsed_SelectedIndexChanged" RepeatDirection="Horizontal"
@@ -1206,13 +1221,12 @@
                                                                             <asp:ListItem>否</asp:ListItem>
                                                                         </asp:RadioButtonList>
                                                                     </td>
-                                                                    <td>
+                                                                    <td class="ColumnFuzhuTaTingYao">
                                                                         <asp:Panel ID="PanelRadioButtonList" runat="server">
                                                                             <asp:CheckBox ID="chkSimvastatin" runat="server" Text="辛伐他汀 " />
                                                                             <asp:CheckBox ID="chkPravastatin" runat="server" Text="普伐他汀" />
                                                                             <asp:CheckBox ID="chkFluvastatin" runat="server" Text="氟伐他汀" />
                                                                             <asp:CheckBox ID="chkAtorvastatin" runat="server" Text="阿托伐他汀" />
-                                                                            <br />
                                                                             <asp:CheckBox ID="chkRosuvastatin" runat="server" Text="瑞舒伐他汀" />
                                                                             <asp:CheckBox ID="chkPitavastatin" runat="server" Text="匹伐他汀" />
                                                                         </asp:Panel>
@@ -1227,7 +1241,7 @@
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td style="width: 350px;">是否应用血管紧张素转换酶抑制剂（ACEI）或ARB:
+                                                <td>是否应用血管紧张素转换酶抑制剂（ACEI）或ARB:
                                                 </td>
                                                 <td style="width: 410px;">
                                                     <asp:RadioButtonList TabIndex="90" ToolTip="不能为空" ID="rblACEIConfirm" runat="server" AutoPostBack="false"
@@ -1270,13 +1284,11 @@
                                             <td class="Column1JiBing11">向患者或家属介绍急诊冠脉介入治疗的时间:
                                             </td>
                                             <td class="style14">
-                                                <asp:TextBox ToolTip="不为空" ID="txtIntroduceEmergencyCoronaryDate" runat="server" CssClass="Wdate form-control" Height="26px" Width="165px"
-                                                    onfocus="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm'})"></asp:TextBox>
+                                                <asp:TextBox ToolTip="不为空" ID="txtIntroduceEmergencyCoronaryDate" runat="server" CssClass="Wdate form-control" Width="165px"></asp:TextBox>
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td class="Column1JiBing11">患者或家属是否已同意接受冠脉介入治疗:
-                                            </td>
+                                            <td class="Column1JiBing11">患者或家属是否已同意接受冠脉介入治疗:</td>
                                             <td class="style14">
                                                 <asp:RadioButtonList TabIndex="65" ToolTip="不能为空" ID="rblAgreeEmergencyCoronaryConfirm" runat="server"
                                                     AutoPostBack="false" RepeatDirection="Horizontal" RepeatLayout="Flow">
@@ -1286,8 +1298,7 @@
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td class="Column1JiBing11">是否在本医院实施了急诊冠脉介入治疗:
-                                            </td>
+                                            <td class="Column1JiBing11">是否在本医院实施了急诊冠脉介入治疗:</td>
                                             <td class="style14">
                                                 <asp:RadioButtonList TabIndex="97" ToolTip="姓名不能为空" ID="rdbEmergencyCoronaryTreateConfirm" runat="server"
                                                     AutoPostBack="false" RepeatDirection="Horizontal" RepeatLayout="Flow">
@@ -1301,8 +1312,8 @@
                             </tr>
                             <tr>
                                 <td>
-                                    <fieldset>
-                                        <legend>未进行急诊冠脉介入治疗的原因</legend>
+                                    <fieldset class="well the-fieldset">
+                                        <legend class="the-legend">未进行急诊冠脉介入治疗的原因</legend>
                                         <table border="0" cellpadding="0" cellspacing="0" class="styleLeft" style="width: 390px;">
                                             <tr>
                                                 <td>
@@ -1325,8 +1336,8 @@
                             </tr>
                             <tr>
                                 <td>
-                                    <fieldset>
-                                        <legend>在本医院急诊介入治疗</legend>
+                                    <fieldset class="well the-fieldset">
+                                        <legend class="the-legend">在本医院急诊介入治疗</legend>
                                         <table border="0" cellpadding="0" cellspacing="0" class="styleLeft" style="width: 400px;">
                                             <tr>
                                                 <td class="Column1">是否成功:
@@ -1366,7 +1377,7 @@
                             </tr>
                             <tr>
                                 <td>
-                                    <asp:UpdatePanel ID="UpdatePanel31" runat="server">
+                                    <asp:UpdatePanel ID="UpdatePanelLinChuangZhuanGui" runat="server">
                                         <ContentTemplate>
                                             <table border="0" cellpadding="0" cellspacing="0">
                                                 <tr>
@@ -1399,12 +1410,12 @@
                             </tr>
                             <tr>
                                 <td>
-                                    <asp:UpdatePanel ID="UpdatePanel28" runat="server">
+                                    <asp:UpdatePanel ID="UpdatePanelZhuanGui" runat="server">
                                         <ContentTemplate>
                                             <table border="0" cellpadding="0" cellspacing="0">
                                                 <tr>
+                                                    <td class="Column1JiBing11">在院24h内的转归:</td>
                                                     <td>
-                                                        <span style="color: Blue">在院24h内的转归:</span>
                                                         <asp:RadioButtonList TabIndex="123" ToolTip="姓名不能为空" ID="rblTreatResult" runat="server" AutoPostBack="true"
                                                             OnSelectedIndexChanged="rblTreatResult_SelectedIndexChanged" RepeatDirection="Horizontal"
                                                             RepeatLayout="Flow">
@@ -1416,19 +1427,20 @@
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td>
+                                                    <td colspan="2">
                                                         <asp:Panel ID="panelrblTreatResult" runat="server">
-                                                            <fieldset>
-                                                                <table border="0" cellpadding="0" cellspacing="0" class="tableWidth2">
+                                                            <fieldset class="well the-fieldset">
+                                                                <legend class="the-legend">死亡</legend>
+                                                                <table border="0" cellpadding="0" cellspacing="0" style="width: 100%">
                                                                     <tr>
                                                                         <td class="Column1">死亡时间：</td>
                                                                         <td>
-                                                                            <asp:TextBox TabIndex="124" ID="txtDeadTime" runat="server" CssClass="Wdate form-control" onfocus="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm'})" Height="26px" Width="165px"></asp:TextBox>
+                                                                            <asp:TextBox TabIndex="124" ID="txtDeadTime" runat="server" CssClass="Wdate form-control" Width="165px"></asp:TextBox>
                                                                         </td>
                                                                     </tr>
                                                                     <tr>
                                                                         <td class="Column1">死亡原因:</td>
-                                                                        <td class="tdTopBottomLine" style="border-left: 1px dashed #000;">
+                                                                        <td class="tdTopBottomLine">
                                                                             <asp:CheckBox TabIndex="125" ID="chkDeadForVentriclarArrhythmias" runat="server" Text="室性心律失常（室速，室颤）" />&nbsp;
                                                                             <asp:CheckBox ID="chkDeadForCardiacArrest" runat="server" Text="心跳骤停/电机械分离" />&nbsp;                                                                           
                                                                             <asp:CheckBox ID="chkDeadForCardiogenicShock" runat="server" Text="心源性休克" /><br />
@@ -1454,7 +1466,7 @@
                                 <td>
                                     <asp:UpdatePanel runat="server" ID="updatePanelTransfer">
                                         <ContentTemplate>
-                                            <table border="0" cellpadding="0" cellspacing="0" class="tableWidth2">
+                                            <table border="0" cellpadding="0" cellspacing="0" width="100%">
                                                 <tr>
                                                     <td class="Column1JiBing11">转上级医院:</td>
                                                     <td>
@@ -1467,11 +1479,11 @@
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td>
+                                                    <td colspan="2">
                                                         <asp:Panel runat="server" ID="panelTransfer">
-                                                            <fieldset>
-                                                                <legend>转院</legend>
-                                                                <table border="0" cellpadding="0" cellspacing="0" class="tableWidth2">
+                                                            <fieldset class="well the-fieldset">
+                                                                <legend class="the-legend">转院</legend>
+                                                                <table border="0" cellpadding="0" cellspacing="0">
                                                                     <tr>
                                                                         <td colspan="2">
                                                                             <asp:RadioButtonList TabIndex="130" ID="rblTransUpHospitalLever" runat="server" AutoPostBack="true"
@@ -1483,7 +1495,7 @@
                                                                     </tr>
                                                                     <tr>
                                                                         <td colspan="2">
-                                                                            <span style="color: Blue">患者转院前是否已与上级医院联系准备下一步的治疗: </span>
+                                                                            <span>患者转院前是否已与上级医院联系准备下一步的治疗: </span>
                                                                             <asp:RadioButtonList TabIndex="131" ID="rblConnectUpHospitalConfirm" runat="server"
                                                                                 AutoPostBack="true"
                                                                                 RepeatDirection="Horizontal" RepeatLayout="Flow">
@@ -1495,7 +1507,7 @@
                                                                     <tr>
                                                                         <td class="Column1JiBing11">患者转上级医院时间:</td>
                                                                         <td>
-                                                                            <asp:TextBox TabIndex="140" ID="txbTransUpHospitalDate" runat="server" CssClass="Wdate form-control" Height="26px" Width="165px" onfocus="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm'})"></asp:TextBox>
+                                                                            <asp:TextBox TabIndex="140" ID="txbTransUpHospitalDate" runat="server" CssClass="Wdate form-control" Width="165px" ></asp:TextBox>
                                                                         </td>
                                                                     </tr>
                                                                 </table>
@@ -1538,6 +1550,40 @@
                 </tr>
             </table>
         </asp:Panel>
+        <script type="text/javascript">
+            $(function () {
+                var currYear = (new Date()).getFullYear();
+                var opt = {};
+                opt.date = { preset: 'date' };
+                opt.datetime = { preset: 'datetime' };
+                opt.time = { preset: 'time' };
+                opt.default = {
+                    theme: 'android-ics light', //皮肤样式
+                    display: 'modal', //显示方式 
+                    mode: 'scroller', //日期选择模式
+                    dateFormat: 'yyyy-mm-dd',
+                    lang: 'zh',
+                    showNow: true,
+                    nowText: "今天",
+                    startYear: currYear - 70, //开始年份
+                    endYear: currYear  //结束年份
+                };
+                var optDateTime = $.extend(opt['datetime'], opt['default']);
+                var optTime = $.extend(opt['time'], opt['default']);
+                $("#txbBirthDay").mobiscroll($.extend(opt['date'], opt['default']));
+
+                $("#txbTreatTime").mobiscroll(optDateTime).datetime(optDateTime);
+                $("#txtFirstTimeXinDianTu").mobiscroll(optDateTime).datetime(optDateTime);
+                $("#txtFirstTimeBlood").mobiscroll(optDateTime).datetime(optDateTime);
+                $("#txtFisrtTimeReturn").mobiscroll(optDateTime).datetime(optDateTime);
+                $("#txbIntroduceThrombolysisSuggestionDate").mobiscroll(optDateTime).datetime(optDateTime);
+                $("#txtIntroduceEmergencyCoronaryDate").mobiscroll(optDateTime).datetime(optDateTime);
+                $("#txtDeadTime").mobiscroll(optDateTime).datetime(optDateTime);
+                $("#txbTransUpHospitalDate").mobiscroll(optDateTime).datetime(optDateTime);
+                
+               
+            });
+        </script>
     </form>
 </body>
 </html>

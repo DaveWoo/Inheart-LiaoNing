@@ -66,7 +66,7 @@
             </div>
             <div class="tabContent ">
                 <div class="nav_bar_top"><span class="nav_name">网站导航: > </span><span id="nav_host">管理</span> > <span class="label label-info" id="nav_title">病例查询</span></div>
-                <iframe name="content3" src="MessageManage.aspx" onclick="show_title('病例查询',this)" frameborder="0" style="width: inherit; height: inherit; margin-left: 0; padding-left: 0"></iframe>
+                <iframe name="content3" src="MessageInput.aspx" onclick="show_title('病例查询',this)" frameborder="0" style="width: inherit; height: inherit; margin-left: 0; padding-left: 0"></iframe>
             </div>
         </div>
         <uc1:User ID="User1" runat="server" />

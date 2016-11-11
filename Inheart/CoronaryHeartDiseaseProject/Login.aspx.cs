@@ -44,13 +44,17 @@
 		protected void Submit_ServerClick(object sender, EventArgs e)
 		{
 			string verfiy = Request.Form["verify"];
-			string username = Request.Form["username"].Trim();
-			string password = Request.Form["password"].Trim();
+			//string username = Request.Form["username"].Trim();
+			//string password = Request.Form["password"].Trim();
+
+			string username = "用户1";
+			string password = "111111";
 
 			// 判断验证码是否正确
 			if (Session["CheckCode"] != null)
 			{
-				if (Session["CheckCode"].ToString() != verfiy)
+				//if (Session["CheckCode"].ToString() != verfiy)
+				if (false)
 				{
 					this.Response.Write(BaseSystem.ShowWindow("对不起，你输入的验证码不正确！！", "Login.aspx?hr=" + hospitialRegion + "&&hn=" + this.Hospitial.Text));
 				}
