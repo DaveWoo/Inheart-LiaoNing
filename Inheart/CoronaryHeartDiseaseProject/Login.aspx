@@ -4,7 +4,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
-    <link rel="stylesheet" href="Styles/main.css" />
+    <link rel="stylesheet" href="Styles/admin.css" />
     <link rel="stylesheet" href="/Content/bootstrap.min.css" />
     <script type="text/javascript" src="/Scripts/bootstrap.min.js"></script>
     <script type="text/javascript" src="/Scripts/jquery-1.9.1.min.js"></script>
@@ -79,7 +79,7 @@
                         </tr>
                         <tr>
                             <td colspan="2" style="padding-bottom: 20px">
-                                <input type="submit" value="登录系统" name="B12" class="btn btn-success " style="margin-left: 85px; width: 200px"
+                                <input type="submit" value="登录系统" name="B12" class="btn btn-info " style="margin-left: 85px; width: 200px"
                                     id="Submit1" onserverclick="Submit_ServerClick" runat="server" tabindex="5" />
                                 &nbsp;&nbsp;&nbsp;&nbsp;
                             </td>
@@ -88,24 +88,6 @@
                 </td>
             </tr>
         </table>
-        <p>
-            &nbsp;
-        </p>
-        <p>
-            &nbsp;
-        </p>
-        <p>
-            &nbsp;
-        </p>
-        <p>
-            &nbsp;
-        </p>
-        <p>
-            &nbsp;
-        </p>
-        <p>
-            &nbsp;
-        </p>
     </form>
 </body>
 </html>

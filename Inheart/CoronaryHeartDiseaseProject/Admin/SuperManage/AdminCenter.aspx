@@ -14,26 +14,26 @@
 </head>
 <body>
     <form id="myform" runat="server" onsubmit="return checkReSetPwd()">
-        <table width="100%" border="0" align="center" cellpadding="3" cellspacing="1" class="tableborder">
+        <table width="100%" border="0" align="center" cellpadding="3" cellspacing="1" class="table">
             <tr class="header">
                 <td height="30px" colspan="2">修改超级管理员密码&nbsp;
                 </td>
             </tr>
             <tr bgcolor="#FFFFFF">
-                <td width="25%" height="25">原密码</td>
-                <td width="75%" height="25">
+                <td width="25%" height="30px">原密码</td>
+                <td width="75%" >
                     <input type="password" class="form-control" placeholder="原密码" name="oldpass" style="width: 250px" />
                 </td>
             </tr>
             <tr bgcolor="#FFFFFF">
-                <td height="25">新密码</td>
-                <td height="25">
+                <td >新密码</td>
+                <td >
                     <input type="password" class="form-control" name="newpass" placeholder="新密码" style="width: 250px" />
                 </td>
             </tr>
             <tr bgcolor="#FFFFFF">
-                <td height="25">确认密码</td>
-                <td height="25">
+                <td >确认密码</td>
+                <td >
                     <input type="password" class="form-control" name="repass" placeholder="确认新密码" style="width: 250px" />
                 </td>
             </tr>

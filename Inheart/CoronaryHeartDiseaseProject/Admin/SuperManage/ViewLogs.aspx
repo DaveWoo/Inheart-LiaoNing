@@ -4,6 +4,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <link rel="stylesheet" href="../../Styles/admin.css" />
+    <link rel="stylesheet" href="../../Styles/main.css" />
     <link rel="stylesheet" href="/Content/bootstrap.min.css" />
     <script type="text/javascript" src="/Scripts/bootstrap.min.js"></script>
     <script type="text/javascript" src="/Scripts/jquery-1.9.1.min.js"></script>

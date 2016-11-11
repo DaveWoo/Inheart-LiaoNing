@@ -16,7 +16,7 @@
 </head>
 <body>
     <form id="myform" runat="server" onsubmit="return checkHospital()">
-        <table width="100%" border="0" align="center" class="tableborder">
+        <table width="100%" border="0" align="center" class="table">
             <tr class="header">
                 <td height="30px" colspan="2">添加医院&nbsp;
                 </td>

@@ -5,17 +5,13 @@
     border-color: #46b8da;
 }
 
-.header a {
-    color: #FFFFFF;
-}
+    .header a {
+        color: #FFFFFF;
+    }
 
 .category {
     color: #000000;
     background-color: #EFEFEF;
-}
-
-.tableborder {
-    border: 1px solid #ccc;
 }
 
 .singleborder {
@@ -124,10 +120,48 @@ img {
     margin-right: 10px;
     margin-top: 1px;
 }
+
 .headerLongin {
     font: 14pt;
     color: #3795d2;
     font-weight: bold;
-    line-height: 40px;
     text-align: center;
+    padding: 10px;
+    border-bottom: solid 1px #ccc;
+}
+
+.tableborder {
+    height: 35px;
+    background-color: #5bc0de;
+    border-color: #46b8da;
+    border: 1px solid #ccc;
+}
+
+.tableborderLogin {
+    border: 1px solid #ccc;
+    background-color: #FAFAFA;
+}
+
+#DataListUser {
+    margin-top: 10px;
+}
+
+#DataListHospital {
+    margin-top: 10px;
+}
+
+#DataListUserLog {
+    margin-top: 10px;
+}
+
+#dgMessage {
+    margin-top: 10px;
+}
+
+#Label1 {
+    padding-top: 100px;
+}
+.tableCell{
+    vertical-align: inherit;
+    padding-left:5px !important;
 }

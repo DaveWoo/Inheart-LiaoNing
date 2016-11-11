@@ -34,75 +34,75 @@
                 <HeaderTemplate>
                     <table width="100%" border="0" align="center" cellpadding="3" cellspacing="1" class="tableborder">
                         <tr class="header">
-                            <td width="10%" height="25">
-                                <div align="center">序号</div>
+                            <td width="10%">
+                                <div align="left">序号</div>
                             </td>
-                            <td width="10%" height="25">
-                                <div align="center">患者姓名</div>
+                            <td width="10%">
+                                <div align="left">患者姓名</div>
                             </td>
-                            <td width="5%" height="25">
-                                <div align="center">性别</div>
+                            <td width="5%" >
+                                <div align="left">性别</div>
                             </td>
-                            <td width="5%" height="25">
-                                <div align="center">年龄</div>
+                            <td width="5%" >
+                                <div align="left">年龄</div>
                             </td>
-                            <td width="10%" height="25">
-                                <div align="center">医生</div>
+                            <td width="10%">
+                                <div align="left">医生</div>
                             </td>
-                            <td width="15%" height="25">
-                                <div align="center">就诊时间</div>
+                            <td width="15%" >
+                                <div align="left">就诊时间</div>
                             </td>
-                            <td width="15%" height="25">
-                                <div align="center">创建时间</div>
+                            <td width="15%" >
+                                <div align="left">创建时间</div>
                             </td>
-                            <td width="5%" height="25">
-                                <div align="center">状态</div>
+                            <td width="5%" >
+                                <div align="left">状态</div>
                             </td>
                         </tr>
                     </table>
                 </HeaderTemplate>
                 <ItemTemplate>
                     <table width="100%" border="1" align="center" cellpadding="3" cellspacing="1" class="tableborder">
-                        <tr bgcolor="#ffffff" id="news<%#Eval("ReportID") %>">
-                            <td height="25" width="10%">
-                                <div align="center">
+                        <tr bgcolor="#ffffff" id="news<%#Eval("ReportID") %>" class="tableBody">
+                            <td width="10%">
+                                <div align="left">
                                     <%#Eval("ID")%>
                                 </div>
                             </td>
-                            <td height="25" width="10%">
-                                <div align="center">
+                            <td  width="10%">
+                                <div align="left">
                                     <a href='<%#EnterCase(Eval("ID").ToString(),Eval("IsLocked").ToString(),Eval("ReportID").ToString())%>'
                                         title="进入病例">
                                         <%#Eval("PatientName")%></a>
                                 </div>
                             </td>
-                            <td height="25" width="5%">
-                                <div align="center">
+                            <td  width="5%">
+                                <div align="left">
                                     <%#Eval("Sex")%>
                                 </div>
                             </td>
-                            <td height="25" width="5%">
-                                <div align="center">
+                            <td width="5%">
+                                <div align="left">
                                     <%#Eval("Age")%>
                                 </div>
                             </td>
-                            <td height="25" width="10%">
-                                <div align="center">
+                            <td width="10%">
+                                <div align="left">
                                     <%#Eval("Creater")%>
                                 </div>
                             </td>
-                            <td height="25" width="15%">
-                                <div align="center">
+                            <td  width="15%">
+                                <div align="left">
                                     <%#Eval("TreatDate")%>
                                 </div>
                             </td>
-                            <td height="25" width="15%">
-                                <div align="center">
+                            <td width="15%">
+                                <div align="left">
                                     <%#Eval("CreateDate")%>
                                 </div>
                             </td>
-                            <td height="25" width="5%">
-                                <div align="center">
+                            <td  width="5%">
+                                <div align="left">
                                     <%#ShowLock(Eval("IsLocked").ToString())%>
                                 </div>
                             </td>

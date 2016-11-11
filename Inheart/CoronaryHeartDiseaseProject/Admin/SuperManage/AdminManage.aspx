@@ -18,16 +18,16 @@
             <HeaderTemplate>
                 <table width="100%" border="0" align="left" cellpadding="1" cellspacing="1" class="tableborder">
                     <tr class="header">
-                        <td width="100" height="25">
+                        <td width="100" height="30px">
                             <div align="left">管理员ID</div>
                         </td>
-                        <td width="100" height="25">
+                        <td width="100" >
                             <div align="left">所属医院</div>
                         </td>
-                        <td width="100" height="25">
+                        <td width="100">
                             <div align="left">所属地区</div>
                         </td>
-                        <td width="100" height="25">
+                        <td width="100" >
                             <div align="left">操作</div>
                         </td>
                     </tr>
@@ -36,22 +36,22 @@
             <ItemTemplate>
                 <table width="100%" border="0" align="left" cellpadding="1" cellspacing="1" class="tableborder">
                     <tr bgcolor="#ffffff" id="news<%#Eval("ID") %>">
-                        <td height="25" width="100">
+                        <td width="100">
                             <div align="left">
                                 <%#Eval("UserName")%>
                             </div>
                         </td>
-                        <td height="25" width="100">
+                        <td width="100">
                             <div align="left">
                                 <%#Eval("Hospital.HospitalName")%>
                             </div>
                         </td>
-                        <td height="25" width="100">
+                        <td width="100">
                             <div align="left">
                                 <%#ShowRegionName(Eval("Hospital.RegionID").ToString())%>
                             </div>
                         </td>
-                        <td height="25" width="100">
+                        <td width="100">
                             <div align="left">
                                 <%#ShowTxt(Eval("ID").ToString())%>
                             </div>

@@ -14,13 +14,13 @@
 </head>
 <body>
     <form id="myform" runat="server" onsubmit="return checkUser()">
-        <table width="100%" border="0" align="center" cellpadding="3" cellspacing="1" class="tableborder">
+        <table width="100%" border="0" align="center" cellpadding="3" cellspacing="1" class="table">
             <tr class="header">
                 <td height="30px" colspan="2">添加管理员&nbsp;
                 </td>
             </tr>
             <tr bgcolor="#FFFFFF">
-                <td width="32%" height="25">医院：</td>
+                <td width="32%" height="25">医院</td>
                 <td width="100%" height="25" colspan="2">
                     <asp:DropDownList CssClass="form-control" ID="SelectHosptial" runat="server" Width="250px">
                     </asp:DropDownList>

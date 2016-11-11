@@ -47,12 +47,17 @@
             <div class="sidebar">
                 <ul class="nav">
                     <li class="has-sub">
-                        <a href="MessageManage.aspx" tag="admin" target="content3" onclick="show_title('病例查询',this,'管理')"><span>管理</span><i title="nav" class="fa fa-caret-right fa-fw pull-right"></i></a>
+                        <a href="MessageManage.aspx" tag="admin" target="content3" onclick="show_title('病例查询',this,'病例管理')"><span>病例管理</span><i title="nav" class="fa fa-caret-right fa-fw pull-right"></i></a>
                         <ul class="sub-menu">
                             <li><a title="病例查询" onclick="show_title('病例查询',this)" href="MessageManage.aspx"
                                 target="content3"><i class="glyphicon glyphicon-map-marker"></i>病例查询</a></li>
                             <li><a title="病例录入" onclick="show_title('病例录入',this)" href="MessageInput.aspx"
                                 target="content3"><i class="glyphicon glyphicon-map-marker"></i>病例录入</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-sub">
+                        <a href="UserCenter.aspx" tag="admin" target="content3" onclick="show_title('病例查询',this,'用户管理')"><span>用户管理</span><i title="nav" class="fa fa-caret-right fa-fw pull-right"></i></a>
+                        <ul class="sub-menu">
                             <li><a title="修改密码" onclick="show_title('修改密码',this)" href="UserCenter.aspx"
                                 target="content3"><i class="glyphicon glyphicon-map-marker"></i>修改密码</a> </li>
                         </ul>

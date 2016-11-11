@@ -93,8 +93,6 @@ function nav_left(navOjb) {
         $(navOjb).parents("ul").slideDown();
         $(navOjb).parents(".has-sub").addClass("active");
     }
-
-
 }
 
 

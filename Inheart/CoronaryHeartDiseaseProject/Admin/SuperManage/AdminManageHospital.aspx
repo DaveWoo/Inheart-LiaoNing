@@ -13,7 +13,6 @@
     <title>修改资料</title>
 </head>
 <body>
-
     <form id="myform" name="listform" runat="server" onsubmit="return confirm('确认要执行此操作？');">
         <asp:Label ID="Label1" runat="server"></asp:Label>&nbsp;   
            

@@ -13,7 +13,7 @@
 <body>
     <form id="myform" runat="server">
         <div style="height: 20px;" class="input-group" id="search-bar">
-            <span class="glyphicon glyphicon-search" style="font-size: 30px; vertical-align: middle"></span>&nbsp;
+            <span class="glyphicon glyphicon-search" style="font-size: 25px; vertical-align: middle"></span>&nbsp;
                 <asp:DropDownList ID="ddlCondition" runat="server" Height="30px" Style="vertical-align: middle">
                     <asp:ListItem>请选择</asp:ListItem>
                 </asp:DropDownList>
@@ -29,29 +29,29 @@
                     </FooterTemplate>
                     <HeaderTemplate>
                         <table width="100%" border="0" align="center" cellpadding="3" cellspacing="1" class="tableborder">
-                            <tr class="header">
+                            <tr  class="header">
                                 <td width="80" height="25">
                                     <div align="center">录入时间</div>
                                 </td>
-                                <td width="80" height="25">
+                                <td width="80" >
                                     <div align="center">患者姓名</div>
                                 </td>
-                                <td width="60" height="25">
+                                <td width="60" >
                                     <div align="center">性别</div>
                                 </td>
-                                <td width="40" height="25">
+                                <td width="40" >
                                     <div align="center">年龄</div>
                                 </td>
-                                <td width="80" height="25">
+                                <td width="80" >
                                     <div align="center">录入医生</div>
                                 </td>
-                                <td width="80" height="25">
+                                <td width="80" >
                                     <div align="center">是否上报</div>
                                 </td>
-                                <td width="40" height="25">
+                                <td width="40" >
                                     <div align="center">操作</div>
                                 </td>
-                                <td width="40" height="25">
+                                <td width="40" >
                                     <div align="center">状态</div>
                                 </td>
                             </tr>
@@ -106,8 +106,7 @@
                         </table>
                     </ItemTemplate>
                 </asp:DataList>
-            <table align="center" border="0" cellpadding="3" cellspacing="1" class="tableborder"
-                width="100%">
+            <table align="center" border="0" cellpadding="3" cellspacing="1" class="tableborder"width="100%">
                 <tr bgcolor="#ffffff">
                     <td colspan="4" height="25">
                         <div align="left">

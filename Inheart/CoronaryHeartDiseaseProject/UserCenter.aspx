@@ -14,7 +14,7 @@
 </head>
 <body>
     <form id="myform" runat="server" onsubmit="return   <title>修改资料</title>()">
-        <table width="100%" border="0" align="center" cellpadding="3" cellspacing="1" class="tableborder">
+        <table width="100%" border="0" align="center" cellpadding="3" cellspacing="1" class="table">
             <tr class="header">
                 <td height="30px" colspan="2">修改密码&nbsp;</td>
             </tr>

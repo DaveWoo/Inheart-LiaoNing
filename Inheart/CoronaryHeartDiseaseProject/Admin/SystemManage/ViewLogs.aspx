@@ -5,6 +5,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>修改资料</title>
     <link rel="stylesheet" href="../../Styles/admin.css" />
+    <link rel="stylesheet" href="../../Styles/main.css" />
     <link rel="stylesheet" href="/Content/bootstrap.min.css" />
     <script type="text/javascript" src="/Scripts/bootstrap.min.js"></script>
     <script type="text/javascript" src="/Scripts/jquery-1.9.1.min.js"></script>
@@ -16,32 +17,32 @@
             <HeaderTemplate>
                 <table width="100%" border="0" align="left" cellpadding="3" cellspacing="1" class="tableborder">
                     <tr class="header">
-                        <td width="10%" height="25">
+                        <td width="10%" >
                             <div align="left">医院</div>
                         </td>
-                        <td width="10%" height="25">
+                        <td width="10%" >
                             <div align="left">用户ID</div>
                         </td>
-                        <td width="10%" height="25">
+                        <td width="10%" >
                             <div align="left">登录时间</div>
                         </td>
                     </tr>
                 </table>
             </HeaderTemplate>
             <ItemTemplate>
-                <table width="100%" border="0" align="center" cellpadding="3" cellspacing="1" class="tableborder">
+                <table width="100%" border="1" align="center" cellpadding="3" cellspacing="1" class="tableborder">
                     <tr bgcolor="#ffffff" id="news<%#Eval("LogID") %>">
-                        <td height="25" width="10%">
+                        <td width="10%">
                             <div align="left">
                                 <%#ShowHospitalName(Eval("HospitalID").ToString())%>
                             </div>
                         </td>
-                        <td height="25" width="10%">
+                        <td width="10%">
                             <div align="left">
                                 <%#ShowUserName(Eval("UserID").ToString())%>
                             </div>
                         </td>
-                        <td height="25" width="10%">
+                        <td width="10%">
                             <div align="left">
                                 <%#Eval("LoginDate")%>
                             </div>
