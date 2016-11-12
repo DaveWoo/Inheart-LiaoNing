@@ -14,40 +14,40 @@
 </head>
 <body>
     <form id="myform" runat="server" onsubmit="return checkUser()">
-        <table width="100%" border="0" align="center" cellpadding="3" cellspacing="1" class="table">
-            <tr class="header">
-                <td height="30px" colspan="2">添加管理员&nbsp;
+        <table width="100%" border="0" align="center" cellpadding="3" cellspacing="1" class="table-bordered">
+            <tr>
+                <td colspan="2" class="header">添加管理员
                 </td>
             </tr>
-            <tr bgcolor="#FFFFFF">
-                <td width="32%" height="25">医院</td>
-                <td width="100%" height="25" colspan="2">
+            <tr>
+                <td class="tableTDCell" width="32%">医院</td>
+                <td width="100%" colspan="2">
                     <asp:DropDownList CssClass="form-control" ID="SelectHosptial" runat="server" Width="250px">
                     </asp:DropDownList>
                 </td>
             </tr>
-            <tr bgcolor="#FFFFFF">
-                <td width="25%" height="25">管理员用户名</td>
-                <td width="75%" height="25">
+            <tr>
+                <td class="tableTDCell" width="25%">管理员用户名</td>
+                <td width="75%">
                     <input type="text" class="form-control" name="username" placeholder="用户名" style="width: 250px" />
                 </td>
             </tr>
-            <tr bgcolor="#FFFFFF">
-                <td height="25">管理员密码</td>
-                <td height="25">
+            <tr>
+                <td class="tableTDCell">管理员密码</td>
+                <td >
                     <input type="password" name="newpass" class="form-control" placeholder="密码" style="width: 250px" />
                 </td>
             </tr>
-            <tr bgcolor="#FFFFFF">
-                <td height="25">确认密码</td>
-                <td height="25">
+            <tr>
+                <td class="tableTDCell">确认密码</td>
+                <td>
                     <input type="password" name="repass" class="form-control" placeholder="确认密码" style="width: 250px">
                 </td>
             </tr>
-            <tr bgcolor="#FFFFFF">
-                <td height="25">&nbsp;
+            <tr>
+                <td>&nbsp;
                 </td>
-                <td height="25">
+                <td>
                     <input type="submit" value="添加管理员" class="btn btn-info " name="B1" id="Submit2" onserverclick="Submit1_ServerClick"
                         runat="server" onclick="return Submit2_onclick()">
                     <input type="reset" name="Submit2" value="重置" class="btn btn-info ">

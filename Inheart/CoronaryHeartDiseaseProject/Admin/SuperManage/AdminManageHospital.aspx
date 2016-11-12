@@ -16,9 +16,11 @@
     <form id="myform" name="listform" runat="server" onsubmit="return confirm('确认要执行此操作？');">
         <asp:Label ID="Label1" runat="server"></asp:Label>&nbsp;   
            
+       
+
         <asp:DataList ID="DataListHospital" runat="server" Width="100%">
             <HeaderTemplate>
-                <table width="100%" border="0" align="left" cellpadding="3" cellspacing="1" class="tableborder">
+                <table width="100%" border="1" align="left" cellpadding="3" cellspacing="1" class="tableborder">
                     <tr class="header">
                         <td class="c1">医院</td>
                         <td class="c2">所属地区</td>
@@ -27,7 +29,7 @@
                 </table>
             </HeaderTemplate>
             <ItemTemplate>
-                <table width="100%" border="0" align="left" cellpadding="3" cellspacing="1" class="tableborder">
+                <table width="100%" border="1" align="left" cellpadding="3" cellspacing="1" class="tableborder">
                     <tr bgcolor="#ffffff" id="news<%#Eval("ID") %>">
                         <td class="c1">
                             <%#Eval("HospitalName")%>
@@ -43,10 +45,11 @@
             </ItemTemplate>
             <FooterTemplate>
                 <table width="100%" border="1" align="left" cellpadding="3" cellspacing="1" class="tableborder">
-                    <tr bgcolor="#ffffff">
-                        <td height="25" colspan="4">
+                    <tr bgcolor="#ffffff" >
+                        <td  colspan="4">
                             <div align="left">
                                 <input type="button" class="btn btn-info widthButton" name="Submit822" value="添加医院" onclick="javascript: window.location = 'AddHospital.aspx';">&nbsp;
+                               
                                 <input type="submit" class="btn btn-info widthButton" name="Submit3" value="将所选医院删除" id="Submit1" onserverclick="Submit1_ServerClick" runat="server">
                                 <span class="label label-default">选中全部</span>
                                 <input type="checkbox" name="chkall" value="on" onclick="CheckAll(this.form)">
@@ -57,8 +60,8 @@
             </FooterTemplate>
         </asp:DataList>
         <table width="100%" border="0" align="center" cellpadding="3" cellspacing="1" class="tableborder">
-            <tr bgcolor="#ffffff">
-                <td height="25" colspan="4">
+            <tr bgcolor="#ffffff" >
+                <td  colspan="4">
                     <div align="left">
                         &nbsp;&nbsp;
                     </div>
@@ -66,9 +69,10 @@
             </tr>
         </table>
         <table width="100%" border="0" cellpadding="0" cellspacing="0">
-            <tr bgcolor="#ffffff">
-                <td height="25" colspan="4">备注：<span style="color: #ff0000"> 1.多选框背景色为蓝色代表已选中信息,所有操作均为不可恢复，在操作时请管理员慎重。<br />
+            <tr>
+                <td  colspan="4">备注：<span style="color: #ff0000"> 1.多选框背景色为蓝色代表已选中信息,所有操作均为不可恢复，在操作时请管理员慎重。<br />
                     &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                   
                     <!--2.放入回收站的文章可以恢复,清空回收站文章彻底删除。-->
                     <br />
                 </span>

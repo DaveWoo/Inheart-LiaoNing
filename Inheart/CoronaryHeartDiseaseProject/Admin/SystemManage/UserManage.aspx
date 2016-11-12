@@ -22,24 +22,24 @@
         </table>
         <asp:DataList ID="DataListUser" runat="server" Width="100%">
             <HeaderTemplate>
-                <table width="100%" border="0" align="center" cellpadding="3" cellspacing="1" class="tableborder">
+                <table width="100%" border="1" align="center" cellpadding="3" cellspacing="1" class="tableborder">
                     <tr class="header">
-                        <td class="co1-1">用户ID</td>
-                        <td class="co1-2">所属医院</td>
-                        <td class="co1-3">操作</td>
+                        <td class="c1">用户ID</td>
+                        <td class="c2">所属医院</td>
+                        <td class="c3">操作</td>
                     </tr>
                 </table>
             </HeaderTemplate>
             <ItemTemplate>
-                <table width="100%" border="0" align="center" cellpadding="3" cellspacing="1" class="tableborder">
-                    <tr bgcolor="#ffffff" id="news<%#Eval("ID") %>">
-                        <td class="co1-1">
+                <table width="100%" border="10" align="center" cellpadding="3" cellspacing="1" class="tableborder">
+                    <tr bgcolor="#ffffff"  id="news<%#Eval("ID") %>">
+                        <td class="c1">
                             <%#Eval("UserName")%>
                         </td>
-                        <td class="co1-2">
+                        <td class="c2">
                             <%#Eval("Hospital.HospitalName")%>
                         </td>
-                        <td class="co1-3">
+                        <td class="c3">
                             <%#ShowTxt(Eval("ID").ToString())%>
                         </td>
                     </tr>
@@ -47,8 +47,8 @@
             </ItemTemplate>
             <FooterTemplate>
                 <table width="100%" border="0" align="center" cellpadding="3" cellspacing="1" class="tableborder">
-                    <tr bgcolor="#ffffff">
-                        <td height="25" colspan="4">
+                    <tr >
+                        <td  colspan="4">
                             <div align="left">
                                 <input type="button" class="btn btn-info" name="Submit822" value="添加新用户" onclick="javascript: window.location = 'AddUser.aspx';">
                                 <input type="submit" class="btn btn-info" name="Submit3" value="将所选用户删除" id="Submit1" onserverclick="Submit1_ServerClick"
@@ -60,8 +60,8 @@
             </FooterTemplate>
         </asp:DataList>
         <table width="100%" border="0" align="center" cellpadding="3" cellspacing="1" class="tableborder">
-            <tr bgcolor="#ffffff">
-                <td height="25" colspan="4">
+            <tr >
+                <td  colspan="4">
                     <div align="left">
                         &nbsp;&nbsp;    
                     </div>
@@ -69,8 +69,8 @@
             </tr>
         </table>
         <table width="100%" border="0" cellpadding="0" cellspacing="0">
-            <tr bgcolor="#ffffff">
-                <td height="25" colspan="4">备注：<span style="color: #ff0000"> 1.多选框背景色为蓝色代表已选中信息,所有操作均为不可恢复，在操作时请管理员慎重。<br />
+            <tr >
+                <td  colspan="4">备注：<span style="color: #ff0000"> 1.多选框背景色为蓝色代表已选中信息,所有操作均为不可恢复，在操作时请管理员慎重。<br />
                     &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;     
                     <!--2.放入回收站的文章可以恢复,清空回收站文章彻底删除。-->
                     <br />

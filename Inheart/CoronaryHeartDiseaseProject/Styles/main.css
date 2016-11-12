@@ -1,11 +1,12 @@
 .subTitle {
-    display: block;
     padding-left: 0;
     background-color: #5bc0de;
-    font-size: 20px;
     color: #fff;
-    padding-top: 3px;
-    padding-bottom: 3px;
+    padding-top: .5em;
+    padding-bottom: .5em;
+    padding-left:.5em;
+    font-weight: bold;
+    border-color: #46b8da;
 }
 
 .subTitleTip {
@@ -148,7 +149,6 @@ TH {
     color: Black;
     height: 30px;
     text-align: center;
-    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
 .foot {
@@ -541,14 +541,14 @@ FORM {
 
 .Column1JiBing1 {
     width: 180px;
-    padding-left: 0;
+    padding-left: .5em;
     margin-left: 0;
-    height: 26px;
+    height: 26px;    
 }
 
 .Column1JiBing11 {
     width: 280px;
-    padding-left: 0;
+    padding-left: .5em;
     margin-left: 0;
     height: 26px;
 }
@@ -610,7 +610,16 @@ FORM {
 .header {
     color: #FFFFFF;
     font-weight: bold;
+    background-color: #5bc0de;
+    border-color: #46b8da;
+    height: 36px;
+    padding-left: 5px;
 }
+
+    .header a {
+        color: #FFFFFF;
+    }
+
 
 .columnAge {
     text-align: center;
@@ -693,10 +702,10 @@ FORM {
 }
 
 .tableborder {
-    height: 35px;
-    background-color: #5bc0de;
+    height: 30px;
     border-color: #46b8da;
     border: 1px solid #ccc;
+    font-size:14px;
 }
 
 #dgMessage {

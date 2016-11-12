@@ -21,28 +21,28 @@
                     <asp:TextBox ID="TextBox1" runat="server" Width="61px" Visible="false"></asp:TextBox>
                 </td>
             </tr>
-            <tr bgcolor="#FFFFFF">
-                <td width="25%" height="25">管理员用户名</td>
-                <td width="75%" height="25">
+            <tr >
+                <td width="25%" >管理员用户名</td>
+                <td width="75%" >
                     <input type="text" class="form-control" name="username" size="35" readonly value="<%=UserName %>" />
                 </td>
             </tr>
-            <tr bgcolor="#FFFFFF">
-                <td height="25">管理员密码</td>
-                <td height="25">
+            <tr >
+                <td >管理员密码</td>
+                <td >
                     <input type="password" name="newpass" size="35" value="" />
                 </td>
             </tr>
-            <tr bgcolor="#FFFFFF">
-                <td height="25">确认密码</td>
-                <td height="25">
+            <tr >
+                <td >确认密码</td>
+                <td >
                     <input type="password" name="repass" size="35" value="">
                 </td>
             </tr>
-            <tr bgcolor="#FFFFFF">
-                <td height="25">&nbsp;
+            <tr >
+                <td >&nbsp;
                 </td>
-                <td height="25">
+                <td >
                     <input type="submit" value="修改管理员" name="B1" class="Button" id="Submit2" onserverclick="Submit1_ServerClick"
                         runat="server" />
                     <input type="reset" name="Submit2" value="重置" />

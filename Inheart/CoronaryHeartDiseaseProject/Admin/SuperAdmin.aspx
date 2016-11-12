@@ -98,7 +98,7 @@
                 </ul>
             </div>
             <div class="tabContent ">
-                <div class="nav_bar_top"><span class="nav_name">网站导航: > </span><span id="nav_host">管理</span> > <span class="label label-info" id="nav_title">医院</span></div>
+                <div class="nav_bar_top"><span class="nav_name">网站导航: <i class="fa fa-angle-right" aria-hidden="true"></i> </span><span id="nav_host">管理</span> <i class="fa fa-angle-right" aria-hidden="true"></i> <span class="label label-info" id="nav_title">医院</span></div>
 
                 <iframe name="content3" src="SuperManage/AddHospital.aspx" onclick="show_title('添加医院',this)" frameborder="0" style="width: inherit; height: inherit; margin-left: 0; padding-left: 0"></iframe>
             </div>

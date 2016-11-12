@@ -3,6 +3,8 @@
     font-weight: bold;
     background-color: #5bc0de;
     border-color: #46b8da;
+    height: 36px;
+    padding-left: 5px;
 }
 
     .header a {
@@ -51,14 +53,21 @@ img {
 
 .c1 {
     width: 30%;
+    padding-left:5px;
 }
 
 .c2 {
     width: 30%;
+    padding-left:5px;
 }
 
 .c3 {
     width: 30%;
+    padding-left:5px;
+}
+.c4 {
+    width: 30%;
+    padding-left:5px;
 }
 
     .c3 input {
@@ -131,10 +140,10 @@ img {
 }
 
 .tableborder {
-    height: 35px;
-    background-color: #5bc0de;
+    height: 30px;
     border-color: #46b8da;
     border: 1px solid #ccc;
+    font-size:14px;
 }
 
 .tableborderLogin {
@@ -161,7 +170,9 @@ img {
 #Label1 {
     padding-top: 100px;
 }
-.tableCell{
+
+.tableTDCell {
     vertical-align: inherit;
-    padding-left:5px !important;
+    padding-left: 5px !important;
+    height:20px;
 }

@@ -18,22 +18,22 @@
             <tr class="header">
                 <td height="30px" colspan="2">管理医院&nbsp;</td>
             </tr>
-            <tr bgcolor="#FFFFFF">
-                <td width="25%" height="25">医院名称</td>
-                <td width="75%" height="25">
+            <tr>>
+                <td width="25%" >医院名称</td>
+                <td width="75%" >
                     <input type="text" class="form-control" name="hospitalname" size="35" value="<%=hospitalNameOriginal %>" />
                 </td>
             </tr>
-            <tr bgcolor="#FFFFFF">
-                <td height="25">备注</td>
-                <td height="25">
+            <tr>>
+                <td >备注</td>
+                <td >
                     <input type="text" class="form-control" name="comment" size="35" value="<%=comment %>" />
                 </td>
             </tr>
-            <tr bgcolor="#FFFFFF">
-                <td height="25">&nbsp;
+            <tr>>
+                <td >&nbsp;
                 </td>
-                <td height="25">
+                <td >
                     <input type="submit" value="修改" name="B1" class="Button" id="Submit2" onserverclick="Submit1_ServerClick"
                         runat="server" />
                     <input type="reset" name="Submit2" value="重置" />

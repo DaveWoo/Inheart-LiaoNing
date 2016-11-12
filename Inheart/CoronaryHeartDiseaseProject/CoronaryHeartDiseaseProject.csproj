@@ -103,7 +103,7 @@
     <Content Include="Images\112.png" />
     <Content Include="Images\ChartAge.jpg" />
     <Content Include="Images\ChartImage.jpg" />
-    <Content Include="index.html" />
+    <Content Include="Images\lock.png" />
     <Content Include="js\jquery-1.js" />
     <Content Include="js\jquery.1.7.2.min.js" />
     <Content Include="js\mobiscroll.js" />

@@ -16,32 +16,32 @@
     <form id="myform" runat="server" onsubmit="return checkUser()">
         <table width="100%" border="0" align="center" cellpadding="3" cellspacing="1" class="tableborder">
             <tr class="header">
-                <td height="30px" colspan="2">修改用户&nbsp;
-                <asp:TextBox ID="TextBox1" runat="server" Width="61px" Visible="false"></asp:TextBox>
+                <td colspan="2">修改用户             
+                    <asp:TextBox ID="TextBox1" runat="server" Width="61px" Visible="false"></asp:TextBox>
                 </td>
             </tr>
-            <tr bgcolor="#FFFFFF">
-                <td width="25%" height="25">用户名</td>
-                <td width="75%" height="25">
+            <tr>
+                <td width="25%" class="tableTDCell">用户名</td>
+                <td width="75%">
                     <input type="text" class="form-control" name="username" size="35" readonly value="<%=userName %>" />
                 </td>
             </tr>
-            <tr bgcolor="#FFFFFF">
-                <td height="25">用户密码</td>
-                <td height="25">
+            <tr>
+                <td class="tableTDCell">用户密码</td>
+                <td>
                     <input type="password" name="newpass" size="35" value="">
                 </td>
             </tr>
-            <tr bgcolor="#FFFFFF">
-                <td height="25">确认密码</td>
-                <td height="25">
+            <tr>
+                <td class="tableTDCell">确认密码</td>
+                <td>
                     <input type="password" name="repass" size="35" value="">
                 </td>
             </tr>
-            <tr bgcolor="#FFFFFF">
-                <td height="25">&nbsp;
+            <tr>
+                <td>&nbsp;
                 </td>
-                <td height="25">
+                <td>
                     <input type="submit" value="修改用户" name="B1" class="Button" id="Submit2" onserverclick="Submit1_ServerClick"
                         runat="server">
                     <input type="reset" name="Submit2" value="重置">

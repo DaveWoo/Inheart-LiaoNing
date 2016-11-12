@@ -41,25 +41,25 @@
                     <table style="margin-top: 20px; margin-left: 20px;">
                         <tr>
                             <td style="width: 80px;">地&nbsp;&nbsp;&nbsp;区：</td>
-                            <td height="25" class="loginleft">&nbsp;&nbsp;&nbsp;<%=HospitalRegion%>
+                            <td  class="loginleft">&nbsp;&nbsp;&nbsp;<%=HospitalRegion%>
                             </td>
                         </tr>
                         <tr>
-                            <td height="25">医&nbsp;&nbsp;&nbsp;院：</td>
+                            <td >医&nbsp;&nbsp;&nbsp;院：</td>
                             <td>
                                 <asp:DropDownList ID="Hospitial" TabIndex="1" Style="width: 200px" runat="server" CssClass="form-control" />
                             </td>
                         </tr>
                         <tr>
-                            <td height="25">用户名：</td>
-                            <td height="25" class="loginleft">
+                            <td >用户名：</td>
+                            <td  class="loginleft">
                                 <input name="username" type="text" id="username" maxlength="16" style="width: 200px" placeholder="请输入您的用户名" title="请输入您的用户名"
                                     class="form-control" tabindex="2" />
                             </td>
                         </tr>
                         <tr>
-                            <td height="25">密&nbsp;&nbsp;&nbsp;码：</td>
-                            <td height="25" class="loginleft">
+                            <td >密&nbsp;&nbsp;&nbsp;码：</td>
+                            <td  class="loginleft">
                                 <input name="password" type="password" id="password" maxlength="16" style="width: 200px" placeholder="请输入您的密码" title="请输入您的密码"
                                     class="form-control" tabindex="3" />
                             </td>

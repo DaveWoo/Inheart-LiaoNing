@@ -16,33 +16,33 @@
 </head>
 <body>
     <form id="myform" runat="server" onsubmit="return checkHospital()">
-        <table width="100%" border="0" align="center" class="table">
-            <tr class="header">
-                <td height="30px" colspan="2">添加医院&nbsp;
+        <table width="100%" border="0" align="center" class="table-bordered">
+            <tr >
+                <td class="header"colspan="2">添加医院&nbsp;
                 </td>
             </tr>
-            <tr bgcolor="#FFFFFF">
-                <td width="25%" height="25">所在地区</td>
-                <td width="75%" height="25">
+            <tr>
+                <td width="25%" class="tableTDCell">所在地区</td>
+                <td width="75%">
                     <asp:DropDownList ID="Region" runat="server" CssClass="form-control" Width="250px" />
                 </td>
             </tr>
-            <tr bgcolor="#FFFFFF">
-                <td width="25%" height="25">医院名称</td>
-                <td height="25" colspan="2">
+            <tr>
+                <td width="25%" class="tableTDCell">医院名称</td>
+                <td colspan="2">
                     <input type="text" name="hospitalname" class="form-control" placeholder="请输入医院名称" style="width: 250px" />
                 </td>
             </tr>
-            <tr bgcolor="#FFFFFF">
-                <td height="25">备注</td>
-                <td height="25">
+            <tr>
+                <td class="tableTDCell">备注</td>
+                <td>
                     <input type="text" name="comment" class="form-control" placeholder="医院备注" style="width: 250px" />
                 </td>
             </tr>
-            <tr bgcolor="#FFFFFF">
-                <td height="25">&nbsp;
+            <tr>
+                <td>&nbsp;
                 </td>
-                <td height="25">
+                <td>
                     <input type="submit" value="添加" name="B1" class="btn btn-info" id="Submit2" onserverclick="Submit1_ServerClick" style="width: 100px;"
                         runat="server" />
                     <input type="reset" name="Submit2" value="重置" class="btn btn-info" style="width: 100px;" onclick="return Submit2_onclick()" />

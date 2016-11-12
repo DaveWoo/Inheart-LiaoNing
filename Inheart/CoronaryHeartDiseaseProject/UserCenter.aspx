@@ -14,32 +14,32 @@
 </head>
 <body>
     <form id="myform" runat="server" onsubmit="return   <title>修改资料</title>()">
-        <table width="100%" border="0" align="center" cellpadding="3" cellspacing="1" class="table">
-            <tr class="header">
-                <td height="30px" colspan="2">修改密码&nbsp;</td>
+        <table width="100%" border="0" align="center" class="table-bordered">
+            <tr>
+                <td colspan="2" class="header">修改密码&nbsp;</td>
             </tr>
-            <tr bgcolor="#FFFFFF">
-                <td width="25%" height="25">原密码</td>
-                <td width="75%" height="25">
+            <tr>
+                <td class="tableTDCell" width="25%" >原密码</td>
+                <td width="75%" >
                     <input type="password" class="form-control-user" placeholder="请输入原密码" name="oldpass" size="35">
                 </td>
             </tr>
-            <tr bgcolor="#FFFFFF">
-                <td height="25">新密码</td>
-                <td height="25">
+            <tr>
+                <td class="tableTDCell" >新密码</td>
+                <td >
                     <input type="password" class="form-control-user" placeholder="请输入密码" name="newpass" size="35" />
                 </td>
             </tr>
-            <tr bgcolor="#FFFFFF">
-                <td height="25">确认密码</td>
-                <td height="25">
+            <tr>
+                <td class="tableTDCell" >确认密码</td>
+                <td >
                     <input type="password" class="form-control-user" placeholder="请您再次输入密码" name="repass" size="35">
                 </td>
             </tr>
-            <tr bgcolor="#FFFFFF">
-                <td height="25">&nbsp;
+            <tr>
+                <td >&nbsp;
                 </td>
-                <td height="25">
+                <td >
                     <input type="submit" value="保存密码" name="B1" class="btn btn-info" id="Submit2" onserverclick="Submit1_ServerClick"
                         runat="server" onclick="return Submit2_onclick()">
                     <input type="reset" name="Submit2" class="btn btn-info" value="重置">

@@ -13,39 +13,28 @@
 <body>
     <form id="myform" runat="server" onsubmit="return confirm('确认要执行此操作？');">
         <asp:Label ID="Label1" runat="server"></asp:Label>&nbsp;   
+       
         <asp:DataList ID="DataListUserLog" runat="server" Width="100%">
             <HeaderTemplate>
                 <table width="100%" border="0" align="left" cellpadding="3" cellspacing="1" class="tableborder">
                     <tr class="header">
-                        <td width="10%" >
-                            <div align="left">医院</div>
-                        </td>
-                        <td width="10%" >
-                            <div align="left">用户ID</div>
-                        </td>
-                        <td width="10%" >
-                            <div align="left">登录时间</div>
-                        </td>
+                        <td width="10%" class="tableTDCell">医院</td>
+                        <td width="10%" class="tableTDCell">用户ID</td>
+                        <td width="10%" class="tableTDCell">登录时间</td>
                     </tr>
                 </table>
             </HeaderTemplate>
             <ItemTemplate>
                 <table width="100%" border="1" align="center" cellpadding="3" cellspacing="1" class="tableborder">
                     <tr bgcolor="#ffffff" id="news<%#Eval("LogID") %>">
-                        <td width="10%">
-                            <div align="left">
-                                <%#ShowHospitalName(Eval("HospitalID").ToString())%>
-                            </div>
+                        <td width="10%" class="tableTDCell">
+                            <%#ShowHospitalName(Eval("HospitalID").ToString())%> 
                         </td>
-                        <td width="10%">
-                            <div align="left">
-                                <%#ShowUserName(Eval("UserID").ToString())%>
-                            </div>
+                        <td width="10%" class="tableTDCell">
+                            <%#ShowUserName(Eval("UserID").ToString())%>
                         </td>
-                        <td width="10%">
-                            <div align="left">
-                                <%#Eval("LoginDate")%>
-                            </div>
+                        <td width="10%" class="tableTDCell">
+                            <%#Eval("LoginDate")%>
                         </td>
                     </tr>
                 </table>

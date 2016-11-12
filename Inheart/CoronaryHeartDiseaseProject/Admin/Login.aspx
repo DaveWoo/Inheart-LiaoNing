@@ -29,7 +29,7 @@
             </tr>
             <tr>
                 <td style="width: 80px; height: 25px; padding-left: 20px;">密&nbsp;&nbsp;&nbsp;码：</td>
-                <td height="25">
+                <td >
                     <input name="password" type="password" id="password" class="form-control-user" maxlength="16" placeholder="请输入您的密码" title="请输入您的密码"
                         tabindex="3" />
                 </td>

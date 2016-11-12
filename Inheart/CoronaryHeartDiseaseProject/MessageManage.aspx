@@ -30,7 +30,7 @@
                     <HeaderTemplate>
                         <table width="100%" border="0" align="center" cellpadding="3" cellspacing="1" class="tableborder">
                             <tr  class="header">
-                                <td width="80" height="25">
+                                <td width="80" >
                                     <div align="center">录入时间</div>
                                 </td>
                                 <td width="80" >
@@ -59,45 +59,45 @@
                     </HeaderTemplate>
                     <ItemTemplate>
                         <table width="100%" border="1" align="center" cellpadding="3" cellspacing="1" class="tableborder">
-                            <tr bgcolor="#ffffff" id="news<%#Eval("ReportID") %>">
-                                <td height="25" width="80">
+                            <tr id="news<%#Eval("ReportID") %>">
+                                <td  width="80">
                                     <div align="center">
                                         <%#Eval("CreateDate")%>
                                     </div>
                                 </td>
-                                <td height="25" width="80">
+                                <td  width="80">
                                     <div align="center">
                                         <a href='<%#EnterCase(Eval("ID").ToString(),Eval("IsLocked").ToString(),Eval("ReportID").ToString())%>'
                                             title="进入病例">
                                             <%#Eval("PatientName")%></a>
                                     </div>
                                 </td>
-                                <td height="25" width="60">
+                                <td  width="60">
                                     <div align="center">
                                         <%#Eval("Sex")%>
                                     </div>
                                 </td>
-                                <td height="25" width="40">
+                                <td  width="40">
                                     <div align="center">
                                         <%#Eval("Age")%>
                                     </div>
                                 </td>
-                                <td height="25" width="80">
+                                <td  width="80">
                                     <div align="center">
                                         <%#Eval("Creater")%>
                                     </div>
                                 </td>
-                                <td height="25" width="80">
+                                <td  width="80">
                                     <div align="center">
                                         <%#Eval("IsSubmit")%>
                                     </div>
                                 </td>
-                                <td height="25" width="40">
+                                <td  width="40">
                                     <div align="center">
                                         <%#ShowTxt(Eval("ID").ToString(), Eval("IsLocked").ToString(), Eval("ReportID").ToString())%>
                                     </div>
                                 </td>
-                                <td height="25" width="40">
+                                <td  width="40">
                                     <div align="center">
                                         <%#ShowLock(Eval("IsLocked").ToString())%>
                                     </div>
@@ -107,8 +107,8 @@
                     </ItemTemplate>
                 </asp:DataList>
             <table align="center" border="0" cellpadding="3" cellspacing="1" class="tableborder"width="100%">
-                <tr bgcolor="#ffffff">
-                    <td colspan="4" height="25">
+                <tr >
+                    <td colspan="4" >
                         <div align="left">
                             <input id="btnAddMedical" name="Submit822" onclick="javascript: window.location = 'MessageInput.aspx';"
                                 type="button" value="添加病例" runat="server" align="left" class="btn btn-info" />

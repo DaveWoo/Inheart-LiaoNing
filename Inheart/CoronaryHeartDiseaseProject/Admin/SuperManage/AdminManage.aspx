@@ -16,45 +16,29 @@
         <asp:Label ID="Label1" runat="server"></asp:Label>&nbsp;          
         <asp:DataList ID="DataListUser" runat="server" Width="100%">
             <HeaderTemplate>
-                <table width="100%" border="0" align="left" cellpadding="1" cellspacing="1" class="tableborder">
+                <table width="100%" border="1" align="left" cellpadding="1" cellspacing="1" class="tableborder">
                     <tr class="header">
-                        <td width="100" height="30px">
-                            <div align="left">管理员ID</div>
-                        </td>
-                        <td width="100" >
-                            <div align="left">所属医院</div>
-                        </td>
-                        <td width="100">
-                            <div align="left">所属地区</div>
-                        </td>
-                        <td width="100" >
-                            <div align="left">操作</div>
-                        </td>
+                        <td class="c1">管理员ID</td>
+                        <td class="c2">所属医院</td>
+                        <td  class="c3">所属地区</td>
+                        <td  class="c4">操作</td>
                     </tr>
                 </table>
             </HeaderTemplate>
             <ItemTemplate>
-                <table width="100%" border="0" align="left" cellpadding="1" cellspacing="1" class="tableborder">
+                <table width="100%" border="1" align="left" cellpadding="1" cellspacing="1" class="tableborder">
                     <tr bgcolor="#ffffff" id="news<%#Eval("ID") %>">
-                        <td width="100">
-                            <div align="left">
+                        <td class="c1">
                                 <%#Eval("UserName")%>
-                            </div>
                         </td>
-                        <td width="100">
-                            <div align="left">
+                        <td class="c2">
                                 <%#Eval("Hospital.HospitalName")%>
-                            </div>
                         </td>
-                        <td width="100">
-                            <div align="left">
+                        <td class="c3">
                                 <%#ShowRegionName(Eval("Hospital.RegionID").ToString())%>
-                            </div>
                         </td>
-                        <td width="100">
-                            <div align="left">
+                        <td class="c4"">
                                 <%#ShowTxt(Eval("ID").ToString())%>
-                            </div>
                         </td>
                     </tr>
                 </table>
@@ -62,7 +46,7 @@
             <FooterTemplate>
                 <table width="100%" border="0" align="left" cellpadding="3" cellspacing="1" class="tableborder">
                     <tr bgcolor="#ffffff">
-                        <td height="25" colspan="4">
+                        <td  colspan="4">
                             <div align="left">
                                 <input type="button" class="btn btn-info widthButton" name="Submit822" value="添加管理员" onclick="javascript: window.location = 'AddAdmin.aspx';">&nbsp;
                             </div>
@@ -73,7 +57,7 @@
         </asp:DataList>
         <table width="100%" border="0" align="center" cellpadding="3" cellspacing="1" class="tableborder">
             <tr bgcolor="#ffffff">
-                <td height="25" colspan="4">
+                <td  colspan="4">
                     <div align="left">
                         &nbsp;&nbsp;
                     </div>
@@ -82,7 +66,7 @@
         </table>
         <table width="100%" border="0" cellpadding="0" cellspacing="0">
             <tr bgcolor="#ffffff">
-                <td height="25" colspan="4">备注：<span style="color: #ff0000"> 1.多选框背景色为蓝色代表已选中信息,所有操作均为不可恢复，在操作时请管理员慎重。<br />
+                <td  colspan="4">备注：<span style="color: #ff0000"> 1.多选框背景色为蓝色代表已选中信息,所有操作均为不可恢复，在操作时请管理员慎重。<br />
                     &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;   
                     <br />
                 </span>
