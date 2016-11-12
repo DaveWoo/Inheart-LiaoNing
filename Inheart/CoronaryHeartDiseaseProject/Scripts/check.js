@@ -13,82 +13,82 @@ String.prototype.rtrim = function () {
 
 function checkUser() {
     if (document.myform.username.value == "") {
-        alert("用户名不能为空！！");
+        swal("用户名不能为空！！");
         return false;
     }
 
     if (document.myform.username.value.length > 12) {
-        alert("用户名不能不能长于12！！");
+        swal("用户名不能不能长于12！！");
         return false;
     }
 
     if (document.myform.newpass.value == "") {
-        alert("密码不能为空！！");
+        swal("密码不能为空！！");
         return false;
     }
 
     if (document.myform.newpass.value.length < 6) {
-        alert("密码长度不能小于6位！！");
+        swal("密码长度不能小于6位！！");
         return false;
     }
 
     if (document.myform.repass.value != document.myform.newpass.value) {
-        alert("两次密码输入不一样！！");
+        swal("两次密码输入不一样！！");
         return false;
     }
 
     if (document.myform.newpass.value.length > 11) {
-        alert("密码长度不能长于12！！");
+        swal("密码长度不能长于12！！");
         return false;
     }
 }
 
 function checkReSetPwd() {
     if (document.myform.oldpass.value == "") {
-        alert("原密码不能为空！！");
+        swal("原密码不能为空！！");
         return false;
     }
     if (document.myform.newpass.value.length < 6) {
-        alert("密码长度不能小于6位！！");
+        swal("密码长度不能小于6位！！");
         return false;
     }
     if (document.myform.newpass.value == "") {
-        alert("新密码不能为空！！");
+        swal("新密码不能为空！！");
         return false;
     }
     if (document.myform.repass.value != document.myform.newpass.value) {
-        alert("两次密码输入不一样！！");
+        swal("两次密码输入不一样！！");
         return false;
     }
 }
 
 function checkHospital() {
     if (document.myform.hospitalname.value.trim() == "") {
-        alert("医院名称名不能为空！！");
+        swal("医院名称名不能为空！！");
         return false;
     }
 
     if (document.myform.hospitalname.value.length > 16) {
-        alert("医院名称长度不能长于16个汉字或者字符！！");
+        swal("医院名称长度不能长于16个汉字或者字符！！");
         return false;
     }
     if (document.myform.comment.value.trim() == "") {
-        alert("备注不能为空！！");
+        swal("备注不能为空！！");
         return false;
     }
     if (document.myform.comment.value.length > 32) {
-        alert("备注长度不能长于32个汉字！！");
+        swal("备注长度不能长于32个汉字！！");
         return false;
     }
 }
 
 function checkHospitalName() {
     if (document.myform.hospitalname.value.trim() == "") {
-        alert("医院名称名不能为空！！");
+        swal("医院名称名不能为空！！");
         return false;
     }
     if (document.myform.comment.value.trim() == "") {
-        alert("备注不能为空！！");
+        swal("备注不能为空！！");
         return false;
     }
 }

@@ -10,35 +10,30 @@
     <link rel="stylesheet" href="../../Styles/admin.css" />
     <script type="text/javascript" src="/Scripts/bootstrap.min.js"></script>
     <script type="text/javascript" src="/Scripts/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="/Scripts/Calendar3.js"></script>
+
     <title>数据统计</title>
 </head>
 <body style="padding-left: 10px;">
     <form id="form1" runat="server">
         <asp:Panel runat="server" ID="panelQuery" Visible="false">
-            <div style="margin-bottom: 50px;">
-                <table border="0" cellpadding="0" cellspacing="0" style="margin-top: 10px;">
-                    <tr style="height: 60px;">
-                        <td style="color: Red; font-size: 20px;" colspan="4" align="left">请选择统计时期，不选择则统计全部！
-                        </td>
-                    </tr>
-                    <tr style="height: 60px;">
-                        <td>按时间段查询：
-                        </td>
-                        <td>起                       
-                            <asp:TextBox name="control_date" type="text" ID="controldate" size="10" MaxLength="10"
-                                onclick="new Calendar().show(this);" runat="server" Width="182px" />
-                        </td>
-                        <td>止<asp:TextBox name="control_date2" type="text" ID="controldate2" size="10" MaxLength="10"
-                            onclick="new Calendar().show(this);" runat="server" Width="182px" />
-                        </td>
-                        <td>
-                            <span class="glyphicon glyphicon-search"></span>
-                            <asp:Button runat="server" ID="Button1" Text="查询" OnClick="Go_Click" CssClass="btn btn-info widthButton "
-                                Height="35px" />
-                        </td>
-                    </tr>
-                </table>
+            <div style="color: Red; font-size: 20px;" colspan="4" align="left">请选择统计时期，不选择则统计全部！</div>
+            <div class="form-group">
+                <label class="control-label col-sm-1">开始:</label>
+                <asp:TextBox name="control_date" type="text" ID="controldate" size="10" MaxLength="10"
+                    onclick="new Calendar().show(this);" runat="server" class="form-control" Width="150px" />
             </div>
+            <div class="form-group">
+                <label class="control-label col-sm-1">结束:</label>
+                <asp:TextBox name="control_date2" type="text" ID="controldate2" size="10" MaxLength="10"  Width="150px"
+                    onclick="new Calendar().show(this);" runat="server" class="form-control" />
+            </div>
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-1">
+                    <asp:Button runat="server" ID="Button1" Text="查询" OnClick="Go_Click" CssClass="btn btn-info" />
+                </div>
+            </div>
+
         </asp:Panel>
         <asp:Panel runat="server" ID="paneOverView" Visible="false">
             <table cellpadding="0" cellspacing="0" class="tableSummary" align="left" style="margin-top: 50px;">

@@ -28,7 +28,7 @@
                         aria-expanded="false" aria-controls="navbar">
                         <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="SuperManage/AddHospital.aspx" target="content3">病例录入平台</a>
+                    <a class="navbar-brand" target="content3">病例录入平台</a>
                 </div>
                 <div id="navbar" class="collapse navbar-collapse">
                     <ul class="nav navbar-nav navbar-right">

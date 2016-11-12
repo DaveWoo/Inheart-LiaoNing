@@ -680,7 +680,7 @@
                                                             <asp:CheckBox ID="chkRightVentricular" Text="右室" runat="server" />
                                                         </asp:Panel>
                                                     </td>
-                                                    <td style="width: 110px;">
+                                                    <td style="width: 110px;" align="right">
                                                         <button tabindex="39" type="button" onclick="javascript:ST1()" class="btn btn-info">
                                                             诊断标准</button>
                                                     </td>

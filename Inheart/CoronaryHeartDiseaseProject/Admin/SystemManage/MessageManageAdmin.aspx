@@ -23,8 +23,8 @@
                 <asp:ListItem>请选择</asp:ListItem>
             </asp:DropDownList>
             <asp:TextBox ID="txtCondition" runat="server" Height="30px" Style="vertical-align: middle" placeholder="请输入"></asp:TextBox>
-            <asp:Button runat="server" ID="Button1" Text="查询" OnClick="ibtnSearch_Click" CssClass="btn btn-info widthButton "
-                Height="30px" />
+            <asp:Button runat="server" ID="Button1" Text="查询" OnClick="ibtnSearch_Click" CssClass="btn btn-info"
+                Height="30px" Width="60px" />
             <asp:Label ID="lblMessage" runat="server" ForeColor="Red" />
         </div>
         <div>
