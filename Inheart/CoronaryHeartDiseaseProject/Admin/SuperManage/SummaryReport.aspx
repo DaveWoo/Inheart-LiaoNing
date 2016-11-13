@@ -17,31 +17,33 @@
 <body style="padding-left: 10px;">
     <form id="form1" runat="server">
         <asp:Panel runat="server" ID="panelQuery" Visible="false">
-            <div style="color: Red; font-size: 20px;" colspan="4" align="left">请选择统计时期，不选择则统计全部！</div>
-            <div class="form-group">
-                <label class="control-label col-sm-1">开始:</label>
-                <asp:TextBox name="control_date" type="text" ID="controldate" size="10" MaxLength="10"
-                    onclick="new Calendar().show(this);" runat="server" class="form-control" Width="150px" />
-            </div>
-            <div class="form-group">
+            <div style="color: Red; font-size: 20px;" align="left">请选择统计时期，不选择则统计全部！</div>
+            <div class="form-horizontal">
+                <label class="control-label col-sm-1 ">开始:</label>
+                <div class="col-sm-2">
+                    <asp:TextBox name="control_date" type="text" ID="controldate" size="10" MaxLength="10"
+                        onclick="new Calendar().show(this);" runat="server" class="form-control" />
+                </div>
+
                 <label class="control-label col-sm-1">结束:</label>
-                <asp:TextBox name="control_date2" type="text" ID="controldate2" size="10" MaxLength="10"  Width="150px"
-                    onclick="new Calendar().show(this);" runat="server" class="form-control" />
-            </div>
-            <div class="form-group">
-                <div class="col-sm-offset-2 col-sm-1">
+                <div class="col-sm-2">
+                    <asp:TextBox name="control_date2" type="text" ID="controldate2" size="10" MaxLength="10"
+                        onclick="new Calendar().show(this);" runat="server" class="form-control" />
+                </div>
+                <div class="col-sm-1">
                     <asp:Button runat="server" ID="Button1" Text="查询" OnClick="Go_Click" CssClass="btn btn-info" />
                 </div>
+
             </div>
 
         </asp:Panel>
         <asp:Panel runat="server" ID="paneOverView" Visible="false">
-            <table cellpadding="0" cellspacing="0" class="tableSummary" align="left" style="margin-top: 50px;">
+            <table cellpadding="0" cellspacing="0" class="table-condensed" align="left" style="margin-top: 30px;">
                 <tr class="row1Summary">
                     <td colspan="2" style="text-align: center; font-weight: bold; font-size: 16px">2016年上报统计
                     </td>
                 </tr>
-                <tr>
+                <tr style="background-color:#f1f1f1">
                     <td class="tableOverview1">患者总人数
                     </td>
                     <td class="tableOverview2">
@@ -60,11 +62,11 @@
                         </table>
                     </td>
                 </tr>
-                <tr>
+                <tr style="background-color:#f1f1f1">
                     <td class="tableOverview1">患者年龄
                     </td>
                     <td class="tableOverview2">
-                        <%=Equation%>
+                        <%=AvaAge%>
                     </td>
                 </tr>
                 <tr class="row1Summary">
@@ -74,7 +76,7 @@
                         <%=TotalRongShuan%>
                     </td>
                 </tr>
-                <tr>
+                <tr style="background-color:#f1f1f1">
                     <td class="tableOverview1">急诊介入人数
                     </td>
                     <td class="tableOverview2">
@@ -88,7 +90,7 @@
                         <%=TotalDeath%>
                     </td>
                 </tr>
-                <tr>
+                <tr style="background-color:#f1f1f1">
                     <td class="tableOverview1">转上级医院患者数
                     </td>
                     <td class="tableOverview2">

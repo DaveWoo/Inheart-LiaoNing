@@ -41,9 +41,9 @@
                 <td>&nbsp;
                 </td>
                 <td>
-                    <input type="submit" class="btn btn-info widthButton" value="保存密码" name="B1" id="Submit2" onserverclick="Submit1_SavePassword_ServerClick"
+                    <input type="submit" class="btn btn-info" value="保存密码" name="B1" id="Submit2" onserverclick="Submit1_SavePassword_ServerClick"
                         runat="server">
-                    <input type="reset" class="btn btn-info widthButton" name="Submit2" value="重置">
+                    <input type="reset" class="btn btn-info" name="Submit2" value="重置">
                 </td>
             </tr>
         </table>

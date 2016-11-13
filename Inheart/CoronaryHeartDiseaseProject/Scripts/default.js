@@ -105,8 +105,9 @@ function show_title(str, navOjb, hostName) {
         for (var i = 0; i < oItem.length; i++) {
             oItem[i].className = 'fa fa-caret-right fa-fw pull-right';
         }
-
-        navOjb.childNodes[1].className = 'fa fa-caret-down fa-fw pull-right';
+        if (navOjb.childNodes[1] != undefined) {
+            navOjb.childNodes[1].className = 'fa fa-caret-down fa-fw pull-right';
+        }
     }
     $("#nav_title")[0].innerHTML = str;
     nav_left(navOjb);
