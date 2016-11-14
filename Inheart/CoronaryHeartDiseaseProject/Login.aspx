@@ -1,14 +1,23 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" Inherits="CoronaryHeartDiseaseProject.Login" %>
 
+<!DOCTYPE html>
 <html>
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <%--设置编码--%>
+    <meta charset="utf-8" />
+    <%--页面首次由浏览器加载时的初始缩放级别。--%>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <link rel="stylesheet" href="Styles/admin.css" />
+    <%--引用bootstrap和相关的Jquery--%>
     <link rel="stylesheet" href="/Content/bootstrap.min.css" />
-    <script type="text/javascript" src="/Scripts/bootstrap.min.js"></script>
     <script type="text/javascript" src="/Scripts/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="/Scripts/bootstrap.min.js"></script>
+
+     <%--管理页面相关的样式--%>
+    <link rel="stylesheet" href="/Styles/admin.css" />
+
     <base onmouseover="window.status='辽宁省冠心病急救网络信息平台';return true" />
+
     <title>辽宁省冠心病急救网络信息平台-系统登陆</title>
 </head>
 <body>
@@ -41,25 +50,25 @@
                     <table style="margin-top: 20px; margin-left: 20px;">
                         <tr>
                             <td style="width: 80px;">地&nbsp;&nbsp;&nbsp;区：</td>
-                            <td  class="loginleft">&nbsp;&nbsp;&nbsp;<%=HospitalRegion%>
+                            <td class="loginleft">&nbsp;&nbsp;&nbsp;<%=HospitalRegion%>
                             </td>
                         </tr>
                         <tr>
-                            <td >医&nbsp;&nbsp;&nbsp;院：</td>
+                            <td>医&nbsp;&nbsp;&nbsp;院：</td>
                             <td>
                                 <asp:DropDownList ID="Hospitial" TabIndex="1" Style="width: 200px" runat="server" CssClass="form-control" />
                             </td>
                         </tr>
                         <tr>
-                            <td >用户名：</td>
-                            <td  class="loginleft">
+                            <td>用户名：</td>
+                            <td class="loginleft">
                                 <input name="username" type="text" id="username" maxlength="16" style="width: 200px" placeholder="请输入您的用户名" title="请输入您的用户名"
                                     class="form-control" tabindex="2" />
                             </td>
                         </tr>
                         <tr>
-                            <td >密&nbsp;&nbsp;&nbsp;码：</td>
-                            <td  class="loginleft">
+                            <td>密&nbsp;&nbsp;&nbsp;码：</td>
+                            <td class="loginleft">
                                 <input name="password" type="password" id="password" maxlength="16" style="width: 200px" placeholder="请输入您的密码" title="请输入您的密码"
                                     class="form-control" tabindex="3" />
                             </td>

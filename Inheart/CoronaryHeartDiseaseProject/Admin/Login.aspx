@@ -1,12 +1,21 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" Inherits="CoronaryHeartDiseaseProject.AdminLogin" %>
 
+<!DOCTYPE html>
 <html>
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <link rel="stylesheet" href="../Styles/admin.css" />
+    <%--设置编码--%>
+    <meta charset="utf-8" />
+    <%--页面首次由浏览器加载时的初始缩放级别。--%>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <%--管理页面相关的样式--%>
+    <link rel="stylesheet" href="/Styles/admin.css" />
+
+    <%--引用bootstrap和相关的Jquery--%>
     <link rel="stylesheet" href="/Content/bootstrap.min.css" />
-    <script type="text/javascript" src="/Scripts/bootstrap.min.js"></script>
     <script type="text/javascript" src="/Scripts/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="/Scripts/bootstrap.min.js"></script>
+
     <base onmouseover="window.status='辽宁省冠心病急救网络信息平台';return true" />
     <title>辽宁省冠心病急救网络信息平台 -- 系统登陆</title>
 </head>
@@ -29,7 +38,7 @@
             </tr>
             <tr>
                 <td style="width: 80px; height: 25px; padding-left: 20px;">密&nbsp;&nbsp;&nbsp;码：</td>
-                <td >
+                <td>
                     <input name="password" type="password" id="password" class="form-control-user" maxlength="16" placeholder="请输入您的密码" title="请输入您的密码"
                         tabindex="3" />
                 </td>

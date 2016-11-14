@@ -198,15 +198,12 @@ namespace CoronaryHeartDiseaseProject.Admin
 		public string ShowTxt(string ID)
 		{
 			string htmlstring = "";
-			string htmlstring1 = "";
 
-			htmlstring += "<img src=\"../../images/EditNews.png\" alt='修改' title='修改' border=\"0\">&nbsp;";
-			htmlstring += "<img src=\"../../images/DelNews.png\" alt='删除' title='删除' border=\"0\">&nbsp;";
-			htmlstring1 = "<a href=\"ModifyUser.aspx?ID=" + ID + "\">";
-			htmlstring1 += "<img src=\"../../images/EditNews.png\" alt='修改' title='修改' border=\"0\"></a>&nbsp; <a href=\"?action=del&ID=" + ID + "\" onclick=\"return confirm('确认要删除？');\">";
-			htmlstring1 += "<img src=\"../../images/DelNews.png\" alt='删除' title='删除' border=\"0\"></a>&nbsp;";
+			htmlstring = "<a href=\"ModifyUser.aspx?ID=" + ID + "\">";
+			htmlstring += "<span class=\"glyphicon glyphicon-edit\"></a>&nbsp; <a href=\"?action=del&ID=" + ID + "\" onclick=\"return confirm('确认要删除？');\">";
+			htmlstring += "<span class=\"glyphicon glyphicon-trash\"></a>&nbsp;";
 
-			return htmlstring1 += "<input name=\"Pid\" type=\"checkbox\" id=\"Checkbox24\"  onclick=\"if(this.checked){news" + ID + ".style.backgroundColor='#DBEAF5';}else{news" + ID + ".style.backgroundColor='#ffffff';}\" value=\"" + ID + "\">";
+			return htmlstring += "<input name=\"Pid\" type=\"checkbox\" id=\"Checkbox24\"  onclick=\"if(this.checked){news" + ID + ".style.backgroundColor='#DBEAF5';}else{news" + ID + ".style.backgroundColor='#ffffff';}\" value=\"" + ID + "\">";
 		}
 	}
 }

@@ -1,50 +1,63 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" Inherits="SuperAdmin" %>
 
 <%@ Register Src="inc/IsSuperAdmin.ascx" TagName="IsSuperAdmin" TagPrefix="uc1" %>
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
 <html>
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <script type="text/javascript" src="../Scripts/jquery-1.9.1.min.js"></script>
-    <script type="text/javascript" src="../Scripts/bootstrap.min.js"></script>
-    <script type="text/javascript" src="../Scripts/default.js"></script>
+    <%--设置编码--%>
+    <meta charset="utf-8" />
+    <%--页面首次由浏览器加载时的初始缩放级别。--%>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <%--引用bootstrap和相关的Jquery--%>
     <link rel="stylesheet" href="/Content/bootstrap.min.css" />
-    <link rel="stylesheet" href="../Styles/default-nav.css" type="text/css" />
-    <link rel="stylesheet" href="../../Styles/admin.css" />
+    <script type="text/javascript" src="/Scripts/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="/Scripts/bootstrap.min.js"></script>
+
+    <%--页面主题风格脚本--%>
+    <script type="text/javascript" src="/Scripts/default.js"></script>
+
+
+    <link rel="stylesheet" href="/Styles/default-nav.css" type="text/css" />
+    <%--管理页面相关的样式--%>
+    <link rel="stylesheet" href="/Styles/admin.css" />
+
     <!--font-awesome字体库-->
     <link href="/Content/font-awesome.min.css" rel="stylesheet" />
 
+    <%--弹窗页面样式--%>
     <script type="text/javascript" src="/Scripts/sweetalert.min.js"></script>
     <link rel="stylesheet" type="text/css" href="/Styles/sweetalert.css" />
+
     <title>辽宁省冠心病急救网络信息平台</title>
 </head>
 <body>
     <form id="form1" runat="server">
         <nav class="navbar navbar-inverse navbar-fixed-top" style="height: 50px">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle show pull-left" data-target="sidebar">
-                    <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
-                </button>
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                    <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span><span class="icon-bar"></span>
-                </button>
-                
-                <a class="navbar-brand" target="content3">超级管理管理平台</a>
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle show pull-left" data-target="sidebar">
+                        <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+                    </button>
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span><span class="icon-bar"></span>
+                    </button>
+
+                    <a class="navbar-brand" target="content3">超级管理管理平台</a>
+                </div>
+                <div id="navbar" class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                aria-expanded="false"><i class="fa fa-user fa-fw"></i>&nbsp;<%=UserName%>&nbsp;<span class="caret"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="Logout.aspx"><i class="glyphicon glyphicon-log-out"></i>&nbsp;&nbsp;注销</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <div id="navbar" class="collapse navbar-collapse">           
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
-                           aria-expanded="false"><i class="fa fa-user fa-fw"></i>&nbsp;<%=UserName%>&nbsp;<span class="caret"></span></a>
-                        <ul class="dropdown-menu" role="menu">
-                            <li><a href="Logout.aspx"><i class="glyphicon glyphicon-log-out"></i>&nbsp;&nbsp;注销</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-        </div>
-         </nav>
+        </nav>
         <div class="container-fluid all">
             <div class="sidebar">
                 <ul class="nav">
@@ -84,7 +97,7 @@
                 </ul>
             </div>
             <div class="tabContent ">
-                <div class="nav_bar_top"><span class="nav_name">网站导航: <i class="fa fa-angle-right" aria-hidden="true"></i> </span><span id="nav_host">管理</span> <i class="fa fa-angle-right" aria-hidden="true"></i> <span class="label label-info" id="nav_title">医院</span></div>
+                <div class="nav_bar_top"><span class="nav_name">网站导航: &nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;</span><span id="nav_host">管理</span>&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;<span class="label label-info" id="nav_title">医院</span></div>
 
                 <iframe name="content3" src="SuperManage/AddHospital.aspx" onclick="show_title('添加医院',this)" frameborder="0" style="width: inherit; height: inherit; margin-left: 0; padding-left: 0"></iframe>
             </div>

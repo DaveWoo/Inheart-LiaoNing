@@ -1,16 +1,24 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" Inherits="index" %>
 
 <%@ Register Src="Admin/inc/User.ascx" TagName="User" TagPrefix="uc1" %>
+
+<!DOCTYPE html>
 <html>
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <%--设置编码--%>
+    <meta charset="utf-8" />
+    <%--页面首次由浏览器加载时的初始缩放级别。--%>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <%--引用bootstrap和相关的Jquery--%>
     <link rel="stylesheet" href="/Content/bootstrap.min.css" />
     <script type="text/javascript" src="/Scripts/jquery-1.9.1.min.js"></script>
-    <script type="text/javascript" src="../Scripts/default.js"></script>
-    <script type="text/javascript" src="../Scripts/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="../Styles/default-nav.css" type="text/css" />
+    <script type="text/javascript" src="/Scripts/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="/Styles/default-nav.css" type="text/css" />
     <!--font-awesome字体库-->
     <link href="/Content/font-awesome.min.css" rel="stylesheet" />
+
     <title>辽宁省冠心病急救网络信息平台</title>
 </head>
 <body>
@@ -65,7 +73,7 @@
                 </ul>
             </div>
             <div class="tabContent ">
-                <div class="nav_bar_top"><span class="nav_name">网站导航: <i class="fa fa-angle-right" aria-hidden="true"></i> </span><span id="nav_host">管理</span> <i class="fa fa-angle-right" aria-hidden="true"></i> <span class="label label-info" id="nav_title">病例录入</span></div>
+                <div class="nav_bar_top"><span class="nav_name">网站导航: <i class="fa fa-angle-right" aria-hidden="true"></i></span><span id="nav_host">管理</span> <i class="fa fa-angle-right" aria-hidden="true"></i><span class="label label-info" id="nav_title">病例录入</span></div>
                 <iframe name="content3" src="MessageInput.aspx" onclick="show_title('病例查询',this)" frameborder="0" style="width: inherit; height: inherit; margin-left: 0; padding-left: 0"></iframe>
             </div>
         </div>

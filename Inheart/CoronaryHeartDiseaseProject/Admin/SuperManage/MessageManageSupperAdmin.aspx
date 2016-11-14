@@ -2,16 +2,25 @@
 
 <%@ Register Src="../inc/IsSuperAdmin.ascx" TagName="IsSuperAdmin" TagPrefix="uc1" %>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html>
 <head runat="server">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../../Styles/main.css" />
-    <link rel="stylesheet" href="../../Styles/admin.css" />
+    <%--设置编码--%>
+    <meta charset="utf-8" />
+    <%--页面首次由浏览器加载时的初始缩放级别。--%>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <%--引用bootstrap和相关的Jquery--%>
     <link rel="stylesheet" href="/Content/bootstrap.min.css" />
-    <script type="text/javascript" src="/Scripts/bootstrap.min.js"></script>
     <script type="text/javascript" src="/Scripts/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="/Scripts/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="/Styles/main.css" />
+    <%--管理页面相关的样式--%>
+    <link rel="stylesheet" href="/Styles/admin.css" />
+    <%--输入框检查--%>
     <script type="text/javascript" src="/Scripts/check.js"></script>
+
     <title>病例管理</title>
 </head>
 <body>
@@ -73,7 +82,7 @@
             </asp:DataList>
             <table align="left" border="0" cellpadding="3" cellspacing="1" class="tableborder"
                 width="100%">
-                <tr bgcolor="#ffffff" >
+                <tr bgcolor="#ffffff">
                     <td colspan="4">
                         <div align="left">
                             <input id="btnImportExcel" name="Submit822" type="button" value="导出Excel" runat="server"

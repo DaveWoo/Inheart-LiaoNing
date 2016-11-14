@@ -208,15 +208,12 @@
 		public string ShowTxt(string ID)
 		{
 			string htmlstring = "";
-			string htmlstring1 = "";
 
-			htmlstring += "<img src=\"../../images/EditNews.png\" alt='修改' title='修改' border=\"0\">&nbsp;";
-			htmlstring += "<img src=\"../../images/DelNews.png\" alt='删除' title='删除' border=\"0\">&nbsp;";
-			htmlstring1 = "<a href=\"ModifyAdmin.aspx?ID=" + ID + "\">";
-			htmlstring1 += "<img src=\"../../images/EditNews.png\" alt='修改' title='修改' border=\"0\"></a>&nbsp; <a href=\"?action=del&ID=" + ID + "\" onclick=\"return confirm('确认要删除？');\">";
-			htmlstring1 += "<img src=\"../../images/DelNews.png\" alt='删除' title='删除' border=\"0\"></a>&nbsp;";
+			htmlstring = "<a href=\"ModifyAdmin.aspx?ID=" + ID + "\">";
+			htmlstring += "<span class=\"glyphicon glyphicon-edit\"></a>&nbsp; <a href=\"?action=del&ID=" + ID + "\" onclick=\"return confirm('确认要删除？');\">";
+			htmlstring += "<span class=\"glyphicon glyphicon-trash\"></a>&nbsp;";
 
-			return htmlstring1;
+			return htmlstring;
 		}
 	}
 }

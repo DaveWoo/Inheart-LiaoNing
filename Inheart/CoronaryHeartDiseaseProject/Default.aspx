@@ -1,21 +1,25 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" Inherits="CoronaryHeartDiseaseProject.Default" %>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html>
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <%--设置编码--%>
+    <meta charset="utf-8" />
+    <%--页面首次由浏览器加载时的初始缩放级别。--%>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <%--引用bootstrap--%>
     <link rel="stylesheet" href="/Content/bootstrap.min.css" />
+
     <link rel="stylesheet" href="/Styles/home.css" />
-    <script type="text/javascript" src="/Scripts/bootstrap.min.js"></script>
-    <script type="text/javascript" src="/Scripts/jquery-1.9.1.min.js"></script>
-    <script type="text/javascript" src="/Scripts/Chart.min.js"></script>
     <title>辽宁省冠心病急救网络信息平台</title>
 </head>
 <body>
     <table width="800" border="0" align="center" cellpadding="0" cellspacing="0" style="margin-top: 50px;">
         <tr>
             <td>
-                <div class="t1">辽宁省冠心病急救网络信息平台
+                <div class="t1">
+                    辽宁省冠心病急救网络信息平台
                 </div>
             </td>
         </tr>

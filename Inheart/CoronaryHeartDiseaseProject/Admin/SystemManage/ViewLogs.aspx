@@ -1,14 +1,23 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="ViewLogs.aspx.cs" Inherits="CoronaryHeartDiseaseProject.Admin.ViewLogs" %>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html>
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>修改资料</title>
-    <link rel="stylesheet" href="../../Styles/admin.css" />
-    <link rel="stylesheet" href="../../Styles/main.css" />
+    <%--设置编码--%>
+    <meta charset="utf-8" />
+    <%--页面首次由浏览器加载时的初始缩放级别。--%>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <%--管理页面相关的样式--%>
+    <link rel="stylesheet" href="/Styles/admin.css" />
+    <link rel="stylesheet" href="/Styles/main.css" />
+
+    <%--引用bootstrap和相关的Jquery--%>
     <link rel="stylesheet" href="/Content/bootstrap.min.css" />
-    <script type="text/javascript" src="/Scripts/bootstrap.min.js"></script>
     <script type="text/javascript" src="/Scripts/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="/Scripts/bootstrap.min.js"></script>
+
+    <title>修改资料</title>
 </head>
 <body>
     <form id="myform" runat="server" onsubmit="return confirm('确认要执行此操作？');">
