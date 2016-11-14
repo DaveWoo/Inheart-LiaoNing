@@ -40,7 +40,7 @@
                         <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
                     </button>
 
-                    <a class="navbar-brand" target="content3">管理平台&nbsp;&nbsp;-&nbsp;&nbsp; <span id="title" style="color: #9d9d9d;">用户管理</span> </a>
+                    <a class="navbar-brand" target="content3">管理平台</a>
                 </div>
                 <div id="navbar" class="collapse navbar-collapse">
                     <ul class="nav navbar-nav navbar-right">

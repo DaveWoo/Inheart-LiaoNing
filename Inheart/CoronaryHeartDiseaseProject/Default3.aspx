@@ -2,7 +2,6 @@
 
 <%@ Register Src="Admin/inc/User.ascx" TagName="User" TagPrefix="uc1" %>
 
-<!DOCTYPE html>
 <html>
 <head>
     <%--设置编码--%>
@@ -15,6 +14,8 @@
     <script type="text/javascript" src="/Scripts/jquery-1.9.1.min.js"></script>
     <script type="text/javascript" src="/Scripts/bootstrap.min.js"></script>
 
+    <%--页面主题风格脚本--%>
+    <script type="text/javascript" src="/Scripts/default.js"></script>
     <link rel="stylesheet" href="/Styles/default-nav.css" type="text/css" />
     <!--font-awesome字体库-->
     <link href="/Content/font-awesome.min.css" rel="stylesheet" />
@@ -73,7 +74,7 @@
                 </ul>
             </div>
             <div class="tabContent ">
-                <div class="nav_bar_top"><span class="nav_name">网站导航: <i class="fa fa-angle-right" aria-hidden="true"></i></span><span id="nav_host">管理</span> <i class="fa fa-angle-right" aria-hidden="true"></i><span class="label label-info" id="nav_title">病例录入</span></div>
+                <div class="nav_bar_top"><span class="nav_name">网站导航:&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;</span><span id="nav_host">管理</span> &nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;<span class="label label-info" id="nav_title">病例录入</span></div>
                 <iframe name="content3" src="MessageInput.aspx" onclick="show_title('病例查询',this)" frameborder="0" style="width: inherit; height: inherit; margin-left: 0; padding-left: 0"></iframe>
             </div>
         </div>

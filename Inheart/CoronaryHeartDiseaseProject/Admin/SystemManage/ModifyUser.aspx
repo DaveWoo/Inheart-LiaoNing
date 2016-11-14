@@ -26,35 +26,36 @@
     <form id="myform" runat="server" onsubmit="return checkUser()">
         <table width="100%" border="0" align="center" cellpadding="3" cellspacing="1" class="tableborder">
             <tr class="header">
-                <td colspan="2">修改用户             
-                    <asp:TextBox ID="TextBox1" runat="server" Width="61px" Visible="false"></asp:TextBox>
+                <td colspan="2" class="tableTDCell">修改用户             
+                   
+                    <asp:TextBox ID="TextBox1" runat="server" Visible="false"></asp:TextBox>
                 </td>
             </tr>
             <tr>
                 <td width="25%" class="tableTDCell">用户名</td>
                 <td width="75%">
-                    <input type="text" class="form-control" name="username" size="35" readonly value="<%=userName %>" />
+                    <input type="text" class="form-control" name="username" readonly value="<%=userName %>" style="width: 200px"/>
                 </td>
             </tr>
             <tr>
                 <td class="tableTDCell">用户密码</td>
                 <td>
-                    <input type="password" name="newpass" size="35" value="">
+                    <input type="password" class="form-control" name="newpass" value="" placeholder="请输入密码" style="width: 200px">
                 </td>
             </tr>
             <tr>
                 <td class="tableTDCell">确认密码</td>
                 <td>
-                    <input type="password" name="repass" size="35" value="">
+                    <input type="password" class="form-control" name="repass" value="" placeholder="请再次输入密码" style="width: 200px">
                 </td>
             </tr>
             <tr>
                 <td>&nbsp;
                 </td>
                 <td>
-                    <input type="submit" value="修改用户" name="B1" class="Button" id="Submit2" onserverclick="Submit1_ServerClick"
+                    <input type="submit" value="修改用户" name="B1" class="btn btn-info" id="Submit2" onserverclick="Submit1_ServerClick"
                         runat="server">
-                    <input type="reset" name="Submit2" value="重置">
+                    <input type="reset" name="Submit2" class="btn btn-info" value="重置">
                 </td>
             </tr>
         </table>

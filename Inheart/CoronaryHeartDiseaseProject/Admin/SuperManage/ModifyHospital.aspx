@@ -26,7 +26,7 @@
     <form id="myform" runat="server" onsubmit="return checkHospitalName()">
         <table width="100%" border="0" align="center" cellpadding="3" cellspacing="1" class="table-bordered"">
             <tr class="header">
-                <td colspan="2" class="tableTDCell">管理医院&nbsp;</td>
+                <td colspan="2" class="tableTDCell">修改医院&nbsp;</td>
             </tr>
             <tr>
                 <td width="25%" class="tableTDCell">医院名称</td>
@@ -44,9 +44,9 @@
                 <td>&nbsp;
                 </td>
                 <td>
-                    <input type="submit" value="修改" name="B1" class="Button" id="Submit2" onserverclick="Submit1_ServerClick"
+                    <input type="submit" value="修改" name="B1" class="btn btn-info" id="Submit2" onserverclick="Submit1_ServerClick"
                         runat="server" />
-                    <input type="reset" name="Submit2" value="重置" />
+                    <input type="reset" name="Submit2" class="btn btn-info"  value="重置" />
                 </td>
             </tr>
         </table>

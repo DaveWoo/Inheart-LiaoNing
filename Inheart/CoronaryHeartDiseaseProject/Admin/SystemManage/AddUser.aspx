@@ -25,10 +25,10 @@
     <form id="myform" runat="server">
         <table width="100%" border="1" align="center" cellpadding="3" cellspacing="1" class="tableborder">
             <tr class="header">
-                <td height="30px" colspan="2" class="tableTDCell">添加新用户</td>
+                <td colspan="2" class="tableTDCell">添加新用户</td>
             </tr>
             <tr>
-                <td width="25%" class="tableTDCell">新用户用名</td>
+                <td width="25%" class="tableTDCell">新用户</td>
                 <td width="75%">
                     <input type="text" class="form-control-user" name="username" placeholder="户用名" />
                 </td>
