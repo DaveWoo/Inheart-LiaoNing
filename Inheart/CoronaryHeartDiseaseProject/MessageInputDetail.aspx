@@ -4,7 +4,7 @@
 <html>
 <head>
 
-        <%--设置编码--%>
+    <%--设置编码--%>
     <meta charset="utf-8" />
     <%--页面首次由浏览器加载时的初始缩放级别。--%>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -16,6 +16,7 @@
     <script type="text/javascript" src="./Scripts/jquery-1.9.1.min.js"></script>
     <script type="text/javascript" src="./Scripts/bootstrap.min.js"></script>
 
+       <link rel="stylesheet" href="./Styles/main.css" />
     <%--这个属性可以在打印时有效--%>
     <style type="text/css" media="print">
         .Noprint {
@@ -1031,7 +1032,7 @@
                 <tr>
                     <td align="center" class="userfont3">
                         <input id="Button1" onclick="window.print()" type="button" value="打印" name="Button"
-                            Class="btn btn-info NOPRINT" />
+                            class="btn btn-info NOPRINT" />
                     </td>
                 </tr>
                 <tr>

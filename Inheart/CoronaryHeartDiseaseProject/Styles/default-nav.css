@@ -151,12 +151,14 @@
 }
 
 .nav_bar_top {
-    height: 36px;
-    border-bottom: 1px solid #ccc;
-    margin-top: 12px;
+    margin-top:2px;
+    padding-top: 13px;
+    padding-bottom: 13px;
+    background-color:#f9f9f9;
 }
+
 .nav_name {
-    margin-left:12px;
+    margin-left: 12px;
 }
 
 .label {
