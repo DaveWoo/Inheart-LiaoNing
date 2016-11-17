@@ -11,14 +11,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <%--引用bootstrap和相关的Jquery--%>
-    <link rel="stylesheet" href="/Content/bootstrap.min.css" />
-    <script type="text/javascript" src="/Scripts/jquery-1.9.1.min.js"></script>
-    <script type="text/javascript" src="/Scripts/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="./Content/bootstrap.min.css" />
+    <script type="text/javascript" src="./Scripts/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="./Scripts/bootstrap.min.js"></script>
 
     <%--管理页面相关的样式--%>
-    <link rel="stylesheet" href="/Styles/admin.css" />
+    <link rel="stylesheet" href="./Styles/admin.css" />
     <%--输入框检查--%>
-    <script type="text/javascript" src="/Scripts/check.js"></script>
+    <script type="text/javascript" src="./Scripts/check.js"></script>
 
     <title>修改资料</title>
 </head>

@@ -12,12 +12,12 @@
 
     <title>修改资料</title>
      <%--管理页面相关的样式--%>
-    <link rel="stylesheet" href="/Styles/admin.css" />
+    <link rel="stylesheet" href="../../Styles/admin.css" />
 
     <%--引用bootstrap和相关的Jquery--%>
-    <link rel="stylesheet" href="/Content/bootstrap.min.css" />
-    <script type="text/javascript" src="/Scripts/jquery-1.9.1.min.js"></script>
-    <script type="text/javascript" src="/Scripts/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../../Content/bootstrap.min.css" />
+    <script type="text/javascript" src="../../Scripts/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="../../Scripts/bootstrap.min.js"></script>
 </head>
 <body>
     <form id="myform" name="listform" runat="server" onsubmit="return confirm('确认要执行此操作？');">

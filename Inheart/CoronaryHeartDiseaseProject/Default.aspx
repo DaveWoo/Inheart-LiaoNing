@@ -9,9 +9,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <%--引用bootstrap--%>
-    <link rel="stylesheet" href="/Content/bootstrap.min.css" />
+    <link rel="stylesheet" href="./Content/bootstrap.min.css" />
 
-    <link rel="stylesheet" href="/Styles/home.css" />
+    <link rel="stylesheet" href="./Styles/home.css" />
     <title>辽宁省冠心病急救网络信息平台</title>
 </head>
 <body>

@@ -295,11 +295,11 @@ namespace CoronaryHeartDiseaseProject
 
 			if (locked)
 			{
-				htmlstring += "<img src=\"/images/lock.png\" alt='锁' title='已锁' border=\"0\">&nbsp;";
+				htmlstring += "<img src=\"../../images/lock.png\" alt='锁' title='已锁' border=\"0\">&nbsp;";
 			}
 			else
 			{
-				htmlstring += "<img src=\"/images/unlock.png\" alt='锁' title='未锁' border=\"0\">&nbsp;";
+				htmlstring += "<img src=\"../../images/unlock.png\" alt='锁' title='未锁' border=\"0\">&nbsp;";
 			}
 			return htmlstring;
 		}

@@ -11,25 +11,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <%-- 引用系统的 jquery and bootstrap--%>
-    <link rel="stylesheet" href="Content/bootstrap.min.css" />
-    <script type="text/javascript" src="Scripts\jquery-1.9.1.min.js"></script>
-    <script type="text/javascript" src="Scripts\bootstrap.min.js"></script>
+    <link rel="stylesheet" href=".\Content/bootstrap.min.css" />
+    <script type="text/javascript" src=".\Scripts\jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src=".\Scripts\bootstrap.min.js"></script>
 
     <%--时间日期控件 开始--%>
-    <script src="/Scripts/DatePicker/mobiscroll_002.js" type="text/javascript"></script>
-    <script src="/Scripts/DatePicker/mobiscroll_004.js" type="text/javascript"></script>
-    <link href="/Styles/DatePicker/mobiscroll_002.css" rel="stylesheet" type="text/css" />
-    <link href="/Styles/DatePicker/mobiscroll.css" rel="stylesheet" type="text/css" />
-    <script src="/Scripts/DatePicker/mobiscroll.js" type="text/javascript"></script>
-    <script src="/Scripts/DatePicker/mobiscroll_003.js" type="text/javascript"></script>
-    <script src="/Scripts/DatePicker/mobiscroll_005.js" type="text/javascript"></script>
-    <link href="/Styles/DatePicker/mobiscroll_003.css" rel="stylesheet" type="text/css"/>
+    <script src="./Scripts/DatePicker/mobiscroll_002.js" type="text/javascript"></script>
+    <script src="./Scripts/DatePicker/mobiscroll_004.js" type="text/javascript"></script>
+    <link href="./Styles/DatePicker/mobiscroll_002.css" rel="stylesheet" type="text/css" />
+    <link href="./Styles/DatePicker/mobiscroll.css" rel="stylesheet" type="text/css" />
+    <script src="./Scripts/DatePicker/mobiscroll.js" type="text/javascript"></script>
+    <script src="./Scripts/DatePicker/mobiscroll_003.js" type="text/javascript"></script>
+    <script src="./Scripts/DatePicker/mobiscroll_005.js" type="text/javascript"></script>
+    <link href="./Styles/DatePicker/mobiscroll_003.css" rel="stylesheet" type="text/css"/>
     <%--时间日期控件 结束--%>
 
     <%--自定义控件--%>
-    <script type="text/javascript" src="/Scripts/pi.js"></script>
-    <script type="text/javascript" src="Scripts/Preview.js"></script>
-    <link rel="stylesheet" href="Styles/main.css" />
+    <script type="text/javascript" src="./Scripts/pi.js"></script>
+    <script type="text/javascript" src="./Scripts/Preview.js"></script>
+    <link rel="stylesheet" href="./Styles/main.css" />
 
     <title>病例表单</title>
 </head>

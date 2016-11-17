@@ -8,14 +8,14 @@
     <%--页面首次由浏览器加载时的初始缩放级别。--%>
 
     <%--引用bootstrap和相关的Jquery--%>
-    <link rel="stylesheet" href="/Content/bootstrap.min.css" />
-    <script type="text/javascript" src="/Scripts/jquery-1.9.1.min.js"></script>
-    <script type="text/javascript" src="/Scripts/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="./Content/bootstrap.min.css" />
+    <script type="text/javascript" src="./Scripts/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="./Scripts/bootstrap.min.js"></script>
 
-    <link rel="stylesheet" href="/Styles/main.css" />
+    <link rel="stylesheet" href="./Styles/main.css" />
 
     <%--输入框检查--%>
-    <script type="text/javascript" src="/Scripts/check.js"></script>
+    <script type="text/javascript" src="./Scripts/check.js"></script>
 
     <title>病例管理</title>
 </head>

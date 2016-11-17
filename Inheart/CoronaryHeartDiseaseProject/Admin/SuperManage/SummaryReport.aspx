@@ -49,7 +49,7 @@
                     <td colspan="2" style="text-align: center; font-weight: bold; font-size: 16px">2016年上报统计
                     </td>
                 </tr>
-                <tr style="background-color:#f1f1f1">
+                <tr style="background-color:#ccc">
                     <td class="tableOverview1">患者总人数
                     </td>
                     <td class="tableOverview2">
@@ -68,7 +68,7 @@
                         </table>
                     </td>
                 </tr>
-                <tr style="background-color:#f1f1f1">
+                <tr style="background-color:#ccc">
                     <td class="tableOverview1">患者年龄
                     </td>
                     <td class="tableOverview2">
@@ -82,7 +82,7 @@
                         <%=TotalRongShuan%>
                     </td>
                 </tr>
-                <tr style="background-color:#f1f1f1">
+                <tr style="background-color:#ccc">
                     <td class="tableOverview1">急诊介入人数
                     </td>
                     <td class="tableOverview2">

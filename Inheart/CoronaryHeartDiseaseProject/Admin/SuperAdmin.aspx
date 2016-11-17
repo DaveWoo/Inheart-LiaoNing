@@ -10,24 +10,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <%--引用bootstrap和相关的Jquery--%>
-    <link rel="stylesheet" href="/Content/bootstrap.min.css" />
-    <script type="text/javascript" src="/Scripts/jquery-1.9.1.min.js"></script>
-    <script type="text/javascript" src="/Scripts/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../Content/bootstrap.min.css" />
+    <script type="text/javascript" src="../Scripts/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="../Scripts/bootstrap.min.js"></script>
 
     <%--页面主题风格脚本--%>
-    <script type="text/javascript" src="/Scripts/default.js"></script>
+    <script type="text/javascript" src="../Scripts/default.js"></script>
 
 
-    <link rel="stylesheet" href="/Styles/default-nav.css" type="text/css" />
+    <link rel="stylesheet" href="../Styles/default-nav.css" type="text/css" />
     <%--管理页面相关的样式--%>
-    <link rel="stylesheet" href="/Styles/admin.css" />
+    <link rel="stylesheet" href="../Styles/admin.css" />
 
     <!--font-awesome字体库-->
-    <link href="/Content/font-awesome.min.css" rel="stylesheet" />
+    <link href="../Content/font-awesome.min.css" rel="stylesheet" />
 
     <%--弹窗页面样式--%>
-    <script type="text/javascript" src="/Scripts/sweetalert.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="/Styles/sweetalert.css" />
+    <script type="text/javascript" src="../Scripts/sweetalert.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../Styles/sweetalert.css" />
 
     <title>辽宁省冠心病急救网络信息平台</title>
 </head>

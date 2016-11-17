@@ -34,8 +34,7 @@ if (!window.showModalDialog) {
 
         var left = window.screenX + (window.outerWidth / 2) - (w / 2);
         var top = window.screenY + (window.outerHeight / 2) - (h / 2);
-        //var targetWin = window.open(arg1, arg2, 'toolbar=no, location=no,directories=no, status=' + status + ', menubar=no, scrollbars=' + scroll + ', resizable=' + resizable + ', copyhistory=no, width=' + w + ', height=' + h + ', top=' + top + ', left=' + left);
-        window.open(arg1, arg2, "height=100, width=400, toolbar =no, menubar=no, scrollbars=no, resizable=yes, location=yes, status=no");
+        var targetWin = window.open(arg1, arg2, 'toolbar=no, location=no,directories=no, status=' + status + ', menubar=no, scrollbars=' + scroll + ', resizable=' + resizable + ', copyhistory=no, width=' + w + ', height=' + h + ', top=' + top + ', left=' + left);
         targetWin.document.write(arg2);
         targetWin.focus();
     };

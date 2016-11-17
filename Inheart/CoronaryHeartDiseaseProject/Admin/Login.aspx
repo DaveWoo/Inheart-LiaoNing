@@ -9,12 +9,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <%--管理页面相关的样式--%>
-    <link rel="stylesheet" href="/Styles/admin.css" />
+    <link rel="stylesheet" href="../Styles/admin.css" />
 
     <%--引用bootstrap和相关的Jquery--%>
-    <link rel="stylesheet" href="/Content/bootstrap.min.css" />
-    <script type="text/javascript" src="/Scripts/jquery-1.9.1.min.js"></script>
-    <script type="text/javascript" src="/Scripts/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../Content/bootstrap.min.css" />
+    <script type="text/javascript" src="../Scripts/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="../Scripts/bootstrap.min.js"></script>
 
     <base onmouseover="window.status='辽宁省冠心病急救网络信息平台';return true" />
     <title>辽宁省冠心病急救网络信息平台 -- 系统登陆</title>
