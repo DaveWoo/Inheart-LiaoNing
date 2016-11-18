@@ -1082,7 +1082,7 @@ namespace DreamWork.BussinessLogic
 			{
 				isLocked = true;
 			}
-			if (report.CreateDate.AddDays(3) < DateTime.Now)
+			if (report.CreateDate.AddDays(10) < DateTime.Now)
 			{
 				isLocked = true;
 			}

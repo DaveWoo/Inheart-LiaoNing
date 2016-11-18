@@ -177,7 +177,7 @@
 			else
 			{
 				htmlstring1 = string.Format("<a href=\"?action=del&ReportID={0}\" onclick=\"return confirm('确认要删除？');\">", ReportID);
-				htmlstring1 += "删除</a>&nbsp;";
+				htmlstring1 += "<span class=\"glyphicon glyphicon-trash\"></a>&nbsp;";
 			}
 
 			return htmlstring1;

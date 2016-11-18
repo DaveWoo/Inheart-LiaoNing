@@ -13,6 +13,6 @@ public partial class Logout : System.Web.UI.Page
 		Session["user"] = null;
 		Session["admin"] = null;
 		Session["sa"] = null;
-		this.Response.Write("<script>top.location.href='Login.aspx';</script>");
+		this.Response.Write("<script>top.location.href='Login.aspx?hr=" + Session["hr"].ToString() + "';</script>");
 	}
 }

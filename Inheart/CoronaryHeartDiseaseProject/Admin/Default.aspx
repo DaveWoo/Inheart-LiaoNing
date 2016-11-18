@@ -9,14 +9,17 @@
     <%--页面首次由浏览器加载时的初始缩放级别。--%>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <%--引用bootstrap和相关的Jquery--%>
+   <%--引用bootstrap和相关的Jquery--%>
     <link rel="stylesheet" href="../Content/bootstrap.min.css" />
     <script type="text/javascript" src="../Scripts/jquery-1.9.1.min.js"></script>
     <script type="text/javascript" src="../Scripts/bootstrap.min.js"></script>
 
     <%--页面主题风格脚本--%>
     <script type="text/javascript" src="../Scripts/default.js"></script>
+
     <link rel="stylesheet" href="../Styles/default-nav.css" type="text/css" />
+    <%--管理页面相关的样式--%>
+    <link rel="stylesheet" href="../Styles/admin.css" />
 
     <!--font-awesome字体库-->
     <link href="../Content/font-awesome.min.css" rel="stylesheet" />
@@ -35,11 +38,6 @@
                     <button type="button" class="navbar-toggle show pull-left" data-target="sidebar">
                         <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
                     </button>
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
-                        aria-expanded="false" aria-controls="navbar">
-                        <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
-                    </button>
-
                     <a class="navbar-brand" target="content3">管理平台</a>
                 </div>
                 <div id="navbar" class="collapse navbar-collapse">

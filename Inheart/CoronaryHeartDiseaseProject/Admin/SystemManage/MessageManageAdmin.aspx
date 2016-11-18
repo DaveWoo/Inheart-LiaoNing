@@ -10,7 +10,7 @@
     <%--页面首次由浏览器加载时的初始缩放级别。--%>
 
     <%--引用bootstrap和相关的Jquery--%>
-    <link rel="stylesheet" href="../..Content/bootstrap.min.css" />
+    <link rel="stylesheet" href="../../Content/bootstrap.min.css" />
     <script type="text/javascript" src="../../Scripts/jquery-1.9.1.min.js"></script>
     <script type="text/javascript" src="../../Scripts/bootstrap.min.js"></script>
 
