@@ -17,6 +17,9 @@
     <%--输入框检查--%>
     <script type="text/javascript" src="./Scripts/check.js"></script>
 
+    <!--font-awesome字体库-->
+    <link href="./Content/font-awesome.min.css" rel="stylesheet" />
+
     <title>病例管理</title>
 </head>
 <body>
@@ -32,100 +35,64 @@
             <asp:Label ID="lblMessage" runat="server" ForeColor="Red" />
         </div>
         <div>
-            <asp:Label ID="Label1" runat="server"></asp:Label>&nbsp;  
-                <asp:DataList ID="dgMessage" runat="server" Width="100%">
-                    <FooterTemplate>
-                    </FooterTemplate>
-                    <HeaderTemplate>
-                        <table width="100%" border="0" align="center" cellpadding="3" cellspacing="1" class="tableborder">
+            <asp:Label ID="Label1" runat="server"></asp:Label>
+            <asp:DataList ID="dgMessage" runat="server" Width="100%" class="table table-striped table-bordered table-list">
+                <HeaderTemplate>
+                    <table width="100%">
+                        <thead>
                             <tr class="header">
-                                <td width="80">
-                                    <div align="center">录入时间</div>
-                                </td>
-                                <td width="80">
-                                    <div align="center">患者姓名</div>
-                                </td>
-                                <td width="60">
-                                    <div align="center">性别</div>
-                                </td>
-                                <td width="40">
-                                    <div align="center">年龄</div>
-                                </td>
-                                <td width="80">
-                                    <div align="center">录入医生</div>
-                                </td>
-                                <td width="80">
-                                    <div align="center">是否上报</div>
-                                </td>
-                                <td width="40">
-                                    <div align="center">操作</div>
-                                </td>
-                                <td width="40">
-                                    <div align="center">状态</div>
-                                </td>
+                                <td width="80">录入时间</td>
+                                <td width="80" align="center">患者姓名</td>
+                                <td width="40" align="center">性别</td>
+                                <td width="40" align="center">年龄</td>
+                                <td width="80" align="center">录入医生</td>
+                                <td width="80" align="center">是否上报</td>
+                                <td width="40" align="center">操作</td>
+                                <td width="40" align="center">状态</td>
                             </tr>
-                        </table>
-                    </HeaderTemplate>
-                    <ItemTemplate>
-                        <table width="100%" border="1" align="center" cellpadding="3" cellspacing="1" class="tableborder">
+                        </thead>
+                    </table>
+                </HeaderTemplate>
+                <ItemTemplate>
+                    <table width="100%">
+                        <tbody>
                             <tr id="news<%#Eval("ReportID") %>">
                                 <td width="80">
-                                    <div align="center">
-                                        <%#Eval("CreateDate")%>
+                                    <%#Eval("CreateDate")%>
+                                </td>
+                                <td width="80" align="center">
+                                    <a href='<%#EnterCase(Eval("ID").ToString(),Eval("IsLocked").ToString(),Eval("ReportID").ToString())%>'
+                                        title="进入病例">
+                                        <%#Eval("PatientName")%></a>
                                     </div>
                                 </td>
-                                <td width="80">
-                                    <div align="center">
-                                        <a href='<%#EnterCase(Eval("ID").ToString(),Eval("IsLocked").ToString(),Eval("ReportID").ToString())%>'
-                                            title="进入病例">
-                                            <%#Eval("PatientName")%></a>
-                                    </div>
+                                <td width="40" align="center">
+                                    <%#Eval("Sex")%>
                                 </td>
-                                <td width="60">
-                                    <div align="center">
-                                        <%#Eval("Sex")%>
-                                    </div>
+                                <td width="40" align="center">
+                                    <%#Eval("Age")%>
                                 </td>
-                                <td width="40">
-                                    <div align="center">
-                                        <%#Eval("Age")%>
-                                    </div>
+                                <td width="80" align="center">
+                                    <%#Eval("Creater")%>
                                 </td>
-                                <td width="80">
-                                    <div align="center">
-                                        <%#Eval("Creater")%>
-                                    </div>
+                                <td width="80" align="center">
+                                    <%#Eval("IsSubmit")%>
                                 </td>
-                                <td width="80">
-                                    <div align="center">
-                                        <%#Eval("IsSubmit")%>
-                                    </div>
+                                <td width="40" align="center">
+                                    <%#ShowTxt(Eval("ID").ToString(), Eval("IsLocked").ToString(), Eval("ReportID").ToString())%>                                   
                                 </td>
-                                <td width="40">
-                                    <div align="center">
-                                        <%#ShowTxt(Eval("ID").ToString(), Eval("IsLocked").ToString(), Eval("ReportID").ToString())%>
-                                    </div>
-                                </td>
-                                <td width="40">
-                                    <div align="center">
-                                        <%#ShowLock(Eval("IsLocked").ToString())%>
-                                    </div>
+                                <td width="40" align="center">
+                                    <%#ShowLock(Eval("IsLocked").ToString())%>
                                 </td>
                             </tr>
-                        </table>
-                    </ItemTemplate>
-                </asp:DataList>
-            <table align="center" border="0" cellpadding="3" cellspacing="1" class="tableborder" width="100%">
-                <tr>
-                    <td colspan="4">
-                        <div align="left">
-                            <input id="btnAddMedical" name="Submit822" onclick="javascript: window.location = 'MessageInput.aspx';"
-                                type="button" value="添加病例" runat="server" align="left" class="btn btn-info" />
-                            &nbsp;                       
-                        </div>
-                    </td>
-                </tr>
-            </table>
+                        </tbody>
+                    </table>
+                </ItemTemplate>
+                <FooterTemplate>
+                 
+                </FooterTemplate>
+            </asp:DataList>
+
         </div>
     </form>
 </body>

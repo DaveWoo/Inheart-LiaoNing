@@ -15,11 +15,11 @@
 		private const string conditionDoctor = "医生";
 		private const string conditionPatient = "患者姓名";
 		private static SiteUser user;
-		private int MaxPages;
-		private int PagePageID;
-		private int PageSize = 10;
-		private int PageStartIndex;
-		private int TotalNums;
+		protected int MaxPages;
+		protected int PagePageID;
+		protected int PageSize = 10;
+		protected int PageStartIndex;
+		protected int TotalNums;
 
 		#endregion 私有变量
 
@@ -152,13 +152,63 @@
 
 			if (locked)
 			{
-				htmlstring += "<img src=\"../images/lock.png\" alt='锁' title='已锁' border=\"0\">&nbsp;";
+				htmlstring += "<i class='fa fa-lock fa-2x' aria-hidden='true' style='padding-left:5px'></i>";
 			}
 			else
 			{
-				htmlstring += "<img src=\"../images/unlock.png\" alt='锁' title='未锁' border=\"0\">&nbsp;";
+				htmlstring += "<i class='fa fa-unlock fa-2x' aria-hidden='true' style='padding-left:5px'></i>";
 			}
 			return htmlstring;
+		}
+
+		public string ShowCurrentPage()
+		{
+			return string.Format("前页 {0}/{1} 页", this.PagePageID, this.MaxPages);
+		}
+
+		public string ShowNextPages()
+		{
+			string HtmlSelectString = string.Empty;
+			int i = this.PagePageID;
+			int maxPage = 5;
+			if (this.PagePageID == 1)
+			{
+				HtmlSelectString += string.Format("<li class='disabled'><a href=\"?PageID={0}\">上一页</a></li>", i);
+			}
+			else
+			{
+				HtmlSelectString += string.Format("<li><a href=\"?PageID={0}\">上一页</a></li>", this.PagePageID - 1);
+			}
+			if (this.PagePageID - 5 > 0)
+			{
+				i = this.PagePageID - 5;
+				maxPage = 5;
+			}
+			else
+			{
+				i = 1;
+				maxPage = 5;
+			}
+			for (; i <= maxPage; i++)
+			{
+				if (i == this.PagePageID)
+				{
+					HtmlSelectString += string.Format("<li class='active'><a href=\"?PageID={0}\">{0}</a></li>", i);
+				}
+				else
+				{
+					HtmlSelectString += string.Format("<li><a href=\"?PageID={0}\">{0}</a></li>", i);
+				}
+			}
+			if (this.PagePageID > 0 && this.PagePageID == this.MaxPages)
+			{
+				HtmlSelectString += string.Format("<li class='disabled'><a href=\"?PageID={0}\">下一页</a></li>", this.PagePageID);
+			}
+			else
+			{
+				HtmlSelectString += string.Format("<li><a href=\"?PageID={0}\">下一页</a></li>", this.PagePageID + 1);
+			}
+			return HtmlSelectString;
 		}
 
 		/// <summary>
@@ -243,12 +293,12 @@
 				if (user != null)
 				{
 					conditionList.Add(conditionDoctor);
-					this.btnAddMedical.Visible = true;
+					//this.btnAddMedical.Visible = true;
 				}
 				else
 				{
 					user = (SiteUser)this.Session["admin"];
-					this.btnAddMedical.Visible = false;
+					//this.btnAddMedical.Visible = false;
 				}
 				// 将初始化的查询条件绑定到前台
 				foreach (var conditon in conditionList)

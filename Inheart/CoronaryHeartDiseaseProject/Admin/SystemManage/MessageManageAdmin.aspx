@@ -20,6 +20,9 @@
     <%--输入框检查--%>
     <script type="text/javascript" src="../../Scripts/check.js"></script>
 
+    <!--font-awesome字体库-->
+    <link href="../../Content/font-awesome.min.css" rel="stylesheet" />
+
     <title>新增管理员</title>
 </head>
 <body>
@@ -62,7 +65,7 @@
                             <td width="10%" class="tableTDCell">
                                 <%#Eval("ID" )%>
                             </td>
-                            <td width="10%" class="tableTDCell">
+                            <td width="10%" class="tableTDCell" align="left">
                                 <a href='<%#EnterCase(Eval("ID").ToString(),Eval("IsLocked").ToString(),Eval("ReportID").ToString())%>'
                                     title="进入病例">
                                     <%#Eval("PatientName")%></a>

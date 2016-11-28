@@ -93,15 +93,6 @@ table {
     table-layout: fixed;
 }
 
-    table tr td span input {
-        padding-right: 6px;
-        padding-left: 6px;
-    }
-
-    table tr td span label {
-        padding-right: 16px;
-    }
-
 div input {
     padding-right: 10px;
 }

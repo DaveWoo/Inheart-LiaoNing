@@ -1609,23 +1609,23 @@
     <!-- Diagram content (shape and connector positions) -->
     <Diagrams>
       <Diagram Name="Model1" ZoomLevel="100">
-        <EntityTypeShape EntityType="MedicalBaseModel.Hospital" Width="1.5" PointX="0.75" PointY="6.625" Height="2.3648893229166674" />
-        <EntityTypeShape EntityType="MedicalBaseModel.Log_Login" Width="1.5" PointX="5.75" PointY="0.75" Height="2.1725878906250031" />
-        <EntityTypeShape EntityType="MedicalBaseModel.Person" Width="1.5" PointX="0.75" PointY="11.5" Height="3.7109993489583388" />
-        <EntityTypeShape EntityType="MedicalBaseModel.Region" Width="1.5" PointX="0.75" PointY="0.75" Height="1.7879850260416674" />
-        <EntityTypeShape EntityType="MedicalBaseModel.Report_ChuBuZhenDuan" Width="1.5" PointX="0.75" PointY="15.875" Height="5.2494108072916674" />
-        <EntityTypeShape EntityType="MedicalBaseModel.Report_FuZhuYongYao" Width="1.5" PointX="0.75" PointY="21.875" Height="3.5186979166666674" />
-        <EntityTypeShape EntityType="MedicalBaseModel.Report_JiBingBanSuiZhuangTai" Width="1.5" PointX="0.75" PointY="28.75" Height="5.4417122395833246" />
-        <EntityTypeShape EntityType="MedicalBaseModel.Report_JieRuZhiLiao" Width="1.5" PointX="0.75" PointY="26.125" Height="1.7879850260416674" />
-        <EntityTypeShape EntityType="MedicalBaseModel.Report_JingMaiRongShuan" Width="1.5" PointX="0.75" PointY="34.875" Height="3.1340950520833246" />
-        <EntityTypeShape EntityType="MedicalBaseModel.Report_JiWangBingShi" Width="1.5" PointX="0.75" PointY="38.75" Height="3.5186979166666674" />
-        <EntityTypeShape EntityType="MedicalBaseModel.Report_LinChuangZhuanGui" Width="1.5" PointX="0.75" PointY="43" Height="6.5955208333333246" />
-        <EntityTypeShape EntityType="MedicalBaseModel.Report_Summation" Width="1.5" PointX="3" PointY="3.25" Height="8.9031380208333246" />
-        <EntityTypeShape EntityType="MedicalBaseModel.Report_WeiJinXingJingMaiRongSuanLiYou" Width="1.5" PointX="0.75" PointY="50.375" Height="2.3648893229166674" />
-        <EntityTypeShape EntityType="MedicalBaseModel.Report_WeiJinXingJiZhenGuanMaiJieRuZhiLiao" Width="1.5" PointX="0.75" PointY="53.5" Height="2.3648893229166674" />
-        <EntityTypeShape EntityType="MedicalBaseModel.Report_ZhuSuAndXianBingShi" Width="1.5" PointX="0.75" PointY="56.625" Height="8.3262337239583388" />
-        <EntityTypeShape EntityType="MedicalBaseModel.Role" Width="1.5" PointX="3.75" PointY="1" Height="1.595683593749996" />
-        <EntityTypeShape EntityType="MedicalBaseModel.User" Width="1.5" PointX="6" PointY="6.25" Height="2.9417936197916674" />
+        <EntityTypeShape EntityType="MedicalBaseModel.Hospital" Width="1.5" PointX="0.5" PointY="1.375" Height="2.3648893229166674" IsExpanded="false" />
+        <EntityTypeShape EntityType="MedicalBaseModel.Log_Login" Width="1.5" PointX="7.25" PointY="5.125" Height="2.1725878906250031" IsExpanded="false" />
+        <EntityTypeShape EntityType="MedicalBaseModel.Person" Width="1.5" PointX="0.5" PointY="2" Height="3.7109993489583388" IsExpanded="false" />
+        <EntityTypeShape EntityType="MedicalBaseModel.Region" Width="1.5" PointX="0.5" PointY="5.125" Height="1.7879850260416674" IsExpanded="false" />
+        <EntityTypeShape EntityType="MedicalBaseModel.Report_ChuBuZhenDuan" Width="1.5" PointX="7.25" PointY="4.5" Height="5.2494108072916674" IsExpanded="false" />
+        <EntityTypeShape EntityType="MedicalBaseModel.Report_FuZhuYongYao" Width="1.5" PointX="0.5" PointY="3.25" Height="3.5186979166666674" IsExpanded="false" />
+        <EntityTypeShape EntityType="MedicalBaseModel.Report_JiBingBanSuiZhuangTai" Width="1.5" PointX="0.5" PointY="3.875" Height="5.4417122395833246" IsExpanded="false" />
+        <EntityTypeShape EntityType="MedicalBaseModel.Report_JieRuZhiLiao" Width="1.5" PointX="0.5" PointY="2.625" Height="1.7879850260416674" IsExpanded="false" />
+        <EntityTypeShape EntityType="MedicalBaseModel.Report_JingMaiRongShuan" Width="1.5" PointX="7.25" PointY="3.875" Height="3.1340950520833246" IsExpanded="false" />
+        <EntityTypeShape EntityType="MedicalBaseModel.Report_JiWangBingShi" Width="1.5" PointX="2.25" PointY="5.125" Height="3.5186979166666674" IsExpanded="false" />
+        <EntityTypeShape EntityType="MedicalBaseModel.Report_LinChuangZhuanGui" Width="1.5" PointX="7.25" PointY="2" Height="6.5955208333333246" IsExpanded="false" />
+        <EntityTypeShape EntityType="MedicalBaseModel.Report_Summation" Width="1.5" PointX="3.5" PointY="0.625" Height="8.9031380208333246" IsExpanded="false" />
+        <EntityTypeShape EntityType="MedicalBaseModel.Report_WeiJinXingJingMaiRongSuanLiYou" Width="1.5" PointX="7.25" PointY="3.25" Height="2.3648893229166674" IsExpanded="false" />
+        <EntityTypeShape EntityType="MedicalBaseModel.Report_WeiJinXingJiZhenGuanMaiJieRuZhiLiao" Width="1.5" PointX="0.5" PointY="4.5" Height="2.3648893229166674" IsExpanded="false" />
+        <EntityTypeShape EntityType="MedicalBaseModel.Report_ZhuSuAndXianBingShi" Width="1.5" PointX="5.5" PointY="5.125" Height="8.3262337239583388" IsExpanded="false" />
+        <EntityTypeShape EntityType="MedicalBaseModel.Role" Width="1.5" PointX="7.25" PointY="2.625" Height="1.595683593749996" IsExpanded="false" />
+        <EntityTypeShape EntityType="MedicalBaseModel.User" Width="1.5" PointX="3.875" PointY="5.125" Height="2.9417936197916674" IsExpanded="false" />
         <AssociationConnector Association="MedicalBaseModel.FK_ReportSummation_Hospital" >
           <ConnectorPoint PointX="2.25" PointY="7.8074446614583337" />
           <ConnectorPoint PointX="2.6666666666666665" PointY="7.8074446614583328" />
@@ -1726,18 +1726,7 @@
           <ConnectorPoint PointX="3.95312625" PointY="40.509348958333334" />
           <ConnectorPoint PointX="3.95312625" PointY="12.153138020833325" />
         </AssociationConnector>
-        <AssociationConnector Association="MedicalBaseModel.FK_Report_Summation_LinChuangZhuanGui" >
-          <ConnectorPoint PointX="2.25" PointY="46.297760416666662" />
-          <ConnectorPoint PointX="2.9557247916666665" PointY="46.297760416666662" />
-          <ConnectorPoint PointX="3.1223914583333334" PointY="46.297760416666662" />
-          <ConnectorPoint PointX="3.1588510416666669" PointY="46.297760416666662" />
-          <ConnectorPoint PointX="3.3255177083333338" PointY="46.297760416666662" />
-          <ConnectorPoint PointX="3.3619772916666664" PointY="46.297760416666662" />
-          <ConnectorPoint PointX="3.5286439583333333" PointY="46.297760416666662" />
-          <ConnectorPoint PointX="3.5651035416666668" PointY="46.297760416666662" />
-          <ConnectorPoint PointX="3.7317702083333337" PointY="46.297760416666662" />
-          <ConnectorPoint PointX="4.3593787499999994" PointY="46.297760416666662" />
-          <ConnectorPoint PointX="4.3593787499999994" PointY="12.153138020833325" />
+        <AssociationConnector Association="MedicalBaseModel.FK_Report_Summation_LinChuangZhuanGui" ManuallyRouted="false" >
         </AssociationConnector>
         <AssociationConnector Association="MedicalBaseModel.FK_Report_Summation_Report_Summation" >
           <ConnectorPoint PointX="3.5319230769230767" PointY="3.25" />
